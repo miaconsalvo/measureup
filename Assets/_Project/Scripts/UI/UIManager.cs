@@ -34,7 +34,7 @@ namespace Mystie.UI
 
         public static Controls controls;
 
-        [SerializeField] public UIState startState;
+        [SerializeField] public List<UIState> startStates = new List<UIState>();
         protected Stack<UIState> stateStack = new Stack<UIState>();
 
         public UIState CurrentState { get { return (stateStack.Count > 0) ? stateStack.Peek() : null; } }
@@ -80,7 +80,8 @@ namespace Mystie.UI
 
         public void Start()
         {
-            if (startState != null) SetState(startState);
+            foreach(UIState state in startStates)
+                if (state != null) SetState(state);
         }
 
         public void SetState(UIState newState)

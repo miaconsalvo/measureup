@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Tags Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Tags
+  m_TableCollectionNameGuidString: 5bc35b766c8020a45b1503db9ab49bd5
+  m_Entries:
+  - m_Id: 13014663168
+    m_Key: Girly
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33566752768
+    m_Key: Basic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50532712448
+    m_Key: Sporty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 263003570176
+    m_Key: Baggy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 390078398464
+    m_Key: Bright
+    m_Metadata:
+      m_Items: []
+  - m_Id: 408625610752
+    m_Key: Business
+    m_Metadata:
+      m_Items: []
+  - m_Id: 424891121664
+    m_Key: Casual
+    m_Metadata:
+      m_Items: []
+  - m_Id: 440502321152
+    m_Key: Comfy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 459087282176
+    m_Key: Edgy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481849769984
+    m_Key: Fancy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 518499598336
+    m_Key: Modest
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8469298824904179738
+  references:
+    version: 2
+    RefIds:
+    - rid: 8469298824904179738
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1737355204934

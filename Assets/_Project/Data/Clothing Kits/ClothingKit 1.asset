@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac65f3b549756749bbcde476d226756, type: 3}
+  m_Name: ClothingKit 1
+  m_EditorClassIdentifier: 
+  name: Clothing Kit 1
+  price: 800
+  priceRange: $$
+  garments:
+  - {fileID: 11400000, guid: b74bceb0a22a7d14c927c7bca3796332, type: 2}
+  - {fileID: 11400000, guid: 72408046eb56be04c84d5682e516d505, type: 2}
+  tags:
+  - Basic
+  - Casual

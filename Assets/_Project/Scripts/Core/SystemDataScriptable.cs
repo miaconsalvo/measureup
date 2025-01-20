@@ -1,4 +1,5 @@
 using Mystie.Audio;
+using Mystie.Core;
 using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace Mystie
     [CreateAssetMenu(fileName = "System Data", menuName = "CustomData/System Data", order = 0)]
     public class SystemDataScriptable : ScriptableObject
     {
-        public new string name = "SystemData";
+        public new string name = GameManager.systemDataPath;
 
         [Header("Scenes")]
 

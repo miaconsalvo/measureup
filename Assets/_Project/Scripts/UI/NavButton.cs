@@ -9,18 +9,37 @@ namespace Mystie.UI
     [System.Serializable]
     public class NavButton
     {
+        private UIManager manager;
+
         [SerializeField] private string name;
         [SerializeField] public Button btn;
         [SerializeField] public UIState state;
+        public enum NavType {ADD, REPLACE, CLEAR}
+        [SerializeField] private NavType navType;
 
         public void Sub(UIManager manager)
         {
-            if (btn != null) btn.onClick.AddListener(() => { manager.SetState(state); });
+            this.manager = manager;
+            if (btn != null) btn.onClick.AddListener(OnClick);
         }
 
-        public void Unsub(UIManager manager)
+        public void Unsub()
         {
-            if (btn != null) btn.onClick.RemoveListener(() => { manager.SetState(state); });
+            if (btn != null) btn.onClick.RemoveListener(OnClick);
+        }
+
+        public void OnClick(){
+            switch(navType)
+            {
+                case NavType.REPLACE:
+                    manager.CloseState();
+                    break;
+                case NavType.CLEAR:
+                    manager.ClearStates();
+                    break;
+            }
+            
+            manager.SetState(state);
         }
     }
 }

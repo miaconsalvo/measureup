@@ -22,7 +22,7 @@ namespace Mystie.Core
         public static bool isPaused = false;
         public static GameState gameState { get; private set; }
 
-        private const string systemDataPath = "SystemData";
+        public const string systemDataPath = "System Data";
 
         #region Singleton
 

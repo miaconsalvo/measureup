@@ -1,0 +1,26 @@
+﻿title: Start
+tags:
+position: 0,0
+---
+Cat: Let's talk about my hunger :3
+-> Sure thing
+    <<jump PositiveOutcome>>
+-> Idk about that
+    <<jump NegativeOutcome>>
+===
+title: PositiveOutcome
+tags:
+position: -125,196
+---
+Cat: Yay!~ Can I have big tuna can pwease? owo
+-> Of course baby!~
+    Cat: YAYYYYYY! :333
+-> Lmao nope
+    <<jump NegativeOutcome>>
+===
+title: NegativeOutcome
+tags:
+position: 142,196
+---
+Cat: Damn alright I see qwq
+===
