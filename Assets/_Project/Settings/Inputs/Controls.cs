@@ -15,7 +15,7 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-namespace Mystie.Core
+namespace MeasureUp.Core
 {
     public partial class @Controls: IInputActionCollection2, IDisposable
     {

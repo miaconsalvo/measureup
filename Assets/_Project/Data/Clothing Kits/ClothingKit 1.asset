@@ -18,6 +18,8 @@ MonoBehaviour:
   garments:
   - {fileID: 11400000, guid: b74bceb0a22a7d14c927c7bca3796332, type: 2}
   - {fileID: 11400000, guid: 72408046eb56be04c84d5682e516d505, type: 2}
+  - {fileID: 11400000, guid: 31b715e4c72b461439825b2873daccf1, type: 2}
   tags:
   - Basic
   - Casual
+  - Comfy
