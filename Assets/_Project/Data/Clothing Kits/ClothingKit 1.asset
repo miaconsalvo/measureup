@@ -20,6 +20,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 72408046eb56be04c84d5682e516d505, type: 2}
   - {fileID: 11400000, guid: 31b715e4c72b461439825b2873daccf1, type: 2}
   tags:
-  - Basic
-  - Casual
-  - Comfy
+  - {fileID: 11400000, guid: 238b34ce3ccdcb3418a3ed93684cfcc0, type: 2}
+  - {fileID: 11400000, guid: 6a02b2fc9b6fe1f45b16c7a74d13bd64, type: 2}
+  - {fileID: 11400000, guid: 3dd5bee944a9892499537f489a2e5591, type: 2}

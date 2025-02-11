@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
-  m_Name: Shirt
+  m_Script: {fileID: 11500000, guid: b9d9901ef09188c468ec3663c8bccea6, type: 3}
+  m_Name: Basic
   m_EditorClassIdentifier: 
-  name: Shirt
-  icon: {fileID: 21300000, guid: 6c8fd763d6b7a304eba5e1a5cbc31a56, type: 3}
-  sprite: {fileID: 21300000, guid: 6c8fd763d6b7a304eba5e1a5cbc31a56, type: 3}
-  type: 0
+  name: Basic

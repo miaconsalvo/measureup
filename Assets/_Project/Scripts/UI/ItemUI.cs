@@ -1,16 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Mystie
+namespace Mystie.Dressup
 {
     public class ItemUI : MonoBehaviour
     {
+        public event Action<GarmentScriptable> onSelect;
+
+        [SerializeField] private Button button;
         [SerializeField] private Image image;
         [SerializeField] private GarmentScriptable garment;
         
         private bool init = false;
+
+        private void Awake(){
+            if (button != null) button.onClick.AddListener(OnSelect);
+        }
 
         private void Start(){
             if (!init) Set(garment);
@@ -34,8 +42,13 @@ namespace Mystie
             init = true;
         }
 
+        public void OnSelect(){
+            onSelect?.Invoke(garment);
+        }
+
         public void Reset(){
             image = GetComponent<Image>();
+            button = GetComponent<Button>();
         }
 
         public void OnValidate(){

@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Mystie
+namespace Mystie.Dressup
 {
     public class ClothingKitUI : MonoBehaviour
     {
@@ -54,7 +54,7 @@ namespace Mystie
                 if (priceLabel != null) priceLabel.text = "$" + String.Format("{0:0.00}", kit.price);
                 if (priceRangeLabel != null) priceRangeLabel.text = kit.priceRange;
                 
-                if (tagUIPrefab != null) SetTags(kit.tags);
+                if (tagUIPrefab != null) SetTags(kit.Tags);
             }
             else{
                 if (nameLabel != null) nameLabel.text = "None";

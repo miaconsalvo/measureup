@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
-  m_Name: Skirt
+  m_Name: Shirt
   m_EditorClassIdentifier: 
-  name: Skirt
-  icon: {fileID: 21300000, guid: f69b21ffc22bb8a4a978778c597a3509, type: 3}
-  sprite: {fileID: 21300000, guid: f69b21ffc22bb8a4a978778c597a3509, type: 3}
-  type: 1
+  name: Shirt
+  icon: {fileID: 21300000, guid: 6c8fd763d6b7a304eba5e1a5cbc31a56, type: 3}
+  sprite: {fileID: 21300000, guid: 6c8fd763d6b7a304eba5e1a5cbc31a56, type: 3}
+  type: 0
+  tags:
+  - {fileID: 11400000, guid: 238b34ce3ccdcb3418a3ed93684cfcc0, type: 2}

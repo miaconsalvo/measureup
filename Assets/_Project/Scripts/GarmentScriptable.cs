@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Mystie
+namespace Mystie.Dressup
 {
+    public enum GarmentType{TOP, BOTTOM, SHOES}
+
     [CreateAssetMenu(fileName = "Garment", menuName = "Clothing/Garment", order = 2)]
     public class GarmentScriptable : ScriptableObject
     {
@@ -12,7 +13,15 @@ namespace Mystie
         public Sprite icon;
         public Sprite sprite;
 
-        public enum GarmentType{TOP, BOTTOM, SHOES}
-        [SerializeField] private GarmentType type;
+        [field: SerializeField] public GarmentType type {get; private set;}
+        public List<ClothingTag> tags = new List<ClothingTag>();
+
+        public List<string> Tags {
+            get {
+                List<string> t = new List<string>();
+                foreach(ClothingTag tag in tags) t.Add(tag.name);
+                return t;
+            }
+        }
     }
 }
