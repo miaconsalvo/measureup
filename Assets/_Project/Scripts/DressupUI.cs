@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Mystie.Core;
+using NaughtyAttributes;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Mystie.Dressup.UI
@@ -10,6 +13,17 @@ namespace Mystie.Dressup.UI
         [SerializeField] private ModelUI modelUI;
         [SerializeField] private Transform itemAnchor;
         [SerializeField] private ItemUI itemPrefab;
+
+        [Space]
+
+        public ContestantScriptable contestant;
+
+        [Space]
+
+        public FilterMode filterMode = FilterMode.OR;
+        [SerializeField] private List<GarmentType> filterTypes = new List<GarmentType>();
+        [SerializeField] private List<ClothingTag> filterTags = new List<ClothingTag>();
+        public enum FilterMode {AND, OR}
         
         [Space]
 
@@ -32,6 +46,41 @@ namespace Mystie.Dressup.UI
             if (modelUI != null) {
                 modelUI.SelectItem(garment);
             }
+        }
+        
+        [Button]
+        public void UpdateFilter(){
+            foreach(ItemUI item in items){
+                
+                if(item.garment == null ||
+                (!filterTypes.IsNullOrEmpty() && !filterTypes.Contains(item.garment.type))){
+                    item.Show(false);
+                    continue;
+                }
+
+                List<ClothingTag> tags = item.Tags;
+                bool enabled = filterTags.IsNullOrEmpty();
+
+                foreach(ClothingTag tag in tags){
+                    if(filterMode == FilterMode.OR && (enabled || tags.Contains(tag))){
+                        enabled = true;
+                        break;
+                    }
+                    else if(filterMode == FilterMode.AND && !tags.Contains(tag)){
+                        enabled = false;
+                        break;
+                    }
+                }
+
+                item.Show(enabled);
+            }
+        }
+
+        [Button]
+        public void ClearFilter(){
+            filterTypes.Clear();
+            filterTags.Clear();
+            UpdateFilter();
         }
     }
 }

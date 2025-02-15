@@ -12,7 +12,11 @@ namespace Mystie.Dressup
 
         [SerializeField] private Button button;
         [SerializeField] private Image image;
-        [SerializeField] private GarmentScriptable garment;
+        [field: SerializeField] public GarmentScriptable garment{get; private set;}
+
+        public List<ClothingTag> Tags{
+            get => garment != null? garment.tags : new List<ClothingTag>();
+        }
         
         private bool init = false;
 
@@ -34,6 +38,10 @@ namespace Mystie.Dressup
             image.enabled = false;
         }
 
+        public void Hide(){
+            gameObject.SetActive(false);
+        }
+
         public void Set(GarmentScriptable garment){
             this.garment = garment;
             if (image != null && garment != null) 
@@ -44,6 +52,15 @@ namespace Mystie.Dressup
 
         public void OnSelect(){
             onSelect?.Invoke(garment);
+        }
+
+        public void Show(bool show){
+            if(show){
+                gameObject.SetActive(true);
+            }
+            else{
+                gameObject.SetActive(false);
+            }
         }
 
         public void Reset(){
