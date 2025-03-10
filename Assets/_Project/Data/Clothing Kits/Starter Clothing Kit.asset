@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac65f3b549756749bbcde476d226756, type: 3}
+  m_Name: Starter Clothing Kit
+  m_EditorClassIdentifier: 
+  name: Starter Clothing Kit
+  price: 0
+  priceRange: 
+  garments:
+  - {fileID: 11400000, guid: 4c6b1da375955c041969d7a5d2d03dc1, type: 2}
+  - {fileID: 11400000, guid: 0ca89dacc564c224baed237c22901233, type: 2}
+  - {fileID: 11400000, guid: f8391fcc816ce1241b215f8697d8fe6d, type: 2}
+  - {fileID: 11400000, guid: c09731fa04bf88c469a297c2cd108829, type: 2}
+  - {fileID: 11400000, guid: c92a86ec80c61c34bb0a5481929072d1, type: 2}
+  - {fileID: 11400000, guid: 29e49012c3137124e8d25d4e22181ae9, type: 2}
+  - {fileID: 11400000, guid: ec942d84939531841806642379ad9138, type: 2}
+  - {fileID: 11400000, guid: 7f7ef3efd370b754698233280b8bf9ad, type: 2}
+  - {fileID: 11400000, guid: 39c3355eb6037fb48b627ae9d44745d5, type: 2}
+  - {fileID: 11400000, guid: 67f57b039e85c554b962787bcd7cb6d5, type: 2}
+  - {fileID: 11400000, guid: 7a63d671a431bf84c8470fe57c8344ab, type: 2}
+  - {fileID: 11400000, guid: 53d9ae020c4607140a5de839d9bf6341, type: 2}
+  tags: []

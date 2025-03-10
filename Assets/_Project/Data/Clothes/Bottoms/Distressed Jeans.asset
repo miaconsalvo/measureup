@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
-  m_Name: Blue Skinny Jeans
+  m_Name: Distressed Jeans
   m_EditorClassIdentifier: 
-  name: Blue Skinny Jeans
-  icon: {fileID: 21300000, guid: fdb1a8a66291cb74f9a8f967145af965, type: 3}
-  sprite: {fileID: 21300000, guid: ba614af1dfb242d4091ae950cc650ea6, type: 3}
+  name: Distressed Jeans
+  icon: {fileID: 0}
+  sprite: {fileID: 0}
   <type>k__BackingField: 1
   tags:
+  - {fileID: 11400000, guid: e92b940437bf51c4bbd846942fc3b02c, type: 2}
   - {fileID: 11400000, guid: 62dc69857624ecb4c807fbd001c128ce, type: 2}
-  - {fileID: 11400000, guid: b739dd24505919541bee74a638139d25, type: 2}
-  - {fileID: 11400000, guid: cf5407f068ef0eb49a13740676feec99, type: 2}
+  - {fileID: 11400000, guid: 47fa92b562b53834aa7cc45e5e7de466, type: 2}
+  - {fileID: 11400000, guid: 455c649ab1b8d7c41b71195a6ef72f17, type: 2}
+  - {fileID: 11400000, guid: 5a0100448d9cace4c8ef3cfa958a5706, type: 2}
   - {fileID: 11400000, guid: f193d6eade1f4d34298d783d8cf05f88, type: 2}
