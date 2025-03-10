@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
+  m_Name: Polka Dot Skirt
+  m_EditorClassIdentifier: 
+  name: Polka Dot Skirt
+  icon: {fileID: 0}
+  sprite: {fileID: 0}
+  <type>k__BackingField: 1
+  tags:
+  - {fileID: 11400000, guid: 46da594aa093a314ca17348cd4a39004, type: 2}
+  - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
+  - {fileID: 11400000, guid: 238b34ce3ccdcb3418a3ed93684cfcc0, type: 2}
+  - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
+  - {fileID: 11400000, guid: e92b940437bf51c4bbd846942fc3b02c, type: 2}
+  - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
+  - {fileID: 11400000, guid: 777d4d8a95f1ac94d803a85155e2e3a9, type: 2}
