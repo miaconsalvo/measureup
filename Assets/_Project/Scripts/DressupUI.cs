@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Mystie.Core;
 using NaughtyAttributes;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Mystie.Dressup.UI
 {
@@ -13,10 +13,11 @@ namespace Mystie.Dressup.UI
         [SerializeField] private ModelUI modelUI;
         [SerializeField] private Transform itemAnchor;
         [SerializeField] private ItemUI itemPrefab;
+        [SerializeField] private Button fitCheckButton;
 
         [Space]
 
-        public ContestantScriptable contestant;
+        public ContestantData contestant;
 
         [Space]
 
@@ -40,12 +41,28 @@ namespace Mystie.Dressup.UI
                 itemUI.onSelect += OnItemSelected;
                 items.Add(itemUI);
             }
+
+            fitCheckButton.onClick.AddListener(OnFitCheck);
+        }
+
+        private void OnDestroy(){
+            fitCheckButton.onClick.RemoveListener(OnFitCheck);
         }
 
         private void OnItemSelected(GarmentScriptable garment){
             if (modelUI != null) {
                 modelUI.SelectItem(garment);
             }
+        }
+
+        [Button]
+        public void OnFitCheck(){
+            modelUI.FitCheck();
+        }
+        
+        [Button]
+        public void Validate(){
+
         }
         
         [Button]
