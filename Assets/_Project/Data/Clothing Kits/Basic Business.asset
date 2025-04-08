@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac65f3b549756749bbcde476d226756, type: 3}
+  m_Name: Basic Business
+  m_EditorClassIdentifier: 
+  name: Basic Business
+  price: 0
+  priceRange: $$
+  garments:
+  - {fileID: 11400000, guid: f137bac69401609468ce77b47c27f5c3, type: 2}
+  - {fileID: 11400000, guid: c2d540129c1142e4d933c45510fb2f15, type: 2}
+  - {fileID: 11400000, guid: a49c1e31b3cdd754a9c016312e28b40d, type: 2}
+  - {fileID: 11400000, guid: 308eba012ccefdf488816bad39d02dd6, type: 2}
+  - {fileID: 11400000, guid: da1ec2035f04f464e9bd93eaa25de180, type: 2}
+  tags: []
