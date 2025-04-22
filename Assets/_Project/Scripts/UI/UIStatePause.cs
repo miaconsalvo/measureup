@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Mystie
 {
-    public class PauseMenu : UIState
+    public class UIStatePause : UIState
     {
         public override void DisplayState()
         {
@@ -16,9 +16,8 @@ namespace Mystie
 
         public override void CloseState()
         {
-            base.CloseState();
-
             GameManager.Unpause();
+            base.CloseState();
         }
 
         public override void Pause()

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace Mystie.Dressup.UI
 {
-    public class DressupUI : MonoBehaviour
+    public class DressupStage : LevelStage
     {
         [SerializeField] private ModelUI modelUI;
         [SerializeField] private Transform itemAnchor;
@@ -45,7 +45,8 @@ namespace Mystie.Dressup.UI
             fitCheckButton.onClick.AddListener(OnFitCheck);
         }
 
-        private void OnDestroy(){
+        protected override void OnDestroy(){
+            base.OnDestroy();
             fitCheckButton.onClick.RemoveListener(OnFitCheck);
         }
 

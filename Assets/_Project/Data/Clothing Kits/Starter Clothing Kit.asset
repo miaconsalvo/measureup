@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Starter Clothing Kit
   price: 0
-  priceRange: 
+  priceRange: FREE
   garments:
   - {fileID: 11400000, guid: 4c6b1da375955c041969d7a5d2d03dc1, type: 2}
   - {fileID: 11400000, guid: 0ca89dacc564c224baed237c22901233, type: 2}

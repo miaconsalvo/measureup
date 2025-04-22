@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Basic Business
   m_EditorClassIdentifier: 
   name: Basic Business
-  price: 0
+  price: 400
   priceRange: $$
   garments:
   - {fileID: 11400000, guid: f137bac69401609468ce77b47c27f5c3, type: 2}

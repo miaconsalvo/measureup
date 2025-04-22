@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Flats
   m_EditorClassIdentifier: 
   name: Flats
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 620e74a9d4d20a04d8c532683000b473, type: 3}
   sprite: {fileID: 0}
   <type>k__BackingField: 2
   tags:
