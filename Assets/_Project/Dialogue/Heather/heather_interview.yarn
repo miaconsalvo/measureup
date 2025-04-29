@@ -1,26 +1,77 @@
-﻿title: TestStart
+﻿title: InterviewStart
 tags: 
-position: 10,-15
+position: -129,-2
 ---
-Cat: Let's talk about my hunger :3
--> Sure thing
-    <<jump PositiveOutcome>>
--> Idk about that
-    <<jump NegativeOutcome>>
+<<set $QuestionA to false>>
+<<set $QuestionB to false>>
+<<set $QuestionC to false>>
+<<set $QuestionD to false>>
+<<set $QuestionE to false>>
+<<set $QuestionsAsked to 0>>
+<<jump InterviewQuestions>>
 ===
-title: PositiveOutcome
-tags:
-position: -125,196
+
+title: InterviewQuestions
+tags: 
+position: 119.97610282897949,-1.4147605895996094
 ---
-Cat: Yay!~ Can I have big tuna can pwease? owo
--> Of course baby!~
-    Cat: YAYYYYYY! :333
--> Lmao nope
-    <<jump NegativeOutcome>>
+-> A. How would you describe your day-today wardrobe? <<if $QuestionA == false>>
+    <<set $QuestionA to true>>
+    <<set $QuestionsAsked = $QuestionsAsked + 1>>
+    Heather: Well, with the kids at school and in after school sports and activities I usually go with comfort over anything else. 
+    Heather: Yoga pants are my go to. Usually a T-Shirt with it, and then sneakers. 
+    Heather: It's a pretty basic vibe.
+    << if $QuestionsAsked < 3>>
+        <<jump InterviewQuestions>>
+    <<endif>>
+        <<jump InterviewEnd>>
+-> B. What would you never be caught dead wearing? <<if $QuestionB == false>>
+    <<set $QuestionB to true>>
+    <<set $QuestionsAsked = $QuestionsAsked + 1>>
+    Heather: That's easy. Skirts.
+    Heather: I hated when wardrobe would put the big frilly and flashy ones on me as Jenny on The Family Tree.
+    Heather: I think that has stuck with me ever since. 
+    Heather: It made sense for the character, I guess, but as a kid I haaaated them.
+       << if $QuestionsAsked < 3>>
+        <<jump InterviewQuestions>>
+    <<endif>>
+        <<jump InterviewEnd>>
+-> C. What is your most loved item in your wardrobe? <<if $QuestionC == false>>
+    <<set $QuestionC to true>>
+    <<set $QuestionsAsked = $QuestionsAsked + 1>>
+    Heather: Hmm... like worn the most? Or what I love for its style the most?
+        -> What you wear the the most.
+            Heather: That would be my tried and true black yoga pants.
+            Heather: I think I won like five pairs of the same ones now. 
+        -> What you love the most, regardless of how often you wear it. 
+            Heather: I have a designer letterman-style jacket that I'll wear to the kids games.
+            Heather: The kids got it for me! Well, their dad did. You know how it goes. 
+    << if $QuestionsAsked < 3>>
+        <<jump InterviewQuestions>>
+    <<endif>>
+        <<jump InterviewEnd>>
+-> D. What do you want to get out of this makeover? <<if $QuestionD == false>>
+    <<set $QuestionD to true>>
+    <<set $QuestionsAsked = $QuestionsAsked + 1>>
+        Heather: I’d like to feel like I have an outfit or style beyond the school run mom.
+        Heather: As much as I live and die by my athleisure wardrobe, I know I can pull off some other looks - I just need a helping hand.
+     << if $QuestionsAsked < 3>>
+        <<jump InterviewQuestions>>
+    <<endif>>
+        <<jump InterviewEnd>>
+-> E. What is an outfit you’ve worn that you’ll never wear again? <<if $QuestionE == false>>
+    <<set $QuestionE to true>>
+    <<set $QuestionsAsked = $QuestionsAsked + 1>>
+    Heather: I had to wear a blazer and suit pants to court, thanks to some actions of an old co-star who needed a character witness for a custody case.
+    Heather: That day cost him two favours because I despise uncomfy, stuffy clothes, and dealing with lawyers, haha!
+    << if $QuestionsAsked < 3>>
+        <<jump InterviewQuestions>>
+    <<endif>>
+        <<jump InterviewEnd>>
 ===
-title: NegativeOutcome
-tags:
-position: 142,196
+title: InterviewEnd
+tags: 
+position: 350,4
 ---
-Cat: Damn alright I see qwq
+Interview ends.
 ===
