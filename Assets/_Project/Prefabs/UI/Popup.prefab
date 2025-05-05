@@ -272,10 +272,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   submitBtn: {fileID: 5300020920493279328}
   closeBtn: {fileID: 4275241643615947968}
+  closeStateOnSubmit: 1
   closeStateOnCancel: 1
+  submitPopup: {fileID: 0}
   pauseState: {fileID: 0}
   canvas: {fileID: 536119107314327739}
-  canvasBackground: {fileID: 536119107314327739}
+  canvasBackground: {fileID: 0}
   fadeOutTime: 0.05
   fadeInTime: 0.25
   navButtons: []

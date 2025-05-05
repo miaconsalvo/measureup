@@ -12,63 +12,76 @@ namespace Mystie.Dressup
 
         [SerializeField] private Button button;
         [SerializeField] private Image image;
-        [field: SerializeField] public GarmentScriptable garment{get; private set;}
+        [field: SerializeField] public GarmentScriptable garment { get; private set; }
 
-        public List<ClothingTag> Tags{
-            get => garment != null? garment.tags : new List<ClothingTag>();
+        public List<ClothingTag> Tags
+        {
+            get => garment != null ? garment.tags : new List<ClothingTag>();
         }
-        
+
         private bool init = false;
 
-        private void Awake(){
+        private void Awake()
+        {
             if (button != null) button.onClick.AddListener(OnSelect);
         }
 
-        private void Start(){
+        private void Start()
+        {
             if (!init) Set(garment);
         }
 
-        public void Set(Sprite sprite){
+        public void SetSprite(Sprite sprite)
+        {
             image.sprite = sprite;
             image.enabled = true;
         }
 
-        public void SetEmpty(){
+        public void SetEmpty()
+        {
             image.sprite = null;
             image.enabled = false;
         }
 
-        public void Hide(){
+        public void Hide()
+        {
             gameObject.SetActive(false);
         }
 
-        public void Set(GarmentScriptable garment){
+        public void Set(GarmentScriptable garment)
+        {
             this.garment = garment;
-            if (image != null && garment != null) 
-                Set(garment.icon);
+            if (image != null && garment != null)
+                SetSprite(garment.icon);
             else SetEmpty();
             init = true;
         }
 
-        public void OnSelect(){
+        public void OnSelect()
+        {
             onSelect?.Invoke(garment);
         }
 
-        public void Show(bool show){
-            if(show){
+        public void Show(bool show)
+        {
+            if (show)
+            {
                 gameObject.SetActive(true);
             }
-            else{
+            else
+            {
                 gameObject.SetActive(false);
             }
         }
 
-        public void Reset(){
+        public void Reset()
+        {
             image = GetComponent<Image>();
             button = GetComponent<Button>();
         }
 
-        public void OnValidate(){
+        public void OnValidate()
+        {
             Set(garment);
         }
     }

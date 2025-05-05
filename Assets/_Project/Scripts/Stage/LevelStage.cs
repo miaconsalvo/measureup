@@ -11,14 +11,14 @@ namespace Mystie.Core
         public event Action onStageEnter;
         public event Action onStageComplete;
 
-        public LevelManager levelManager{get; protected set;}
-        public UIManager uiManager{get; protected set;}
+        public LevelManager levelManager { get; protected set; }
+        public UIManager uiManager { get; protected set; }
 
         public bool active { get; private set; }
 
         [SerializeField] public UIState uiState;
 
-        [field: SerializeField] public LevelStageType stage{get; protected set;}
+        [field: SerializeField] public LevelStageType stage { get; protected set; }
 
         protected virtual void Awake()
         {
@@ -36,7 +36,7 @@ namespace Mystie.Core
             uiState.onSubmit -= OnStageComplete;
         }
 
-        public void OnStageSet(LevelStageType newStage)
+        protected virtual void OnStageSet(LevelStageType newStage)
         {
             if (newStage == stage && !active)
             {
@@ -44,18 +44,20 @@ namespace Mystie.Core
             }
         }
 
-        public virtual void OnStageEnter() {
+        protected virtual void OnStageEnter()
+        {
             active = true;
             uiManager.SetState(uiState);
             onStageEnter?.Invoke();
             Debug.Log("On stage enter " + stage);
         }
 
-        public virtual void OnStageComplete() {
+        protected virtual void OnStageComplete()
+        {
+            Debug.Log("Stage complete!");
             active = false;
             uiManager.CloseState();
             onStageComplete?.Invoke();
-            Debug.Log("Stage complete!");
             levelManager.CompleteStage(stage);
         }
     }

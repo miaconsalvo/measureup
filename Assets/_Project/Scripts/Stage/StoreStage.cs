@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mystie.Core;
+using Mystie.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,12 +14,13 @@ namespace Mystie.Dressup
         [SerializeField] private Transform kitPreviewsAnchor;
         [SerializeField] private ClothingKitUI kitPreviewPrefab;
         private ClothingKitUI selectedKitUI;
-        
+
         private List<ClothingKitUI> kitUIs;
 
         [Space]
 
         [SerializeField] private Button purchaseButton;
+        [SerializeField] private UIState purchaseConfirmPopup;
         [SerializeField] private LabelUI moneyUI;
         [SerializeField] private int money;
 
@@ -26,24 +28,30 @@ namespace Mystie.Dressup
 
         [SerializeField] private List<ClothingKitScriptable> kits = new List<ClothingKitScriptable>();
 
-        protected override void Awake(){
+        protected override void Awake()
+        {
             base.Awake();
             purchaseButton.onClick.AddListener(OnPurchase);
+            purchaseConfirmPopup.onSubmit += OnConfirmPurchase;
         }
 
-        protected override void OnDestroy(){
+        protected override void OnDestroy()
+        {
             base.OnDestroy();
             purchaseButton.onClick.RemoveListener(OnPurchase);
+            purchaseConfirmPopup.onSubmit -= OnConfirmPurchase;
         }
 
         private void Start()
         {
             kitUIs = new List<ClothingKitUI>();
-            foreach(Transform child in kitPreviewsAnchor){
+            foreach (Transform child in kitPreviewsAnchor)
+            {
                 GameObject.Destroy(child.gameObject);
             }
-            
-            foreach(ClothingKitScriptable kit in kits){
+
+            foreach (ClothingKitScriptable kit in kits)
+            {
                 ClothingKitUI clothingKitUI = Instantiate(kitPreviewPrefab.gameObject, kitPreviewsAnchor).GetComponent<ClothingKitUI>();
                 clothingKitUI.Set(kit);
                 clothingKitUI.SetPurchased(false);
@@ -55,9 +63,11 @@ namespace Mystie.Dressup
             UpdateMoneyUI();
         }
 
-        private void OnKitSelected(ClothingKitUI kitUI, ClothingKitScriptable kit){
+        private void OnKitSelected(ClothingKitUI kitUI, ClothingKitScriptable kit)
+        {
             selectedKitUI = kitUI;
-            if (detailsPanel != null) {
+            if (detailsPanel != null)
+            {
                 detailsPanel.gameObject.SetActive(true);
                 detailsPanel.Set(kit);
             }
@@ -66,19 +76,23 @@ namespace Mystie.Dressup
             purchaseButton.interactable = CanBuy(kit.price);
         }
 
-        private void OnKitDeselect(){
-            if (detailsPanel != null) {
+        private void OnKitDeselect()
+        {
+            if (detailsPanel != null)
+            {
                 detailsPanel.gameObject.SetActive(false);
             }
         }
 
-        public void GainMoney(int amount){
+        public void GainMoney(int amount)
+        {
             money += amount;
             UpdateMoneyUI();
             Debug.Log(amount + "$ gained. New total is " + money + "$.");
         }
 
-        public bool CanBuy(int price){
+        public bool CanBuy(int price)
+        {
             return price <= money;
         }
 
@@ -94,15 +108,29 @@ namespace Mystie.Dressup
             return true;
         }
 
-        public void OnPurchase(){
-            if (Purchase(selectedKitUI.clothingKit.price)){
+        public void OnPurchase()
+        {
+            if (purchaseConfirmPopup != null)
+            {
+                uiManager.SetState(purchaseConfirmPopup);
+            }
+            else OnConfirmPurchase();
+        }
+
+        public void OnConfirmPurchase()
+        {
+            if (Purchase(selectedKitUI.clothingKit.price))
+            {
                 detailsPanel.SetPurchased();
                 selectedKitUI.SetPurchased();
+                InventoryManager.Instance.AddClothes(selectedKitUI.clothingKit);
+                OnKitDeselect();
                 //purchaseButton.interactable = false;
             }
         }
 
-        public void UpdateMoneyUI(){
+        public void UpdateMoneyUI()
+        {
             moneyUI.Set("$" + String.Format("{0:0.00}", money));
         }
     }

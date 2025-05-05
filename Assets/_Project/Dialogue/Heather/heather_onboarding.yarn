@@ -1,4 +1,4 @@
-title: Start
+title: OnboardingBoss
 tags: 
 position: 32,205
 ---
@@ -25,10 +25,10 @@ Boss: That is your holy text for how to run the show.
 Boss: If it’s in the dossier, I better see it to the final episode. If it’s not in the dossier, I don’t care.
 Boss: Now, I have a meeting with some potential sponsors. 
 Boss: I am going to pass you off to our top PA Jo here, they’ll give you this week’s dossier.
-    <<jump Jo>>
+    <<jump OnboardingJo>>
 ===
 
-title: Jo
+title: OnboardingJo
 tags: 
 position: 282,204
 ---
@@ -48,9 +48,14 @@ Jo: Last but not least, you style the contestant! Pick out a nice outfit you thi
 Jo: Ok, I think that’s everything! Are you ready to get started?
     -> I'm ready!
         Jo: Great! Your first contestant is waiting!
-        <<jump Interview>>
+        <<jump OnboardingEnd>>
     -> Wait, could you go over that again?
         Jo: Of course!
-        <<jump Jo>>
+        <<jump OnboardingJo>>
 ===
-
+title: OnboardingEnd
+tags: 
+position: 282,204
+---
+Let's get started!
+===
