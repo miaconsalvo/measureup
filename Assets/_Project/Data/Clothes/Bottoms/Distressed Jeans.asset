@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Distressed Jeans
   m_EditorClassIdentifier: 
   name: Distressed Jeans
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: fdb1a8a66291cb74f9a8f967145af965, type: 3}
   sprite: {fileID: 0}
   <type>k__BackingField: 1
   tags:

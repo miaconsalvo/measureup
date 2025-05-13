@@ -752,7 +752,7 @@ MonoBehaviour:
   continueButton: {fileID: 6900652888288177872}
   holdTime: 1
   autoAdvance: 0
-  palette: {fileID: 0}
+  palette: {fileID: 11400000, guid: d2326e4e286ff84418181b4dee530a03, type: 2}
 --- !u!114 &6761394241162766962
 MonoBehaviour:
   m_ObjectHideFlags: 0

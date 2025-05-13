@@ -11,12 +11,15 @@ namespace Mystie.Dressup
 {
     public class ClothingKitUI : MonoBehaviour
     {
-        public event Action<ClothingKitScriptable> onSelect;
+        public event Action<ClothingKitUI, ClothingKitScriptable> onSelect;
 
         public Button button{get; private set;}
+        [SerializeField] private CanvasGroup canvas;
         [SerializeField] private TextMeshProUGUI nameLabel;
         [SerializeField] private TextMeshProUGUI priceLabel;
         [SerializeField] private TextMeshProUGUI priceRangeLabel;
+
+        [field: SerializeField] public bool isPurchased{get; private set;}
 
         [Space]
 
@@ -38,7 +41,8 @@ namespace Mystie.Dressup
             tagsUI = new List<LabelUI>();
                 
             itemsUI = itemsAnchor.GetComponentsInChildren<ItemUI>().ToList();
-            Set(clothingKit);
+            //Set(clothingKit);
+            //SetPurchased(isPurchased);
         }
 
         private void OnDestroy() {
@@ -70,6 +74,25 @@ namespace Mystie.Dressup
             }
         }
 
+        public void SetPurchased(bool purchased = true){
+            isPurchased = purchased;
+            if (canvas != null){
+                if (purchased){
+                    canvas.alpha = 0.8f;
+                    canvas.interactable = false;
+                    if (priceLabel != null) priceLabel.text = "[SOLD]";
+                    if (priceRangeLabel != null) priceRangeLabel.text = "[SOLD]";
+                }
+                else{
+                    canvas.alpha = 1f;
+                    canvas.interactable = true;
+                    if (priceLabel != null) priceLabel.text = "$" + String.Format("{0:0.00}", clothingKit.price);
+                    if (priceRangeLabel != null) priceRangeLabel.text = clothingKit.priceRange;
+                }
+            }
+            
+        }
+
         public void SetTags(List<string> tags){
             if (tagUIPrefab == null) return;
             Canvas.ForceUpdateCanvases();
@@ -92,7 +115,7 @@ namespace Mystie.Dressup
         }
 
         public void OnSelect(){
-            onSelect?.Invoke(clothingKit);
+            onSelect?.Invoke(this, clothingKit);
         }
 
         public void UpdateItems(){

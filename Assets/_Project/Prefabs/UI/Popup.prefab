@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 5585917235643285923}
   - component: {fileID: 6859935494748683370}
   - component: {fileID: 536119107314327739}
+  - component: {fileID: 2955944296760530371}
   m_Layer: 5
   m_Name: Popup
   m_TagString: Untagged
@@ -271,15 +272,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   submitBtn: {fileID: 5300020920493279328}
   closeBtn: {fileID: 4275241643615947968}
+  closeStateOnSubmit: 1
   closeStateOnCancel: 1
+  submitPopup: {fileID: 0}
   pauseState: {fileID: 0}
   canvas: {fileID: 536119107314327739}
-  canvasFocused: {fileID: 0}
+  canvasBackground: {fileID: 0}
   fadeOutTime: 0.05
   fadeInTime: 0.25
-  panel: {fileID: 5479166187741067631}
-  uiElements:
-  - {fileID: 548160479211912995}
   navButtons: []
   showCursor: 1
   displaySFX:
@@ -308,6 +308,26 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &2955944296760530371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4846255141415937846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 1
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &5479166187741067631
 GameObject:
   m_ObjectHideFlags: 0

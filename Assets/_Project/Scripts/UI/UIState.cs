@@ -7,6 +7,8 @@ using UnityEngine.UI;
 using System;
 using Mystie.Core;
 using DG.Tweening;
+using UnityEngine.Serialization;
+using NaughtyAttributes;
 
 namespace Mystie.UI
 {
@@ -14,25 +16,27 @@ namespace Mystie.UI
     {
         public event Action onDisplay;
         public event Action onExit;
+        public event Action onSubmit;
+        public event Action onCancel;
 
         protected UIManager manager;
 
         [SerializeField] protected Button submitBtn;
         [SerializeField] protected Button closeBtn;
+        [SerializeField] protected bool closeStateOnSubmit = false;
         [SerializeField] protected bool closeStateOnCancel = true;
+        [SerializeField] protected UIState submitPopup;
         [SerializeField] public UIState pauseState;
 
         [Space]
 
         [SerializeField] private CanvasGroup canvas;
-        [SerializeField] private CanvasGroup canvasFocused;
+        [SerializeField] private CanvasGroup canvasBackground;
         [SerializeField][Min(0)] private float fadeOutTime = 0.05f;
         [SerializeField][Min(0)] private float fadeInTime = 0.25f;
 
         [Space]
 
-        [SerializeField] private GameObject panel;
-        [SerializeField] private List<GameObject> uiElements = new List<GameObject>();
         [SerializeField] protected List<NavButton> navButtons = new List<NavButton>();
         [SerializeField] protected bool showCursor = true;
 
@@ -44,15 +48,17 @@ namespace Mystie.UI
         protected virtual void Awake()
         {
             manager = UIManager.Instance;
-            if (canvas != null) {
+            if (canvas != null)
+            {
                 canvas.alpha = 0;
                 canvas.blocksRaycasts = false;
-            } 
+            }
 
-            if (canvasFocused != null) {
-                canvasFocused.alpha = 0;
-                canvasFocused.blocksRaycasts = false;
-            } 
+            if (canvasBackground != null)
+            {
+                canvasBackground.alpha = 0;
+                canvasBackground.blocksRaycasts = false;
+            }
 
             if (manager.CurrentState != this)
                 CloseState();
@@ -62,8 +68,10 @@ namespace Mystie.UI
         {
             if (submitBtn != null) submitBtn.onClick.AddListener(Submit);
             if (closeBtn != null) closeBtn.onClick.AddListener(Close);
+            if (submitPopup != null) submitPopup.onSubmit += OnSubmit;
 
-            foreach (NavButton navButton in navButtons) {
+            foreach (NavButton navButton in navButtons)
+            {
                 navButton.Sub(manager);
             }
         }
@@ -72,35 +80,33 @@ namespace Mystie.UI
         {
             if (submitBtn != null) submitBtn.onClick.RemoveListener(Submit);
             if (closeBtn != null) closeBtn.onClick.RemoveListener(Close);
+            if (submitPopup != null) submitPopup.onSubmit -= OnSubmit;
 
-            foreach (NavButton navButton in navButtons) {
+            foreach (NavButton navButton in navButtons)
+            {
                 navButton.Unsub();
             }
         }
 
         public virtual void DisplayState()
         {
-            if (canvas != null){
+            if (canvas != null)
+            {
                 canvas.alpha = 1f;
                 //canvas.DOFade(1, fadeInTime);
                 canvas.blocksRaycasts = true;
             }
 
-            if (canvasFocused != null){
-                canvasFocused.alpha = 1f;
+            if (canvasBackground != null)
+            {
+                canvasBackground.alpha = 1f;
                 //canvasFocused.DOFade(1, fadeInTime);
-                canvasFocused.blocksRaycasts = true;
+                canvasBackground.blocksRaycasts = true;
             }
-
-            /*if (panel != null) panel.SetActive(true);
-
-            if (!uiElements.IsNullOrEmpty())
-                foreach (GameObject element in uiElements)
-                    element.SetActive(true);*/
 
             Cursor.visible = showCursor;
 
-            if (!displaySFX.IsNull) 
+            if (!displaySFX.IsNull)
                 RuntimeManager.PlayOneShot(displaySFX);
 
             onDisplay?.Invoke();
@@ -108,41 +114,34 @@ namespace Mystie.UI
 
         public virtual void PauseState()
         {
-            if(canvasFocused != null){
-                canvasFocused.alpha = 0;
+            if (canvas != null)
+            {
+                canvas.alpha = 0;
                 //canvasFocused.DOFade(0, fadeOutTime);
-                canvasFocused.blocksRaycasts = true;
+                canvas.blocksRaycasts = true;
             }
-
-            /*if (!uiElements.IsNullOrEmpty())
-                foreach (GameObject element in uiElements)
-                    element.SetActive(false);*/
         }
 
         public virtual void CloseState()
         {
-            if (canvas != null){
+            if (canvas != null)
+            {
                 canvas.alpha = 0;
                 //canvas.DOFade(0, fadeOutTime);
                 canvas.blocksRaycasts = false;
             }
-            
-            if (canvasFocused != null){
-                canvasFocused.alpha = 0;
+
+            if (canvasBackground != null)
+            {
+                canvasBackground.alpha = 0;
                 //canvasFocused.DOFade(0, fadeOutTime);
-                canvasFocused.blocksRaycasts = false;
+                canvasBackground.blocksRaycasts = false;
             }
 
-            /*if (panel != null) panel.SetActive(false);
-
-            if (!uiElements.IsNullOrEmpty())
-                foreach (GameObject element in uiElements)
-                    if (element != null) element.SetActive(false);
-
-            //Cursor.visible = !showCursor;*/
-
-            if (!displaySFX.IsNull) 
+            if (!closeSFX.IsNull)
                 RuntimeManager.PlayOneShot(closeSFX);
+
+            Debug.Log("Close state : " + gameObject.name);
 
             onExit?.Invoke();
         }
@@ -159,17 +158,63 @@ namespace Mystie.UI
             else Cancel();
         }
 
-        public virtual void Submit() { }
+        public virtual void Submit()
+        {
+            if (submitPopup != null)
+            {
+                manager.SetState(submitPopup);
+            }
+            else OnSubmit();
+        }
+
+        public virtual void OnSubmit()
+        {
+            if (closeStateOnSubmit) manager.CloseState();
+            onSubmit?.Invoke();
+        }
 
         public virtual void Cancel()
         {
             if (closeStateOnCancel) manager.CloseState();
+            onCancel?.Invoke();
         }
 
         public virtual void Pause()
         {
             if (pauseState != null) manager.SetState(pauseState);
             Debug.Log("Pause (" + gameObject.name + ")");
+        }
+
+        [Button]
+        public void Show()
+        {
+            if (canvasBackground != null)
+            {
+                canvasBackground.alpha = 1f;
+                canvasBackground.blocksRaycasts = true;
+            }
+
+            if (canvas != null)
+            {
+                canvas.alpha = 1f;
+                canvas.blocksRaycasts = true;
+            }
+        }
+
+        [Button]
+        public void Hide()
+        {
+            if (canvasBackground != null)
+            {
+                canvasBackground.alpha = 0;
+                canvasBackground.blocksRaycasts = false;
+            }
+
+            if (canvas != null)
+            {
+                canvas.alpha = 0;
+                canvas.blocksRaycasts = false;
+            }
         }
     }
 }

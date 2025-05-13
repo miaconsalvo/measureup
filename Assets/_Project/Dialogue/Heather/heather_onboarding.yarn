@@ -1,0 +1,61 @@
+title: OnboardingBoss
+tags: 
+position: 32,205
+---
+Boss: Oh hi... 
+Boss: You must be the new stylist we hired. 
+Boss: Welcome, make yourself at home. Feel free to get to work now.
+Boss: ...
+Boss: What should you do?
+Boss: Look, I'm not here to coddle you.
+Boss: I can give you a quick overview of your job, but in this business, you need to be a self-starter.
+Boss: You need to be able to think on your feet, and roll with the punches, okay?
+Boss: Alright, As I’m sure you know, our goal here at Measure Up! is to empower women.
+Boss: You’ve seen the think pieces about the original show, how it was problematic… or “unfeminist”… or whatever…
+Boss: but we’re doing something different here on the reboot.
+Boss: We aren’t telling women how to dress, we are showing them how to be the best versions of themselves.
+Boss: And to do that, they need to be shown how to dress. Got it?
+Boss: Make sense so far?
+    -> Nod your head yes.
+        Boss: Great.
+    -> Ask a question
+        Boss: I don't have time for questions, keep up. 
+Boss: Every week you’ll get an [bold]episode dossier[/bold] from our PA. 
+Boss: That is your holy text for how to run the show.
+Boss: If it’s in the dossier, I better see it to the final episode. If it’s not in the dossier, I don’t care.
+Boss: Now, I have a meeting with some potential sponsors. 
+Boss: I am going to pass you off to our top PA Jo here, they’ll give you this week’s dossier.
+    <<jump OnboardingJo>>
+===
+
+title: OnboardingJo
+tags: 
+position: 282,204
+---
+Jo: Jo: Hi there. You’re the new stylist? 
+Jo: Nice to meet you, I’m Jo. 
+Jo: Here’s this week’s [bold]dossier[/bold].
+//bring up dossier in screen
+Jo: The dossier contains information about this week’s contestant and the style rule we are trying to demonstrate in this week’s episode. 
+Jo: Boss really cares about the [bold]style rules[/bold], so don’t forget about them, OK? Make sure you follow them in the final outfit.
+Jo: There will also be notes from our social team about what’s [bold]trending[/bold] right now, using trending items will help our ratings.
+Jo: From time to time there will also be [bold]sponsors[/bold] for certain episodes. Be sure to feature clothing from sponsors in the final outfit.
+Jo: After reviewing the dossier, you will get a chance to buy clothes for this week’s episode.
+Jo: You get free control over the budget. You’re the pro, we trust your judgement – buy what you think you’ll need!
+Jo: Then, you get to meet the contestant, and ask them some questions.
+Jo: If you learn anything useful about their lifestyle or preferences, you can note it down on the dossier as well.
+Jo: Last but not least, you style the contestant! Pick out a nice outfit you think will work for them, but keep the dossier in mind too.
+Jo: Ok, I think that’s everything! Are you ready to get started?
+    -> I'm ready!
+        Jo: Great! Your first contestant is waiting!
+        <<jump OnboardingEnd>>
+    -> Wait, could you go over that again?
+        Jo: Of course!
+        <<jump OnboardingJo>>
+===
+title: OnboardingEnd
+tags: 
+position: 282,204
+---
+Let's get started!
+===

@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.InputSystem.InputAction;
 
 namespace Mystie.UI
 {
@@ -59,9 +60,9 @@ namespace Mystie.UI
         {
             if (controls != null)
             {
-                controls.UI.Submit.performed += ctx => { CurrentState?.Submit(); };
-                controls.UI.Cancel.performed += ctx => { CurrentState?.Cancel(); };
-                controls.UI.Pause.performed += ctx => { CurrentState?.Pause(); };
+                controls.UI.Submit.started += OnSubmit;
+                controls.UI.Cancel.started += OnCancel;
+                controls.UI.Pause.started += OnPause;
                 //controls.UI.Escape.performed += ctx => { CurrentState?.Escape(); };
             }
         }
@@ -70,9 +71,9 @@ namespace Mystie.UI
         {
             if (controls != null)
             {
-                controls.UI.Submit.performed -= ctx => { CurrentState?.Submit(); };
-                controls.UI.Cancel.performed -= ctx => { CurrentState?.Cancel(); };
-                controls.UI.Pause.performed -= ctx => { CurrentState?.Pause(); };
+                controls.UI.Submit.started -= OnSubmit;
+                controls.UI.Cancel.started -= OnCancel;
+                controls.UI.Pause.started -= OnPause;
                 //controls.UI.Escape.performed -= ctx => { CurrentState?.Escape(); };
             }
               
@@ -104,9 +105,23 @@ namespace Mystie.UI
             if (CurrentState != null) CurrentState?.DisplayState();
         }
 
+        private IEnumerator CloseStateCoroutine(){
+
+            yield return new WaitForSeconds(0);
+            stateStack.Pop().CloseState(); // we close the current state
+            if (CurrentState != null) CurrentState?.DisplayState();
+        }
+
         public void ClearStates()
         {
             while (CurrentState != null) CloseState();
         }
+
+        
+        public void OnSubmit(CallbackContext ctx) { CurrentState?.Submit(); }
+
+        public void OnCancel(CallbackContext ctx) { CurrentState?.Cancel(); }
+
+        public void OnPause(CallbackContext ctx) { CurrentState?.Pause(); }
     }
 }

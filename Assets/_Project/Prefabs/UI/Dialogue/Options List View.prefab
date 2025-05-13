@@ -68,7 +68,7 @@ MonoBehaviour:
   optionViewPrefab: {fileID: -2032660799021887138, guid: fe9a5b39d5435c24388abb3231c074f5, type: 3}
   palette: {fileID: 0}
   fadeTime: 0.1
-  showUnavailableOptions: 0
+  showUnavailableOptions: 1
   lastLineText: {fileID: 5073453351778379312}
   lastLineContainer: {fileID: 4161325800305182203}
   lastLineCharacterNameText: {fileID: 0}
