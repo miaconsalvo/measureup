@@ -12,7 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ac65f3b549756749bbcde476d226756, type: 3}
   m_Name: Starter Clothing Kit
   m_EditorClassIdentifier: 
-  name: Starter Clothing Kit
+  name: Starter Kit
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:9b488de41f12d8b44a0e611d909df40a
+    m_TableEntryReference:
+      m_KeyId: 63645610147840
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   price: 0
   priceRange: FREE
   garments:
@@ -29,3 +38,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7a63d671a431bf84c8470fe57c8344ab, type: 2}
   - {fileID: 11400000, guid: 53d9ae020c4607140a5de839d9bf6341, type: 2}
   tags: []
+  references:
+    version: 2
+    RefIds: []

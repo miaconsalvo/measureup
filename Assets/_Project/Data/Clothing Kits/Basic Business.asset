@@ -13,6 +13,15 @@ MonoBehaviour:
   m_Name: Basic Business
   m_EditorClassIdentifier: 
   name: Basic Business
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:9b488de41f12d8b44a0e611d909df40a
+    m_TableEntryReference:
+      m_KeyId: 63672151703552
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   price: 400
   priceRange: $$
   garments:
@@ -22,3 +31,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 308eba012ccefdf488816bad39d02dd6, type: 2}
   - {fileID: 11400000, guid: da1ec2035f04f464e9bd93eaa25de180, type: 2}
   tags: []
+  references:
+    version: 2
+    RefIds: []

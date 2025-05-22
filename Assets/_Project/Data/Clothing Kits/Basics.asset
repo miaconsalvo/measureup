@@ -13,6 +13,15 @@ MonoBehaviour:
   m_Name: Basics
   m_EditorClassIdentifier: 
   name: Basics
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:9b488de41f12d8b44a0e611d909df40a
+    m_TableEntryReference:
+      m_KeyId: 63801466290176
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   price: 200
   priceRange: $
   garments:
@@ -23,3 +32,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 31b5952a4373fad4cbfddde6f2f12708, type: 2}
   - {fileID: 11400000, guid: 21eec73e40a351340af75727fe74b70a, type: 2}
   tags: []
+  references:
+    version: 2
+    RefIds: []

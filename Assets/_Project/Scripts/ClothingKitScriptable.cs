@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace Mystie.Dressup
 {
@@ -9,15 +10,18 @@ namespace Mystie.Dressup
     public class ClothingKitScriptable : ScriptableObject
     {
         public string name = "Clothing Kit";
+        public LocalizedString displayName;
         public int price = 400;
         public string priceRange = "$";
         public List<GarmentScriptable> garments = new List<GarmentScriptable>();
         public List<ClothingTag> tags = new List<ClothingTag>();
 
-        public List<string> Tags {
-            get {
-                List<string> t = new List<string>();
-                foreach(ClothingTag tag in tags) t.Add(tag.name);
+        public List<LocalizedString> Tags
+        {
+            get
+            {
+                List<LocalizedString> t = new List<LocalizedString>();
+                foreach (ClothingTag tag in tags) t.Add(tag.displayName);
                 return t;
             }
         }

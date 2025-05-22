@@ -41,8 +41,8 @@ namespace Mystie.Dressup
         public void AddClothes(ClothingKitScriptable newClothingKit)
         {
             Debug.Log("Added kit " + newClothingKit.ToString());
-            foreach (GarmentScriptable garment in newClothingKit.garments)
-                Debug.Log(garment.ToString());
+            //foreach (GarmentScriptable garment in newClothingKit.garments)
+            //Debug.Log(garment.ToString());
             AddClothes(newClothingKit.garments);
         }
     }

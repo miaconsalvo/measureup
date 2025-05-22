@@ -8,48 +8,48 @@ position: 0,0
 // set current speaker to "Me", the player
 <<Me>>
 Hello?
-<<wait 1>>
+//<<wait 1>>
 Does this Chat Example dialogue work?
 
 // set current speaker to "Them", the person the player is talking to
 <<Them>>
-<<wait 3>>
-yes it does but its very basic
-<<wait 2>>
-I did the hard part for you
-<<wait 4>>
-I figured out this weird UI stuff with layout groups
-<<wait 4>>
-and there's a script that clones the message bubble
+//<<wait 3>>
+Katya: yes it does but its very basic
+//<<wait 2>>
+Katya: I did the hard part for you
+//<<wait 4>>
+Katya: I figured out this weird UI stuff with layout groups
+//<<wait 4>>
+Katya: and there's a script that clones the message bubble
 
 <<Me>>
-<<wait 1>>
+//<<wait 1>>
 -> But I don't know how to code.
     But I don't know how to code. How do I modify this example?
 -> But I'm new to Yarn Spinner.
     But I'm new to Yarn Spinner. What should I do now?
     
 <<Them>>
-<<wait 2>>
-you'll figure it out
-<<wait 4>>
-just read the documentation... www.yarnspinner.dev !
-<<wait 2>>
-but if you want my advice,
-<<wait 5>>
-you should maybe add an automatic delay before a message, based on the length of the message, in PhoneChatDialogueHelper.RunLine()
-<<wait 4>>
-otherwise you have to keep typing out "wait" instructions, which is annoying
+//<<wait 2>>
+Katya: you'll figure it out
+//<<wait 4>>
+Katya: just read the documentation... www.yarnspinner.dev !
+//<<wait 2>>
+Katya: but if you want my advice,
+//<<wait 5>>
+Katya: you should maybe add an automatic delay before a message, based on the length of the message, in PhoneChatDialogueHelper.RunLine()
+//<<wait 4>>
+Katya: otherwise you have to keep typing out "wait" instructions, which is annoying
 
 <<Me>>
-<<wait 1>>
+//<<wait 1>>
 -> Thanks!
     Thanks!
-    <<wait 2>>
+    //<<wait 2>>
     This conversation helped a lot
 -> Thanks!... for nothing
     Thanks!... for nothing
-    <<wait 4>>
+    //<<wait 4>>
     Next time, make my entire game for me! The whole thing!
 
 
@@ -63,8 +63,8 @@ colorID: 0
 position: 0,0
 ---
 <<Them>>
-<<wait 2>>
-sorry I have to go now, bye
-<<wait 2>>
-good luck with your game!
+//<<wait 2>>
+Katya: sorry I have to go now, bye
+//<<wait 2>>
+Katya: good luck with your game!
 ===

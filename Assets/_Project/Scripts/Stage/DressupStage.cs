@@ -35,8 +35,18 @@ namespace Mystie.Dressup.UI
         private void Start()
         {
             UpdateItems();
+        }
 
+        protected override void OnEnable()
+        {
+            base.OnEnable();
             fitCheckButton.onClick.AddListener(OnFitCheck);
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            fitCheckButton.onClick.RemoveListener(OnFitCheck);
         }
 
         protected override void OnDestroy()
@@ -46,7 +56,7 @@ namespace Mystie.Dressup.UI
             {
                 DestroyItemUI(item);
             }
-            fitCheckButton.onClick.RemoveListener(OnFitCheck);
+
         }
 
         protected override void OnStageEnter()

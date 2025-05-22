@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace Mystie.Dressup
 {
@@ -8,5 +9,6 @@ namespace Mystie.Dressup
     public class ClothingTag : ScriptableObject
     {
         public string name;
+        public LocalizedString displayName;
     }
 }

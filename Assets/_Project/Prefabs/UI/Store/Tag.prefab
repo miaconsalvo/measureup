@@ -158,10 +158,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5682109443505737129}
-  - component: {fileID: 659685488616482005}
-  - component: {fileID: 8464287505942207398}
   - component: {fileID: 2379309713657227229}
+  - component: {fileID: 8464287505942207398}
   - component: {fileID: 2343579695506970649}
+  - component: {fileID: 659685488616482005}
   - component: {fileID: 4160239865435382759}
   - component: {fileID: 1093651028610137660}
   - component: {fileID: 3803416862339236057}
@@ -192,7 +192,7 @@ RectTransform:
   m_AnchoredPosition: {x: 41.739998, y: -25.214827}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &659685488616482005
+--- !u!114 &2379309713657227229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,17 +201,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9074727912100652073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Script: {fileID: 11500000, guid: ad484d63e1f6f9d4b8b94804e36542d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreLayout: 0
-  m_MinWidth: -1
-  m_MinHeight: -1
-  m_PreferredWidth: -1
-  m_PreferredHeight: -1
-  m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
-  m_LayoutPriority: 1
+  labelLocalized: {fileID: 8464287505942207398}
+  label: {fileID: 3607802437045911902}
 --- !u!114 &8464287505942207398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,19 +246,6 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
---- !u!114 &2379309713657227229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9074727912100652073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad484d63e1f6f9d4b8b94804e36542d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  label: {fileID: 3607802437045911902}
 --- !u!114 &2343579695506970649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +296,26 @@ MonoBehaviour:
   m_NStarPolygonSideCount: 3
   m_NStarPolygonInset: 2
   m_NStarPolygonCornerRadius: 0
+--- !u!114 &659685488616482005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074727912100652073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &4160239865435382759
 MonoBehaviour:
   m_ObjectHideFlags: 0
