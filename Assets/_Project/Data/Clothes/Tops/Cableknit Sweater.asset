@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cableknit Sweater
   m_EditorClassIdentifier: 
   name: Cableknit Sweater
-  icon: {fileID: 21300000, guid: 6c8fd763d6b7a304eba5e1a5cbc31a56, type: 3}
+  icon: {fileID: 21300000, guid: 4316fb5b28dfe4c4785e79aa8183d678, type: 3}
   sprite: {fileID: 21300000, guid: da5cf6f83a3a9c84b87a68efd977407b, type: 3}
   <type>k__BackingField: 0
   tags:
