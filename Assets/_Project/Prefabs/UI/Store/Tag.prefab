@@ -224,10 +224,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad484d63e1f6f9d4b8b94804e36542d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <isVisible>k__BackingField: 1
   labelLocalized: {fileID: 8464287505942207398}
   label: {fileID: 3607802437045911902}
   bg: {fileID: 2343579695506970649}
   icon: {fileID: 0}
+  <fadeTime>k__BackingField: 0
 --- !u!114 &8464287505942207398
 MonoBehaviour:
   m_ObjectHideFlags: 0

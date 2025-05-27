@@ -19,5 +19,14 @@ namespace Mystie.Dressup
 
         [field: SerializeField] public GarmentType type { get; private set; }
         public List<ClothingTag> tags = new List<ClothingTag>();
+
+        public bool HasTag(string s)
+        {
+            foreach (ClothingTag tag in tags)
+            {
+                if (tag.name == s) return true;
+            }
+            return false;
+        }
     }
 }

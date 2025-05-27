@@ -4,32 +4,44 @@ using System.Linq;
 using Febucci.UI.Core;
 using UnityEngine;
 using UnityEngine.UI;
+using Yarn.Unity;
 
-namespace Mystie.Dressup.UI
+namespace Mystie.Dressup
 {
-    public class ModelUI : MonoBehaviour
+    public class DressupModel : MonoBehaviour
     {
+        private static DressupModel instance;
+
         public ContestantData contestant;
         public Transform modelAnchor;
         public Image clothingImage;
-        private Dictionary<GarmentType, ItemScriptable> items;
+        [SerializeField] private Dictionary<GarmentType, ItemScriptable> items;
         private Dictionary<GarmentType, Image> itemsUI;
         public List<ClothingTag> currentTags;
 
         public List<string> opinionsAvailable;
         public List<string> opinionsUsed;
 
+        private int negativeCount = 0;
+        private int positiveCount = 0;
+
+        [SerializeField] private List<ItemScriptable> startingItems;
+
         public void Awake()
         {
+            instance = this;
+
             clothingImage.gameObject.SetActive(false);
             items = new Dictionary<GarmentType, ItemScriptable>();
             itemsUI = new Dictionary<GarmentType, Image>();
             currentTags = new List<ClothingTag>();
             opinionsAvailable = new List<string>();
             opinionsUsed = new List<string>();
+
+            foreach (ItemScriptable item in startingItems) AddItem(item);
         }
 
-        public void FitCheck()
+        public string FitCheck()
         {
             opinionsAvailable.Clear();
 
@@ -48,28 +60,33 @@ namespace Mystie.Dressup.UI
                 int rand = Random.Range(0, opinionsAvailable.Count);
                 string opinion = opinionsAvailable[rand];
                 opinionsUsed.Add(opinion);
-                Debug.Log(opinion);
+                return opinion;
                 //opinionsAvailable.RemoveAt(rand);
             }
             else
             {
-                Debug.Log("Hmmm… yeah this is okay.");
+                return "Hmmm… yeah this is okay.";
             }
         }
 
-        public void SelectItem(ItemScriptable garment)
+        public void UpdateTags()
         {
-            if (garment == null) return;
-            if (items.ContainsKey(garment.type) && items[garment.type] == garment)
+            // Check positive and negative tags count
+            negativeCount = 0;
+            positiveCount = 0;
+
+            foreach (ClothingTag tag in currentTags)
             {
-                RemoveItem(garment);
+                if (contestant.positiveTags.Contains(tag))
+                    positiveCount++;
+                if (contestant.negativeTags.Contains(tag))
+                    negativeCount++;
             }
-            else SetItem(garment);
         }
 
-        public void SetItem(ItemScriptable item)
+        public void AddItem(ItemScriptable item)
         {
-            if (item == null) return;
+            if (item == null || items.ContainsValue(item)) return;
 
             if (!items.ContainsKey(item.type))
             {
@@ -92,28 +109,29 @@ namespace Mystie.Dressup.UI
                 currentTags.Add(tag);
             }
 
-            Debug.Log("Set " + item.type + ": " + item.name);
+            UpdateTags();
+
+            Debug.Log("Added " + item.type + "(" + item.type + ")");
         }
 
-        public void RemoveItem(ItemScriptable garment)
+        public void RemoveItem(ItemScriptable item)
         {
-            if (garment == null) return;
+            if (item == null || !items.ContainsValue(item)) return;
 
-            if (items.ContainsKey(garment.type) && items[garment.type] == garment)
+            foreach (ClothingTag tag in item.tags)
             {
-                foreach (ClothingTag tag in garment.tags)
-                {
-                    if (currentTags.Contains(tag)) currentTags.Remove(tag);
-                }
-                items[garment.type] = null;
-                if (itemsUI.ContainsKey(garment.type))
-                {
-                    itemsUI[garment.type].gameObject.SetActive(false);
-                    itemsUI[garment.type].sprite = null;
-                }
+                if (currentTags.Contains(tag)) currentTags.Remove(tag);
+            }
+            items[item.type] = null;
+            if (itemsUI.ContainsKey(item.type))
+            {
+                itemsUI[item.type].gameObject.SetActive(false);
+                itemsUI[item.type].sprite = null;
             }
 
-            Debug.Log("Remove " + garment.type);
+            UpdateTags();
+
+            Debug.Log("Removed " + item.name + "(" + item.type + ")");
         }
 
         private bool MeetsConditions(OpinionCondition condition)
@@ -130,17 +148,6 @@ namespace Mystie.Dressup.UI
                 if (currentTags.Contains(tag)) return false;
             }
 
-            // Check positive and negative tags count
-            int negativeCount = 0;
-            int positiveCount = 0;
-            foreach (ClothingTag tag in currentTags)
-            {
-                if (contestant.positiveTags.Contains(tag))
-                    positiveCount++;
-                if (contestant.negativeTags.Contains(tag))
-                    negativeCount++;
-            }
-
             if (negativeCount < condition.minNegativeTags
             || positiveCount < condition.minPositiveTags)
             {
@@ -148,6 +155,43 @@ namespace Mystie.Dressup.UI
             }
 
             return true;
+        }
+
+        // TODO Implement this better
+        [YarnFunction("has_tag")]
+        public static bool HasTag(string s)
+        {
+            //Debug.Log("Has tag " + s);
+            foreach (ClothingTag tag in instance.currentTags)
+            {
+                if (tag.name == s) return true;
+            }
+            return false;
+        }
+
+        [YarnFunction("neg_tags")]
+        public static int GetNegativeTags()
+        {
+            return instance.negativeCount;
+        }
+
+        [YarnFunction("pos_tags")]
+        public static int GetPositiveTag()
+        {
+            return instance.positiveCount;
+        }
+
+        [YarnFunction("get_item")]
+        public static string GetItemWithTag(string s)
+        {
+            if (!HasTag(s)) return null;
+
+            foreach (ItemScriptable item in instance.items.Values)
+            {
+                if (item.HasTag(s)) return item.displayName.GetLocalizedString();
+            }
+
+            return null;
         }
     }
 }

@@ -100,6 +100,14 @@ PrefabInstance:
       propertyPath: button
       value: 
       objectReference: {fileID: 2415282369724070214}
+    - target: {fileID: 4204628378015064517, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
+      propertyPath: isDraggable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204628378015064517, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
+      propertyPath: isSelectableUnequip
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7326497275430987215, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
       propertyPath: m_Enabled
       value: 0

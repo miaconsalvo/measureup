@@ -11,11 +11,13 @@ namespace Mystie.Dressup.UI
 {
     public class DressupStage : LevelStage
     {
-        [SerializeField] private ModelUI modelUI;
+        [SerializeField] private DressupModel model;
         [SerializeField] private Transform itemAnchor;
         [SerializeField] private ItemUI itemPrefab;
         [SerializeField] private Button fitCheckButton;
         [SerializeField] private ItemDetailsPanelUI itemDetailsPanelUI;
+        [SerializeField] private LabelUI opinionBox;
+        [SerializeField] private float opinionDuration = 4f;
 
         [Space]
 
@@ -30,7 +32,7 @@ namespace Mystie.Dressup.UI
 
         [Space]
 
-        [SerializeField] private List<ItemScriptable> clothes;
+        private List<ItemScriptable> clothes;
         private List<ItemUI> items;
 
         private void Start()
@@ -88,27 +90,19 @@ namespace Mystie.Dressup.UI
         private ItemUI CreateItemUI(ItemScriptable c)
         {
             ItemUI itemUI = Instantiate(itemPrefab.gameObject, itemAnchor).GetComponent<ItemUI>();
-            itemUI.Set(c);
-            itemUI.onSelect += OnItemSelected;
+            itemUI.Init(c, OnItemSelected, model.AddItem, model.RemoveItem);
             items.Add(itemUI);
             return itemUI;
         }
 
         private void DestroyItemUI(ItemUI itemUI)
         {
-            itemUI.onSelect -= OnItemSelected;
             items.Remove(itemUI);
             Destroy(itemUI.gameObject);
         }
 
-        private void OnItemSelected(ItemScriptable item, bool isSelected)
+        private void OnItemSelected(ItemScriptable item)
         {
-            if (modelUI != null)
-            {
-                modelUI.SelectItem(item);
-
-            }
-
             StartCoroutine(OnItemSelectedCoroutine(item));
         }
 
@@ -136,7 +130,21 @@ namespace Mystie.Dressup.UI
         [Button]
         public void OnFitCheck()
         {
-            modelUI.FitCheck();
+            string opinion = model.FitCheck();
+            if (opinionBox != null) StartCoroutine(ShowOpinionCoroutine(opinion));
+        }
+
+        public IEnumerator ShowOpinionCoroutine(string opinion)
+        {
+            if (opinionBox.isVisible)
+            {
+                opinionBox.StopAllCoroutines();
+                opinionBox.Hide();
+                yield return new WaitForSeconds(opinionBox.fadeTime);
+            }
+
+            opinionBox.Set(opinion);
+            opinionBox.ShowForDuration(opinionDuration);
         }
 
         [Button]

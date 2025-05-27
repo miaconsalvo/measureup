@@ -1,50 +1,49 @@
-title: PostcatwalkSetup
+title: PCWStart
 tags: 
 position: 357.24005126953125,143.65028381347656
 ---
 //pos tags
-<<declare $comfy = false>>
-<<declare $pattern = false>>
-<<declare $practical = false>>
-<<declare $sporty = false>>
+//<<declare $comfy = false>>
+//<<declare $pattern = false>>
+//<<declare $practical = false>>
+//<<declare $sporty = false>>
 
 //neg tags
-<<declare $bright = false>>
-<<declare $skirt = false>>
-<<declare $flashy = false>>
-<<declare $impractical = false>>
-<<declare $uncomfy = false>>
-<<declare $business = false>>
+//<<declare $bright = false>>
+//<<declare $skirt = false>>
+//<<declare $flashy = false>>
+//<<declare $impractical = false>>
+//<<declare $uncomfy = false>>
+//<<declare $business = false>>
+
 <<declare $patternedItem = "null">>
 
-<<declare $negTags = 0>>
-<<declare $posTags = 0>>
 <<declare $sameTags = 0>>
 
 //check for outfit tags
 //set appropriate variables to true
 //set neg and pos tag variable numbers
 
-<<if $skirt == true>>
+<<if has_tag("skirt") == true>>
     << jump HeatherPCWSkirt>>
-<<elseif $bright == true>>
+<<elseif has_tag("bright") == true>>
     << jump HeatherPCWBright>>
-<<elseif $flashy == true >>
+<<elseif has_tag("flashy") == true >>
     << jump HeatherPCWFlashyImpractical>>
-<<elseif $impractical == true >>
+<<elseif has_tag("impractical") == true >>
     << jump HeatherPCWFlashyImpractical >>
-<<elseif $uncomfy == true>>
+<<elseif has_tag("uncomfy") == true>>
     << jump HeatherPCWUncomfy >>
-<<elseif $negTags >= 2 >>
+<<elseif neg_tags() >= 2 >>
     << jump HeatherPCWNegative >>
 <<elseif $sameTags >= 3 >>
     << jump HeatherPCWSame >>
-<<elseif $comfy == true && $uncomfy == false && $negTags == 0>>
+<<elseif has_tag("comfy") == true && neg_tags() == 0>>
     << jump HeatherPCWComfy >>
-<<elseif $pattern == true && $negTags == 0>>
-   <<set $patternedItem = "INSERT CLOTHING ITEM">> //get clothing type from unity
+<<elseif has_tag("pattern") == true && neg_tags() == 0>>
+    <<set $patternedItem = get_item("pattern")>> 
     << jump HeatherPCWPattern >>
-<<elseif $posTags >=2 && $negTags == 0>>
+<<elseif pos_tags() >=2 && neg_tags() == 0>>
     << jump HeatherPCWPositive >>
 <<else>>
     << jump HeatherPCWMixedFeels >>
@@ -58,13 +57,7 @@ Heather: This makeover process has been… interesting I guess?
 Heather: I don’t know what I expected going into it.
 Heather:  I’m not sure how I really feel about the new look yet.
 Heather: I’ll give it a try though, it can’t hurt. I’ll see if it grows on me.
-    ->PCWEnd
-===
-title: PCWEnd
-tags: 
-position: 357,626
----
-Postcat walk ends.
+<<jump PCWEnd>>
 ===
 title: HeatherPCWSkirt
 tags: 
@@ -125,7 +118,7 @@ Heather: Well, I like the outfit!
 Heather: It’s honestly not that different from what I was wearing before though… 
 Heather: I guess this is all I can pull off anymore? 
 Heather: At least I got some free clothes out of this “makeover”!
-<<jumpe PCWEnd>>
+<<jump PCWEnd>>
 ===
 title: HeatherPCWComfy
 tags: 
@@ -143,6 +136,7 @@ position: 1051.7653224468231,391.6652374267578
 Heather: The pattern on this {$patternedItem} is amazing, I love it! 
 Heather: I was sort of nervous about being on TV again, but this was a good experience. 
 Heather: I like the final look, and this outfit is great!
+<<jump PCWEnd>>
 ===
 title: HeatherPCWPositive
 tags: 
@@ -154,4 +148,10 @@ Heather: But I am so glad I did it. I can tell the stylist really understood wha
 Heather: I love how they gave me a new look while still working with what I like. 
 Heather: I can see myself wearing this all the time!
 <<jump PCWEnd>>
+===
+title: PCWEnd
+tags: 
+position: 357,626
+---
+Postcat walk ends.
 ===
