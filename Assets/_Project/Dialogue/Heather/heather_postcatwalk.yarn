@@ -2,23 +2,23 @@ title: PostcatwalkSetup
 tags: 
 position: 357.24005126953125,143.65028381347656
 ---
-//pos tags
-<<declare $comfy = false>>
-<<declare $pattern = false>>
-<<declare $practical = false>>
-<<declare $sporty = false>>
+// //pos tags
+// <<declare $comfy = false>>
+// <<declare $pattern = false>>
+// <<declare $practical = false>>
+// <<declare $sporty = false>>
 
-//neg tags
-<<declare $bright = false>>
-<<declare $skirt = false>>
-<<declare $flashy = false>>
-<<declare $impractical = false>>
-<<declare $uncomfy = false>>
-<<declare $business = false>>
-<<declare $patternedItem = "null">>
+// //neg tags
+// <<declare $bright = false>>
+// <<declare $skirt = false>>
+// <<declare $flashy = false>>
+// <<declare $impractical = false>>
+// <<declare $uncomfy = false>>
+// <<declare $business = false>>
+// <<declare $patternedItem = "null">>
 
-<<declare $negTags = 0>>
-<<declare $posTags = 0>>
+// <<declare $negTags = 0>>
+// <<declare $posTags = 0>>
 <<declare $sameTags = 0>>
 
 //check for outfit tags
@@ -155,3 +155,4 @@ Heather: I love how they gave me a new look while still working with what I like
 Heather: I can see myself wearing this all the time!
 <<jump PCWEnd>>
 ===
+
