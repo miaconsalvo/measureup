@@ -13,11 +13,34 @@ MonoBehaviour:
   m_Name: Loose Graphic TShirt
   m_EditorClassIdentifier: 
   name: Loose Graphic TShirt
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
+    m_TableEntryReference:
+      m_KeyId: 2343086784774144
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  brand: {fileID: 0}
   icon: {fileID: 21300000, guid: 6c8fd763d6b7a304eba5e1a5cbc31a56, type: 3}
   sprite: {fileID: 21300000, guid: da5cf6f83a3a9c84b87a68efd977407b, type: 3}
   <type>k__BackingField: 0
   tags:
+  - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
   - {fileID: 11400000, guid: 62dc69857624ecb4c807fbd001c128ce, type: 2}
   - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
   - {fileID: 11400000, guid: 5a0100448d9cace4c8ef3cfa958a5706, type: 2}
   - {fileID: 11400000, guid: 78720b0e8379ef548ac85e241ddd1e31, type: 2}
+  references:
+    version: 2
+    RefIds: []

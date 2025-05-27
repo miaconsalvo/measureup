@@ -178,6 +178,14 @@ MonoBehaviour:
     m_Localized: Simple
     m_Metadata:
       m_Items: []
+  - m_Id: 45862652269559808
+    m_Localized: Sustainable
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45862663573209088
+    m_Localized: Fast Fashion
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

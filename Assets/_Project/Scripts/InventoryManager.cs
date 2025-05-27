@@ -6,7 +6,7 @@ namespace Mystie.Dressup
 {
     public class InventoryManager : MonoBehaviour
     {
-        [field: SerializeField] public List<GarmentScriptable> clothes { get; private set; }
+        [field: SerializeField] public List<ItemScriptable> clothes { get; private set; }
 
         #region Singleton
 
@@ -33,7 +33,7 @@ namespace Mystie.Dressup
             }
         }
 
-        public void AddClothes(List<GarmentScriptable> newClothes)
+        public void AddClothes(List<ItemScriptable> newClothes)
         {
             clothes.AddRange(newClothes);
         }
@@ -41,7 +41,7 @@ namespace Mystie.Dressup
         public void AddClothes(ClothingKitScriptable newClothingKit)
         {
             Debug.Log("Added kit " + newClothingKit.ToString());
-            //foreach (GarmentScriptable garment in newClothingKit.garments)
+            //foreach (ItemScriptable garment in newClothingKit.garments)
             //Debug.Log(garment.ToString());
             AddClothes(newClothingKit.garments);
         }

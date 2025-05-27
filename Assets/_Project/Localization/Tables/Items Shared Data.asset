@@ -14,7 +14,127 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: Items
   m_TableCollectionNameGuidString: 06fb516fd519a2944b963e89afed6231
-  m_Entries: []
+  m_Entries:
+  - m_Id: 2342392686182400
+    m_Key: Baggy Striped TShirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2342411682185216
+    m_Key: Basic White TShirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2342519517741056
+    m_Key: Black Crop Top
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2342847550062592
+    m_Key: Brown Paisley Blouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2342860007145472
+    m_Key: Cableknit Sweater
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2342974960435200
+    m_Key: Cropped Floral Shirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343011572514816
+    m_Key: Fitted Blazer and White Button Up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343047752581120
+    m_Key: Grey Blazer and White Button Up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343086784774144
+    m_Key: Loose Graphic TShirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343117390610432
+    m_Key: Plain White Button-Up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343234046787584
+    m_Key: Black Pencil Skirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343264019283968
+    m_Key: Black Skinny Jeans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343526385582080
+    m_Key: Blue Skinny Jeans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343560883732480
+    m_Key: Distressed Jeans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343593393782784
+    m_Key: Floral Maxi Skirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343638239281152
+    m_Key: Grey Dress Pants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343674461290496
+    m_Key: Leggings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343706975535104
+    m_Key: Navy Dress Pants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343728123215872
+    m_Key: Sweatpants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343765779677184
+    m_Key: Polka Dot Skirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343864698142720
+    m_Key: Striped Dress Pants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343910038568960
+    m_Key: Ballet Flats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343936039059456
+    m_Key: Brown Tall Boots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343981320765440
+    m_Key: Chelsea Boots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2344012140511232
+    m_Key: Converse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2344043341938688
+    m_Key: Flats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2344085192704000
+    m_Key: Heeled Calf High Boots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2344138225483776
+    m_Key: Heels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2344166285377536
+    m_Key: Plain Loafers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2344196551475200
+    m_Key: White Sneakers
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -25,8 +25,8 @@ namespace Mystie.Core
 
         [Space]
 
-        [SerializeField] private Button completeStageButton;
-        [SerializeField] private LocalizedString stageCompletePopupText;
+        [SerializeField] protected Button completeStageButton;
+        [SerializeField] protected LocalizedString stageCompletePopupText;
 
         protected virtual void Awake()
         {

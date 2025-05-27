@@ -1,22 +1,35 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Mystie.Dressup
 {
     public class ItemUI : MonoBehaviour
     {
-        public event Action<GarmentScriptable> onSelect;
+        public event Action<ItemScriptable, bool> onSelect;
 
+        private DragAndDropHandler dragAndDropHandler;
+
+        [field: SerializeField] public ItemScriptable item { get; private set; }
         [SerializeField] private Button button;
         [SerializeField] private Image image;
-        [field: SerializeField] public GarmentScriptable garment { get; private set; }
+
+        [Space]
+
+        [SerializeField] private Color buttonColor;
+        [SerializeField] private Color buttonColorSelected;
+        [SerializeField] private Color iconColor;
+        [SerializeField] private Color iconColorSelected;
+
+        [SerializeField] private bool isSelected;
 
         public List<ClothingTag> Tags
         {
-            get => garment != null ? garment.tags : new List<ClothingTag>();
+            get => item != null ? item.tags : new List<ClothingTag>();
         }
 
         private bool init = false;
@@ -24,11 +37,13 @@ namespace Mystie.Dressup
         private void Awake()
         {
             if (button != null) button.onClick.AddListener(OnSelect);
+            isSelected = false;
         }
 
         private void Start()
         {
-            if (!init) Set(garment);
+            if (!init) Set(item);
+            dragAndDropHandler = DragAndDropHandler.Instance;
         }
 
         public void SetSprite(Sprite sprite)
@@ -48,18 +63,36 @@ namespace Mystie.Dressup
             gameObject.SetActive(false);
         }
 
-        public void Set(GarmentScriptable garment)
+        public void Set(ItemScriptable item)
         {
-            this.garment = garment;
-            if (image != null && garment != null)
-                SetSprite(garment.icon);
+            this.item = item;
+            if (image != null && item != null)
+                SetSprite(item.icon);
             else SetEmpty();
+
+            SetSelected(isSelected);
+
             init = true;
+        }
+
+        [Button()]
+        public void UpdateDisplay()
+        {
+            Set(item);
         }
 
         public void OnSelect()
         {
-            onSelect?.Invoke(garment);
+            SetSelected(!isSelected);
+            onSelect?.Invoke(item, isSelected);
+        }
+
+        public void SetSelected(bool isSelected)
+        {
+            this.isSelected = isSelected;
+
+            if (button != null) button.image.color = isSelected ? buttonColorSelected : buttonColor;
+            if (image != null) image.color = isSelected ? iconColorSelected : iconColor;
         }
 
         public void Show(bool show)
@@ -74,15 +107,34 @@ namespace Mystie.Dressup
             }
         }
 
+        #region Drag and Drop
+
+        public void OnBeginDrag(PointerEventData pointer)
+        {
+
+        }
+
+        public void OnDrag(PointerEventData pointer)
+        {
+
+        }
+
+        public void OnEndDrag(PointerEventData pointer)
+        {
+
+        }
+
+        #endregion
+
         public void Reset()
         {
             image = GetComponent<Image>();
             button = GetComponent<Button>();
         }
 
-        public void OnValidate()
+        public void Oalidate()
         {
-            Set(garment);
+            SetSelected(isSelected);
         }
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d9901ef09188c468ec3663c8bccea6, type: 3}
   m_Name: Girly
   m_EditorClassIdentifier: 
-  name: Girly
+  name: girly
   displayName:
     m_TableReference:
       m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
@@ -22,6 +22,9 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  color: {r: 0.9490196, g: 0.8392157, b: 0.8627451, a: 1}
+  sprite: {fileID: 0}
+  type: 2
   references:
     version: 2
     RefIds: []

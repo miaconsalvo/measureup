@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Mystie.Core;
 using Mystie.Dialogue;
 using UnityEngine;
+using UnityEngine.UI;
 using Yarn.Unity;
 
 namespace Mystie
@@ -13,10 +14,13 @@ namespace Mystie
         public string nodeStart;
         public string nodeEnd;
 
+
         protected override void OnStageEnter()
         {
             base.OnStageEnter();
 
+            if (completeStageButton != null)
+                completeStageButton.gameObject.SetActive(false);
             dialogueRunner.StartDialogue(nodeStart);
         }
 
@@ -28,7 +32,12 @@ namespace Mystie
 
         protected void OnNodeComplete(string node)
         {
-            if (node == nodeEnd) OnStageComplete();
+            if (node == nodeEnd)
+            {
+                if (completeStageButton != null)
+                    completeStageButton.gameObject.SetActive(true);
+                else OnStageComplete();
+            }
         }
 
         protected override void OnStageComplete()

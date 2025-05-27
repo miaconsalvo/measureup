@@ -12,17 +12,18 @@ namespace Mystie.Dressup.UI
         public ContestantData contestant;
         public Transform modelAnchor;
         public Image clothingImage;
-        private Dictionary<GarmentType, GarmentScriptable> garments;        
-        private Dictionary<GarmentType, Image> garmentsUI;
+        private Dictionary<GarmentType, ItemScriptable> items;
+        private Dictionary<GarmentType, Image> itemsUI;
         public List<ClothingTag> currentTags;
 
         public List<string> opinionsAvailable;
         public List<string> opinionsUsed;
-        
-        public void Awake(){
+
+        public void Awake()
+        {
             clothingImage.gameObject.SetActive(false);
-            garments = new Dictionary<GarmentType,GarmentScriptable>();
-            garmentsUI = new Dictionary<GarmentType,Image>();
+            items = new Dictionary<GarmentType, ItemScriptable>();
+            itemsUI = new Dictionary<GarmentType, Image>();
             currentTags = new List<ClothingTag>();
             opinionsAvailable = new List<string>();
             opinionsUsed = new List<string>();
@@ -32,76 +33,91 @@ namespace Mystie.Dressup.UI
         {
             opinionsAvailable.Clear();
 
-            foreach(OpinionCondition condition in contestant.opinionConditions){
-                if(MeetsConditions(condition)){
+            foreach (OpinionCondition condition in contestant.opinionConditions)
+            {
+                if (MeetsConditions(condition))
+                {
                     opinionsAvailable.AddRange(condition.opinions);
                 }
             }
 
             opinionsAvailable = opinionsAvailable.Except(opinionsUsed).ToList();
 
-            if(opinionsAvailable.Count > 0){
+            if (opinionsAvailable.Count > 0)
+            {
                 int rand = Random.Range(0, opinionsAvailable.Count);
                 string opinion = opinionsAvailable[rand];
                 opinionsUsed.Add(opinion);
                 Debug.Log(opinion);
                 //opinionsAvailable.RemoveAt(rand);
             }
-            else{
+            else
+            {
                 Debug.Log("Hmmm… yeah this is okay.");
             }
         }
 
-        public void SelectItem(GarmentScriptable garment){
+        public void SelectItem(ItemScriptable garment)
+        {
             if (garment == null) return;
-            if (garments.ContainsKey(garment.type) && garments[garment.type] == garment){
+            if (items.ContainsKey(garment.type) && items[garment.type] == garment)
+            {
                 RemoveItem(garment);
             }
             else SetItem(garment);
         }
 
-        public void SetItem(GarmentScriptable garment){
-            if (garment == null) return;
+        public void SetItem(ItemScriptable item)
+        {
+            if (item == null) return;
 
-            if (!garments.ContainsKey(garment.type)){
-                garments.Add(garment.type, garment);
+            if (!items.ContainsKey(item.type))
+            {
+                items.Add(item.type, item);
             }
 
-            if (!garmentsUI.ContainsKey(garment.type)){
+            if (!itemsUI.ContainsKey(item.type))
+            {
                 Image img = Instantiate(clothingImage.gameObject, modelAnchor).GetComponent<Image>();
-                garmentsUI.Add(garment.type, img);
+                itemsUI.Add(item.type, img);
             }
 
-            garments[garment.type] = garment;
-            garmentsUI[garment.type].gameObject.SetActive(garment.sprite != null);
-            garmentsUI[garment.type].sprite = garment.sprite;
-            garmentsUI[garment.type].SetNativeSize();
+            items[item.type] = item;
+            itemsUI[item.type].gameObject.SetActive(item.sprite != null);
+            itemsUI[item.type].sprite = item.sprite;
+            itemsUI[item.type].SetNativeSize();
 
-            foreach(ClothingTag tag in garment.tags) {
+            foreach (ClothingTag tag in item.tags)
+            {
                 currentTags.Add(tag);
             }
 
-            Debug.Log("Set " + garment.type + ": " + garment.name);
+            Debug.Log("Set " + item.type + ": " + item.name);
         }
 
-        public void RemoveItem(GarmentScriptable garment){
-            if(garment == null) return;
+        public void RemoveItem(ItemScriptable garment)
+        {
+            if (garment == null) return;
 
-            if (garments.ContainsKey(garment.type) && garments[garment.type] == garment){
-                foreach(ClothingTag tag in garment.tags) {
-                    if(currentTags.Contains(tag)) currentTags.Remove(tag);
+            if (items.ContainsKey(garment.type) && items[garment.type] == garment)
+            {
+                foreach (ClothingTag tag in garment.tags)
+                {
+                    if (currentTags.Contains(tag)) currentTags.Remove(tag);
                 }
-                garments[garment.type] = null;
-                if (garmentsUI.ContainsKey(garment.type)){
-                    garmentsUI[garment.type].gameObject.SetActive(false);
-                    garmentsUI[garment.type].sprite = null;
+                items[garment.type] = null;
+                if (itemsUI.ContainsKey(garment.type))
+                {
+                    itemsUI[garment.type].gameObject.SetActive(false);
+                    itemsUI[garment.type].sprite = null;
                 }
             }
 
             Debug.Log("Remove " + garment.type);
         }
-    
-        private bool MeetsConditions(OpinionCondition condition){
+
+        private bool MeetsConditions(OpinionCondition condition)
+        {
             // Check required tags
             foreach (ClothingTag tag in condition.requiredTags)
             {
@@ -125,7 +141,7 @@ namespace Mystie.Dressup.UI
                     negativeCount++;
             }
 
-            if (negativeCount < condition.minNegativeTags 
+            if (negativeCount < condition.minNegativeTags
             || positiveCount < condition.minPositiveTags)
             {
                 return false;

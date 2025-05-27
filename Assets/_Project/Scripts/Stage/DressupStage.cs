@@ -15,6 +15,7 @@ namespace Mystie.Dressup.UI
         [SerializeField] private Transform itemAnchor;
         [SerializeField] private ItemUI itemPrefab;
         [SerializeField] private Button fitCheckButton;
+        [SerializeField] private ItemDetailsPanelUI itemDetailsPanelUI;
 
         [Space]
 
@@ -29,11 +30,12 @@ namespace Mystie.Dressup.UI
 
         [Space]
 
-        private List<GarmentScriptable> clothes;
+        [SerializeField] private List<ItemScriptable> clothes;
         private List<ItemUI> items;
 
         private void Start()
         {
+            if (itemDetailsPanelUI != null) itemDetailsPanelUI.Hide(false);
             UpdateItems();
         }
 
@@ -72,7 +74,7 @@ namespace Mystie.Dressup.UI
 
             for (int i = 0; i < clothes.Count; i++)
             {
-                if (i < items.Count) items[i].Set(null);
+                if (i < items.Count) items[i].Set(clothes[i]);
                 else CreateItemUI(clothes[i]);
             }
 
@@ -83,7 +85,7 @@ namespace Mystie.Dressup.UI
             }
         }
 
-        private ItemUI CreateItemUI(GarmentScriptable c)
+        private ItemUI CreateItemUI(ItemScriptable c)
         {
             ItemUI itemUI = Instantiate(itemPrefab.gameObject, itemAnchor).GetComponent<ItemUI>();
             itemUI.Set(c);
@@ -99,11 +101,35 @@ namespace Mystie.Dressup.UI
             Destroy(itemUI.gameObject);
         }
 
-        private void OnItemSelected(GarmentScriptable garment)
+        private void OnItemSelected(ItemScriptable item, bool isSelected)
         {
             if (modelUI != null)
             {
-                modelUI.SelectItem(garment);
+                modelUI.SelectItem(item);
+
+            }
+
+            StartCoroutine(OnItemSelectedCoroutine(item));
+        }
+
+        public IEnumerator OnItemSelectedCoroutine(ItemScriptable item)
+        {
+            if (itemDetailsPanelUI == null || itemDetailsPanelUI.item == item) yield break;
+
+            if (itemDetailsPanelUI.item != null)
+            {
+                itemDetailsPanelUI.Hide();
+                yield return new WaitForSeconds(itemDetailsPanelUI.fadeTime);
+            }
+
+            if (itemDetailsPanelUI.item != item)
+            {
+                itemDetailsPanelUI.Set(item);
+                if (item != null) itemDetailsPanelUI.Show();
+            }
+            else
+            {
+                itemDetailsPanelUI.Set(null);
             }
         }
 
@@ -125,8 +151,8 @@ namespace Mystie.Dressup.UI
             foreach (ItemUI item in items)
             {
 
-                if (item.garment == null ||
-                (!filterTypes.IsNullOrEmpty() && !filterTypes.Contains(item.garment.type)))
+                if (item.item == null ||
+                (!filterTypes.IsNullOrEmpty() && !filterTypes.Contains(item.item.type)))
                 {
                     item.Show(false);
                     continue;

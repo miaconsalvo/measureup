@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
+using UnityEngine.UI;
 
 namespace Mystie
 {
@@ -11,16 +12,32 @@ namespace Mystie
     {
         [SerializeField] private LocalizeStringEvent labelLocalized;
         [SerializeField] private TextMeshProUGUI label;
+        [SerializeField] private Image bg;
+        [SerializeField] private Image icon;
 
-        public void Set(LocalizedString textLocalized)
+        public void Set(LocalizedString textLocalized, Color color, Sprite sprite = null)
         {
-            labelLocalized.StringReference = textLocalized;
-            Set(textLocalized.GetLocalizedString());
+            if (bg != null) bg.color = color;
+            Set(textLocalized, sprite);
         }
 
-        public void Set(string text)
+        public void Set(LocalizedString textLocalized, Sprite sprite = null)
         {
-            label.text = text;
+            labelLocalized.StringReference = textLocalized;
+            if (!textLocalized.IsEmpty)
+                Set(textLocalized.GetLocalizedString(), sprite);
+            else Set(string.Empty);
+        }
+
+        public void Set(string text, Sprite sprite = null)
+        {
+            if (label != null) label.text = text;
+            if (icon != null)
+            {
+                icon.sprite = sprite;
+                icon.gameObject.SetActive(sprite != null);
+            }
+
             gameObject.SetActive(true);
         }
 
@@ -32,6 +49,7 @@ namespace Mystie
         public void Reset()
         {
             label = GetComponentInChildren<TextMeshProUGUI>();
+            bg = GetComponentInChildren<Image>();
         }
     }
 }

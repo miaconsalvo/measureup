@@ -19,6 +19,7 @@ namespace Mystie.Dressup
         [SerializeField] private TextMeshProUGUI nameLabel;
         [SerializeField] private TextMeshProUGUI priceLabel;
         [SerializeField] private TextMeshProUGUI priceRangeLabel;
+        [SerializeField] private TagsDisplayUI tagsUI;
 
         [field: SerializeField] public bool isPurchased { get; private set; }
 
@@ -27,19 +28,12 @@ namespace Mystie.Dressup
         [SerializeField] private Transform itemsAnchor;
         private List<ItemUI> itemsUI = new List<ItemUI>();
 
-        [Space]
-        [SerializeField] private Transform tagsAnchor;
-        [SerializeField] private LabelUI tagUIPrefab;
-        private List<LabelUI> tagsUI;
-
         [field: SerializeField] public ClothingKitScriptable clothingKit { get; private set; }
 
         private void Awake()
         {
             button = GetComponent<Button>();
             if (button != null) button.onClick.AddListener(OnSelect);
-
-            tagsUI = new List<LabelUI>();
 
             itemsUI = itemsAnchor.GetComponentsInChildren<ItemUI>().ToList();
             //Set(clothingKit);
@@ -56,21 +50,17 @@ namespace Mystie.Dressup
 
             clothingKit = kit;
 
-            if (kit != null)
+            if (kit == null)
             {
-                if (nameLabel != null) nameLabel.text = kit.name;
-                if (priceLabel != null) priceLabel.text = "$" + String.Format("{0:0.00}", kit.price);
-                if (priceRangeLabel != null) priceRangeLabel.text = kit.priceRange;
+                Clear();
+                return;
+            }
 
-                if (tagUIPrefab != null) SetTags(kit.Tags);
-            }
-            else
-            {
-                if (nameLabel != null) nameLabel.text = "None";
-                if (priceLabel != null) priceLabel.text = "$0.00";
-                if (priceRangeLabel != null) priceRangeLabel.text = "";
-                foreach (LabelUI tag in tagsUI) tag.gameObject.SetActive(false);
-            }
+            if (nameLabel != null) nameLabel.text = kit.name;
+            if (priceLabel != null) priceLabel.text = "$" + String.Format("{0:0.00}", kit.price);
+            if (priceRangeLabel != null) priceRangeLabel.text = kit.priceRange;
+
+            if (tagsUI != null) tagsUI.SetTags(kit.tags);
 
             for (int i = 0; i < itemsUI.Count; i++)
             {
@@ -78,6 +68,18 @@ namespace Mystie.Dressup
                     itemsUI[i].Set(clothingKit.garments[i]);
                 else itemsUI[i].SetEmpty();
             }
+        }
+
+        public void Clear()
+        {
+            if (nameLabel != null) nameLabel.text = "None";
+            if (priceLabel != null) priceLabel.text = "$0.00";
+            if (priceRangeLabel != null) priceRangeLabel.text = "";
+
+            tagsUI.SetTags(null);
+
+            foreach (ItemUI item in itemsUI)
+                item.SetEmpty();
         }
 
         public void SetPurchased(bool purchased = true)
@@ -101,31 +103,6 @@ namespace Mystie.Dressup
                 }
             }
 
-        }
-
-        public void SetTags(List<LocalizedString> tags)
-        {
-            if (tagUIPrefab == null) return;
-            Canvas.ForceUpdateCanvases();
-            GenerateTags(tags.Count);
-            for (int i = 0; i < tags.Count; i++)
-            {
-                tagsUI[i].Set(tags[i]);
-            }
-            Canvas.ForceUpdateCanvases();
-        }
-
-        public void GenerateTags(int amount)
-        {
-            if (tagUIPrefab == null) return;
-            for (int i = tagsUI.Count; i < amount; i++)
-            {
-                if (i > tagsUI.Count) continue;
-                LabelUI tagUI = Instantiate(tagUIPrefab.gameObject, tagsAnchor).GetComponent<LabelUI>();
-                tagUI.Deactivate();
-                tagsUI.Add(tagUI);
-            }
-            foreach (LabelUI tagUI in tagsUI) tagUI.gameObject.SetActive(false);
         }
 
         public void OnSelect()
