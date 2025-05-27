@@ -13,11 +13,34 @@ MonoBehaviour:
   m_Name: Heels
   m_EditorClassIdentifier: 
   name: Heels
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
+    m_TableEntryReference:
+      m_KeyId: 2344138225483776
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  brand: {fileID: 0}
   icon: {fileID: 21300000, guid: 620e74a9d4d20a04d8c532683000b473, type: 3}
   sprite: {fileID: 0}
   <type>k__BackingField: 2
   tags:
+  - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
   - {fileID: 11400000, guid: 82d6e20d75a73394883c9d881b0b6742, type: 2}
-  - {fileID: 11400000, guid: 33aca471313df754888be3da8c5a3f0d, type: 2}
+  - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
   - {fileID: 11400000, guid: 47fa92b562b53834aa7cc45e5e7de466, type: 2}
   - {fileID: 11400000, guid: f7c0109afcb5ab749a73d95ed2733663, type: 2}
+  references:
+    version: 2
+    RefIds: []

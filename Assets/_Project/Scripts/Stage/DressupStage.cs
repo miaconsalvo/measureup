@@ -11,10 +11,13 @@ namespace Mystie.Dressup.UI
 {
     public class DressupStage : LevelStage
     {
-        [SerializeField] private ModelUI modelUI;
+        [SerializeField] private DressupModel model;
         [SerializeField] private Transform itemAnchor;
         [SerializeField] private ItemUI itemPrefab;
         [SerializeField] private Button fitCheckButton;
+        [SerializeField] private ItemDetailsPanelUI itemDetailsPanelUI;
+        [SerializeField] private LabelUI opinionBox;
+        [SerializeField] private float opinionDuration = 4f;
 
         [Space]
 
@@ -29,14 +32,25 @@ namespace Mystie.Dressup.UI
 
         [Space]
 
-        private List<GarmentScriptable> clothes;
+        private List<ItemScriptable> clothes;
         private List<ItemUI> items;
 
         private void Start()
         {
+            if (itemDetailsPanelUI != null) itemDetailsPanelUI.Hide(false);
             UpdateItems();
+        }
 
+        protected override void OnEnable()
+        {
+            base.OnEnable();
             fitCheckButton.onClick.AddListener(OnFitCheck);
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            fitCheckButton.onClick.RemoveListener(OnFitCheck);
         }
 
         protected override void OnDestroy()
@@ -46,7 +60,7 @@ namespace Mystie.Dressup.UI
             {
                 DestroyItemUI(item);
             }
-            fitCheckButton.onClick.RemoveListener(OnFitCheck);
+
         }
 
         protected override void OnStageEnter()
@@ -62,7 +76,7 @@ namespace Mystie.Dressup.UI
 
             for (int i = 0; i < clothes.Count; i++)
             {
-                if (i < items.Count) items[i].Set(null);
+                if (i < items.Count) items[i].Set(clothes[i]);
                 else CreateItemUI(clothes[i]);
             }
 
@@ -73,34 +87,64 @@ namespace Mystie.Dressup.UI
             }
         }
 
-        private ItemUI CreateItemUI(GarmentScriptable c)
+        private ItemUI CreateItemUI(ItemScriptable c)
         {
             ItemUI itemUI = Instantiate(itemPrefab.gameObject, itemAnchor).GetComponent<ItemUI>();
-            itemUI.Set(c);
-            itemUI.onSelect += OnItemSelected;
+            itemUI.Init(c, OnItemSelected, model.AddItem, model.RemoveItem);
             items.Add(itemUI);
             return itemUI;
         }
 
         private void DestroyItemUI(ItemUI itemUI)
         {
-            itemUI.onSelect -= OnItemSelected;
             items.Remove(itemUI);
             Destroy(itemUI.gameObject);
         }
 
-        private void OnItemSelected(GarmentScriptable garment)
+        private void OnItemSelected(ItemScriptable item)
         {
-            if (modelUI != null)
+            StartCoroutine(OnItemSelectedCoroutine(item));
+        }
+
+        public IEnumerator OnItemSelectedCoroutine(ItemScriptable item)
+        {
+            if (itemDetailsPanelUI == null || itemDetailsPanelUI.item == item) yield break;
+
+            if (itemDetailsPanelUI.item != null)
             {
-                modelUI.SelectItem(garment);
+                itemDetailsPanelUI.Hide();
+                yield return new WaitForSeconds(itemDetailsPanelUI.fadeTime);
+            }
+
+            if (itemDetailsPanelUI.item != item)
+            {
+                itemDetailsPanelUI.Set(item);
+                if (item != null) itemDetailsPanelUI.Show();
+            }
+            else
+            {
+                itemDetailsPanelUI.Set(null);
             }
         }
 
         [Button]
         public void OnFitCheck()
         {
-            modelUI.FitCheck();
+            string opinion = model.FitCheck();
+            if (opinionBox != null) StartCoroutine(ShowOpinionCoroutine(opinion));
+        }
+
+        public IEnumerator ShowOpinionCoroutine(string opinion)
+        {
+            if (opinionBox.isVisible)
+            {
+                opinionBox.StopAllCoroutines();
+                opinionBox.Hide();
+                yield return new WaitForSeconds(opinionBox.fadeTime);
+            }
+
+            opinionBox.Set(opinion);
+            opinionBox.ShowForDuration(opinionDuration);
         }
 
         [Button]
@@ -115,8 +159,8 @@ namespace Mystie.Dressup.UI
             foreach (ItemUI item in items)
             {
 
-                if (item.garment == null ||
-                (!filterTypes.IsNullOrEmpty() && !filterTypes.Contains(item.garment.type)))
+                if (item.item == null ||
+                (!filterTypes.IsNullOrEmpty() && !filterTypes.Contains(item.item.type)))
                 {
                     item.Show(false);
                     continue;

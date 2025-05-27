@@ -1,34 +1,76 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Mystie.Dressup
 {
-    public class ItemUI : MonoBehaviour
+    public class ItemUI : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
     {
-        public event Action<GarmentScriptable> onSelect;
+        public event Action<ItemScriptable> onSelect;
+        public event Action<ItemScriptable> onEquip;
+        public event Action<ItemScriptable> onUnequip;
 
+        private DragAndDropHandler dragAndDropHandler;
+
+        [field: SerializeField] public ItemScriptable item { get; private set; }
         [SerializeField] private Button button;
         [SerializeField] private Image image;
-        [field: SerializeField] public GarmentScriptable garment { get; private set; }
+        private RectTransform t;
+
+        [Space]
+
+        [SerializeField] private Color buttonColor;
+        [SerializeField] private Color buttonColorSelected;
+        [SerializeField] private Color iconColor;
+        [SerializeField] private Color iconColorSelected;
+
+        [SerializeField] private bool isEquipped;
+        [SerializeField] private bool isSelectableEquip;
+        [SerializeField] private bool isSelectableUnequip;
+        [SerializeField] private bool isDraggable;
 
         public List<ClothingTag> Tags
         {
-            get => garment != null ? garment.tags : new List<ClothingTag>();
+            get => item != null ? item.tags : new List<ClothingTag>();
         }
 
         private bool init = false;
 
         private void Awake()
         {
+            t = GetComponent<RectTransform>();
             if (button != null) button.onClick.AddListener(OnSelect);
+            isEquipped = false;
         }
 
         private void Start()
         {
-            if (!init) Set(garment);
+            if (!init) Set(item);
+            dragAndDropHandler = DragAndDropHandler.Instance;
+        }
+
+        public void Init(ItemScriptable item, Action<ItemScriptable> onSelect, Action<ItemScriptable> onEquip, Action<ItemScriptable> onUnequip)
+        {
+            this.onSelect = onSelect;
+            this.onEquip = onEquip;
+            this.onUnequip = onUnequip;
+            Set(item);
+        }
+
+        public void Set(ItemScriptable item)
+        {
+            this.item = item;
+            if (image != null && item != null)
+                SetSprite(item.icon);
+            else SetEmpty();
+
+            SetEquipped(isEquipped);
+
+            init = true;
         }
 
         public void SetSprite(Sprite sprite)
@@ -43,23 +85,18 @@ namespace Mystie.Dressup
             image.enabled = false;
         }
 
-        public void Hide()
+        [Button()]
+        public void UpdateDisplay()
         {
-            gameObject.SetActive(false);
-        }
-
-        public void Set(GarmentScriptable garment)
-        {
-            this.garment = garment;
-            if (image != null && garment != null)
-                SetSprite(garment.icon);
-            else SetEmpty();
-            init = true;
+            Set(item);
         }
 
         public void OnSelect()
         {
-            onSelect?.Invoke(garment);
+            onSelect?.Invoke(item);
+
+            if (!isEquipped && isSelectableEquip) Equip();
+            else if (isEquipped && isSelectableUnequip) Unequip();
         }
 
         public void Show(bool show)
@@ -74,15 +111,74 @@ namespace Mystie.Dressup
             }
         }
 
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+
+        [Button()]
+        private void Equip()
+        {
+            SetEquipped(true);
+            onEquip?.Invoke(item);
+        }
+
+        [Button()]
+        private void Unequip()
+        {
+            SetEquipped(false);
+            onUnequip?.Invoke(item);
+        }
+
+        private void SetEquipped(bool isEquipped)
+        {
+            this.isEquipped = isEquipped;
+
+            if (button != null) button.image.color = isEquipped ? buttonColorSelected : buttonColor;
+            if (image != null) image.color = isEquipped ? iconColorSelected : iconColor;
+        }
+
+        #region Drag and Drop
+
+        public void OnBeginDrag(PointerEventData eventData)
+        {
+            if (!isDraggable) return;
+            Debug.Log("Dragging", this);
+
+            dragAndDropHandler.StartDrag(
+                this,
+                item,
+                image.sprite,
+                t.sizeDelta,
+                DropItem
+                );
+        }
+
+        public void OnDrag(PointerEventData eventData) { }
+
+        public void OnEndDrag(PointerEventData eventData)
+        {
+            if (!isDraggable) return;
+            dragAndDropHandler.EndDrag(this);
+        }
+
+        public void DropItem(object data, GameObject target)
+        {
+            DressupModelUI modelUI = null;
+            ItemScriptable item = data as ItemScriptable;
+            if (target == null || data == null
+            || (modelUI = target.GetComponent<DressupModelUI>()) == null)
+                return;
+
+            Equip();
+        }
+
+        #endregion
+
         public void Reset()
         {
             image = GetComponent<Image>();
             button = GetComponent<Button>();
-        }
-
-        public void OnValidate()
-        {
-            Set(garment);
         }
     }
 }

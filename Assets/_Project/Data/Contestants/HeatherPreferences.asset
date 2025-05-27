@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2104838e4fb1ee4880cbc8d2839a90a, type: 3}
+  m_Name: HeatherPreferences
+  m_EditorClassIdentifier: 
+  positiveTags:
+  - {fileID: 11400000, guid: 1d1096a0fc5996e42b1ba032c050ddb2, type: 2}
+  - {fileID: 11400000, guid: ab9061b34b917b441b987ce0707a3542, type: 2}
+  - {fileID: 11400000, guid: 3dd5bee944a9892499537f489a2e5591, type: 2}
+  - {fileID: 11400000, guid: 08fceaa451d9efe47b6da4818198d768, type: 2}
+  negativeTags:
+  - {fileID: 11400000, guid: 4a59490fbd8c32f4b8c82656df1877e2, type: 2}
+  - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
+  - {fileID: 11400000, guid: 60b80bf94361d1442a1de0a7652112b3, type: 2}
+  - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
+  - {fileID: 11400000, guid: 171da05d49ca2ee418d75cba4de3e287, type: 2}
+  opinionConditions:
+  - requiredTags:
+    - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
+    excludedTags: []
+    minNegativeTags: 0
+    minPositiveTags: 0
+    opinions:
+    - "Oh, this [item] is really\u2026 bright. I wouldn\u2019t usually pick this
+      colour for myself."
+    - Oh wow. I mean, the [item] is OK but does it maybe come in a different colour?
+    - "Ahh.. the outfit is interesting but I\u2019m not sure about the colours\u2026"
+  - requiredTags:
+    - {fileID: 11400000, guid: 4a59490fbd8c32f4b8c82656df1877e2, type: 2}
+    excludedTags: []
+    minNegativeTags: 0
+    minPositiveTags: 0
+    opinions:
+    - "This outfit is\u2026 ok\u2026 but I\u2019m not usually one for skirts."
+    - Oh, uh, did I mention that I kind of hate skirts? Sorry.
+    - "Sorry but I really don\u2019t like skirts. They remind me of when I was a
+      little kid on the Family Tree."
+  - requiredTags:
+    - {fileID: 11400000, guid: 171da05d49ca2ee418d75cba4de3e287, type: 2}
+    excludedTags: []
+    minNegativeTags: 0
+    minPositiveTags: 0
+    opinions:
+    - "This is super cute, but I can\u2019t see myself ever wearing it if I am being
+      honest."
+    - "Imagine the weird looks I would get dropping the kids off at school in this\u2026"
+  - requiredTags:
+    - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
+    excludedTags: []
+    minNegativeTags: 0
+    minPositiveTags: 0
+    opinions:
+    - This is pretty, but sooo uncomfortable.
+  - requiredTags: []
+    excludedTags: []
+    minNegativeTags: 2
+    minPositiveTags: 0
+    opinions:
+    - "I\u2019m sorry to be difficult but this outfit really isn\u2019t very \"me\""
+    - "Oh wow \u2013 the outfit is ok but, maybe for someone else?"
+    - "Uh, hmm, I don\u2019t really know when I would ever wear this."
+  - requiredTags:
+    - {fileID: 11400000, guid: 1d1096a0fc5996e42b1ba032c050ddb2, type: 2}
+    excludedTags:
+    - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
+    minNegativeTags: 0
+    minPositiveTags: 0
+    opinions:
+    - I love how comfortable this [item] is!
+    - I could totally see myself wearing this to run errands
+    - Wow this [item] is seriously so comfy!
+  - requiredTags:
+    - {fileID: 11400000, guid: ab9061b34b917b441b987ce0707a3542, type: 2}
+    excludedTags:
+    - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
+    minNegativeTags: 0
+    minPositiveTags: 0
+    opinions:
+    - I really love this pattern!
+    - Woah, this [item] is so fun!
+    - The pattern on this [item] is amazing!
+  - requiredTags:
+    - {fileID: 11400000, guid: ab9061b34b917b441b987ce0707a3542, type: 2}
+    excludedTags:
+    - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
+    minNegativeTags: 0
+    minPositiveTags: 2
+    opinions:
+    - "I am seriously obsessed with this outfit! It\u2019s like you read my mind!"
+    - I love everything about this!
+    - Wow! I LOVE this outfit!

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Mystie.Core;
 using Mystie.UI;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 
 namespace Mystie.Dressup
@@ -20,9 +21,12 @@ namespace Mystie.Dressup
         [Space]
 
         [SerializeField] private Button purchaseButton;
-        [SerializeField] private UIState purchaseConfirmPopup;
         [SerializeField] private LabelUI moneyUI;
         [SerializeField] private int money;
+
+        [Space]
+
+        [SerializeField] private LocalizedString purchaseConfirmText;
 
         [Space]
 
@@ -32,14 +36,12 @@ namespace Mystie.Dressup
         {
             base.Awake();
             purchaseButton.onClick.AddListener(OnPurchase);
-            purchaseConfirmPopup.onSubmit += OnConfirmPurchase;
         }
 
         protected override void OnDestroy()
         {
             base.OnDestroy();
             purchaseButton.onClick.RemoveListener(OnPurchase);
-            purchaseConfirmPopup.onSubmit -= OnConfirmPurchase;
         }
 
         private void Start()
@@ -110,11 +112,7 @@ namespace Mystie.Dressup
 
         public void OnPurchase()
         {
-            if (purchaseConfirmPopup != null)
-            {
-                uiManager.SetState(purchaseConfirmPopup);
-            }
-            else OnConfirmPurchase();
+            PopupEvents.RequestConfirmation(purchaseConfirmText, OnConfirmPurchase);
         }
 
         public void OnConfirmPurchase()

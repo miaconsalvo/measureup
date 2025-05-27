@@ -13,12 +13,35 @@ MonoBehaviour:
   m_Name: Brown Tall Boots
   m_EditorClassIdentifier: 
   name: Brown Tall Boots
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
+    m_TableEntryReference:
+      m_KeyId: 2343936039059456
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  brand: {fileID: 0}
   icon: {fileID: 21300000, guid: 620e74a9d4d20a04d8c532683000b473, type: 3}
   sprite: {fileID: 0}
   <type>k__BackingField: 2
   tags:
+  - {fileID: 11400000, guid: 879a62e18b8ddef49be4113368d9f11a, type: 2}
   - {fileID: 11400000, guid: f8a1eef32fae65f4290a8fc77836a745, type: 2}
   - {fileID: 11400000, guid: b739dd24505919541bee74a638139d25, type: 2}
   - {fileID: 11400000, guid: 47fa92b562b53834aa7cc45e5e7de466, type: 2}
   - {fileID: 11400000, guid: f7c0109afcb5ab749a73d95ed2733663, type: 2}
   - {fileID: 11400000, guid: b9ea74aeb487b8444a46e29887668b1c, type: 2}
+  references:
+    version: 2
+    RefIds: []
