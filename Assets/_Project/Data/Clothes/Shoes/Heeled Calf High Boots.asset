@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Heeled Calf High Boots
   m_EditorClassIdentifier: 
   name: Heeled Calf High Boots
-  icon: {fileID: 21300000, guid: 620e74a9d4d20a04d8c532683000b473, type: 3}
-  sprite: {fileID: 0}
+  icon: {fileID: 21300000, guid: 06909a17ca7134643af40ccb7b1feae7, type: 3}
+  sprite: {fileID: 21300000, guid: 96c401b4d4f490444be71bf26b5d7e90, type: 3}
   <type>k__BackingField: 2
   tags:
   - {fileID: 11400000, guid: 47fa92b562b53834aa7cc45e5e7de466, type: 2}
