@@ -1,0 +1,74 @@
+title: SetUp_HeatherFinalGroupChat
+tags: 
+position: 22,169
+---
+//get heather reaction 
+// 0 = good, 1 = neutral, 2 = neg
+
+
+Donna: and so she somehow managed to get the whole visit comped lol
+Alex: your mother is a force to be reckoned with
+Alex: i both respect and fear her
+Calvin: i respectfully fear her
+
+<<if $HeatherReaction == 0>>
+    <<jump PosReact_HeatherFinalGroupChat>>
+<<elseif $HeatherReaction == 1>>
+    <<jump NeutralReact_HeatherFinalGroupChat>>
+<<elseif $HeatherReaction == 2>>
+    <<jump NeutralReact_HeatherFinalGroupChat>>
+<<endif>>
+===
+title: NegReact_HeatherFinalGroupChat
+tags: 
+position: 241,397
+---
+Alex: i mean …i thought the outfit was nice
+Alex: even if she wasn’t super into it
+Calvin: girl she hated that outfit lol
+
+<<jump End_HeatherFinalGroupChat>>
+===
+title: PosReact_HeatherFinalGroupChat
+tags: 
+position: -178,399
+---
+Alex: omg that was such a wholesome show!!!
+Calvin: look at you changing lives and shit
+Calvin: legit tho she looked fire in that fit
+Elie: it would have been really depressing to see you put her in that skirt she clearly hated and pulled on all her childhood trauma
+Alex: yeah… that
+    -> Yeah but now my boss is on my ass
+    ->I just couldn't do it to her
+    -> idk this show is about getting out of your comfort zone a bit
+Donna: don’t get all up in your head about it
+Calvin: yeah just go with what feels right to you
+
+<<jump End_HeatherFinalGroupChat>>
+===
+title: NeutralReact_HeatherFinalGroupChat
+tags: 
+position: 33,392
+---
+Donna: well that was definitely an outfit of somekind
+Alex: it was fine!
+Calvin: yeah it wasn’t like BAD or anything
+Donna: or GOOD lol
+Alex: it was fiiiine don’t be jerks about it
+
+    -> No I definitely whiffed on this one
+    -> I thought it was cute!
+    -> She seemed really picky honestly
+    
+Calvin: this is like your practice run don’t sweat it
+
+<<jump End_HeatherFinalGroupChat>>
+===
+title: End_HeatherFinalGroupChat
+tags: 
+position: 36,602
+---
+Elie: don’t put too much pressure on yourself
+Elie: let’s go for drinks tonight! we can gab about it all
+Alex: yessss
+===
