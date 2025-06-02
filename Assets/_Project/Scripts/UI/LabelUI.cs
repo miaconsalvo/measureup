@@ -11,8 +11,11 @@ namespace Mystie
 {
     public class LabelUI : MonoBehaviour
     {
+        public Button button { get; private set; }
+        public Toggle toggle { get; private set; }
+
         [SerializeField] private CanvasGroup canvas;
-        [field: SerializeField] public bool isVisible { get; private set; }
+        [field: SerializeField] public bool isVisible { get; private set; } = true;
         [SerializeField] private LocalizeStringEvent labelLocalized;
         [SerializeField] private TextMeshProUGUI label;
         [SerializeField] private Image bg;
@@ -21,8 +24,17 @@ namespace Mystie
 
         private void Awake()
         {
+            button = GetComponent<Button>();
+            toggle = GetComponent<Toggle>();
+
             if (isVisible) Show(false);
             else Hide(false);
+        }
+
+        private void OnDestroy()
+        {
+            if (button != null) button.onClick.RemoveAllListeners();
+            if (toggle != null) toggle.onValueChanged.RemoveAllListeners();
         }
 
         public void Set(LocalizedString textLocalized, Color color, Sprite sprite = null)
@@ -33,7 +45,8 @@ namespace Mystie
 
         public void Set(LocalizedString textLocalized, Sprite sprite = null)
         {
-            labelLocalized.StringReference = textLocalized;
+            if (labelLocalized != null)
+                labelLocalized.StringReference = textLocalized;
             if (!textLocalized.IsEmpty)
                 Set(textLocalized.GetLocalizedString(), sprite);
             else Set(string.Empty);
@@ -47,8 +60,6 @@ namespace Mystie
                 icon.sprite = sprite;
                 icon.gameObject.SetActive(sprite != null);
             }
-
-            gameObject.SetActive(true);
         }
 
         public void Show(bool fade = true)

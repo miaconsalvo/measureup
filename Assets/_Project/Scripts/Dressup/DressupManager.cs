@@ -1,22 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Febucci.UI.Core;
 using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
 
 namespace Mystie.Dressup
 {
-    public class DressupModel : MonoBehaviour
+    public class DressupManager : MonoBehaviour
     {
-        private static DressupModel instance;
+        private static DressupManager instance;
+
+        public event Action<ItemScriptable> onItemAdded;
+        public event Action<ItemScriptable> onItemRemoved;
 
         public ContestantData contestant;
-        public Transform modelAnchor;
-        public Image clothingImage;
-        [SerializeField] private Dictionary<GarmentType, ItemScriptable> items;
-        private Dictionary<GarmentType, Image> itemsUI;
+        [SerializeField] private Dictionary<ItemType, ItemScriptable> items;
+
         public List<ClothingTag> currentTags;
 
         public List<string> opinionsAvailable;
@@ -25,20 +26,42 @@ namespace Mystie.Dressup
         private int negativeCount = 0;
         private int positiveCount = 0;
 
-        [SerializeField] private List<ItemScriptable> startingItems;
+        [SerializeField] private Dictionary<ItemType, ItemScriptable> startingItems;
+        [SerializeField] private Dictionary<ItemType, ItemScriptable> underwearItems;
 
         public void Awake()
         {
             instance = this;
 
-            clothingImage.gameObject.SetActive(false);
-            items = new Dictionary<GarmentType, ItemScriptable>();
-            itemsUI = new Dictionary<GarmentType, Image>();
+
+            items = new Dictionary<ItemType, ItemScriptable>();
+
             currentTags = new List<ClothingTag>();
             opinionsAvailable = new List<string>();
             opinionsUsed = new List<string>();
 
-            foreach (ItemScriptable item in startingItems) AddItem(item);
+            SetModel(contestant);
+        }
+
+        public void SetModel(ContestantData newContestant)
+        {
+            contestant = newContestant;
+
+            if (contestant == null) return;
+
+            startingItems = new Dictionary<ItemType, ItemScriptable>();
+            underwearItems = new Dictionary<ItemType, ItemScriptable>();
+
+            foreach (ItemScriptable item in contestant.startingClothes) startingItems.Add(item.type, item);
+            foreach (ItemScriptable item in contestant.underwear) underwearItems.Add(item.type, item);
+
+            foreach (ItemScriptable item in startingItems.Values) AddItem(item);
+            foreach (ItemType itemType in underwearItems.Keys)
+            {
+                if (underwearItems.ContainsKey(itemType) && !items.ContainsKey(itemType))
+                    AddItem(underwearItems[itemType]);
+            }
+
         }
 
         public string FitCheck()
@@ -57,7 +80,7 @@ namespace Mystie.Dressup
 
             if (opinionsAvailable.Count > 0)
             {
-                int rand = Random.Range(0, opinionsAvailable.Count);
+                int rand = UnityEngine.Random.Range(0, opinionsAvailable.Count);
                 string opinion = opinionsAvailable[rand];
                 opinionsUsed.Add(opinion);
                 return opinion;
@@ -86,35 +109,32 @@ namespace Mystie.Dressup
 
         public void AddItem(ItemScriptable item)
         {
-            if (item == null || items.ContainsValue(item)) return;
+            if (item == null || items.ContainsValue(item))
+                return;
 
-            if (!items.ContainsKey(item.type))
+            if (items.ContainsKey(item.type))
             {
-                items.Add(item.type, item);
+                if (items[item.type] != null && items[item.type] != item)
+                    RemoveItem(items[item.type], true);
+                items[item.type] = item;
             }
+            else items.Add(item.type, item);
 
-            if (!itemsUI.ContainsKey(item.type))
-            {
-                Image img = Instantiate(clothingImage.gameObject, modelAnchor).GetComponent<Image>();
-                itemsUI.Add(item.type, img);
-            }
 
-            items[item.type] = item;
-            itemsUI[item.type].gameObject.SetActive(item.sprite != null);
-            itemsUI[item.type].sprite = item.sprite;
-            itemsUI[item.type].SetNativeSize();
 
             foreach (ClothingTag tag in item.tags)
             {
                 currentTags.Add(tag);
             }
 
+            onItemAdded?.Invoke(item);
+
             UpdateTags();
 
-            Debug.Log("Added " + item.type + "(" + item.type + ")");
+            Debug.Log("Added " + item.name + "(" + item.type + ")");
         }
 
-        public void RemoveItem(ItemScriptable item)
+        public void RemoveItem(ItemScriptable item, bool swapping = false)
         {
             if (item == null || !items.ContainsValue(item)) return;
 
@@ -123,11 +143,11 @@ namespace Mystie.Dressup
                 if (currentTags.Contains(tag)) currentTags.Remove(tag);
             }
             items[item.type] = null;
-            if (itemsUI.ContainsKey(item.type))
-            {
-                itemsUI[item.type].gameObject.SetActive(false);
-                itemsUI[item.type].sprite = null;
-            }
+
+            onItemRemoved?.Invoke(item);
+
+            if (!swapping && !contestant.underwear.Contains(item) && underwearItems.ContainsKey(item.type))
+                AddItem(underwearItems[item.type]);
 
             UpdateTags();
 

@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 5205913949203221446}
-  optionViewAnchor: {fileID: 5190169783820309212}
+  optionAnchor: {fileID: 5190169783820309212}
   optionViewPrefab: {fileID: -2032660799021887138, guid: fe9a5b39d5435c24388abb3231c074f5, type: 3}
   palette: {fileID: 0}
   fadeTime: 0.1

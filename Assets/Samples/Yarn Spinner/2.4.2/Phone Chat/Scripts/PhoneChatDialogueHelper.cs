@@ -81,6 +81,8 @@ namespace Mystie.UI
                 StopCoroutine(currentTypewriterEffect);
             }
 
+
+
             InstantiateMessageBox();
             messageBox.SetText(dialogueLine.TextWithoutCharacterName.Text, dialogueLine.CharacterName);
 

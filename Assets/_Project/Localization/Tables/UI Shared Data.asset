@@ -87,6 +87,34 @@ MonoBehaviour:
     m_Key: Restart
     m_Metadata:
       m_Items: []
+  - m_Id: 69662810392231936
+    m_Key: Dossier/Style Rule
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69662868026163200
+    m_Key: Dossier/Contestant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69662896195108864
+    m_Key: Dossier/Age
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69662922698915840
+    m_Key: Dossier/Occupation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69663003619622912
+    m_Key: Dossier/Notes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69688031933366272
+    m_Key: Dossier/Likes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69688052141522944
+    m_Key: Dossier/Dislikes
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

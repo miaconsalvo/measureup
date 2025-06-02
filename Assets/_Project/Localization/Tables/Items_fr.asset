@@ -17,7 +17,19 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 06fb516fd519a2944b963e89afed6231, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 3397726926274560
+    m_Localized: Camisole Blanche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3397776632971264
+    m_Localized: Chaussettes Blanches
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2344138225483776
+    m_Localized: Talons Hauts
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

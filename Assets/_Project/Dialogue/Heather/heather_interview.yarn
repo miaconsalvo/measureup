@@ -2,90 +2,80 @@ title: HeatherInterviewStart
 tags: 
 position: -129,-2
 ---
-<<declare $QuestionA = false>>
-<<declare $QuestionB = false>>
-<<declare $QuestionC = false>>
-<<declare $QuestionD = false>>
-<<declare $QuestionE = false>>
-<<declare $QuestionsAsked = 0>>
-<<declare $QuestionsMax = 3>>
+Hellow
 <<jump HeatherInterviewQuestions>>
 ===
 title: HeatherInterviewQuestions
 tags: 
 position: 119,-1
 ---
-<< if $QuestionsAsked >= $QuestionsMax>>
+<< if max_questions() == true>>
     <<jump HeatherInterviewEnd>>
 <<endif>>
 
--> A. How would you describe your day-to-day wardrobe? <<if $QuestionA == false>>
+-> A. How would you describe your day-to-day wardrobe? <<if question_asked(0) == false>>
     <<jump HeatherInterviewQuestionA>>
--> B. What would you never be caught dead wearing? <<if $QuestionB == false>>
+-> B. What would you never be caught dead wearing? <<if question_asked(1) == false>>
     <<jump HeatherInterviewQuestionB>>
--> C. What is your most loved item in your wardrobe? <<if $QuestionC == false>>
+-> C. What is your most loved item in your wardrobe? <<if question_asked(2) == false>>
     <<jump HeatherInterviewQuestionC>>
--> D. What do you want to get out of this makeover? <<if $QuestionD == false>>
+-> D. What do you want to get out of this makeover? <<if question_asked(3) == false>>
     <<jump HeatherInterviewQuestionD>>
--> E. What is an outfit you’ve worn that you’ll never wear again? <<if $QuestionE == false>>
+-> E. What is an outfit you've worn that you'll never wear again? <<if question_asked(4) == false>>
     <<jump HeatherInterviewQuestionE>>
 ===
 title: HeatherInterviewQuestionA
 tags: 
 position: 119,-1
 ---
-<<set $QuestionA to true>>
-<<set $QuestionsAsked = $QuestionsAsked + 1>>
 Heather: Well, with the kids at school and in after school sports and activities I usually go with comfort over anything else. 
 Heather: Yoga pants are my go to. Usually a [tag]T-Shirt[/tag] with it, and then sneakers. 
 Heather: It's a pretty basic vibe.
+<<add_note 0 0>>
 <<jump HeatherInterviewQuestions>>
 ===
 title: HeatherInterviewQuestionB
 tags: 
 position: 119,-1
 ---
-<<set $QuestionB to true>>
-<<set $QuestionsAsked = $QuestionsAsked + 1>>
 Heather: That's easy. Skirts.
 Heather: I hated when wardrobe would put the big frilly and flashy ones on me as Jenny on The Family Tree.
 Heather: I think that has stuck with me ever since. 
 Heather: It made sense for the character, I guess, but as a kid I haaaated them.
+<<add_note 1 1>>
 <<jump HeatherInterviewQuestions>>
 ===
 title: HeatherInterviewQuestionC
 tags: 
 position: 119,-1
 ---
-<<set $QuestionC to true>>
-<<set $QuestionsAsked = $QuestionsAsked + 1>>
 Heather: Hmm... like worn the most? Or what I love for its style the most?
 -> What you wear the the most.
     Heather: That would be my tried and true black yoga pants.
     Heather: I think I won like five pairs of the same ones now. 
+    <<add_note 2 2>>
 -> What you love the most, regardless of how often you wear it. 
     Heather: I have a designer letterman-style jacket that I'll wear to the kids games.
     Heather: The kids got it for me! Well, their dad did. You know how it goes. 
+    <<add_note 2 3>>
 <<jump HeatherInterviewQuestions>>
 ===
 title: HeatherInterviewQuestionD
 tags: 
 position: 119,-1
 ---
-<<set $QuestionD to true>>
-<<set $QuestionsAsked = $QuestionsAsked + 1>>
-Heather: I’d like to feel like I have an outfit or style beyond the school run mom.
+Heather: I'd like to feel like I have an outfit or style beyond the school run mom.
 Heather: As much as I live and die by my athleisure wardrobe, I know I can pull off some other looks - I just need a helping hand.
+<<add_note 3 4>>
 <<jump HeatherInterviewQuestions>>
 ===
 title: HeatherInterviewQuestionE
 tags: 
 position: 119,-1
 ---
-<<set $QuestionE to true>>
-<<set $QuestionsAsked = $QuestionsAsked + 1>>
 Heather: I had to wear a blazer and suit pants to court, thanks to some actions of an old co-star who needed a character witness for a custody case.
 Heather: That day cost him two favours because I despise uncomfy, stuffy clothes, and dealing with lawyers, haha!
+<<add_note 4 5>>
 <<jump HeatherInterviewQuestions>>
 ===
 title: HeatherInterviewEnd

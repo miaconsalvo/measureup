@@ -138,6 +138,18 @@ MonoBehaviour:
     m_Localized: White Sneakers
     m_Metadata:
       m_Items: []
+  - m_Id: 3397697788444672
+    m_Localized: Spats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3397726926274560
+    m_Localized: White Tanktop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3397776632971264
+    m_Localized: White Socks
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

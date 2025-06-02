@@ -12,17 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2104838e4fb1ee4880cbc8d2839a90a, type: 3}
   m_Name: HeatherPreferences
   m_EditorClassIdentifier: 
+  name: Heather
+  age: 37
+  occupation:
+    m_TableReference:
+      m_TableCollectionName: GUID:f03f2fe8fa8d33c458424d23ac2e6d18
+    m_TableEntryReference:
+      m_KeyId: 192219667234816
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  actor: {fileID: 11400000, guid: a280ec2ec23d79a46a27b862a3b1a990, type: 2}
+  startingClothes: []
+  underwear:
+  - {fileID: 11400000, guid: 1fe112ceb73469c418312d74fe818f7f, type: 2}
+  - {fileID: 11400000, guid: 297297d9adfb9394faf593dd8751b544, type: 2}
+  - {fileID: 11400000, guid: 32491044177b82f4aa8931a5a806314b, type: 2}
   positiveTags:
-  - {fileID: 11400000, guid: 1d1096a0fc5996e42b1ba032c050ddb2, type: 2}
-  - {fileID: 11400000, guid: ab9061b34b917b441b987ce0707a3542, type: 2}
+  - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
+  - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
   - {fileID: 11400000, guid: 3dd5bee944a9892499537f489a2e5591, type: 2}
-  - {fileID: 11400000, guid: 08fceaa451d9efe47b6da4818198d768, type: 2}
+  - {fileID: 11400000, guid: cbeb23e41baf0ad429d46c94024c2519, type: 2}
   negativeTags:
-  - {fileID: 11400000, guid: 4a59490fbd8c32f4b8c82656df1877e2, type: 2}
+  - {fileID: 11400000, guid: 46da594aa093a314ca17348cd4a39004, type: 2}
   - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
-  - {fileID: 11400000, guid: 60b80bf94361d1442a1de0a7652112b3, type: 2}
+  - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}
   - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
-  - {fileID: 11400000, guid: 171da05d49ca2ee418d75cba4de3e287, type: 2}
+  - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
   opinionConditions:
   - requiredTags:
     - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
@@ -35,7 +52,7 @@ MonoBehaviour:
     - Oh wow. I mean, the [item] is OK but does it maybe come in a different colour?
     - "Ahh.. the outfit is interesting but I\u2019m not sure about the colours\u2026"
   - requiredTags:
-    - {fileID: 11400000, guid: 4a59490fbd8c32f4b8c82656df1877e2, type: 2}
+    - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
     excludedTags: []
     minNegativeTags: 0
     minPositiveTags: 0
@@ -45,7 +62,8 @@ MonoBehaviour:
     - "Sorry but I really don\u2019t like skirts. They remind me of when I was a
       little kid on the Family Tree."
   - requiredTags:
-    - {fileID: 11400000, guid: 171da05d49ca2ee418d75cba4de3e287, type: 2}
+    - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
+    - {fileID: 11400000, guid: 47fa92b562b53834aa7cc45e5e7de466, type: 2}
     excludedTags: []
     minNegativeTags: 0
     minPositiveTags: 0
@@ -69,7 +87,7 @@ MonoBehaviour:
     - "Oh wow \u2013 the outfit is ok but, maybe for someone else?"
     - "Uh, hmm, I don\u2019t really know when I would ever wear this."
   - requiredTags:
-    - {fileID: 11400000, guid: 1d1096a0fc5996e42b1ba032c050ddb2, type: 2}
+    - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
     excludedTags:
     - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
     minNegativeTags: 0
@@ -79,7 +97,7 @@ MonoBehaviour:
     - I could totally see myself wearing this to run errands
     - Wow this [item] is seriously so comfy!
   - requiredTags:
-    - {fileID: 11400000, guid: ab9061b34b917b441b987ce0707a3542, type: 2}
+    - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
     excludedTags:
     - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
     minNegativeTags: 0
@@ -88,8 +106,7 @@ MonoBehaviour:
     - I really love this pattern!
     - Woah, this [item] is so fun!
     - The pattern on this [item] is amazing!
-  - requiredTags:
-    - {fileID: 11400000, guid: ab9061b34b917b441b987ce0707a3542, type: 2}
+  - requiredTags: []
     excludedTags:
     - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
     minNegativeTags: 0
@@ -98,3 +115,6 @@ MonoBehaviour:
     - "I am seriously obsessed with this outfit! It\u2019s like you read my mind!"
     - I love everything about this!
     - Wow! I LOVE this outfit!
+  references:
+    version: 2
+    RefIds: []

@@ -12,13 +12,14 @@ namespace Mystie
     public class TagsDisplayUI : MonoBehaviour
     {
         [SerializeField] private Transform tagsAnchor;
-        [SerializeField] private LabelUI tagUIPrefab;
+        [SerializeField] private TagLabelUI tagUIPrefab;
         [SerializeField] private bool disableWhenEmpty = false;
         [SerializeField] private List<ClothingTag> tags = new List<ClothingTag>();
         [SerializeField] private List<ClothingTag.TagType> order = new List<ClothingTag.TagType>();
         [SerializeField] private List<ClothingTag.TagType> filter = new List<ClothingTag.TagType>();
 
-        private List<LabelUI> tagsUI = new List<LabelUI>();
+        private List<TagLabelUI> tagsUI = new List<TagLabelUI>();
+        private List<TagLabelUI> currentTagsUI = new List<TagLabelUI>();
 
         private void Awake()
         {
@@ -31,12 +32,12 @@ namespace Mystie
             else if (disableWhenEmpty) tagsAnchor.gameObject.SetActive(false);
         }
 
-        public void SetTags(List<ClothingTag> newTags)
+        public List<TagLabelUI> SetTags(List<ClothingTag> newTags)
         {
             ClearTags();
             tags.Clear();
 
-            if (tagUIPrefab == null || newTags.IsNullOrEmpty()) return;
+            if (tagUIPrefab == null || newTags.IsNullOrEmpty()) return currentTagsUI;
 
             if (filter.Count > 0)
             {
@@ -47,7 +48,7 @@ namespace Mystie
             }
             else tags = newTags;
 
-            if (tags.IsNullOrEmpty()) return;
+            if (tags.IsNullOrEmpty()) return currentTagsUI;
 
             tags = tags.OrderBy(tag => order.IndexOf(tag.type)).ToList();
 
@@ -55,25 +56,27 @@ namespace Mystie
 
             GenerateTags(tags.Count);
 
-            int i = 0;
-            foreach (ClothingTag tag in tags)
+            for (int i = 0; i < tags.Count; i++)
             {
-                tagsUI[i].Set(tag.displayName, tag.color, tag.sprite);
-                i++;
+                tagsUI[i].Set(tags[i]);
+                tagsUI[i].gameObject.SetActive(true);
+                currentTagsUI.Add(tagsUI[i]);
             }
 
             tagsAnchor.gameObject.SetActive(true);
 
             Canvas.ForceUpdateCanvases();
+
+            return currentTagsUI;
         }
 
-        public void GenerateTags(int amount)
+        private void GenerateTags(int amount)
         {
             if (tagUIPrefab == null) return;
             for (int i = tagsUI.Count; i < amount; i++)
             {
                 //if (i > tagsUI.Count) continue;
-                LabelUI tagUI = Instantiate(tagUIPrefab.gameObject, tagsAnchor).GetComponent<LabelUI>();
+                TagLabelUI tagUI = Instantiate(tagUIPrefab.gameObject, tagsAnchor).GetComponent<TagLabelUI>();
                 tagsUI.Add(tagUI);
             }
 
@@ -82,7 +85,8 @@ namespace Mystie
 
         public void ClearTags()
         {
-            foreach (LabelUI tagUI in tagsUI) tagUI.Deactivate();
+            currentTagsUI = new List<TagLabelUI>();
+            foreach (TagLabelUI tagUI in tagsUI) tagUI.Deactivate();
             if (disableWhenEmpty) tagsAnchor.gameObject.SetActive(false);
         }
     }

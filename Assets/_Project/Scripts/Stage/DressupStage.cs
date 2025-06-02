@@ -4,14 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using Mystie.Core;
 using NaughtyAttributes;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Mystie.Dressup.UI
+namespace Mystie.Dressup
 {
     public class DressupStage : LevelStage
     {
-        [SerializeField] private DressupModel model;
+        public event Action<List<ItemScriptable>> onItemListUpdate;
+        public event Action<List<ItemUI>> onItemUIListUpdate;
+
+        [SerializeField] private DressupManager model;
         [SerializeField] private Transform itemAnchor;
         [SerializeField] private ItemUI itemPrefab;
         [SerializeField] private Button fitCheckButton;
@@ -25,15 +29,8 @@ namespace Mystie.Dressup.UI
 
         [Space]
 
-        public FilterMode filterMode = FilterMode.OR;
-        [SerializeField] private List<GarmentType> filterTypes = new List<GarmentType>();
-        [SerializeField] private List<ClothingTag> filterTags = new List<ClothingTag>();
-        public enum FilterMode { AND, OR }
-
-        [Space]
-
         private List<ItemScriptable> clothes;
-        private List<ItemUI> items;
+        private List<ItemUI> itemsUI;
 
         private void Start()
         {
@@ -56,11 +53,10 @@ namespace Mystie.Dressup.UI
         protected override void OnDestroy()
         {
             base.OnDestroy();
-            foreach (ItemUI item in items.ToList())
+            foreach (ItemUI ui in itemsUI.ToList())
             {
-                DestroyItemUI(item);
+                DestroyItemUI(ui);
             }
-
         }
 
         protected override void OnStageEnter()
@@ -69,35 +65,39 @@ namespace Mystie.Dressup.UI
             UpdateItems();
         }
 
+        [Button()]
         public void UpdateItems()
         {
-            if (items.IsNullOrEmpty()) items = new List<ItemUI>();
+            if (itemsUI == null) itemsUI = new List<ItemUI>();
             clothes = InventoryManager.Instance.clothes;
 
             for (int i = 0; i < clothes.Count; i++)
             {
-                if (i < items.Count) items[i].Set(clothes[i]);
+                if (i < itemsUI.Count) itemsUI[i].Set(clothes[i]);
                 else CreateItemUI(clothes[i]);
             }
 
-            for (int i = clothes.Count; i < items.Count; i++)
+            for (int i = clothes.Count; i < itemsUI.Count; i++)
             {
-                items[i].Set(null);
-                items[i].gameObject.SetActive(false);
+                itemsUI[i].Set(null);
+                itemsUI[i].gameObject.SetActive(false);
             }
+
+            onItemListUpdate?.Invoke(clothes);
+            onItemUIListUpdate?.Invoke(itemsUI);
         }
 
         private ItemUI CreateItemUI(ItemScriptable c)
         {
             ItemUI itemUI = Instantiate(itemPrefab.gameObject, itemAnchor).GetComponent<ItemUI>();
-            itemUI.Init(c, OnItemSelected, model.AddItem, model.RemoveItem);
-            items.Add(itemUI);
+            itemUI.Init(c, OnItemSelected, model.AddItem, (item) => { model.RemoveItem(item); });
+            itemsUI.Add(itemUI);
             return itemUI;
         }
 
         private void DestroyItemUI(ItemUI itemUI)
         {
-            items.Remove(itemUI);
+            itemsUI.Remove(itemUI);
             Destroy(itemUI.gameObject);
         }
 
@@ -151,48 +151,6 @@ namespace Mystie.Dressup.UI
         public void Validate()
         {
 
-        }
-
-        [Button]
-        public void UpdateFilter()
-        {
-            foreach (ItemUI item in items)
-            {
-
-                if (item.item == null ||
-                (!filterTypes.IsNullOrEmpty() && !filterTypes.Contains(item.item.type)))
-                {
-                    item.Show(false);
-                    continue;
-                }
-
-                List<ClothingTag> tags = item.Tags;
-                bool enabled = filterTags.IsNullOrEmpty();
-
-                foreach (ClothingTag tag in tags)
-                {
-                    if (filterMode == FilterMode.OR && (enabled || tags.Contains(tag)))
-                    {
-                        enabled = true;
-                        break;
-                    }
-                    else if (filterMode == FilterMode.AND && !tags.Contains(tag))
-                    {
-                        enabled = false;
-                        break;
-                    }
-                }
-
-                item.Show(enabled);
-            }
-        }
-
-        [Button]
-        public void ClearFilter()
-        {
-            filterTypes.Clear();
-            filterTags.Clear();
-            UpdateFilter();
         }
     }
 }

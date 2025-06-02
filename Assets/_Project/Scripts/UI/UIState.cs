@@ -141,7 +141,7 @@ namespace Mystie.UI
             if (!closeSFX.IsNull)
                 RuntimeManager.PlayOneShot(closeSFX);
 
-            Debug.Log("Close state : " + gameObject.name);
+            //Debug.Log("Close state : " + gameObject.name);
 
             onExit?.Invoke();
         }

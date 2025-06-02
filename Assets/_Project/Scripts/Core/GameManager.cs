@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
+using Yarn.Unity;
 
 namespace Mystie.Core
 {
@@ -25,13 +26,20 @@ namespace Mystie.Core
 
         public const string systemDataPath = "System Data";
 
+        public static string playername = "Cindy";
+        [YarnFunction("playername")]
+        public static string Playername()
+        {
+            return playername;
+        }
+
         #region Singleton
 
         public static GameManager Instance
         {
             get
             {
-                if (instance == null) 
+                if (instance == null)
                     instance = FindObjectOfType<GameManager>();
                 return instance;
             }

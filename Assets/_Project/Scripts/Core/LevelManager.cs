@@ -10,8 +10,10 @@ namespace Mystie.Core
         #region Singleton
 
         private static LevelManager instance;
-        public static LevelManager Instance {
-            get {
+        public static LevelManager Instance
+        {
+            get
+            {
                 if (instance == null)
                     instance = FindObjectOfType<LevelManager>();
 
@@ -24,13 +26,17 @@ namespace Mystie.Core
         #region Events
 
         public event Action<LevelStageType> onStageSet;
-        
+
         #endregion
+
+        [field: SerializeField] public EpisodeScriptable episode { get; private set; }
+        [field: SerializeField] public DossierManager dossier { get; private set; }
 
         private int stageIndex;
         public List<LevelStageType> stages = new List<LevelStageType>();
-        public LevelStageType CurrentStage {
-            get => stageIndex < stages.Count? stages[stageIndex] : stages[stages.Count-1];
+        public LevelStageType CurrentStage
+        {
+            get => stageIndex < stages.Count ? stages[stageIndex] : stages[stages.Count - 1];
         }
 
         public void Awake()
@@ -40,6 +46,9 @@ namespace Mystie.Core
                 Destroy(gameObject);
                 return;
             }
+
+            dossier = FindObjectOfType<DossierManager>();
+            dossier.SetEpisode(episode);
         }
 
         private void Start()
@@ -56,7 +65,8 @@ namespace Mystie.Core
             {
                 stageIndex++;
 
-                if (stageIndex >= stages.Count) {
+                if (stageIndex >= stages.Count)
+                {
                     Debug.Log("Level Complete!");
                 }
                 else

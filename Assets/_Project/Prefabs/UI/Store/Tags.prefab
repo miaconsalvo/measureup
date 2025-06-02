@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagsAnchor: {fileID: 4886794180165019219}
-  tagUIPrefab: {fileID: 2379309713657227229, guid: 976547c1a7cb54b45a37acf0690a1934, type: 3}
+  tagUIPrefab: {fileID: -956164975001388573, guid: 976547c1a7cb54b45a37acf0690a1934, type: 3}
   disableWhenEmpty: 0
   tags: []
   order: 01000000030000000200000000000000

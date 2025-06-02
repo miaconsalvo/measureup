@@ -63,17 +63,19 @@ namespace Mystie.UI
         private IEnumerator CloseRoutine(bool confirmed)
         {
             animator.Play(closeAnim);
-            yield return new WaitForSeconds(0.5f); // Match animation length
 
             if (confirmed) onConfirm?.Invoke();
             else onCancel?.Invoke();
+
+            onClose?.Invoke();
+
+            yield return new WaitForSeconds(0.5f); // Match animation length
 
             onConfirm = null;
             onCancel = null;
             onClose = null;
 
             //gameObject.SetActive(false);
-            onClose?.Invoke();
         }
 
         private void Reset()

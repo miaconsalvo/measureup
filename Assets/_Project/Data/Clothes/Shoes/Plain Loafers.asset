@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Plain Loafers
   m_EditorClassIdentifier: 
   name: Plain Loafers
+  <type>k__BackingField: 0
   displayName:
     m_TableReference:
       m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
@@ -32,9 +33,9 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   brand: {fileID: 0}
-  icon: {fileID: 21300000, guid: 620e74a9d4d20a04d8c532683000b473, type: 3}
+  icon: {fileID: 21300000, guid: fff58210ceb97644597daba37bc194d8, type: 3}
   sprite: {fileID: 0}
-  <type>k__BackingField: 0
+  sprites: []
   tags:
   - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}
   - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}

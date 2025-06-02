@@ -135,6 +135,18 @@ MonoBehaviour:
     m_Key: White Sneakers
     m_Metadata:
       m_Items: []
+  - m_Id: 3397697788444672
+    m_Key: Spats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3397726926274560
+    m_Key: White Tanktop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3397776632971264
+    m_Key: White Socks
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

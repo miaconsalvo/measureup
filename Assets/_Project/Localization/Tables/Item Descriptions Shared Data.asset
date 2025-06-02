@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: Item Descriptions
   m_TableCollectionNameGuidString: 64cd74dbad4db0a498efa44e79477bf2
-  m_Entries: []
+  m_Entries:
+  - m_Id: 1682455194763264
+    m_Key: Heels/Description
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

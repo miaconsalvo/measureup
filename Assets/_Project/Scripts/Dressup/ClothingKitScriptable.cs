@@ -6,7 +6,7 @@ using UnityEngine.Localization;
 
 namespace Mystie.Dressup
 {
-    [CreateAssetMenu(fileName = "ClothingKit", menuName = "Clothing/Clothing Kit", order = 3)]
+    [CreateAssetMenu(fileName = "ClothingKit", menuName = "Data/Clothing/Clothing Kit", order = 3)]
     public class ClothingKitScriptable : ScriptableObject
     {
         public string name = "Clothing Kit";

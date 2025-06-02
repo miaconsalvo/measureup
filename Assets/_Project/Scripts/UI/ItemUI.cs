@@ -11,8 +11,8 @@ namespace Mystie.Dressup
     public class ItemUI : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
     {
         public event Action<ItemScriptable> onSelect;
-        public event Action<ItemScriptable> onEquip;
-        public event Action<ItemScriptable> onUnequip;
+        public event Action<ItemScriptable> onEquipped;
+        public event Action<ItemScriptable> onUnequipped;
 
         private DragAndDropHandler dragAndDropHandler;
 
@@ -53,11 +53,11 @@ namespace Mystie.Dressup
             dragAndDropHandler = DragAndDropHandler.Instance;
         }
 
-        public void Init(ItemScriptable item, Action<ItemScriptable> onSelect, Action<ItemScriptable> onEquip, Action<ItemScriptable> onUnequip)
+        public void Init(ItemScriptable item, Action<ItemScriptable> onSelect, Action<ItemScriptable> onEquipped, Action<ItemScriptable> onUnequipped)
         {
             this.onSelect = onSelect;
-            this.onEquip = onEquip;
-            this.onUnequip = onUnequip;
+            this.onEquipped = onEquipped;
+            this.onUnequipped = onUnequipped;
             Set(item);
         }
 
@@ -120,14 +120,14 @@ namespace Mystie.Dressup
         private void Equip()
         {
             SetEquipped(true);
-            onEquip?.Invoke(item);
+            onEquipped?.Invoke(item);
         }
 
         [Button()]
         private void Unequip()
         {
             SetEquipped(false);
-            onUnequip?.Invoke(item);
+            onUnequipped?.Invoke(item);
         }
 
         private void SetEquipped(bool isEquipped)

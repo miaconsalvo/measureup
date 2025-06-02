@@ -10,6 +10,7 @@ namespace Mystie.UI
     {
         [SerializeField] private RectTransform popupAnchor;
         [SerializeField] private ConfirmPopup popupPrefab;
+        [SerializeField] private CanvasGroup popupBG;
         private Stack<ConfirmPopup> popupPool = new Stack<ConfirmPopup>();
 
         void OnEnable() => PopupEvents.OnConfirmationRequested += ShowPopup;
@@ -25,6 +26,7 @@ namespace Mystie.UI
         {
             ConfirmPopup popup = GetPopup();
             //uiManager.SetState(purchaseConfirmPopup);
+
             popup.gameObject.SetActive(true);
             popup.Setup(messageLocalized.GetLocalizedString(),
                 () => onConfirm?.Invoke(),

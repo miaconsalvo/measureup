@@ -3,11 +3,11 @@ tags:
 position: 21,-75
 ---
 <<Them>>
-Calvin:  yeah and then the barista straight up dropped my coffee so today is the worst and i’m over it
+Calvin:  yeah and then the barista straight up dropped my coffee so today is the worst and i'm over it
 Alex: that suuuuucks
 Alex: but you know what doesn't suck???
 Alex: SOMEONE'S NEW JOB!
-Calvin: omg right! how's it going <playername>?
+Calvin: omg right! how's it going {playername()}?
 <<Me>>
 -> I've definitely only vomited in the bathroom twice out of nerves but I'm fine.
     <<Them>>

@@ -4,18 +4,11 @@ using UnityEngine;
 
 namespace Mystie
 {
-    [CreateAssetMenu(fileName = "Actor", menuName = "Visual Novel/Actor", order = 1)]
+    [CreateAssetMenu(fileName = "Actor", menuName = "Data/Visual Novel/Actor", order = 1)]
     public class ActorScriptable : ScriptableObject
     {
         public List<SpriteItem> poses;
         public List<SpriteItem> expressions;
-
-        [System.Serializable]
-        public class SpriteItem
-        {
-            public string name;
-            public Sprite sprite;
-        }
 
         public Sprite[] Get(string pose, string expression)
         {

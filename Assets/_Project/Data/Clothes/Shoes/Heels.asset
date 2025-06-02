@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Heels
   m_EditorClassIdentifier: 
   name: Heels
+  <type>k__BackingField: 2
   displayName:
     m_TableReference:
       m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
@@ -24,17 +25,17 @@ MonoBehaviour:
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 1682455194763264
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   brand: {fileID: 0}
-  icon: {fileID: 21300000, guid: 620e74a9d4d20a04d8c532683000b473, type: 3}
+  icon: {fileID: 21300000, guid: fff58210ceb97644597daba37bc194d8, type: 3}
   sprite: {fileID: 0}
-  <type>k__BackingField: 2
+  sprites: []
   tags:
   - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
   - {fileID: 11400000, guid: 82d6e20d75a73394883c9d881b0b6742, type: 2}

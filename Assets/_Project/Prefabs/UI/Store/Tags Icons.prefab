@@ -77,7 +77,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 0
+  m_Spacing: 10
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -98,7 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagsAnchor: {fileID: 3121893306817333787}
-  tagUIPrefab: {fileID: 2379309713657227229, guid: 3bd501ad832b02942929d9faf0240b7a, type: 3}
+  tagUIPrefab: {fileID: -8821094019423697732, guid: 3bd501ad832b02942929d9faf0240b7a, type: 3}
+  disableWhenEmpty: 0
   tags: []
   order: 
   filter: 00000000

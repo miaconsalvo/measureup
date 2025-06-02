@@ -159,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5682109443505737129}
   - component: {fileID: 659685488616482005}
-  - component: {fileID: 2379309713657227229}
+  - component: {fileID: -956164975001388573}
   - component: {fileID: 8464287505942207398}
   - component: {fileID: 2343579695506970649}
   - component: {fileID: 4160239865435382759}
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
---- !u!114 &2379309713657227229
+--- !u!114 &-956164975001388573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,15 +221,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 9074727912100652073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad484d63e1f6f9d4b8b94804e36542d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 822b9aaa72d33c647a25c89ea2b7baa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
   <isVisible>k__BackingField: 1
   labelLocalized: {fileID: 8464287505942207398}
   label: {fileID: 3607802437045911902}
   bg: {fileID: 2343579695506970649}
   icon: {fileID: 0}
   <fadeTime>k__BackingField: 0
+  tag: {fileID: 0}
 --- !u!114 &8464287505942207398
 MonoBehaviour:
   m_ObjectHideFlags: 0
