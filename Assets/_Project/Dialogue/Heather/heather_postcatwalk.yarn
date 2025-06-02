@@ -17,7 +17,7 @@ position: 357.24005126953125,143.65028381347656
 //<<declare $business = false>>
 
 <<declare $patternedItem = "null">>
-
+<<declare $HeatherReaction = 0>>
 <<declare $sameTags = 0>>
 
 //check for outfit tags
@@ -53,6 +53,7 @@ title: HeatherPCWMixedFeels
 tags: 
 position: 1581.8624877929688,384.9552917480469
 ---
+<<set $HeatherReaction to 1>>
 Heather: This makeover process has been… interesting I guess?
 Heather: I don’t know what I expected going into it.
 Heather:  I’m not sure how I really feel about the new look yet.
@@ -63,6 +64,7 @@ title: HeatherPCWSkirt
 tags: 
 position: -488.34183168411255,385.89215087890625
 ---
+<<set $HeatherReaction to 2>>
 Heather: I hope I don’t sound ungrateful, this has been a neat experience, but to be honest...
 Heather: I don't know when I would wear this outfit... 
 Heather: There’s a reason I don’t own any skirts. 
@@ -73,6 +75,7 @@ title: HeatherPCWBright
 tags: 
 position: -274.1782684326172,380.0409240722656
 ---
+<<set $HeatherReaction to 2>>
 Heather: Oh wow...
 Heather: I don’t think I’ve worn these colours since I played little Jenny on TV as a kid. 
 Heather: I’m not sure how I feel about it, but if the stylist thinks it suits me, I guess I could try it out… we will see…
@@ -82,6 +85,7 @@ title: HeatherPCWFlashyImpractical
 tags: 
 position: -53.888526916503906,380.81392669677734
 ---
+<<set $HeatherReaction to 2>>
 Heather: This is a cool look, not something I would come up with on my own. 
 Heather: I’m not sure about when I would actually wear something like this though. 
 Heather: It isn’t the most practical for my life right now. 
@@ -92,6 +96,7 @@ title: HeatherPCWUncomfy
 tags: 
 position: 166.3232765197754,387.9626693725586
 ---
+<<set $HeatherReaction to 2>>
 Heather: Okay, well, I think this is a super cute outfit, it looks nice...
 Heather: I see why the stylist chose it for me... 
 Heather: But honestly, it is so so uncomfortable. 
@@ -103,6 +108,7 @@ title: HeatherPCWNegative
 tags: 
 position: 397.72467613220215,385.6652603149414
 ---
+<<set $HeatherReaction to 2>>
 Heather: I hope I don’t sound difficult but...
 Heather: I don’t know if the stylist really understood what I was looking for in my new look. 
 Heather: This outfit isn’t really “me”, you know? I don’t know if I would ever realistically wear it. 
@@ -114,6 +120,7 @@ title: HeatherPCWSame
 tags: 
 position: 601.0851212739944,393.70613861083984
 ---
+<<set $HeatherReaction to 1>>
 Heather: Well, I like the outfit! 
 Heather: It’s honestly not that different from what I was wearing before though… 
 Heather: I guess this is all I can pull off anymore? 
@@ -124,6 +131,7 @@ title: HeatherPCWComfy
 tags: 
 position: 827.2561142444611,385.962646484375
 ---
+<<set $HeatherReaction to 0>>
 Heather: This whole makeover process has been neat. 
 Heather: I was sort of nervous about being on TV again, but this was a good experience. 
 Heather: I like the final look, and this outfit is super comfortable!
@@ -133,6 +141,7 @@ title: HeatherPCWPattern
 tags: 
 position: 1051.7653224468231,391.6652374267578
 ---
+<<set $HeatherReaction to 0>>
 Heather: The pattern on this {$patternedItem} is amazing, I love it! 
 Heather: I was sort of nervous about being on TV again, but this was a good experience. 
 Heather: I like the final look, and this outfit is great!
@@ -142,6 +151,7 @@ title: HeatherPCWPositive
 tags: 
 position: 1278.0180282592773,383.36785888671875
 ---
+<<set $HeatherReaction to 0>>
 Heather: This whole makeover process has been really amazing!
 Heather: I was worried coming into it, being on TV again, having other people dress me again...
 Heather: But I am so glad I did it. I can tell the stylist really understood what I wanted. 
@@ -153,5 +163,5 @@ title: PCWEnd
 tags: 
 position: 357,626
 ---
-Postcat walk ends.
+The episode ends.
 ===
