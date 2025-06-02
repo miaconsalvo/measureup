@@ -1051,17 +1051,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7217510728808571338, guid: 4e6e0ca45ef02674490b8f47344ea50f, type: 3}
   m_PrefabInstance: {fileID: 148297113}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &148297115 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 660954050836696081, guid: 4e6e0ca45ef02674490b8f47344ea50f, type: 3}
-  m_PrefabInstance: {fileID: 148297113}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &185137469
 GameObject:
   m_ObjectHideFlags: 0
@@ -4427,7 +4416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <episode>k__BackingField: {fileID: 11400000, guid: 21907f80f0a76724a911d0ff96f50668, type: 2}
   <dossier>k__BackingField: {fileID: 4406108783070523976}
-  stages: 010000000300000002000000000000000600000004000000
+  stages: 060000000000000001000000020000000300000004000000
 --- !u!4 &482965377
 Transform:
   m_ObjectHideFlags: 0
@@ -7337,37 +7326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: badc868f9647c7d47ac943e424fef53f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 2
-  tabTitle: {fileID: 0}
-  canvas: {fileID: 0}
-  fadeAnim: 0
-  fadeDuration: 0.2
-  switchTabSFX:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  warp: 0
-  leftBtn: {fileID: 0}
-  rightBtn: {fileID: 0}
-  tabs:
-  - name: Social Media
-    button: {fileID: 148297115}
-    <canvas>k__BackingField: {fileID: 1337493166}
-    ctx: {fileID: 0}
-    <index>k__BackingField: 0
-  - name: Inbox
-    button: {fileID: 1381766607}
-    <canvas>k__BackingField: {fileID: 867819523}
-    ctx: {fileID: 0}
-    <index>k__BackingField: 0
-  - name: Group Chat
-    button: {fileID: 777791131}
-    <canvas>k__BackingField: {fileID: 317232200}
-    ctx: {fileID: 0}
-    <index>k__BackingField: 0
 --- !u!222 &771101186
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7490,17 +7448,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7217510728808571338, guid: 4e6e0ca45ef02674490b8f47344ea50f, type: 3}
   m_PrefabInstance: {fileID: 777791129}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &777791131 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 660954050836696081, guid: 4e6e0ca45ef02674490b8f47344ea50f, type: 3}
-  m_PrefabInstance: {fileID: 777791129}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &793590486
 GameObject:
   m_ObjectHideFlags: 0
@@ -12326,7 +12273,7 @@ MonoBehaviour:
   closeStateOnCancel: 0
   submitPopup: {fileID: 0}
   pauseState: {fileID: 1191095718}
-  canvas: {fileID: 0}
+  canvas: {fileID: 1244052175}
   canvasBackground: {fileID: 1244052175}
   fadeOutTime: 0.05
   fadeInTime: 0.25
@@ -14134,17 +14081,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7217510728808571338, guid: 4e6e0ca45ef02674490b8f47344ea50f, type: 3}
   m_PrefabInstance: {fileID: 1381766605}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1381766607 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 660954050836696081, guid: 4e6e0ca45ef02674490b8f47344ea50f, type: 3}
-  m_PrefabInstance: {fileID: 1381766605}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1382180209
 GameObject:
   m_ObjectHideFlags: 0
@@ -18550,7 +18486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7417885277615536138, guid: f16cc2eceb7d9b44cb1c7c1464de5269, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000052974224
+      value: 0.0007781497
       objectReference: {fileID: 0}
     - target: {fileID: 7955703879850810431, guid: f16cc2eceb7d9b44cb1c7c1464de5269, type: 3}
       propertyPath: m_AnchorMax.y

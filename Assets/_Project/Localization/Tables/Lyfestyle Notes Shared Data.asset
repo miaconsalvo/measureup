@@ -10,23 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: Occupations Shared Data
+  m_Name: Lyfestyle Notes Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: Occupations
-  m_TableCollectionNameGuidString: f03f2fe8fa8d33c458424d23ac2e6d18
+  m_TableCollectionName: Lyfestyle Notes
+  m_TableCollectionNameGuidString: 1dc154d288b6b1e48825fd49c1aa3b38
   m_Entries:
-  - m_Id: 192219667234816
-    m_Key: Mom
+  - m_Id: 8652587008
+    m_Key: Heather/Mom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1655487332352
+    m_Key: Heather/Branch out
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 819229178842316816
+    rid: 2721914760861057026
   references:
     version: 2
     RefIds:
-    - rid: 819229178842316816
+    - rid: 2721914760861057026
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1748507471359
+        m_CustomEpoch: 1748874966828
