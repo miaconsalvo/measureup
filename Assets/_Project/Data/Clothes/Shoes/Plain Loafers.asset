@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Plain Loafers
   icon: {fileID: 0}
   sprite: {fileID: 0}
-  <type>k__BackingField: 0
+  <type>k__BackingField: 2
   tags:
   - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}
   - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
