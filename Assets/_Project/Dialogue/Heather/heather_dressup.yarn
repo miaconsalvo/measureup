@@ -68,6 +68,8 @@ position: -182,108
     <<jump HeatherDressupFlashyImpractical>>
 <<elseif $uncomfy == true>>
     <<jump HeatherDressupUncomfy>>
+<<elseif $business == true>>
+    <<jump HeatherDressUpBusiness>>
 <<elseif $negTags > 1>>
     <<HeatherDressupNegative>>
 <<elseif $comfy == true and $uncomfy == false>>
@@ -229,4 +231,18 @@ tags:
 position: -134.89876556396484,554.7522735595703
 ---
 
+===
+title: HeatherDressUpBusiness
+tags: 
+position: 340.34469985961914,520.0117034912109
+---
+<<set $randomDialogue = random_range(0, 2)>>
+
+<<if $randomDialogue == 0>>
+    Heather: Oh interesting… idk if business attire is really my thing though…
+<<elseif $randomDialogue == 1>>
+    Heather: I don’t feel like myself in this! I don't think I've ever considered wearing business clothing...
+<<elseif $randomDialogue == 2>>
+    Heather: Hmm... this feels like something I could wear at an office job, but I’m a stay at home mom!
+<<endif>>
 ===

@@ -1,6 +1,6 @@
 title: HeatherInterviewStart
 tags: 
-position: -129,-2
+position: -574,40
 ---
 <<declare $QuestionA = false>>
 <<declare $QuestionB = false>>
@@ -9,11 +9,18 @@ position: -129,-2
 <<declare $QuestionE = false>>
 <<declare $QuestionsAsked = 0>>
 <<declare $QuestionsMax = 3>>
+
+Heather: Oh hi! You must be th stylist, nice to meet you I'm Heather.
+    -> Hi, nice to meet you!
+    -> How are you doing?
+        Heather: A bit nervous, to be honest, but also excited.
+Heather: Jo told me you were going to ask me some questions before we dive into the makeover.
+Heather: Should we just dive right in?
 <<jump HeatherInterviewQuestions>>
 ===
 title: HeatherInterviewQuestions
 tags: 
-position: 119,-1
+position: -376,44
 ---
 << if $QuestionsAsked >= $QuestionsMax>>
     <<jump HeatherInterviewEnd>>
@@ -32,7 +39,7 @@ position: 119,-1
 ===
 title: HeatherInterviewQuestionA
 tags: 
-position: 119,-1
+position: -192,-140
 ---
 <<set $QuestionA to true>>
 <<set $QuestionsAsked = $QuestionsAsked + 1>>
@@ -43,7 +50,7 @@ Heather: It's a pretty basic vibe.
 ===
 title: HeatherInterviewQuestionB
 tags: 
-position: 119,-1
+position: 16,-138
 ---
 <<set $QuestionB to true>>
 <<set $QuestionsAsked = $QuestionsAsked + 1>>
@@ -51,26 +58,29 @@ Heather: That's easy. Skirts.
 Heather: I hated when wardrobe would put the big frilly and flashy ones on me as Jenny on The Family Tree.
 Heather: I think that has stuck with me ever since. 
 Heather: It made sense for the character, I guess, but as a kid I haaaated them.
+Heather: Especially the really brightly coloured ones.
 <<jump HeatherInterviewQuestions>>
 ===
 title: HeatherInterviewQuestionC
 tags: 
-position: 119,-1
+position: 230,-131
 ---
 <<set $QuestionC to true>>
 <<set $QuestionsAsked = $QuestionsAsked + 1>>
 Heather: Hmm... like worn the most? Or what I love for its style the most?
 -> What you wear the the most.
-    Heather: That would be my tried and true black yoga pants.
-    Heather: I think I won like five pairs of the same ones now. 
+    Heather: That would be my tried and true yoga pants in black. 
+    Heather: I think I own like 5 pairs of the same ones. 
+    Heather: Actually. I almost bought some patterned ones a few weeks ago… but I don’t know if I can pull them off.
 -> What you love the most, regardless of how often you wear it. 
-    Heather: I have a designer letterman-style jacket that I'll wear to the kids games.
-    Heather: The kids got it for me! Well, their dad did. You know how it goes. 
+    Heather:  I have a designer letterman-style jacket that I’ll wear to the kids games that they got me (well their dad did, but you know how it goes!). 
+    Heather: I love that it’s practical but I still feel stylish in it - the sleeves have this cool floral pattern on it.
+    Heather: It isn’t something I would usually choose for myself so it was a great gift.
 <<jump HeatherInterviewQuestions>>
 ===
 title: HeatherInterviewQuestionD
 tags: 
-position: 119,-1
+position: -119,103
 ---
 <<set $QuestionD to true>>
 <<set $QuestionsAsked = $QuestionsAsked + 1>>
@@ -80,7 +90,7 @@ Heather: As much as I live and die by my athleisure wardrobe, I know I can pull 
 ===
 title: HeatherInterviewQuestionE
 tags: 
-position: 119,-1
+position: 113,100
 ---
 <<set $QuestionE to true>>
 <<set $QuestionsAsked = $QuestionsAsked + 1>>
@@ -90,7 +100,7 @@ Heather: That day cost him two favours because I despise uncomfy, stuffy clothes
 ===
 title: HeatherInterviewEnd
 tags: 
-position: 350,4
+position: 497,5
 ---
 Interview ends.
 ===
