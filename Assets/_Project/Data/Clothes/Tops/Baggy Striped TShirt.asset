@@ -25,9 +25,9 @@ MonoBehaviour:
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 3410718481367040
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
