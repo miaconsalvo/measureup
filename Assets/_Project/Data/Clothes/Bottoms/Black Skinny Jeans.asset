@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Black Skinny Jeans
   m_EditorClassIdentifier: 
   name: Black Skinny Jeans
+  <type>k__BackingField: 1
   displayName:
     m_TableReference:
       m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
@@ -32,9 +33,9 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   brand: {fileID: 0}
-  icon: {fileID: 21300000, guid: fdb1a8a66291cb74f9a8f967145af965, type: 3}
-  sprite: {fileID: 21300000, guid: ba614af1dfb242d4091ae950cc650ea6, type: 3}
-  <type>k__BackingField: 1
+  icon: {fileID: 21300000, guid: 7966212a535ff29468e9b99d786cd291, type: 3}
+  sprite: {fileID: 21300000, guid: 25e2285e6dcf314498375d7c62733c91, type: 3}
+  sprites: []
   tags:
   - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
   - {fileID: 11400000, guid: cf5407f068ef0eb49a13740676feec99, type: 2}

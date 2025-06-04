@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Grey Blazer and White Button Up
   m_EditorClassIdentifier: 
   name: Grey Blazer and White Button Up
+  <type>k__BackingField: 0
   displayName:
     m_TableReference:
       m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
@@ -32,9 +33,9 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   brand: {fileID: 0}
-  icon: {fileID: 21300000, guid: 6c8fd763d6b7a304eba5e1a5cbc31a56, type: 3}
-  sprite: {fileID: 21300000, guid: da5cf6f83a3a9c84b87a68efd977407b, type: 3}
-  <type>k__BackingField: 0
+  icon: {fileID: 21300000, guid: 3dd6eb5b08f0941498744c2f14366863, type: 3}
+  sprite: {fileID: 21300000, guid: 05a10071027b00542a4c70c787b215db, type: 3}
+  sprites: []
   tags:
   - {fileID: 11400000, guid: 879a62e18b8ddef49be4113368d9f11a, type: 2}
   - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}

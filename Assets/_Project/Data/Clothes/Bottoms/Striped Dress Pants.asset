@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Striped Dress Pants
   m_EditorClassIdentifier: 
   name: Striped Dress Pants
+  <type>k__BackingField: 1
   displayName:
     m_TableReference:
       m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
@@ -32,9 +33,9 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   brand: {fileID: 0}
-  icon: {fileID: 21300000, guid: fdb1a8a66291cb74f9a8f967145af965, type: 3}
-  sprite: {fileID: 21300000, guid: ba614af1dfb242d4091ae950cc650ea6, type: 3}
-  <type>k__BackingField: 1
+  icon: {fileID: 21300000, guid: 145208bca9350aa4c97a473aee56f870, type: 3}
+  sprite: {fileID: 21300000, guid: f72fe1a8e5169904a9f9b66fe04ea034, type: 3}
+  sprites: []
   tags:
   - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
   - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
