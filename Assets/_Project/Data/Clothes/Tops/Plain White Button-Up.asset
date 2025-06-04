@@ -13,20 +13,21 @@ MonoBehaviour:
   m_Name: Plain White Button-Up
   m_EditorClassIdentifier: 
   name: Plain White Button Up
+  <type>k__BackingField: 0
   displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 2343117390610432
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 3410348761858048
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -34,7 +35,7 @@ MonoBehaviour:
   brand: {fileID: 0}
   icon: {fileID: 21300000, guid: 6c8fd763d6b7a304eba5e1a5cbc31a56, type: 3}
   sprite: {fileID: 21300000, guid: da5cf6f83a3a9c84b87a68efd977407b, type: 3}
-  <type>k__BackingField: 0
+  sprites: []
   tags:
   - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
   - {fileID: 11400000, guid: f7c0109afcb5ab749a73d95ed2733663, type: 2}

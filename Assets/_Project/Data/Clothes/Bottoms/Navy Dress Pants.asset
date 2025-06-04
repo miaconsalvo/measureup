@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Navy Dress Pants
   m_EditorClassIdentifier: 
   name: Navy Dress Pants
+  <type>k__BackingField: 1
   displayName:
     m_TableReference:
       m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
@@ -24,9 +25,9 @@ MonoBehaviour:
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 3409942765813760
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -34,7 +35,7 @@ MonoBehaviour:
   brand: {fileID: 0}
   icon: {fileID: 21300000, guid: fdb1a8a66291cb74f9a8f967145af965, type: 3}
   sprite: {fileID: 21300000, guid: ba614af1dfb242d4091ae950cc650ea6, type: 3}
-  <type>k__BackingField: 1
+  sprites: []
   tags:
   - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
   - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}
