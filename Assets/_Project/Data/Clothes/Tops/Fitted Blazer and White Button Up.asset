@@ -33,8 +33,8 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   brand: {fileID: 0}
-  icon: {fileID: 21300000, guid: 6c8fd763d6b7a304eba5e1a5cbc31a56, type: 3}
-  sprite: {fileID: 21300000, guid: da5cf6f83a3a9c84b87a68efd977407b, type: 3}
+  icon: {fileID: 21300000, guid: 749bbab8433624b41805be2f545aa372, type: 3}
+  sprite: {fileID: 21300000, guid: d82b4a7c9394d3146a8b21546256848a, type: 3}
   sprites: []
   tags:
   - {fileID: 11400000, guid: 879a62e18b8ddef49be4113368d9f11a, type: 2}
