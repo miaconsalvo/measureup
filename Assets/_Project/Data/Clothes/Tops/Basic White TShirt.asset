@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Basic White TShirt
   m_EditorClassIdentifier: 
   name: Basic White TShirt
+  <type>k__BackingField: 0
   displayName:
     m_TableReference:
       m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
@@ -32,9 +33,9 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   brand: {fileID: 0}
-  icon: {fileID: 21300000, guid: 6c8fd763d6b7a304eba5e1a5cbc31a56, type: 3}
-  sprite: {fileID: 21300000, guid: da5cf6f83a3a9c84b87a68efd977407b, type: 3}
-  <type>k__BackingField: 0
+  icon: {fileID: 21300000, guid: 66fd0af47c67fba41bcae740ecab3ee7, type: 3}
+  sprite: {fileID: 21300000, guid: 1c3a01bbc8ede9e48add105df0416d6e, type: 3}
+  sprites: []
   tags:
   - {fileID: 11400000, guid: 879a62e18b8ddef49be4113368d9f11a, type: 2}
   - {fileID: 11400000, guid: 62dc69857624ecb4c807fbd001c128ce, type: 2}

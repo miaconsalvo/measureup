@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Black Crop Top
   m_EditorClassIdentifier: 
   name: Black Crop Top
+  <type>k__BackingField: 0
   displayName:
     m_TableReference:
       m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
@@ -32,9 +33,9 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   brand: {fileID: 0}
-  icon: {fileID: 21300000, guid: 6c8fd763d6b7a304eba5e1a5cbc31a56, type: 3}
-  sprite: {fileID: 21300000, guid: da5cf6f83a3a9c84b87a68efd977407b, type: 3}
-  <type>k__BackingField: 0
+  icon: {fileID: 21300000, guid: 74d7fe2bb148bb444aded5eab85ee515, type: 3}
+  sprite: {fileID: 21300000, guid: 6e0496c3e26633b4683e266835891670, type: 3}
+  sprites: []
   tags:
   - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
   - {fileID: 11400000, guid: 62dc69857624ecb4c807fbd001c128ce, type: 2}
