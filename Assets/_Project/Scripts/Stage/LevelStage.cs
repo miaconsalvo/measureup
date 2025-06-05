@@ -78,7 +78,7 @@ namespace Mystie.Core
 
         protected virtual void OnStageComplete()
         {
-            Debug.Log("Stage complete!");
+            Debug.Log("Stage complete: " + stage, this);
             active = false;
             uiManager.CloseState();
             onStageComplete?.Invoke();

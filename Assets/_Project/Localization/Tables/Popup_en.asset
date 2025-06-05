@@ -30,6 +30,10 @@ MonoBehaviour:
     m_Localized: Lock in outfit?
     m_Metadata:
       m_Items: []
+  - m_Id: 5960569462718464
+    m_Localized: Next week?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

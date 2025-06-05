@@ -27,6 +27,10 @@ MonoBehaviour:
     m_Key: Confirm Dressup
     m_Metadata:
       m_Items: []
+  - m_Id: 5960569462718464
+    m_Key: Finish Week
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

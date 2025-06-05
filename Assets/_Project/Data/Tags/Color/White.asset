@@ -15,9 +15,9 @@ MonoBehaviour:
   name: white
   displayName:
     m_TableReference:
-      m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
+      m_TableCollectionName: GUID:b4535083c23136a4892ba707ae294632
     m_TableEntryReference:
-      m_KeyId: 43366491990261760
+      m_KeyId: 2713643122688
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

@@ -13,15 +13,8 @@ MonoBehaviour:
   m_Name: Episode 1
   m_EditorClassIdentifier: 
   contestant: {fileID: 11400000, guid: 7749c355ff86d8e459f6715becae6f25, type: 2}
-  styleRule:
-    m_TableReference:
-      m_TableCollectionName: GUID:784eba9945baabd489ba977f69982914
-    m_TableEntryReference:
-      m_KeyId: 13962575872
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  rule: {fileID: 11400000, guid: 10d88f6780ed48d4ebf67ec1790aa511, type: 2}
+  socialMediaComments: {fileID: 11400000, guid: e9545bf04a6b5874e8ad7d9b2cdea76e, type: 2}
   maxQuestions: 3
   interviewNotes:
   - question: A. How would you describe your day-to-day wardrobe?

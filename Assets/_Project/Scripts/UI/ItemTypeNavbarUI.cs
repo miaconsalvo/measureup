@@ -16,7 +16,7 @@ namespace Mystie.UI
 
         public override IEnumerator SetActiveTabCoroutine(int i)
         {
-            if (i < 0 || i >= TabCount) yield break;
+            if (i < 0 || i >= tabs.Count) yield break;
 
             canvas.DOFade(0, fadeDuration);
             yield return new WaitForSeconds(fadeDuration);

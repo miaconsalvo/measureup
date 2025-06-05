@@ -19,12 +19,23 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 13962575872
-    m_Localized: Avoid Clashing Colours
+    m_Localized: Avoid Clashing Colours!
     m_Metadata:
       m_Items: []
   - m_Id: 1499446640640
-    m_Localized: "Certain colours just shouldn\u2019t be worn together! Colour pairings
-      to avoid include black and brown, black and blue, and silver and gold.\r"
+    m_Localized: "Certain colours just shouldn\u2019t be worn together! <b>Colour
+      pairings to avoid<b> include: \n- Black and brown\n- Black and blue\n- Silver
+      and gold\n- Red and pink\n- Silver and gold.\n-"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2434933221752832
+    m_Localized: "Dressing your age! Older women should <b>avoid wearing loud prints</b>,
+      and instead <b>focus on muted colours</b>. They should also <b>avoid risque</b>
+      clothing. \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2434894822899712
+    m_Localized: Dress Your Age!
     m_Metadata:
       m_Items: []
   references:

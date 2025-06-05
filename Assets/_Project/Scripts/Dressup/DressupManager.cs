@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 using Yarn.Unity;
 
 namespace Mystie.Dressup
 {
+    public enum Reaction { Neutral = 0, Positive = 1, Negative = 2 }
+
     public class DressupManager : MonoBehaviour
     {
         private static DressupManager instance;
@@ -15,7 +18,9 @@ namespace Mystie.Dressup
         public event Action<ItemScriptable> onItemAdded;
         public event Action<ItemScriptable> onItemRemoved;
 
+        public EpisodeScriptable episode;
         public ContestantData contestant;
+        public Reaction reaction;
         [SerializeField] private Dictionary<ItemType, ItemScriptable> items;
 
         public List<ClothingTag> currentTags;
@@ -90,6 +95,16 @@ namespace Mystie.Dressup
             {
                 return "Hmmm… yeah this is okay.";
             }
+        }
+
+        public bool IsFitAppropriate()
+        {
+            foreach (ItemType type in items.Keys)
+            {
+                if (items[type] == underwearItems[type]) return false;
+            }
+
+            return true;
         }
 
         public void UpdateTags()
@@ -177,6 +192,11 @@ namespace Mystie.Dressup
             return true;
         }
 
+        public bool CheckStyleRule()
+        {
+            return episode.rule.Check(currentTags);
+        }
+
         // TODO Implement this better
         [YarnFunction("has_tag")]
         public static bool HasTag(string s)
@@ -212,6 +232,18 @@ namespace Mystie.Dressup
             }
 
             return null;
+        }
+
+        [YarnCommand("set_reaction")]
+        public static void SetReaction(int reaction)
+        {
+            instance.reaction = (Reaction)reaction;
+        }
+
+        [YarnFunction("get_reaction")]
+        public static int GetReaction()
+        {
+            return (int)instance.reaction;
         }
     }
 }

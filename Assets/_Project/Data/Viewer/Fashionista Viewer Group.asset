@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b8f2a0eaa5059645aaefdd3bca1c7c9, type: 3}
+  m_Name: Fashionista Viewer Group
+  m_EditorClassIdentifier: 
+  groupName: Fashionista
+  condition: {fileID: 11400000, guid: 56289b1560b1c7b4582cc76951383dcd, type: 2}
+  alwaysShowNeutralComments: 0
+  neutralComments: []
+  posComments:
+  - handle: pearlessence
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1471986532352
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: corrine28
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1532145434624
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: 
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1542471811072
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: 
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1573228642304
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  negComments:
+  - handle: pearlessence
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1592165924864
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: 
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1532145434624
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: bgirl
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1542471811072
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: corrine28
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1650827460608
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

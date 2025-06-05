@@ -15,9 +15,9 @@ namespace Mystie
         [field: SerializeField] public TextMeshProUGUI text { get; private set; }
         [SerializeField] private Image profilePicture;
         [SerializeField] private HorizontalLayoutGroup layout;
-        [SerializeField] private List<GameObject> messageComponents;
         [SerializeField] private GameObject loading;
         [SerializeField] private bool isLoading;
+        [SerializeField] private List<GameObject> messageComponents;
 
         [SerializeField] private MessageBoxSettings settings;
         private Sprite profilePictureSpriteDefault;

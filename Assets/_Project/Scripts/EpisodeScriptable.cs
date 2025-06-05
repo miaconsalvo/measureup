@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mystie.Dressup;
+using Mystie.UI;
 using UnityEngine;
 using UnityEngine.Localization;
 
@@ -11,7 +12,8 @@ namespace Mystie
     public class EpisodeScriptable : ScriptableObject
     {
         public ContestantData contestant;
-        public LocalizedString styleRule;
+        public StyleRuleScriptable rule;
+        public CommentCollection socialMediaComments;
         public int maxQuestions = 3;
         public List<InterviewQuestion> interviewNotes;
     }

@@ -6,6 +6,7 @@ using Mystie.Core;
 using NaughtyAttributes;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 
 namespace Mystie.Dressup
@@ -15,19 +16,29 @@ namespace Mystie.Dressup
         public event Action<List<ItemScriptable>> onItemListUpdate;
         public event Action<List<ItemUI>> onItemUIListUpdate;
 
+        public ContestantData contestant;
+
         [SerializeField] private DressupManager model;
         [SerializeField] private Transform itemAnchor;
         [SerializeField] private ItemUI itemPrefab;
-        [SerializeField] private Button fitCheckButton;
+
         [SerializeField] private ItemDetailsPanelUI itemDetailsPanelUI;
+
+        [Space]
+
+        [SerializeField] private Button fitCheckButton;
+        [SerializeField] private int fitChecksMax = 3;
+        private int fitChecksDone;
+
+        [Space]
+
         [SerializeField] private LabelUI opinionBox;
         [SerializeField] private float opinionDuration = 4f;
 
         [Space]
 
-        public ContestantData contestant;
-
-        [Space]
+        [SerializeField] private List<LocalizedString> wrapupComments;
+        [SerializeField] private LocalizedString inappropriateFitComment;
 
         private List<ItemScriptable> clothes;
         private List<ItemUI> itemsUI;
@@ -62,6 +73,7 @@ namespace Mystie.Dressup
         protected override void OnStageEnter()
         {
             base.OnStageEnter();
+            fitChecksDone = 0;
             UpdateItems();
         }
 
@@ -130,8 +142,24 @@ namespace Mystie.Dressup
         [Button]
         public void OnFitCheck()
         {
-            string opinion = model.FitCheck();
-            if (opinionBox != null) StartCoroutine(ShowOpinionCoroutine(opinion));
+            string comment = null;
+            if (!model.IsFitAppropriate())
+            {
+                comment = inappropriateFitComment.GetLocalizedString();
+            }
+            else if (fitChecksDone < fitChecksMax)
+            {
+                fitChecksDone++;
+                comment = model.FitCheck();
+            }
+            else
+            {
+                int rand = UnityEngine.Random.Range(0, wrapupComments.Count);
+                comment = wrapupComments[rand].GetLocalizedString();
+            }
+
+            if (opinionBox != null || string.IsNullOrEmpty(comment))
+                StartCoroutine(ShowOpinionCoroutine(comment));
         }
 
         public IEnumerator ShowOpinionCoroutine(string opinion)

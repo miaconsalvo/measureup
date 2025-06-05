@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Mystie.Dressup;
 using UnityEngine;
 
 namespace Mystie.Core
@@ -31,6 +32,7 @@ namespace Mystie.Core
 
         [field: SerializeField] public EpisodeScriptable episode { get; private set; }
         [field: SerializeField] public DossierManager dossier { get; private set; }
+        [field: SerializeField] public DressupManager dressup { get; private set; }
 
         private int stageIndex;
         public List<LevelStageType> stages = new List<LevelStageType>();

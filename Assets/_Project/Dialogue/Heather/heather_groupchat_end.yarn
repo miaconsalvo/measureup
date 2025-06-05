@@ -11,12 +11,12 @@ Alex: your mother is a force to be reckoned with
 Alex: i both respect and fear her
 Calvin: i respectfully fear her
 
-<<if $HeatherReaction == 0>>
+<<if get_reaction() == 0>>
+    <<jump NeutralReact_HeatherFinalGroupChat>>
+<<elseif get_reaction() == 1>>
     <<jump PosReact_HeatherFinalGroupChat>>
-<<elseif $HeatherReaction == 1>>
-    <<jump NeutralReact_HeatherFinalGroupChat>>
-<<elseif $HeatherReaction == 2>>
-    <<jump NeutralReact_HeatherFinalGroupChat>>
+<<elseif get_reaction() == 2>>
+    <<jump NegReact_HeatherFinalGroupChat>>
 <<endif>>
 ===
 title: NegReact_HeatherFinalGroupChat

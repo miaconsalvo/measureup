@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
+  m_Name: Baggy Striped TShirt
+  m_EditorClassIdentifier: 
+  name: Baggy Striped TShirt
+  <type>k__BackingField: 0
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
+    m_TableEntryReference:
+      m_KeyId: 2342392686182400
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
+    m_TableEntryReference:
+      m_KeyId: 3410718481367040
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  brand: {fileID: 0}
+<<<<<<< HEAD
+  icon: {fileID: 21300000, guid: 943cbedbf41b56e41ac1c20a89657546, type: 3}
+  sprite: {fileID: 21300000, guid: c5df96b3c2beb8d48b30a8279508cb9b, type: 3}
+=======
+  icon: {fileID: 21300000, guid: 6c8fd763d6b7a304eba5e1a5cbc31a56, type: 3}
+  sprite: {fileID: 21300000, guid: da5cf6f83a3a9c84b87a68efd977407b, type: 3}
+>>>>>>> Clothing-Descriptions
+  sprites: []
+  tags:
+  - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
+  - {fileID: 11400000, guid: 62dc69857624ecb4c807fbd001c128ce, type: 2}
+  - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
+  - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
+  - {fileID: 11400000, guid: 78720b0e8379ef548ac85e241ddd1e31, type: 2}
+  - {fileID: 11400000, guid: 5a0100448d9cace4c8ef3cfa958a5706, type: 2}
+  references:
+    version: 2
+    RefIds: []

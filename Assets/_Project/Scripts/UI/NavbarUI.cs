@@ -11,21 +11,15 @@ using UnityEngine.UI;
 
 namespace Mystie.UI
 {
-    public class NavbarUI<ITab> : NavbarUIBase where ITab : Tab
+    public class NavbarUI<ITab> : NavbarBase where ITab : Tab
     {
-
         public TextMeshProUGUI tabTitle;
         [SerializeField] protected CanvasGroup canvas;
+        public List<ITab> tabs = new List<ITab>();
+        public override int TabsCount { get => tabs.Count; }
 
-        public enum FADEANIM { FADEIN, CROSSFADE }
-        [SerializeField] protected FADEANIM fadeAnim;
         [SerializeField] protected float fadeDuration = 0.3f;
         [SerializeField] protected EventReference switchTabSFX;
-
-        [Space]
-
-        public List<ITab> tabs = new List<ITab>();
-        public override int TabCount { get => tabs.Count; }
 
         protected override void OnEnable()
         {
@@ -48,16 +42,10 @@ namespace Mystie.UI
         {
             if (i < 0 || i >= tabs.Count) yield break;
 
-            if (!warp)
-            {
-                if (leftBtn != null) leftBtn.interactable = i > 0;
-                if (rightBtn != null) rightBtn.interactable = i < tabs.Count - 1;
-            }
-
-            if (fadeAnim == FADEANIM.FADEIN)
-                yield return StartCoroutine(tabs[index].Fadeout(fadeDuration));
-            else if (fadeAnim == FADEANIM.CROSSFADE)
-                StartCoroutine(tabs[index].Fadeout(fadeDuration));
+            canvas.DOFade(0, fadeDuration);
+            canvas.blocksRaycasts = false;
+            yield return new WaitForSeconds(fadeDuration);
+            tabs[index].SetActive(false);
 
             if (index != i)
             {
@@ -67,30 +55,30 @@ namespace Mystie.UI
             index = i;
             if (tabTitle != null) tabTitle.SetText(tabs[index].name);
 
-            yield return StartCoroutine(tabs[index].Fadein(fadeDuration));
-
+            canvas.DOFade(1, fadeDuration);
+            tabs[index].SetActive(true);
+            yield return new WaitForSeconds(fadeDuration);
+            canvas.blocksRaycasts = true;
         }
 
         [Button()]
         public override void UpdateActiveTab()
         {
             CloseAllTabs();
-            if (index >= 0 && index < TabCount)
+            if (index >= 0 && index < TabsCount)
                 tabs[index].SetActive(true);
         }
 
         public override void CloseAllTabs()
         {
-            foreach (Tab tab in tabs)
+            foreach (ITab tab in tabs)
             {
                 tab.SetActive(false);
             }
         }
-
-
-
-
     }
+
+    public class NavbarUI : NavbarUI<Tab> { }
 
     [System.Serializable]
     public class Tab
@@ -98,8 +86,8 @@ namespace Mystie.UI
         public Action<int> onSetActive;
 
         public string name;
+        [SerializeField] private GameObject panel;
         [SerializeField] private Button button;
-        [field: SerializeField] public CanvasGroup canvas { get; private set; }
 
         public int index { get; private set; }
 
@@ -122,38 +110,8 @@ namespace Mystie.UI
 
         public void SetActive(bool active)
         {
-            if (canvas == null) return;
-
-            canvas.gameObject.SetActive(active);
-            canvas.alpha = active ? 1 : 0;
-            canvas.blocksRaycasts = active;
+            if (panel != null) panel.SetActive(active);
         }
-
-        public IEnumerator Fadein(float fadeDuration)
-        {
-            if (canvas == null) yield return null;
-
-            canvas.gameObject.SetActive(true);
-            canvas.DOFade(1, fadeDuration);
-
-            yield return new WaitForSeconds(fadeDuration);
-
-            canvas.blocksRaycasts = true;
-
-        }
-
-        public IEnumerator Fadeout(float fadeDuration)
-        {
-            if (canvas == null) yield return null;
-
-            canvas.blocksRaycasts = false;
-            canvas.DOFade(0, fadeDuration);
-
-            yield return new WaitForSeconds(fadeDuration);
-
-            canvas.gameObject.SetActive(false);
-        }
-
 
         /*
         public void Lock()

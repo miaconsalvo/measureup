@@ -18,8 +18,8 @@ namespace Mystie
         private ContestantData contestant;
 
         public LocalizeStringEvent styleRuleText;
+        public LocalizeStringEvent styleRuleDescriptionText;
         public TextMeshProUGUI contestantNameText;
-        public TextMeshProUGUI ageText;
         public LocalizeStringEvent occupationText;
 
         private List<int> questionsAsked;
@@ -44,9 +44,9 @@ namespace Mystie
             this.episode = episode;
             contestant = episode.contestant;
 
-            styleRuleText.StringReference = episode.styleRule;
-            contestantNameText.text = contestant.name;
-            ageText.text = contestant.age;
+            styleRuleText.StringReference = episode.rule.ruleName;
+            styleRuleDescriptionText.StringReference = episode.rule.ruleDescription;
+            contestantNameText.text = contestant.name + ", " + contestant.age;
             occupationText.StringReference = contestant.occupation;
 
             questionsAsked = new List<int>();
