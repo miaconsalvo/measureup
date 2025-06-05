@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
+  m_Name: Sporty Skort
+  m_EditorClassIdentifier: 
+  name: Sporty Skort
+  icon: {fileID: 0}
+  sprite: {fileID: 0}
+  <type>k__BackingField: 1
+  tags:
+  - {fileID: 11400000, guid: 3dd5bee944a9892499537f489a2e5591, type: 2}
+  - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
+  - {fileID: 11400000, guid: 62dc69857624ecb4c807fbd001c128ce, type: 2}
+  - {fileID: 11400000, guid: 96d860e45a4d4a8458144f6efa22a0ed, type: 2}
