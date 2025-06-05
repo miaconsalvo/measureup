@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Plain Loafers
   m_EditorClassIdentifier: 
   name: Plain Loafers
-  <type>k__BackingField: 0
+  <type>k__BackingField: 2
   displayName:
     m_TableReference:
       m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231

@@ -43,7 +43,7 @@ namespace Mystie
         public void SetLoading(bool isLoading)
         {
             this.isLoading = isLoading;
-            loading.SetActive(isLoading);
+            if (loading != null) loading.SetActive(isLoading);
             foreach (GameObject comp in messageComponents)
             {
                 comp.SetActive(!isLoading);

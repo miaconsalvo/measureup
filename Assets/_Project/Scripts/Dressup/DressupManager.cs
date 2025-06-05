@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Mystie.Core;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.UI;
@@ -194,7 +195,7 @@ namespace Mystie.Dressup
 
         public bool CheckStyleRule()
         {
-            return episode.rule.Check(currentTags);
+            return LevelManager.Instance.episode.rule.Check(currentTags);
         }
 
         // TODO Implement this better

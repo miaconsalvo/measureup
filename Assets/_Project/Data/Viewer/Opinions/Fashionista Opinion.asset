@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ab48ff998953ed41b59c1fd866fa585, type: 3}
   m_Name: Fashionista Opinion
   m_EditorClassIdentifier: 
-  rule: {fileID: 0}
+  rule: {fileID: 11400000, guid: a6ae665f2c55cfc43a3ddc140cdef474, type: 2}

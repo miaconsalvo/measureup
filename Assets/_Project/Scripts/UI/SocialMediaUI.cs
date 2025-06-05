@@ -26,8 +26,8 @@ namespace Mystie.UI
             if (comments.IsNullOrEmpty()) return;
 
             if (commentsQueue == null) commentsQueue = new Queue<Comment>();
-
-            foreach (Comment comment in commentsQueue)
+            Debug.Log(comments.Count + " comments queued.");
+            foreach (Comment comment in comments)
                 commentsQueue.Enqueue(comment);
 
             if (!displayingComments) StartCoroutine(DisplayComments());
@@ -37,11 +37,10 @@ namespace Mystie.UI
         {
             displayingComments = true;
 
-            while (commentsQueue.Peek() != null)
+            while (commentsQueue.Count > 0)
             {
                 DisplayComment(commentsQueue.Dequeue());
 
-                commentsQueue.Dequeue();
                 float delay = Random.Range(delayBetweenPostsMin, delayBetweenPostsMax);
                 yield return new WaitForSeconds(delay);
             }
@@ -55,7 +54,7 @@ namespace Mystie.UI
             messageBox.transform.SetAsLastSibling();
             messageBox.Set(messageBoxSettings);
 
-            messageBox.SetText("@" + comment.handle, comment.text.GetLocalizedString());
+            messageBox.SetText(comment.text.GetLocalizedString(), "@" + comment.handle);
         }
     }
 }
