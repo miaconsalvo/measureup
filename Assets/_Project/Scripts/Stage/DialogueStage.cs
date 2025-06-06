@@ -12,8 +12,6 @@ namespace Mystie
     {
         public DialogueRunner dialogueRunner;
         public string nodeStart;
-        public string nodeEnd;
-
 
         protected override void OnStageEnter()
         {
@@ -27,22 +25,19 @@ namespace Mystie
         protected override void OnStageSet(LevelStageType newStage)
         {
             base.OnStageSet(newStage);
-            dialogueRunner.onNodeComplete.AddListener(OnNodeComplete);
+            dialogueRunner.onDialogueComplete.AddListener(OnNodeComplete);
         }
 
-        protected void OnNodeComplete(string node)
+        protected void OnNodeComplete()
         {
-            if (node == nodeEnd)
-            {
-                if (completeStageButton != null)
-                    completeStageButton.gameObject.SetActive(true);
-                else OnStageComplete();
-            }
+            if (completeStageButton != null)
+                completeStageButton.gameObject.SetActive(true);
+            else OnStageComplete();
         }
 
         protected override void OnStageComplete()
         {
-            dialogueRunner.onNodeComplete.RemoveListener(OnNodeComplete);
+            dialogueRunner.onDialogueComplete.RemoveListener(OnNodeComplete);
             base.OnStageComplete();
         }
     }

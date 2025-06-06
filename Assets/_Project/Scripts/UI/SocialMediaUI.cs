@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace Mystie.UI
 {
-    public class SocialMediaUI : MonoBehaviour
+    public class SocialMediaUI : AppUI
     {
         [SerializeField] private RectTransform messageContainer;
         [SerializeField] private ScrollRect scrollRect;
@@ -21,21 +21,39 @@ namespace Mystie.UI
         private Queue<Comment> commentsQueue;
         private bool displayingComments;
 
+        public override void OnOpen()
+        {
+            if (open == true) return;
+            base.OnOpen();
+
+            if (!commentsQueue.IsNullOrEmpty() && !displayingComments)
+                StartCoroutine(DisplayComments());
+        }
+
+        public override void OnClose()
+        {
+            if (open == false) return;
+            base.OnClose();
+            //Debug.Log("Social Media close!");
+            StopCoroutine(DisplayComments());
+            displayingComments = false;
+        }
+
         public void QueueComments(List<Comment> comments)
         {
             if (comments.IsNullOrEmpty()) return;
 
             if (commentsQueue == null) commentsQueue = new Queue<Comment>();
-            Debug.Log(comments.Count + " comments queued.");
+            //Debug.Log(comments.Count + " comments queued.");
             foreach (Comment comment in comments)
                 commentsQueue.Enqueue(comment);
-
-            if (!displayingComments) StartCoroutine(DisplayComments());
         }
 
         public IEnumerator DisplayComments()
         {
             displayingComments = true;
+
+            //Debug.Log("Displaying comments");
 
             while (commentsQueue.Count > 0)
             {
@@ -46,6 +64,7 @@ namespace Mystie.UI
             }
 
             displayingComments = false;
+            OnDisplayDone();
         }
 
         public void DisplayComment(Comment comment)
@@ -55,6 +74,22 @@ namespace Mystie.UI
             messageBox.Set(messageBoxSettings);
 
             messageBox.SetText(comment.text.GetLocalizedString(), "@" + comment.handle);
+        }
+
+        public void OnDisplayDone()
+        {
+            if (appNavbarUI != null && lockNavbar) appNavbarUI.SetNavbarEnabled(true);
+        }
+
+        public override void Clear()
+        {
+            base.Clear();
+            //Debug.Log("Comments cleared.");
+            if (commentsQueue != null) commentsQueue.Clear();
+            /*while (anchor.childCount > 0)
+            {
+                Destroy(anchor.GetChild(anchor.childCount - 1).gameObject);
+            }*/
         }
     }
 }

@@ -4,18 +4,8 @@ using UnityEngine;
 
 namespace Mystie
 {
-    public class EmailUI : MonoBehaviour
+    public class EmailUI : AppUI
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
 
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
     }
 }

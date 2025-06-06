@@ -88,7 +88,6 @@ GameObject:
   - component: {fileID: 3013817665873077410}
   - component: {fileID: 5758707578169625221}
   - component: {fileID: 1502279305655460796}
-  - component: {fileID: 2611554319022866733}
   - component: {fileID: 4090510508002842220}
   m_Layer: 5
   m_Name: Dossier Button
@@ -295,48 +294,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2611554319022866733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3279901341220783484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53a43c91294c5554cbfbaf567a8f1ad7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  submitBtn: {fileID: 0}
-  closeBtn: {fileID: 0}
-  closeStateOnSubmit: 0
-  closeStateOnCancel: 0
-  submitPopup: {fileID: 0}
-  pauseState: {fileID: 0}
-  canvas: {fileID: 4090510508002842220}
-  canvasBackground: {fileID: 0}
-  fadeOutTime: 0.05
-  fadeInTime: 0.25
-  navButtons:
-  - name: Dossier
-    btn: {fileID: 1502279305655460796}
-    state: {fileID: 0}
-    navType: 0
-  showCursor: 1
-  displaySFX:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  closeSFX:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!225 &4090510508002842220
 CanvasGroup:
   m_ObjectHideFlags: 0

@@ -48,13 +48,26 @@ namespace Mystie.UI
 
         public void SetActiveTab(int i)
         {
+            SetActiveTab(i, false);
+        }
+
+        public void SetActiveTab(int i, bool immediate = false)
+        {
             i = ConstrainIndex(i);
             if (i < 0 || i >= TabsCount) return;
 
             if (leftBtn != null) leftBtn.interactable = warp || i > 0;
             if (rightBtn != null) rightBtn.interactable = warp || i < TabsCount - 1;
 
-            StartCoroutine(SetActiveTabCoroutine(i));
+            if (immediate)
+            {
+                index = i;
+                UpdateActiveTab();
+            }
+            else
+            {
+                StartCoroutine(SetActiveTabCoroutine(i));
+            }
         }
 
         public int ConstrainIndex(int i)

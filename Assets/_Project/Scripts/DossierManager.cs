@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mystie.Core;
 using Mystie.Dressup;
+using Mystie.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
+using UnityEngine.UI;
 using Yarn.Unity;
 
 namespace Mystie
@@ -14,6 +17,8 @@ namespace Mystie
     {
         public static LevelManager levelManager;
 
+        [field: SerializeField] public NavButton dossierUI { get; private set; }
+        [SerializeField] private List<LevelStageType> stagesWithDossier;
         public EpisodeScriptable episode;
         private ContestantData contestant;
 
@@ -37,6 +42,14 @@ namespace Mystie
         public void Awake()
         {
             levelManager = LevelManager.Instance;
+            levelManager.onStageSet += OnStageSet;
+            dossierUI.Sub(UIManager.Instance);
+        }
+
+        public void OnDestroy()
+        {
+            levelManager.onStageSet -= OnStageSet;
+            dossierUI.Unsub();
         }
 
         public void SetEpisode(EpisodeScriptable episode)
@@ -118,6 +131,11 @@ namespace Mystie
                 }
             }
             return str;
+        }
+
+        private void OnStageSet(LevelStageType type)
+        {
+            dossierUI.btn.gameObject.SetActive(stagesWithDossier.Contains(type));
         }
     }
 }

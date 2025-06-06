@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Mystie.Dressup;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Mystie.Core
 {

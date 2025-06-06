@@ -37,14 +37,14 @@ namespace Mystie.Core
         protected virtual void OnEnable()
         {
             levelManager.onStageSet += OnStageSet;
-            if (completeStageButton != null) completeStageButton.onClick.AddListener(CompleteStage);
+
             //uiState.onSubmit += CompleteStage;
         }
 
         protected virtual void OnDisable()
         {
             levelManager.onStageSet -= OnStageSet;
-            if (completeStageButton != null) completeStageButton.onClick.RemoveListener(CompleteStage);
+
             //uiState.onSubmit -= CompleteStage;
         }
 
@@ -66,6 +66,8 @@ namespace Mystie.Core
             active = true;
             uiManager.SetState(uiState);
             onStageEnter?.Invoke();
+            if (completeStageButton != null)
+                completeStageButton.onClick.AddListener(CompleteStage);
             Debug.Log("On stage enter " + stage);
         }
 
@@ -82,6 +84,8 @@ namespace Mystie.Core
             active = false;
             uiManager.CloseState();
             onStageComplete?.Invoke();
+            if (completeStageButton != null)
+                completeStageButton.onClick.RemoveListener(CompleteStage);
             levelManager.CompleteStage(stage);
         }
     }

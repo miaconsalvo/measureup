@@ -11,6 +11,7 @@ namespace Mystie
         [SerializeField] private DressupManager model;
         [SerializeField] private Transform modelAnchor;
         [SerializeField] private Image clothingImage;
+        [SerializeField] private List<ItemType> layerOrder;
 
         private Dictionary<ItemType, Image> itemsUI;
 
@@ -18,6 +19,7 @@ namespace Mystie
         {
             itemsUI = new Dictionary<ItemType, Image>();
             clothingImage.gameObject.SetActive(false);
+            InitializeLayers();
 
             model.onItemAdded += OnItemAdded;
             model.onItemRemoved += OnItemRemoved;
@@ -35,6 +37,15 @@ namespace Mystie
             model.AddItem(item);
         }
 
+        public void InitializeLayers()
+        {
+            foreach (ItemType type in layerOrder)
+            {
+                Image img = Instantiate(clothingImage.gameObject, modelAnchor).GetComponent<Image>();
+                itemsUI.Add(type, img);
+            }
+        }
+
         public void OnItemAdded(ItemScriptable item)
         {
             if (item == null) return;
@@ -47,7 +58,7 @@ namespace Mystie
 
             itemsUI[item.type].gameObject.SetActive(item.sprite != null);
             itemsUI[item.type].sprite = item.sprite;
-            //itemsUI[item.type].SetNativeSize();
+            itemsUI[item.type].SetNativeSize();
         }
 
         public void OnItemRemoved(ItemScriptable item)

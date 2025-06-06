@@ -1,4 +1,4 @@
-title: HeatherGroupchatStart
+title: PreGC
 tags: 
 position: 21,-75
 ---
@@ -12,20 +12,12 @@ Calvin: omg right! how's it going {playername()}?
 -> I've definitely only vomited in the bathroom twice out of nerves but I'm fine.
     <<Them>>
     Calvin: ew lol
-    <<jump HeatherGroupchatFinish>>
 -> I am ready to carpe diem and dress the heck out of these people!
     <<Them>>
     Elie: that's the energy we know and love!
-    <<jump HeatherGroupchatFinish>>
 -> I have stood outside my boss' door for 30 mins waiting for the courage to go in...
     <<Them>>
     Alex: they put on pants same as you - except maybe more fashionable pants...
-    <<jump HeatherGroupchatFinish>>
-===
-title: HeatherGroupchatFinish
-tags: 
-position: 255,9
----
 <<Them>>
 Alex: you are gonna crush it don't even worry about it
 Calvin: YES. YOU ARE MIRANDA PRIESTLEY.
@@ -35,3 +27,4 @@ Donna: sure lol
 Alex: have the BEST day
 Alex: don't let them corrupt youuuuu
 ===
+

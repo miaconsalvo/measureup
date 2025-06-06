@@ -76,6 +76,14 @@ namespace Mystie.UI
                 tab.SetActive(false);
             }
         }
+
+        public void SetNavbarEnabled(bool enabled)
+        {
+            foreach (Tab tab in tabs)
+            {
+                tab.button.enabled = enabled;
+            }
+        }
     }
 
     public class NavbarUI : NavbarUI<Tab> { }
@@ -87,7 +95,7 @@ namespace Mystie.UI
 
         public string name;
         [SerializeField] private GameObject panel;
-        [SerializeField] private Button button;
+        [field: SerializeField] public Button button { get; private set; }
 
         public int index { get; private set; }
 
@@ -108,7 +116,7 @@ namespace Mystie.UI
             onSetActive?.Invoke(index);
         }
 
-        public void SetActive(bool active)
+        public virtual void SetActive(bool active)
         {
             if (panel != null) panel.SetActive(active);
         }

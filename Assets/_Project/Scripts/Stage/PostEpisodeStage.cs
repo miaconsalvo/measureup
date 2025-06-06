@@ -5,15 +5,17 @@ using UnityEngine;
 
 namespace Mystie.Core
 {
-    public class PostEpisodeStage : LevelStage
+    public class PostEpisodeStage : TabletStage
     {
         public SocialMediaUI socialMediaUI;
 
-        protected override void OnStageEnter()
+        protected override void InitializeTablet()
         {
+            base.InitializeTablet();
+
+            Debug.Log("Post episode!");
             CommentCollection comments = LevelManager.Instance.episode.socialMediaComments;
             socialMediaUI.QueueComments(comments.GenerateComments(LevelManager.Instance.dressup));
-            base.OnStageEnter();
         }
     }
 }
