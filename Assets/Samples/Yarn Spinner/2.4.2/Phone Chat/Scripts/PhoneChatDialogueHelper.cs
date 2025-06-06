@@ -22,7 +22,7 @@ namespace Mystie.UI
         [SerializeField] private RectTransform messageContainer;
         [SerializeField] private ScrollRect scrollRect;
         [SerializeField] private MessageBoxUI messageBoxPrefab;
-        [SerializeField] private GameObject optionsContainer;
+        [SerializeField] private RectTransform optionsContainer;
         [SerializeField] private OptionView optionPrefab;
         [SerializeField] private float lettersPerSecond = 10f;
         [SerializeField] private float delayPerCharacter = .05f;
@@ -41,7 +41,7 @@ namespace Mystie.UI
             runner.AddCommandHandler("Me", SetSenderMe); // registers Yarn Command <<Me>>, which sets the current message sender to "Me"
             runner.AddCommandHandler("Them", SetSenderThem); // registers Yarn Command <<They>>, which sets the current message sender to "Them" (whoever the player is talking to)
 
-            optionsContainer.SetActive(false);
+            optionsContainer.gameObject.SetActive(false);
         }
 
         public void LateUpdate()
@@ -111,20 +111,21 @@ namespace Mystie.UI
                 Destroy(child.gameObject);
             }
 
-            optionsContainer.SetActive(true);
+            optionsContainer.gameObject.SetActive(true);
 
             for (int i = 0; i < dialogueOptions.Length; i++)
             {
                 DialogueOption option = dialogueOptions[i];
                 var optionView = Instantiate(optionPrefab);
 
-                optionView.transform.SetParent(optionsContainer.transform, false);
+                optionView.transform.SetParent(optionsContainer, false);
+                LayoutRebuilder.ForceRebuildLayoutImmediate(optionsContainer);
 
                 optionView.Option = option;
 
                 optionView.OnOptionSelected = (selectedOption) =>
                 {
-                    optionsContainer.SetActive(false);
+                    optionsContainer.gameObject.SetActive(false);
                     onOptionSelected(selectedOption.DialogueOptionID);
                 };
             }

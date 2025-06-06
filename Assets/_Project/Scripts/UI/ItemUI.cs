@@ -143,7 +143,7 @@ namespace Mystie.Dressup
         public void OnBeginDrag(PointerEventData eventData)
         {
             if (!isDraggable) return;
-            Debug.Log("Dragging", this);
+            //Debug.Log("Dragging", this);
 
             dragAndDropHandler.StartDrag(
                 this,

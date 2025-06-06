@@ -13,7 +13,6 @@ namespace Mystie.Core
         {
             base.InitializeTablet();
 
-            Debug.Log("Post episode!");
             CommentCollection comments = LevelManager.Instance.episode.socialMediaComments;
             socialMediaUI.QueueComments(comments.GenerateComments(LevelManager.Instance.dressup));
         }

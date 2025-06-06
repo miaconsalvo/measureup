@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: System Data
   m_EditorClassIdentifier: 
   name: System Data
-  mainMenuScene: SampleScene
-  transitionScene: SampleScene
-  gameoverScene: SampleScene
+  mainMenuScene: Main Menu
+  transitionScene: Main Menu
+  gameoverScene: Main Menu
   actions: {fileID: 0}
   audioBuses:
   - name: Volume

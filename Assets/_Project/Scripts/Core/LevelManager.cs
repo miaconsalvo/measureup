@@ -70,7 +70,7 @@ namespace Mystie.Core
 
                 if (stageIndex >= stages.Count)
                 {
-                    Debug.Log("Level Complete!");
+                    OnLevelComplete();
                 }
                 else
                 {
@@ -78,6 +78,12 @@ namespace Mystie.Core
                     onStageSet?.Invoke(CurrentStage);
                 }
             }
+        }
+
+        public void OnLevelComplete()
+        {
+            Debug.Log("Level Complete!");
+            GameManager.Instance.LoadMainMenu();
         }
     }
 }

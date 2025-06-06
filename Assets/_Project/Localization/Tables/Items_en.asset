@@ -150,6 +150,30 @@ MonoBehaviour:
     m_Localized: White Socks
     m_Metadata:
       m_Items: []
+  - m_Id: 6341558819094528
+    m_Localized: Cropped Quarter-zip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6341905486708736
+    m_Localized: Sporty Sandals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6341980204040192
+    m_Localized: Sporty Skort
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6342117970149376
+    m_Localized: Flared Leggings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6342259024592896
+    m_Localized: Green Sneakers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6342582824861696
+    m_Localized: Blue Crewneck
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

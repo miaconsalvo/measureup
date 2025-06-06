@@ -19,6 +19,8 @@ namespace Mystie.UI
         public event Action onSubmit;
         public event Action onCancel;
 
+        [SerializeField] private RectTransform rect;
+
         protected UIManager manager;
 
         [SerializeField] protected Button submitBtn;
@@ -47,6 +49,7 @@ namespace Mystie.UI
 
         protected virtual void Awake()
         {
+            rect = GetComponent<RectTransform>();
             manager = UIManager.Instance;
             if (canvas != null)
             {
@@ -103,6 +106,8 @@ namespace Mystie.UI
                 //canvasFocused.DOFade(1, fadeInTime);
                 canvasBackground.blocksRaycasts = true;
             }
+
+            if (rect != null) LayoutRebuilder.ForceRebuildLayoutImmediate(rect);
 
             Cursor.visible = showCursor;
 

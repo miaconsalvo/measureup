@@ -17,28 +17,19 @@ namespace Mystie
         {
             base.OnStageEnter();
 
+            dialogueRunner.onDialogueComplete.AddListener(OnDialogueComplete);
             if (completeStageButton != null)
                 completeStageButton.gameObject.SetActive(false);
             dialogueRunner.StartDialogue(nodeStart);
         }
 
-        protected override void OnStageSet(LevelStageType newStage)
+        protected void OnDialogueComplete()
         {
-            base.OnStageSet(newStage);
-            dialogueRunner.onDialogueComplete.AddListener(OnNodeComplete);
-        }
+            dialogueRunner.onDialogueComplete.RemoveListener(OnDialogueComplete);
 
-        protected void OnNodeComplete()
-        {
             if (completeStageButton != null)
                 completeStageButton.gameObject.SetActive(true);
             else OnStageComplete();
-        }
-
-        protected override void OnStageComplete()
-        {
-            dialogueRunner.onDialogueComplete.RemoveListener(OnNodeComplete);
-            base.OnStageComplete();
         }
     }
 }

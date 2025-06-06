@@ -13,12 +13,35 @@ MonoBehaviour:
   m_Name: Flared Leggings
   m_EditorClassIdentifier: 
   name: Flared Leggings
-  icon: {fileID: 0}
-  sprite: {fileID: 0}
   <type>k__BackingField: 1
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
+    m_TableEntryReference:
+      m_KeyId: 6342117970149376
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
+    m_TableEntryReference:
+      m_KeyId: 3411170040135680
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  brand: {fileID: 0}
+  icon: {fileID: 21300000, guid: 894d374fb619eba41945b1e459e177ca, type: 3}
+  sprite: {fileID: 21300000, guid: b4b01f56dd30ae240a4206b8e7a9fd3f, type: 3}
+  sprites: []
   tags:
   - {fileID: 11400000, guid: 3dd5bee944a9892499537f489a2e5591, type: 2}
   - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
   - {fileID: 11400000, guid: 62dc69857624ecb4c807fbd001c128ce, type: 2}
   - {fileID: 11400000, guid: b739dd24505919541bee74a638139d25, type: 2}
   - {fileID: 11400000, guid: cbeb23e41baf0ad429d46c94024c2519, type: 2}
+  references:
+    version: 2
+    RefIds: []

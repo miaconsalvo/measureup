@@ -13,7 +13,16 @@ MonoBehaviour:
   m_Name: Athleisure Set
   m_EditorClassIdentifier: 
   name: Athleisure
-  price: 400
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:9b488de41f12d8b44a0e611d909df40a
+    m_TableEntryReference:
+      m_KeyId: 6376423434223616
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  price: 360
   priceRange: $
   garments:
   - {fileID: 11400000, guid: 434919b2ac48b8241aa506f4c3044fe5, type: 2}
@@ -26,3 +35,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3dd5bee944a9892499537f489a2e5591, type: 2}
   - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
   - {fileID: 11400000, guid: 62dc69857624ecb4c807fbd001c128ce, type: 2}
+  references:
+    version: 2
+    RefIds: []

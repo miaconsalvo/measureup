@@ -30,6 +30,14 @@ MonoBehaviour:
     m_Localized: Starter Kit
     m_Metadata:
       m_Items: []
+  - m_Id: 6376423434223616
+    m_Localized: Athleisure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6376500059963392
+    m_Localized: Elevated Basics
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

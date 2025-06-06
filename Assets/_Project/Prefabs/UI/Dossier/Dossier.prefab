@@ -594,7 +594,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 600}
+  m_SizeDelta: {x: 800, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7876094692352030381
 CanvasRenderer:
@@ -3341,6 +3341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a43c91294c5554cbfbaf567a8f1ad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rect: {fileID: 0}
   submitBtn: {fileID: 0}
   closeBtn: {fileID: 2255679935117165444}
   closeStateOnSubmit: 0
@@ -3384,6 +3385,7 @@ MonoBehaviour:
     btn: {fileID: 5733504002829143033}
     state: {fileID: 7841925795756067564}
     navType: 0
+  <dossierRect>k__BackingField: {fileID: 7412467719986589281}
   stagesWithDossier: 010000000200000003000000
   episode: {fileID: 0}
   styleRuleText: {fileID: 4730198114345260411}

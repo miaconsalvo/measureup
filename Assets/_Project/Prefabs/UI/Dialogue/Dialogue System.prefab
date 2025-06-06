@@ -360,7 +360,7 @@ RectTransform:
   m_GameObject: {fileID: 8836324549495734146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3218370401985007959}
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showDebug: 0
-  debugTextView: {fileID: 3384499064545977506}
+  debugTextView: {fileID: 0}
 --- !u!225 &7460357047239596168
 CanvasGroup:
   m_ObjectHideFlags: 0

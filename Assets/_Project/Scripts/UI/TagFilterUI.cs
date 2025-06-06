@@ -5,12 +5,18 @@ using System.Linq;
 using Mystie.Core;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Mystie.Dressup
 {
     public class TagFilterUI : MonoBehaviour
     {
         [SerializeField] private DressupStage dressup;
+        [SerializeField] private CanvasGroup panel;
+        [SerializeField] private RectTransform panelRect;
+
+        [SerializeField] private Button filterButton;
+        [SerializeField] private Button closeButton;
 
         private List<ClothingTag> tagsInInventory;
 
@@ -23,15 +29,21 @@ namespace Mystie.Dressup
         {
             dressup.onItemListUpdate += UpdateTagsList;
             dressup.onItemUIListUpdate += OnItemUIListUpdate;
+            filterButton.onClick.AddListener(Open);
+            closeButton.onClick.AddListener(Close);
 
             typeFilter.onUpdate += UpdateFilter;
             foreach (Filter f in filters) f.filter.onUpdate += UpdateFilter;
+
+            Close();
         }
 
         public void OnDestroy()
         {
             dressup.onItemListUpdate -= UpdateTagsList;
             dressup.onItemUIListUpdate -= OnItemUIListUpdate;
+            filterButton.onClick.RemoveListener(Open);
+            closeButton.onClick.RemoveListener(Close);
 
             typeFilter.onUpdate -= UpdateFilter;
             foreach (Filter f in filters) f.filter.onUpdate -= UpdateFilter;
@@ -91,6 +103,8 @@ namespace Mystie.Dressup
                     if (tagUI.toggle != null) tagUI.toggle.onValueChanged.AddListener((value) => f.filter.Set(tagUI.tag, value));
                 }
             }
+
+            UpdateUI();
         }
 
         [Button]
@@ -99,6 +113,25 @@ namespace Mystie.Dressup
             typeFilter.Clear();
             foreach (Filter f in filters) f.filter.Clear();
             UpdateFilter();
+        }
+
+        private void Close()
+        {
+            panel.gameObject.SetActive(false);
+            filterButton.gameObject.SetActive(true);
+
+        }
+
+        private void Open()
+        {
+            panel.gameObject.SetActive(true);
+            filterButton.gameObject.SetActive(false);
+            UpdateUI();
+        }
+
+        public void UpdateUI()
+        {
+            if (panelRect != null) LayoutRebuilder.ForceRebuildLayoutImmediate(panelRect);
         }
 
         [Serializable]

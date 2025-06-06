@@ -72,9 +72,9 @@ namespace Mystie.Dressup
 
         protected override void OnStageEnter()
         {
-            base.OnStageEnter();
             fitChecksDone = 0;
             UpdateItems();
+            base.OnStageEnter();
         }
 
         [Button()]

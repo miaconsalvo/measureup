@@ -1,21 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-namespace Mystie
+namespace Mystie.UI
 {
-    public class FlexibleGridLayout : MonoBehaviour
+    /*
+    public class FlexibleGridLayout : LayoutGroup
     {
-        // Start is called before the first frame update
-        void Start()
+        public int rows;
+        public int columns;
+        public Vector2 cellSize;
+
+        public override void CalculateLayoutInputHorizontal()
         {
-        
+            base.CalculateLayoutInputHorizontal();
+
+            float sqrRt = Mathf.Sqrt(transform.childCount);
+            rows = Mathf.CeilToInt(sqrRt);
+            columns = Mathf.CeilToInt(sqrRt);
+
+            float parentWidth = rectTransform.rect.width;
+            float parentHeight = rectTransform.rect.height;
+
+            float cellWidth =
         }
 
-        // Update is called once per frame
-        void Update()
+        public override void CalculateLayoutInputVertical()
         {
-        
+            base.CalculateLayoutInputVertical();
+
+
         }
-    }
+
+
+
+        public override void SetLayoutVertical()
+        {
+            base.CalculateLayoutInputVertical();
+        }
+    }*/
 }

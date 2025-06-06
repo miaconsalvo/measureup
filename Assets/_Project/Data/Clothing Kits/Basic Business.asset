@@ -22,7 +22,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  price: 400
+  price: 900
   priceRange: $$
   garments:
   - {fileID: 11400000, guid: f137bac69401609468ce77b47c27f5c3, type: 2}
@@ -33,3 +33,6 @@ MonoBehaviour:
   tags:
   - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}
   - {fileID: 11400000, guid: b739dd24505919541bee74a638139d25, type: 2}
+  references:
+    version: 2
+    RefIds: []

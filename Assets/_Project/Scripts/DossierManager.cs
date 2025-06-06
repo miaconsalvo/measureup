@@ -18,6 +18,7 @@ namespace Mystie
         public static LevelManager levelManager;
 
         [field: SerializeField] public NavButton dossierUI { get; private set; }
+        [field: SerializeField] public RectTransform dossierRect { get; private set; }
         [SerializeField] private List<LevelStageType> stagesWithDossier;
         public EpisodeScriptable episode;
         private ContestantData contestant;
@@ -44,12 +45,14 @@ namespace Mystie
             levelManager = LevelManager.Instance;
             levelManager.onStageSet += OnStageSet;
             dossierUI.Sub(UIManager.Instance);
+            dossierUI.state.onDisplay += UpdateUI;
         }
 
         public void OnDestroy()
         {
             levelManager.onStageSet -= OnStageSet;
             dossierUI.Unsub();
+            dossierUI.state.onDisplay -= UpdateUI;
         }
 
         public void SetEpisode(EpisodeScriptable episode)
@@ -71,6 +74,11 @@ namespace Mystie
                 Destroy(lifestyleAnchor.GetChild(i).gameObject);
         }
 
+        public void UpdateUI()
+        {
+            if (dossierRect != null) LayoutRebuilder.ForceRebuildLayoutImmediate(dossierRect);
+        }
+
         [YarnCommand("add_note")]
         public static void AddNote(int q, int n)
         {
@@ -85,12 +93,18 @@ namespace Mystie
                     switch (note.type)
                     {
                         case InterviewNote.InfoType.Like:
-                            dossier.likesList.Add(note.text);
-                            dossier.likes.text = GetList(dossier.likesList);
+                            if (!dossier.likesList.Contains(note.text))
+                            {
+                                dossier.likesList.Add(note.text);
+                                dossier.likes.text = GetList(dossier.likesList);
+                            }
                             break;
                         case InterviewNote.InfoType.Dislike:
-                            dossier.dislikesList.Add(note.text);
-                            dossier.dislikes.text = GetList(dossier.dislikesList);
+                            if (!dossier.dislikesList.Contains(note.text))
+                            {
+                                dossier.dislikesList.Add(note.text);
+                                dossier.dislikes.text = GetList(dossier.dislikesList);
+                            }
                             break;
                         case InterviewNote.InfoType.Lifestyle:
                             LocalizeStringEvent noteString =
@@ -103,6 +117,7 @@ namespace Mystie
                 }
 
                 levelManager.dossier.questionsAsked.Add(q);
+                levelManager.dossier.UpdateUI();
             }
         }
 

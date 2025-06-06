@@ -62,14 +62,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   submitBtn: {fileID: 0}
   closeBtn: {fileID: 3376949460779881485}
+  closeStateOnSubmit: 0
   closeStateOnCancel: 0
+  submitPopup: {fileID: 0}
   pauseState: {fileID: 0}
   canvas: {fileID: 3589949736841487354}
-  canvasFocused: {fileID: 0}
+  canvasBackground: {fileID: 0}
   fadeOutTime: 0.05
   fadeInTime: 0.25
-  panel: {fileID: 5379397577973994907}
-  uiElements: []
   navButtons: []
   showCursor: 1
   displaySFX:
@@ -94,9 +94,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773244772331287185}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 0
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!1 &2945312712051524061
 GameObject:
@@ -1034,7 +1034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8740061736708289390, guid: 71209757c5e4963478e196b396ea4be6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -500.28
+      value: -490.23
       objectReference: {fileID: 0}
     - target: {fileID: 8740061736708289390, guid: 71209757c5e4963478e196b396ea4be6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1176,7 +1176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8740061736708289390, guid: 71209757c5e4963478e196b396ea4be6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -573.8
+      value: -557.05
       objectReference: {fileID: 0}
     - target: {fileID: 8740061736708289390, guid: 71209757c5e4963478e196b396ea4be6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1508,7 +1508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8740061736708289390, guid: 71209757c5e4963478e196b396ea4be6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -426.76
+      value: -423.41
       objectReference: {fileID: 0}
     - target: {fileID: 8740061736708289390, guid: 71209757c5e4963478e196b396ea4be6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

@@ -13,7 +13,16 @@ MonoBehaviour:
   m_Name: Elevated Basics
   m_EditorClassIdentifier: 
   name: Elevated Basics
-  price: 400
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:9b488de41f12d8b44a0e611d909df40a
+    m_TableEntryReference:
+      m_KeyId: 6376500059963392
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  price: 360
   priceRange: $
   garments:
   - {fileID: 11400000, guid: 30a462b5608348e47be05751538a9c8c, type: 2}
@@ -27,3 +36,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b739dd24505919541bee74a638139d25, type: 2}
   - {fileID: 11400000, guid: f7c0109afcb5ab749a73d95ed2733663, type: 2}
   - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
+  references:
+    version: 2
+    RefIds: []

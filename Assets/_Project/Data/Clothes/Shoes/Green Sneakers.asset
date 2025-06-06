@@ -13,11 +13,34 @@ MonoBehaviour:
   m_Name: Green Sneakers
   m_EditorClassIdentifier: 
   name: Green Sneakers
-  icon: {fileID: 0}
-  sprite: {fileID: 0}
   <type>k__BackingField: 2
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  brand: {fileID: 0}
+  icon: {fileID: 21300000, guid: e7b8f4164794f8a47baed8e06390fa37, type: 3}
+  sprite: {fileID: 21300000, guid: 2bdfbf19b63d4534db61915347c08b49, type: 3}
+  sprites: []
   tags:
   - {fileID: 11400000, guid: 3dd5bee944a9892499537f489a2e5591, type: 2}
   - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
   - {fileID: 11400000, guid: 62dc69857624ecb4c807fbd001c128ce, type: 2}
   - {fileID: 11400000, guid: cbeb23e41baf0ad429d46c94024c2519, type: 2}
+  references:
+    version: 2
+    RefIds: []

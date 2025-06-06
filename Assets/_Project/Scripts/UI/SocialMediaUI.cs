@@ -24,7 +24,10 @@ namespace Mystie.UI
         public override void OnOpen()
         {
             if (open == true) return;
-            base.OnOpen();
+            open = true;
+
+            if (lockNavbar && appNavbarUI != null && !commentsQueue.IsNullOrEmpty())
+                appNavbarUI.SetNavbarEnabled(false);
 
             if (!commentsQueue.IsNullOrEmpty() && !displayingComments)
                 StartCoroutine(DisplayComments());
@@ -37,6 +40,15 @@ namespace Mystie.UI
             //Debug.Log("Social Media close!");
             StopCoroutine(DisplayComments());
             displayingComments = false;
+        }
+
+        public void LateUpdate()
+        {
+            if (displayingComments)
+            {
+                scrollRect.verticalNormalizedPosition = 0f;
+                LayoutRebuilder.ForceRebuildLayoutImmediate(messageContainer);
+            }
         }
 
         public void QueueComments(List<Comment> comments)
@@ -58,6 +70,9 @@ namespace Mystie.UI
             while (commentsQueue.Count > 0)
             {
                 DisplayComment(commentsQueue.Dequeue());
+
+                //scrollRect.verticalNormalizedPosition = 0f;
+                //LayoutRebuilder.ForceRebuildLayoutImmediate(messageContainer);
 
                 float delay = Random.Range(delayBetweenPostsMin, delayBetweenPostsMax);
                 yield return new WaitForSeconds(delay);
