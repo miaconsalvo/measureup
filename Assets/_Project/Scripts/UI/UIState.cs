@@ -107,8 +107,6 @@ namespace Mystie.UI
                 canvasBackground.blocksRaycasts = true;
             }
 
-            if (rect != null) LayoutRebuilder.ForceRebuildLayoutImmediate(rect);
-
             Cursor.visible = showCursor;
 
             if (!displaySFX.IsNull)
