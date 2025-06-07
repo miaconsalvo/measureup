@@ -16104,7 +16104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7417885277615536138, guid: f16cc2eceb7d9b44cb1c7c1464de5269, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000062254067
+      value: 0.000031443353
       objectReference: {fileID: 0}
     - target: {fileID: 7955703879850810431, guid: f16cc2eceb7d9b44cb1c7c1464de5269, type: 3}
       propertyPath: m_AnchorMax.y
@@ -18396,6 +18396,10 @@ PrefabInstance:
     - target: {fileID: 8309872162217312466, guid: d518d9483f6047b47ba3e4e91eb99489, type: 3}
       propertyPath: m_Name
       value: Dossier
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309872162217312466, guid: d518d9483f6047b47ba3e4e91eb99489, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8975530703060675253, guid: d518d9483f6047b47ba3e4e91eb99489, type: 3}
       propertyPath: m_AnchorMax.y
