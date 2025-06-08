@@ -12,6 +12,8 @@ namespace Mystie
     public class EpisodeScriptable : ScriptableObject
     {
         public ContestantData contestant;
+        public LocalizedString logline;
+        public LocalizedString trending;
         public StyleRuleScriptable rule;
         public CommentCollection socialMediaComments;
         public int maxQuestions = 3;
