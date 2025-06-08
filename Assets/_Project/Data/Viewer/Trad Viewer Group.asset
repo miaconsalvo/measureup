@@ -27,6 +27,16 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+  - handle: 
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1677847166976
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   negComments:
   - handle: wardrobejudge
     text:
@@ -38,7 +48,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - handle: karebear
+  - handle: 
     text:
       m_TableReference:
         m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1

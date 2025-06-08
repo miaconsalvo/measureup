@@ -98,13 +98,9 @@ namespace Mystie.Dressup
             {
                 List<TagLabelUI> tagsUI = f.display.SetTags(tagsInInventory);
                 if (tagsUI.IsNullOrEmpty()) continue;
-
                 foreach (TagLabelUI tagUI in tagsUI)
                 {
-                    if (tagUI.toggle != null)
-                    {
-                        tagUI.toggle.onValueChanged.AddListener((value) => f.filter.Set(tagUI.tag, value));
-                    }
+                    if (tagUI.toggle != null) tagUI.toggle.onValueChanged.AddListener((value) => f.filter.Set(tagUI.tag, value));
                 }
             }
 
@@ -121,16 +117,14 @@ namespace Mystie.Dressup
 
         private void Close()
         {
-            panel.alpha = 0f;
-            panel.blocksRaycasts = false;
+            panel.gameObject.SetActive(false);
             filterButton.gameObject.SetActive(true);
 
         }
 
         private void Open()
         {
-            panel.alpha = 1f;
-            panel.blocksRaycasts = true;
+            panel.gameObject.SetActive(true);
             filterButton.gameObject.SetActive(false);
             UpdateUI();
         }

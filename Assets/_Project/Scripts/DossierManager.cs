@@ -23,10 +23,8 @@ namespace Mystie
         public EpisodeScriptable episode;
         private ContestantData contestant;
 
-        public LocalizeStringEvent loglineText;
         public LocalizeStringEvent styleRuleText;
         public LocalizeStringEvent styleRuleDescriptionText;
-        public LocalizeStringEvent trendingText;
         public TextMeshProUGUI contestantNameText;
         public LocalizeStringEvent occupationText;
 
@@ -62,10 +60,8 @@ namespace Mystie
             this.episode = episode;
             contestant = episode.contestant;
 
-            loglineText.StringReference = episode.logline;
             styleRuleText.StringReference = episode.rule.ruleName;
             styleRuleDescriptionText.StringReference = episode.rule.ruleDescription;
-            trendingText.StringReference = episode.trending;
             contestantNameText.text = contestant.name + ", " + contestant.age;
             occupationText.StringReference = contestant.occupation;
 

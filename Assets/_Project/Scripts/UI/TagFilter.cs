@@ -21,7 +21,6 @@ namespace Mystie.Dressup
 
         public void Set(ClothingTag tag, bool value)
         {
-            Debug.Log("Set: " + tag);
             if (tag == null) return;
 
             if (value && !filterTags.Contains(tag)) filterTags.Add(tag);

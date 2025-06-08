@@ -37,7 +37,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - handle: pumpsitup
+  - handle: 
     text:
       m_TableReference:
         m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
@@ -47,7 +47,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - handle: rolemodel00
+  - handle: 
     text:
       m_TableReference:
         m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
@@ -68,7 +68,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - handle: rolemodel00
+  - handle: 
     text:
       m_TableReference:
         m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
