@@ -16,8 +16,58 @@ MonoBehaviour:
   condition: {fileID: 11400000, guid: ab30509787dad9b408cd41041271ae99, type: 2}
   alwaysShowNeutralComments: 0
   neutralComments: []
-  posComments: []
-  negComments: []
+  posComments:
+  - handle: rosa0304
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 147005898752
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: violet12
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1363437944832
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: momoffour
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1403489353728
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  negComments:
+  - handle: rosa0304
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1425874354176
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: violet12
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1456496967680
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   references:
     version: 2
     RefIds: []

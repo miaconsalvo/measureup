@@ -34,6 +34,10 @@ MonoBehaviour:
     m_Localized: Next week?
     m_Metadata:
       m_Items: []
+  - m_Id: 6919069441458176
+    m_Localized: Are you sure you want to skip onboarding?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

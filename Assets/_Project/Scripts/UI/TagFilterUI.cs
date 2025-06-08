@@ -117,14 +117,18 @@ namespace Mystie.Dressup
 
         private void Close()
         {
-            panel.gameObject.SetActive(false);
+            //panel.gameObject.SetActive(false);
+            panel.alpha = 0f;
+            panel.blocksRaycasts = false;
             filterButton.gameObject.SetActive(true);
 
         }
 
         private void Open()
         {
-            panel.gameObject.SetActive(true);
+            //panel.gameObject.SetActive(true);
+            panel.alpha = 1.0f;
+            panel.blocksRaycasts = true;
             filterButton.gameObject.SetActive(false);
             UpdateUI();
         }
