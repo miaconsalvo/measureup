@@ -63,9 +63,9 @@ namespace Mystie
             contestant = episode.contestant;
 
             loglineText.StringReference = episode.logline;
-            styleRuleText.StringReference = episode.rule.ruleName;
-            trendingText.StringReference = episode.trending;
-            styleRuleDescriptionText.StringReference = episode.rule.ruleDescription;
+            styleRuleText.StringReference = episode.styleRule.ruleName;
+            trendingText.StringReference = episode.trendingDescription;
+            styleRuleDescriptionText.StringReference = episode.styleRule.ruleDescription;
             contestantNameText.text = contestant.name + ", " + contestant.age;
             occupationText.StringReference = contestant.occupation;
 

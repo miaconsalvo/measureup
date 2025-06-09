@@ -23,6 +23,10 @@ MonoBehaviour:
       are currently trending! Try to incorporate one into this week\u2019s episode.\r\n"
     m_Metadata:
       m_Items: []
+  - m_Id: 126223212347392
+    m_Localized: Bright skirts!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

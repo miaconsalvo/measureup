@@ -301,7 +301,7 @@ CanvasGroup:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914543458822088061}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -341,7 +341,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - <name>k__BackingField: Hanine
+  - <name>k__BackingField: Hanine El Mir
     <ui>k__BackingField: {fileID: 5489571430203421670}
     <localizedString>k__BackingField:
       m_TableReference:
@@ -352,7 +352,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - <name>k__BackingField: Courtney
+  - <name>k__BackingField: Courtney Blamey
     <ui>k__BackingField: {fileID: 687039417472514147}
     <localizedString>k__BackingField:
       m_TableReference:
@@ -363,7 +363,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - <name>k__BackingField: Katey
+  - <name>k__BackingField: Katey Campbell
     <ui>k__BackingField: {fileID: 8447208357195598331}
     <localizedString>k__BackingField:
       m_TableReference:
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914543458822088061}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53a43c91294c5554cbfbaf567a8f1ad7, type: 3}
   m_Name: 
@@ -545,7 +545,7 @@ MonoBehaviour:
   submitBtn: {fileID: 0}
   closeBtn: {fileID: 0}
   closeStateOnSubmit: 0
-  closeStateOnCancel: 1
+  closeStateOnCancel: 0
   submitPopup: {fileID: 0}
   pauseState: {fileID: 0}
   canvas: {fileID: 9184768606607043065}

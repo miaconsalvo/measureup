@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Episode 1
   m_EditorClassIdentifier: 
   contestant: {fileID: 11400000, guid: 7749c355ff86d8e459f6715becae6f25, type: 2}
+  styleRule: {fileID: 11400000, guid: 10d88f6780ed48d4ebf67ec1790aa511, type: 2}
+  trendingRule: {fileID: 11400000, guid: f0bfb4ce66b48fe4f8f66ad2150f97dd, type: 2}
+  socialMediaComments: {fileID: 11400000, guid: e9545bf04a6b5874e8ad7d9b2cdea76e, type: 2}
   logline:
     m_TableReference:
       m_TableCollectionName: GUID:ba909b3975bf8d249ba74c36ea758ded
@@ -22,7 +25,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  trending:
+  trendingDescription:
     m_TableReference:
       m_TableCollectionName: GUID:186f780181f63cf4592323b302052e67
     m_TableEntryReference:
@@ -31,8 +34,6 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  rule: {fileID: 11400000, guid: 10d88f6780ed48d4ebf67ec1790aa511, type: 2}
-  socialMediaComments: {fileID: 11400000, guid: e9545bf04a6b5874e8ad7d9b2cdea76e, type: 2}
   maxQuestions: 3
   interviewNotes:
   - question: A. How would you describe your day-to-day wardrobe?

@@ -38,6 +38,9 @@ namespace Mystie.Dressup
             switch (op)
             {
                 case LogicOp.AND:
+                    if (tagsList.IsNullOrEmpty())
+                        return not ? true : tags.IsNullOrEmpty();
+
                     result = true;
                     foreach (ClothingTag tag in tags)
                     {
@@ -49,6 +52,9 @@ namespace Mystie.Dressup
                     }
                     break;
                 case LogicOp.OR:
+                    if (tagsList.IsNullOrEmpty())
+                        return not ? true : tags.IsNullOrEmpty();
+
                     result = false;
                     foreach (ClothingTag tag in tags)
                     {
@@ -60,6 +66,9 @@ namespace Mystie.Dressup
                     }
                     break;
                 case LogicOp.XOR:
+                    if (tagsList.IsNullOrEmpty())
+                        return not;
+
                     result = false;
                     foreach (ClothingTag tag in tags)
                     {

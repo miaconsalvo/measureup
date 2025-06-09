@@ -16,6 +16,12 @@ namespace Mystie.Dressup
     {
         private static DressupManager instance;
 
+        // todo improve
+        public static DressupManager Instance
+        {
+            get { return instance; }
+        }
+
         public event Action<ItemScriptable> onItemAdded;
         public event Action<ItemScriptable> onItemRemoved;
 
@@ -38,7 +44,6 @@ namespace Mystie.Dressup
         public void Awake()
         {
             instance = this;
-
 
             items = new Dictionary<ItemType, ItemScriptable>();
 
@@ -195,7 +200,12 @@ namespace Mystie.Dressup
 
         public bool CheckStyleRule()
         {
-            return LevelManager.Instance.episode.rule.Check(currentTags);
+            return LevelManager.Instance.episode.styleRule.Check(currentTags);
+        }
+
+        public bool CheckTrending()
+        {
+            return LevelManager.Instance.episode.trendingRule.Check(currentTags);
         }
 
         // TODO Implement this better
@@ -229,7 +239,7 @@ namespace Mystie.Dressup
 
             foreach (ItemScriptable item in instance.items.Values)
             {
-                if (item.HasTag(s)) return item.displayName.GetLocalizedString();
+                if (item.HasTag(s)) return item.displayName.GetLocalizedString().ToLower();
             }
 
             return null;

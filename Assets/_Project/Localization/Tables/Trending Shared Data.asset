@@ -16,7 +16,11 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: 186f780181f63cf4592323b302052e67
   m_Entries:
   - m_Id: 6769344512
-    m_Key: Bright skirts
+    m_Key: Bright Skirts/Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126223212347392
+    m_Key: Bright Skirts
     m_Metadata:
       m_Items: []
   m_Metadata:

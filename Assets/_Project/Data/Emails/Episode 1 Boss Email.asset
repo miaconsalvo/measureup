@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843a9e565f5be2247829d153e225f526, type: 3}
+  m_Name: Episode 1 Boss Email
+  m_EditorClassIdentifier: 
+  sender: boss@measureup.com
+  subject:
+    m_TableReference:
+      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
+    m_TableEntryReference:
+      m_KeyId: 30562789883904
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  bodyPositive:
+    m_TableReference:
+      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
+    m_TableEntryReference:
+      m_KeyId: 13920632832
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  bodyStyle:
+    m_TableReference:
+      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
+    m_TableEntryReference:
+      m_KeyId: 61484040192
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  bodyTrending:
+    m_TableReference:
+      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
+    m_TableEntryReference:
+      m_KeyId: 66420736000
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  bodyNegative:
+    m_TableReference:
+      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
+    m_TableEntryReference:
+      m_KeyId: 87455170560
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  ratingPositive:
+    m_TableReference:
+      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
+    m_TableEntryReference:
+      m_KeyId: 5237787852800
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  ratingNeutral:
+    m_TableReference:
+      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
+    m_TableEntryReference:
+      m_KeyId: 5278623596544
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  ratingBad:
+    m_TableReference:
+      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
+    m_TableEntryReference:
+      m_KeyId: 5299628670976
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  signaturePositive:
+    m_TableReference:
+      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
+    m_TableEntryReference:
+      m_KeyId: 4077903413248
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  signatureNeutral:
+    m_TableReference:
+      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
+    m_TableEntryReference:
+      m_KeyId: 4302198013952
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  signatureBad:
+    m_TableReference:
+      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
+    m_TableEntryReference:
+      m_KeyId: 4320908804096
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

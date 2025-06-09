@@ -11,13 +11,13 @@ namespace Mystie.UI
     {
         [SerializeField] private RectTransform messageContainer;
         [SerializeField] private ScrollRect scrollRect;
-        [SerializeField] private MessageBoxUI messageBoxPrefab;
+        [SerializeField] private ChatBubbleUI messageBoxPrefab;
         [SerializeField] private MessageBoxSettings messageBoxSettings;
         [SerializeField] private float delayBetweenPostsMin = 1f;
         [SerializeField] private float delayBetweenPostsMax = 2f;
         [SerializeField] private EventReference postSFX;
 
-        private MessageBoxUI messageBox;
+        private ChatBubbleUI messageBox;
         private Queue<Comment> commentsQueue;
         private bool displayingComments;
 
@@ -84,7 +84,7 @@ namespace Mystie.UI
 
         public void DisplayComment(Comment comment)
         {
-            messageBox = Instantiate(messageBoxPrefab.gameObject, messageContainer).GetComponent<MessageBoxUI>();
+            messageBox = Instantiate(messageBoxPrefab.gameObject, messageContainer).GetComponent<ChatBubbleUI>();
             messageBox.transform.SetAsLastSibling();
             messageBox.Set(messageBoxSettings);
 

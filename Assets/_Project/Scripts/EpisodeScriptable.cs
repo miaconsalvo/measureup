@@ -12,10 +12,16 @@ namespace Mystie
     public class EpisodeScriptable : ScriptableObject
     {
         public ContestantData contestant;
-        public LocalizedString logline;
-        public LocalizedString trending;
-        public StyleRuleScriptable rule;
+        public StyleRuleScriptable styleRule;
+        public StyleRuleScriptable trendingRule;
         public CommentCollection socialMediaComments;
+
+        [Header("Dossier")]
+
+        public LocalizedString logline;
+        public LocalizedString trendingDescription;
+
+        [Header("Interview")]
         public int maxQuestions = 3;
         public List<InterviewQuestion> interviewNotes;
     }

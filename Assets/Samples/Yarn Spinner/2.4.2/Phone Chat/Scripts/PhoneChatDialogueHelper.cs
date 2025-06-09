@@ -21,7 +21,7 @@ namespace Mystie.UI
 
         [SerializeField] private RectTransform messageContainer;
         [SerializeField] private ScrollRect scrollRect;
-        [SerializeField] private MessageBoxUI messageBoxPrefab;
+        [SerializeField] private ChatBubbleUI messageBoxPrefab;
         [SerializeField] private RectTransform optionsContainer;
         [SerializeField] private OptionView optionPrefab;
         [SerializeField] private float lettersPerSecond = 10f;
@@ -33,7 +33,7 @@ namespace Mystie.UI
         [SerializeField] private MessageBoxSettings messageBoxThem;
         private MessageBoxSettings messageBoxNext;
 
-        private MessageBoxUI messageBox;
+        private ChatBubbleUI messageBox;
 
         void Awake()
         {
@@ -67,7 +67,7 @@ namespace Mystie.UI
 
         public void InstantiateMessageBox()
         {
-            messageBox = Instantiate(messageBoxPrefab.gameObject, messageContainer).GetComponent<MessageBoxUI>();
+            messageBox = Instantiate(messageBoxPrefab.gameObject, messageContainer).GetComponent<ChatBubbleUI>();
             messageBox.transform.SetAsLastSibling();
             messageBox.Set(messageBoxNext);
         }
