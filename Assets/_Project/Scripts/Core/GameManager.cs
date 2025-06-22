@@ -2,9 +2,11 @@ using MeasureUp.Core;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Localization.Settings;
+using UnityEngine.Localization.SmartFormat;
 using UnityEngine.SceneManagement;
 using Yarn.Unity;
 
@@ -20,6 +22,7 @@ namespace Mystie.Core
         public SystemDataScriptable systemData { get; private set; }
         public InputActionAsset actions { get; private set; }
         public Controls controls { get; private set; }
+        public SmartFormatter stringFormatter { get; private set; }
 
         public static bool isPaused = false;
         public static GameState gameState { get; private set; }
@@ -78,9 +81,17 @@ namespace Mystie.Core
 
         IEnumerator Start()
         {
+            Debug.Log("Game Manager Start");
             // Wait for the localization system to initialize, loading Locales, preloading etc.
             yield return LocalizationSettings.InitializationOperation;
             gameSettings.LoadLocale();
+            stringFormatter = LocalizationSettings.StringDatabase.SmartFormatter;
+
+            List<Dressup.ItemScriptable> items = new List<Dressup.ItemScriptable>();
+            items.Add(new Dressup.ItemScriptable());
+            items.Add(new Dressup.ItemScriptable());
+
+            //Debug.Log($"Test 1: {stringFormatter.Format("{items:clothing(comfy)}", new { items = items })}");
         }
 
         public static void SetGameState(GameState state)

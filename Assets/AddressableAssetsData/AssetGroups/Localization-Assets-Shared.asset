@@ -63,7 +63,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ea84933096633a74fbd877fc0fd771f3
-    m_Address: Assets/_Project/Localization/Tables/Comments Shared Data.asset
+    m_Address: Assets/_Project/Localization/Tables/Opinions Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

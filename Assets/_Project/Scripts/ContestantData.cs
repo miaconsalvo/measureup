@@ -25,6 +25,7 @@ namespace Mystie.Dressup
         public List<ClothingTag> positiveTags = new List<ClothingTag>();
         public List<ClothingTag> negativeTags = new List<ClothingTag>();
 
+        [field: SerializeField] public LocalizedString opinionDefault { get; private set; }
         public List<OpinionCondition> opinionConditions = new List<OpinionCondition>();
 
         private void OnValidate()
@@ -44,10 +45,12 @@ namespace Mystie.Dressup
     [System.Serializable]
     public class OpinionCondition
     {
+        public string name = "Opinion";
         public List<ClothingTag> requiredTags = new List<ClothingTag>();
         public List<ClothingTag> excludedTags = new List<ClothingTag>();
         public int minNegativeTags = 0;
         public int minPositiveTags = 0;
-        public List<string> opinions = new List<string>();
+        //public List<string> opinions = new List<string>();
+        public List<LocalizedString> opinions = new List<LocalizedString>();
     }
 }

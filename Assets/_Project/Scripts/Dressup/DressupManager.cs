@@ -32,8 +32,8 @@ namespace Mystie.Dressup
 
         public List<ClothingTag> currentTags;
 
-        public List<string> opinionsAvailable;
-        public List<string> opinionsUsed;
+        private List<LocalizedString> opinionsAvailable;
+        private List<LocalizedString> opinionsUsed;
 
         private int negativeCount = 0;
         private int positiveCount = 0;
@@ -48,8 +48,8 @@ namespace Mystie.Dressup
             items = new Dictionary<ItemType, ItemScriptable>();
 
             currentTags = new List<ClothingTag>();
-            opinionsAvailable = new List<string>();
-            opinionsUsed = new List<string>();
+            opinionsAvailable = new List<LocalizedString>();
+            opinionsUsed = new List<LocalizedString>();
 
             SetModel(contestant);
         }
@@ -92,14 +92,14 @@ namespace Mystie.Dressup
             if (opinionsAvailable.Count > 0)
             {
                 int rand = UnityEngine.Random.Range(0, opinionsAvailable.Count);
-                string opinion = opinionsAvailable[rand];
+                LocalizedString opinion = opinionsAvailable[rand];
+                //opinionsAvailable.RemoveAt(rand)
                 opinionsUsed.Add(opinion);
-                return opinion;
-                //opinionsAvailable.RemoveAt(rand);
+                return opinion.GetLocalizedString(new { items = instance.items.Values.ToList() });
             }
             else
             {
-                return "Hmmm… yeah this is okay.";
+                return contestant.opinionDefault.GetLocalizedString();
             }
         }
 

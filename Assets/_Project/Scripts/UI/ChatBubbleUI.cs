@@ -50,16 +50,6 @@ namespace Mystie.UI
             UpdateDisplay();
         }
 
-        public void SetText(string text, string characterName = null)
-        {
-            if (this.text != null) this.text.text = text;
-            if (this.characterName != null)
-            {
-                this.characterName.text = characterName;
-                this.characterName.gameObject.SetActive(settings.showName && !string.IsNullOrWhiteSpace(characterName));
-            }
-        }
-
         public void UpdateDisplay()
         {
             if (bg != null) bg.color = settings.bgColor;

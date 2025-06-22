@@ -21,6 +21,8 @@ namespace Mystie.Dressup
 
         public List<ClothingTag> tags = new List<ClothingTag>();
 
+        public ItemScriptable() { }
+
         public bool HasTag(string s)
         {
             foreach (ClothingTag tag in tags)
@@ -28,6 +30,16 @@ namespace Mystie.Dressup
                 if (tag.name == s) return true;
             }
             return false;
+        }
+
+        public List<string> TagsStrings
+        {
+            get
+            {
+                List<string> tagsStrings = new List<string>();
+                foreach (ClothingTag tag in tags) tagsStrings.Add(tag.name);
+                return tagsStrings;
+            }
         }
     }
 }

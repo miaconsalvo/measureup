@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Opinions_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: ea84933096633a74fbd877fc0fd771f3, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 2721915193756483610
+  m_TableData:
+  - m_Id: 7000031232
+    m_Localized: Time to wrap it up!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3002064437248
+    m_Localized: I don't think we can send her out like that...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6082297979469824
+    m_Localized: "Oh, this {items:clothing(bright)} is really\u2026 bright. I wouldn\u2019t
+      usually pick this colour for myself."
+    m_Metadata:
+      m_Items:
+      - rid: 2721915193756483610
+  - m_Id: 6085783861329920
+    m_Localized: Oh wow. I mean, the {items:clothing(bright)} is OK but does it maybe
+      come in a different colour?
+    m_Metadata:
+      m_Items:
+      - rid: 2721915193756483610
+  - m_Id: 6085826123137024
+    m_Localized: "Ahh.. the outfit is interesting but I\u2019m not sure about the
+      colours\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6085943311990784
+    m_Localized: "This outfit is\u2026 ok\u2026 but I\u2019m not usually one for
+      skirts."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6085979156512768
+    m_Localized: Oh, uh, did I mention that I kind of hate skirts? Sorry.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6086012115353600
+    m_Localized: "Sorry but I really don\u2019t like skirts. They remind me of when
+      I was a little kid on the Family Tree."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6086656058458112
+    m_Localized: This is pretty, but sooo uncomfortable.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6086756814028800
+    m_Localized: "I\u2019m sorry to be difficult but this outfit really isn\u2019t
+      very \"me\"."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6086795305156608
+    m_Localized: "Oh wow \u2013 the outfit is ok but, maybe for someone else?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6086832407969792
+    m_Localized: "Uh, hmm, I don\u2019t really know when I would ever wear this."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6086953371697152
+    m_Localized: "This is super cute, but I can\u2019t see myself ever wearing it
+      if I am being honest."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6086959969337344
+    m_Localized: "Imagine the weird looks I would get dropping the kids off at school
+      in this\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6087085882343424
+    m_Localized: I really love this pattern!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6087125606596608
+    m_Localized: Woah, this {items:clothing(pattern)} is so fun!
+    m_Metadata:
+      m_Items:
+      - rid: 2721915193756483610
+  - m_Id: 6087146833969152
+    m_Localized: The pattern on this {items:clothing(pattern)} is amazing!
+    m_Metadata:
+      m_Items:
+      - rid: 2721915193756483610
+  - m_Id: 6087526322012160
+    m_Localized: Wow this {items:clothing(comfy)} is seriously so comfy!
+    m_Metadata:
+      m_Items:
+      - rid: 2721915193756483610
+  - m_Id: 6087518554161152
+    m_Localized: I could totally see myself wearing this to run errands
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6087483217149952
+    m_Localized: I love how comfortable this {items:clothing(comfy)} is!
+    m_Metadata:
+      m_Items:
+      - rid: 2721915193756483610
+  - m_Id: 6087622958776320
+    m_Localized: "I am seriously obsessed with this outfit! It\u2019s like you read
+      my mind!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6087631724871680
+    m_Localized: I love everything about this!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6087644307783680
+    m_Localized: Wow! I LOVE this outfit!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6500692688371712
+    m_Localized: "Hmmm\u2026 yeah this is okay."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 2721915193756483610
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0000fcab92a015000000bca288a015000000bc503aa0150000007c5f35a0150000003cf9fc9e150000007c5ad19b1500

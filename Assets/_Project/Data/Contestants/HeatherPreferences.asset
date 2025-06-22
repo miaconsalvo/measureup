@@ -40,81 +40,242 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}
   - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
   - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
+  <opinionDefault>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+    m_TableEntryReference:
+      m_KeyId: 6500692688371712
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   opinionConditions:
-  - requiredTags:
+  - name: Bright
+    requiredTags:
     - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
     excludedTags: []
     minNegativeTags: 0
     minPositiveTags: 0
     opinions:
-    - "Oh, this [item] is really\u2026 bright. I wouldn\u2019t usually pick this
-      colour for myself."
-    - Oh wow. I mean, the [item] is OK but does it maybe come in a different colour?
-    - "Ahh.. the outfit is interesting but I\u2019m not sure about the colours\u2026"
-  - requiredTags:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6082297979469824
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6085783861329920
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6085826123137024
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Flashy
+    requiredTags:
     - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
     excludedTags: []
     minNegativeTags: 0
     minPositiveTags: 0
     opinions:
-    - "This outfit is\u2026 ok\u2026 but I\u2019m not usually one for skirts."
-    - Oh, uh, did I mention that I kind of hate skirts? Sorry.
-    - "Sorry but I really don\u2019t like skirts. They remind me of when I was a
-      little kid on the Family Tree."
-  - requiredTags:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6085943311990784
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6085979156512768
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6086012115353600
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Impractical
+    requiredTags:
     - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
     - {fileID: 11400000, guid: 47fa92b562b53834aa7cc45e5e7de466, type: 2}
     excludedTags: []
     minNegativeTags: 0
     minPositiveTags: 0
     opinions:
-    - "This is super cute, but I can\u2019t see myself ever wearing it if I am being
-      honest."
-    - "Imagine the weird looks I would get dropping the kids off at school in this\u2026"
-  - requiredTags:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6086953371697152
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6086959969337344
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Uncomfy
+    requiredTags:
     - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
     excludedTags: []
     minNegativeTags: 0
     minPositiveTags: 0
     opinions:
-    - This is pretty, but sooo uncomfortable.
-  - requiredTags: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6086656058458112
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Negative
+    requiredTags: []
     excludedTags: []
     minNegativeTags: 2
     minPositiveTags: 0
     opinions:
-    - "I\u2019m sorry to be difficult but this outfit really isn\u2019t very \"me\""
-    - "Oh wow \u2013 the outfit is ok but, maybe for someone else?"
-    - "Uh, hmm, I don\u2019t really know when I would ever wear this."
-  - requiredTags:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6086756814028800
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6086795305156608
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6086832407969792
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Comfy
+    requiredTags:
     - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
     excludedTags:
     - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
     minNegativeTags: 0
     minPositiveTags: 0
     opinions:
-    - I love how comfortable this [item] is!
-    - I could totally see myself wearing this to run errands
-    - Wow this [item] is seriously so comfy!
-  - requiredTags:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087483217149952
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087518554161152
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087526322012160
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Pattern
+    requiredTags:
     - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
     excludedTags:
     - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
     minNegativeTags: 0
     minPositiveTags: 0
     opinions:
-    - I really love this pattern!
-    - Woah, this [item] is so fun!
-    - The pattern on this [item] is amazing!
-  - requiredTags: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087085882343424
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087125606596608
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087146833969152
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Opinion
+    requiredTags: []
     excludedTags:
     - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
     minNegativeTags: 0
     minPositiveTags: 2
     opinions:
-    - "I am seriously obsessed with this outfit! It\u2019s like you read my mind!"
-    - I love everything about this!
-    - Wow! I LOVE this outfit!
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087622958776320
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087631724871680
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087644307783680
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   references:
     version: 2
     RefIds: []

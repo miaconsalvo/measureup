@@ -1,27 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Mystie.Core;
 using Mystie.Dressup;
 using UnityEngine;
-using UnityEngine.Localization;
-using UnityEngine.Localization.SmartFormat;
 using UnityEngine.Localization.SmartFormat.Core.Extensions;
 
 namespace Mystie
 {
     public class ClothingFormatter : FormatterBase
     {
-        public override string[] DefaultNames => new[] { "clothing" };
+        public const string NOT = "!";
+
+        public override string[] DefaultNames => new[] { "clothing", "c" };
 
         public override bool TryEvaluateFormat(IFormattingInfo formattingInfo)
         {
-            if (formattingInfo.CurrentValue is string tag)
+            List<ItemScriptable> items = (List<ItemScriptable>)formattingInfo.CurrentValue;
+
+            string targetTags = formattingInfo.FormatterOptions;
+            List<string> targetTagsList = targetTags.Split(',').ToList();
+
+            // Get the tag from the formatter options
+            if (targetTagsList.IsNullOrEmpty())
             {
-                string clothing = DressupManager.GetItemWithTag(tag);
-                formattingInfo.Write(clothing);
+                formattingInfo.Write("[No clothing tag specified]");
                 return true;
             }
 
-            return false;
+            if (!items.IsNullOrEmpty())
+            {
+                foreach (ItemScriptable item in items.Shuffle())
+                {
+                    if (targetTagsList.All(t => !t.StartsWith(NOT) ?
+                        item.TagsStrings.Contains(t) : !item.TagsStrings.Contains(t)))
+                    {
+                        formattingInfo.Write(item.displayName.GetLocalizedString().ToLower());
+                        return true;
+                    }
+
+                    //if (targetTagsList.Any(item.TagsStrings.Contains)) //OR operator
+                }
+            }
+
+            formattingInfo.Write($"[No item with tags '{targetTags}' found]");
+
+            return true;
         }
     }
 }
+
+
+//

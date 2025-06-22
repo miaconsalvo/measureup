@@ -15,6 +15,11 @@ namespace Mystie.Dressup
         public enum TagType { Special, Type, Style, Color }
         public TagType type;
 
+        public ClothingTag()
+        {
+
+        }
+
         private void OnValidate()
         {
             if (!string.IsNullOrEmpty(name))

@@ -33,6 +33,12 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 2721915193756483649
+      type: {class: ClothingFormatter, ns: Mystie, asm: Assembly-CSharp}
+      data:
+        m_Names:
+        - clothing
+        - c
     - rid: 5872146653351510016
       type: {class: CommandLineLocaleSelector, ns: UnityEngine.Localization.Settings, asm: Unity.Localization}
       data:
@@ -88,6 +94,7 @@ MonoBehaviour:
         - rid: 5872146653351510030
         - rid: 5872146653351510031
         m_Formatters:
+        - rid: 2721915193756483649
         - rid: 5872146653351510025
         - rid: 5872146653351510032
         - rid: 5872146653351510033

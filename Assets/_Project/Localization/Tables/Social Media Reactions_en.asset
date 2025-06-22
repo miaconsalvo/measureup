@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 8028b2bae03f23f45abae95d6f590af1, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 2721915193756483611
   m_TableData:
   - m_Id: 2542792343552
     m_Localized: All of this is just to sell more things. Its dumb.
@@ -96,9 +97,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1532145434624
-    m_Localized: omg obsessed with the <outfit component here>
+    m_Localized: omg obsessed with the {items:clothing(trendy)}
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 2721915193756483611
   - m_Id: 1471986532352
     m_Localized: "YES. Finally a makeover show that does trends on time and doesn\u2019t
       try to MAKE trends"
@@ -152,4 +154,8 @@ MonoBehaviour:
       m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 2721915193756483611
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0000fcba64010000
