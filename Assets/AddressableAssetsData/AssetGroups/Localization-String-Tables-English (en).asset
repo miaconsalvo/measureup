@@ -13,54 +13,10 @@ MonoBehaviour:
   m_Name: Localization-String-Tables-English (en)
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-English (en)
-  m_Data:
-    m_SerializedData: []
   m_GUID: a0659117e410bbf42975cfd33fbb795f
   m_SerializeEntries:
-  - m_GUID: f55d29c58104f2a4b9b5a1bcb30daeb2
-    m_Address: UI_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ad031aaf4dbde9f4486f3ffb30de30d6
-    m_Address: Tags_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 854442386f643004d85ea9f8ce44d177
-    m_Address: Popup_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 29bfebc760d0e63408470ae6575fff9b
-    m_Address: Clothing Kits_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 92ea33b81c3631046814c77cc7d0da09
-    m_Address: Items_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0e07761510c43524086014e218b71eb1
-    m_Address: Item Descriptions_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 76086de3982470c4d8e3ce0ac4fe43ba
-    m_Address: Style Rules_en
+  - m_GUID: 0031341bc6de7e24f89cf8b4e07b43fd
+    m_Address: Colours_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -73,22 +29,15 @@ MonoBehaviour:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7aaa7e9593493f74a8bca0ace255db4a
-    m_Address: Lyfestyle Notes_en
+  - m_GUID: 0e07761510c43524086014e218b71eb1
+    m_Address: Item Descriptions_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 795d1067b457d344aa0a8fc2f0306b5a
-    m_Address: Opinions_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0031341bc6de7e24f89cf8b4e07b43fd
-    m_Address: Colours_en
+  - m_GUID: 29bfebc760d0e63408470ae6575fff9b
+    m_Address: Clothing Kits_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -101,8 +50,70 @@ MonoBehaviour:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5afb85c54a0903845a5452080e9d4d04
+    m_Address: Logline_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76086de3982470c4d8e3ce0ac4fe43ba
+    m_Address: Style Rules_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 795d1067b457d344aa0a8fc2f0306b5a
+    m_Address: Opinions_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7aaa7e9593493f74a8bca0ace255db4a
+    m_Address: Lyfestyle Notes_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 854442386f643004d85ea9f8ce44d177
+    m_Address: Popup_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92ea33b81c3631046814c77cc7d0da09
+    m_Address: Items_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 98d430d8b88639c4aab2bc79c7305fef
     m_Address: Credits_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad031aaf4dbde9f4486f3ffb30de30d6
+    m_Address: Tags_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efe5bf7330166b744b4272c5ad0dbae5
+    m_Address: Emails_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f55d29c58104f2a4b9b5a1bcb30daeb2
+    m_Address: UI_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -114,19 +125,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5afb85c54a0903845a5452080e9d4d04
-    m_Address: Logline_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: efe5bf7330166b744b4272c5ad0dbae5
-    m_Address: Emails_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: b655f1360a050ad408a3707ddda91265, type: 2}

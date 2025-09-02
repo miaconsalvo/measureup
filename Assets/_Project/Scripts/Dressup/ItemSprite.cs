@@ -9,5 +9,6 @@ namespace Mystie
     {
         public string name;
         public Sprite sprite;
+        public Vector2 offset;
     }
 }

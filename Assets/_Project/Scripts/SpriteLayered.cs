@@ -14,9 +14,21 @@ namespace Mystie
         public List<SpriteRenderer> renderers;
         public List<Image> renderersUI;
 
+        private List<Vector2> basePositions = new List<Vector2>();
+
         public void Awake()
         {
             rectTransform = GetComponent<RectTransform>();
+            StoreBasePositions();
+        }
+
+        private void StoreBasePositions()
+        {
+            basePositions.Clear();
+            foreach (Image image in renderersUI)
+            {
+                basePositions.Add(image.rectTransform.anchoredPosition);
+            }
         }
 
         private void Update()
@@ -29,18 +41,35 @@ namespace Mystie
             Set(new Sprite[] { sprite });
         }
 
-        public void Set(Sprite[] sprites)
+        public void Set(Sprite[] sprites, Vector2 offset = default)
         {
+            UpdateColors();
+
             for (int i = 0; i < renderers.Count; i++)
             {
                 renderers[i].sprite = i < sprites.Length ? sprites[i] : null;
                 renderers[i].enabled = renderers[i].sprite != null;
+
+                if (i > 0)
+                {
+                    renderers[i].transform.localPosition = offset;
+                }
+                else renderers[i].transform.localPosition = Vector3.zero;
             }
 
             for (int i = 0; i < renderersUI.Count; i++)
             {
                 renderersUI[i].sprite = i < sprites.Length ? sprites[i] : null;
                 renderersUI[i].enabled = renderersUI[i].sprite != null;
+
+                if (renderersUI[i].sprite != null)
+                {
+                    renderersUI[i].SetNativeSize();
+                    Vector2 basePos = i < basePositions.Count ? basePositions[i] : Vector2.zero;
+
+                    if (i > 0) renderersUI[i].rectTransform.anchoredPosition = basePos + offset;
+                    else renderersUI[i].rectTransform.anchoredPosition = basePos;
+                }
             }
         }
 
@@ -62,12 +91,13 @@ namespace Mystie
             for (int i = 0; i < renderersUI.Count; i++)
             {
                 renderersUI[i].SetNativeSize();
+                /*
                 if (i > 0)
                 {
                     renderersUI[i].rectTransform.anchorMin = Vector2.one / 2;
                     renderersUI[i].rectTransform.anchorMax = Vector2.one / 2;
                     renderersUI[i].rectTransform.anchoredPosition = new Vector2(0, 0);
-                }
+                }*/
             }
 
         }

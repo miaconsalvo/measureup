@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System;
 using TMPro;
 using Yarn.Unity;
+using Yarn.Unity.Legacy;
 
 namespace Mystie.UI
 {

@@ -1,21 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
+using VInspector;
 
 namespace Mystie
 {
     public class AudioCollection : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
+        public SerializedDictionary<string, EventReference> audioDict;
     }
 }

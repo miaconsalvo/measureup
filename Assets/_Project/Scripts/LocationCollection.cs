@@ -1,29 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VInspector;
 
 namespace Mystie
 {
     [CreateAssetMenu(fileName = "Location Collection", menuName = "Visual Novel/Location Collection", order = 2)]
     public class LocationCollection : ScriptableObject
     {
-        [SerializeField] private List<Location> locations = new List<Location>();
+        [SerializeField] private SerializedDictionary<string, GameObject> locations;
 
-        [System.Serializable]
-        public class Location
-        {
-            public string name;
-            public GameObject location;
-        }
-
-        public Dictionary<string, GameObject> Get(Transform parent)
+        public Dictionary<string, GameObject> Instantiate(Transform parent)
         {
             Dictionary<string, GameObject> dict = new Dictionary<string, GameObject>();
-            foreach (Location item in locations)
+            foreach (string location in locations.Keys)
             {
-                GameObject location = Instantiate(item.location, parent);
-                location.SetActive(false);
-                dict.Add(item.name, location);
+                GameObject item = Instantiate(locations[location], parent);
+                item.SetActive(false);
+                dict.Add(location, item);
             }
             return dict;
         }

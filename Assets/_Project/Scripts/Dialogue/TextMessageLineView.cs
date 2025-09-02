@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Mystie;
 using UnityEngine;
 using Yarn.Unity;
+using Yarn.Unity.Legacy;
 
 namespace Mystie.Dialogue
 {

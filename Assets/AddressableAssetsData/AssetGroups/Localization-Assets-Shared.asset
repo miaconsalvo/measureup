@@ -13,32 +13,30 @@ MonoBehaviour:
   m_Name: Localization-Assets-Shared
   m_EditorClassIdentifier: 
   m_GroupName: Localization-Assets-Shared
-  m_Data:
-    m_SerializedData: []
   m_GUID: e7635e590683344418e798eb02f0bc09
   m_SerializeEntries:
-  - m_GUID: c655b94ede769384586d598fbae513ce
-    m_Address: Assets/_Project/Settings/Localization/Tables/UI Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5bc35b766c8020a45b1503db9ab49bd5
-    m_Address: Assets/_Project/Settings/Localization/Tables/Tags Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c44585f9b040f264d883d3de8c96dfe3
-    m_Address: Assets/_Project/Localization/Tables/Popup Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9b488de41f12d8b44a0e611d909df40a
-    m_Address: Assets/_Project/Localization/Tables/Clothing Kits Shared Data.asset
+  - m_GUID: 0338cc0f186c9b1479ae2941eb77f354
+    m_Address: Assets/_Project/Localization/Tables/Credits Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 06fb516fd519a2944b963e89afed6231
     m_Address: Assets/_Project/Localization/Tables/Items Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 186f780181f63cf4592323b302052e67
+    m_Address: Assets/_Project/Localization/Tables/Trending Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1dc154d288b6b1e48825fd49c1aa3b38
+    m_Address: Assets/_Project/Localization/Tables/Lyfestyle Notes Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5bc35b766c8020a45b1503db9ab49bd5
+    m_Address: Assets/_Project/Settings/Localization/Tables/Tags Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -52,18 +50,14 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f03f2fe8fa8d33c458424d23ac2e6d18
-    m_Address: Assets/_Project/Localization/Tables/Occupations Shared Data.asset
+  - m_GUID: 8028b2bae03f23f45abae95d6f590af1
+    m_Address: Assets/_Project/Localization/Tables/Social Media Reactions Shared
+      Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1dc154d288b6b1e48825fd49c1aa3b38
-    m_Address: Assets/_Project/Localization/Tables/Lyfestyle Notes Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ea84933096633a74fbd877fc0fd771f3
-    m_Address: Assets/_Project/Localization/Tables/Opinions Shared Data.asset
+  - m_GUID: 9b488de41f12d8b44a0e611d909df40a
+    m_Address: Assets/_Project/Localization/Tables/Clothing Kits Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -72,24 +66,28 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8028b2bae03f23f45abae95d6f590af1
-    m_Address: Assets/_Project/Localization/Tables/Social Media Reactions Shared
-      Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0338cc0f186c9b1479ae2941eb77f354
-    m_Address: Assets/_Project/Localization/Tables/Credits Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 186f780181f63cf4592323b302052e67
-    m_Address: Assets/_Project/Localization/Tables/Trending Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ba909b3975bf8d249ba74c36ea758ded
     m_Address: Assets/_Project/Localization/Tables/Logline Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c44585f9b040f264d883d3de8c96dfe3
+    m_Address: Assets/_Project/Localization/Tables/Popup Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c655b94ede769384586d598fbae513ce
+    m_Address: Assets/_Project/Settings/Localization/Tables/UI Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea84933096633a74fbd877fc0fd771f3
+    m_Address: Assets/_Project/Localization/Tables/Opinions Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f03f2fe8fa8d33c458424d23ac2e6d18
+    m_Address: Assets/_Project/Localization/Tables/Occupations Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
