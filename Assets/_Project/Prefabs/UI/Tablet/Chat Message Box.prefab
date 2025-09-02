@@ -54,9 +54,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af3bc29ac2bba345a579e334d4647dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bg: {fileID: 1248903508070080866}
   <characterName>k__BackingField: {fileID: 2811249284107436740}
   <text>k__BackingField: {fileID: 8193886939180885423}
+  bg: {fileID: 1248903508070080866}
   profilePicture: {fileID: 2018062084744817232}
   layout: {fileID: 1478931101372243805}
   loading: {fileID: 912187439888054223}
@@ -474,7 +474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -75.365005}
+  m_AnchoredPosition: {x: 0, y: -38.52}
   m_SizeDelta: {x: 547.7, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &6160137094976810410
@@ -672,7 +672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 373.85, y: -56.105003}
+  m_AnchoredPosition: {x: 373.85, y: -40}
   m_SizeDelta: {x: 547.7, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1955906074448138064
