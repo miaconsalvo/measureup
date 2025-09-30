@@ -230,6 +230,12 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
+  <kitsOnSale>k__BackingField:
+  - {fileID: 11400000, guid: 4f0fff8ae5b8c9f4eb3824dd5eaaaa38, type: 2}
+  - {fileID: 11400000, guid: 8e7a8d3ffa2dbff4092da16cf476980e, type: 2}
+  - {fileID: 11400000, guid: 2e2b704aa96f75d4a9a90ab790017933, type: 2}
+  - {fileID: 11400000, guid: 6f062856129934340baee7844f8ea4b0, type: 2}
+  - {fileID: 11400000, guid: 877a0cf81aaba424baec5c0f01166c23, type: 2}
   references:
     version: 2
     RefIds: []

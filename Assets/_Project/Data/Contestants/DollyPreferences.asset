@@ -1,0 +1,281 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2104838e4fb1ee4880cbc8d2839a90a, type: 3}
+  m_Name: DollyPreferences
+  m_EditorClassIdentifier: 
+  name: Dolly
+  age: 37
+  occupation:
+    m_TableReference:
+      m_TableCollectionName: GUID:f03f2fe8fa8d33c458424d23ac2e6d18
+    m_TableEntryReference:
+      m_KeyId: 192219667234816
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  actor: {fileID: 11400000, guid: 401fb3180d36c674ba6eff947731a45f, type: 2}
+  startingClothes: []
+  underwear:
+  - {fileID: 11400000, guid: 1fe112ceb73469c418312d74fe818f7f, type: 2}
+  - {fileID: 11400000, guid: 297297d9adfb9394faf593dd8751b544, type: 2}
+  - {fileID: 11400000, guid: 32491044177b82f4aa8931a5a806314b, type: 2}
+  positiveTags:
+  - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
+  - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
+  - {fileID: 11400000, guid: 3dd5bee944a9892499537f489a2e5591, type: 2}
+  - {fileID: 11400000, guid: cbeb23e41baf0ad429d46c94024c2519, type: 2}
+  negativeTags:
+  - {fileID: 11400000, guid: 46da594aa093a314ca17348cd4a39004, type: 2}
+  - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
+  - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}
+  - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
+  - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
+  <opinionDefault>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+    m_TableEntryReference:
+      m_KeyId: 6500692688371712
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  opinionConditions:
+  - name: Bright
+    requiredTags:
+    - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
+    excludedTags: []
+    minNegativeTags: 0
+    minPositiveTags: 0
+    opinions:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6082297979469824
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6085783861329920
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6085826123137024
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Flashy
+    requiredTags:
+    - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
+    excludedTags: []
+    minNegativeTags: 0
+    minPositiveTags: 0
+    opinions:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6085943311990784
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6085979156512768
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6086012115353600
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Impractical
+    requiredTags:
+    - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
+    - {fileID: 11400000, guid: 47fa92b562b53834aa7cc45e5e7de466, type: 2}
+    excludedTags: []
+    minNegativeTags: 0
+    minPositiveTags: 0
+    opinions:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6086953371697152
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6086959969337344
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Uncomfy
+    requiredTags:
+    - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
+    excludedTags: []
+    minNegativeTags: 0
+    minPositiveTags: 0
+    opinions:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6086656058458112
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Negative
+    requiredTags: []
+    excludedTags: []
+    minNegativeTags: 2
+    minPositiveTags: 0
+    opinions:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6086756814028800
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6086795305156608
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6086832407969792
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Comfy
+    requiredTags:
+    - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
+    excludedTags:
+    - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
+    minNegativeTags: 0
+    minPositiveTags: 0
+    opinions:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087483217149952
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087518554161152
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087526322012160
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Pattern
+    requiredTags:
+    - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
+    excludedTags:
+    - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
+    minNegativeTags: 0
+    minPositiveTags: 0
+    opinions:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087085882343424
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087125606596608
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087146833969152
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Opinion
+    requiredTags: []
+    excludedTags:
+    - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
+    minNegativeTags: 0
+    minPositiveTags: 2
+    opinions:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087622958776320
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087631724871680
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 6087644307783680
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

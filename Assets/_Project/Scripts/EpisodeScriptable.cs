@@ -24,6 +24,8 @@ namespace Mystie
         [Header("Interview")]
         public int maxQuestions = 3;
         public List<InterviewQuestion> interviewNotes;
+
+        [field: SerializeField] public List<ClothingKitScriptable> kitsOnSale { get; private set; }
     }
 
     [Serializable]

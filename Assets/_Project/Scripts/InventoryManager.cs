@@ -8,29 +8,9 @@ namespace Mystie.Dressup
     {
         [field: SerializeField] public List<ItemScriptable> clothes { get; private set; }
 
-        #region Singleton
-
-        private static InventoryManager instance;
-        public static InventoryManager Instance
+        public void Initialize()
         {
-            get
-            {
-                if (instance == null)
-                    instance = FindObjectOfType<InventoryManager>();
 
-                return instance;
-            }
-        }
-
-        #endregion
-
-        public void Awake()
-        {
-            if (Instance != this)
-            {
-                Destroy(gameObject);
-                return;
-            }
         }
 
         public void AddClothes(List<ItemScriptable> newClothes)

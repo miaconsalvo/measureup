@@ -8,7 +8,6 @@ using static UnityEngine.InputSystem.InputAction;
 
 namespace Mystie.UI
 {
-    [RequireComponent(typeof(Canvas))]
     public class UIManager : MonoBehaviour
     {
         //private GameManager gameManager;
@@ -29,6 +28,7 @@ namespace Mystie.UI
 
         #endregion
 
+        [SerializeField] private RectTransform frame;
         [SerializeField] private Vector2 refResolution = new Vector2(1920, 1080);
 
         public static Vector2 RefResolution { get { return Instance.refResolution; } }
@@ -76,13 +76,13 @@ namespace Mystie.UI
                 controls.UI.Pause.started -= OnPause;
                 //controls.UI.Escape.performed -= ctx => { CurrentState?.Escape(); };
             }
-              
+
             GameManager.Unpause();
         }
 
         public void Start()
         {
-            foreach(UIState state in startStates)
+            foreach (UIState state in startStates)
                 if (state != null) SetState(state);
         }
 
@@ -105,7 +105,8 @@ namespace Mystie.UI
             if (CurrentState != null) CurrentState?.DisplayState();
         }
 
-        private IEnumerator CloseStateCoroutine(){
+        private IEnumerator CloseStateCoroutine()
+        {
 
             yield return new WaitForSeconds(0);
             stateStack.Pop().CloseState(); // we close the current state
@@ -117,7 +118,7 @@ namespace Mystie.UI
             while (CurrentState != null) CloseState();
         }
 
-        
+
         public void OnSubmit(CallbackContext ctx) { CurrentState?.Submit(); }
 
         public void OnCancel(CallbackContext ctx) { CurrentState?.Cancel(); }
