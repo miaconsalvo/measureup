@@ -274,6 +274,10 @@ MonoBehaviour:
   startStates: []
   <dossierUI>k__BackingField: {fileID: 4406108783070523976}
   <storeUI>k__BackingField: {fileID: 368124596}
+  <interviewUI>k__BackingField: {fileID: 1753007553}
+  <postCatwalkUI>k__BackingField: {fileID: 1302915830}
+  <preChatUI>k__BackingField: {fileID: 1547583785}
+  <postChatUI>k__BackingField: {fileID: 806898628}
 --- !u!4 &24833695
 Transform:
   m_ObjectHideFlags: 0
@@ -14403,7 +14407,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 113996655}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.77272725
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16591,7 +16595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7417885277615536138, guid: f16cc2eceb7d9b44cb1c7c1464de5269, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00035447843
+      value: 0.00012660726
       objectReference: {fileID: 0}
     - target: {fileID: 7955703879850810431, guid: f16cc2eceb7d9b44cb1c7c1464de5269, type: 3}
       propertyPath: m_AnchorMax.y

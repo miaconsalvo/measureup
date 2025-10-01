@@ -40,7 +40,7 @@ namespace Mystie
         private List<LocalizedString> likesList;
         private List<LocalizedString> dislikesList;
 
-        public void Awake()
+        public void OnEnable()
         {
             dossierUI.Sub(UIManager.Instance);
             dossierUI.state.onDisplay += UpdateUI;
@@ -48,7 +48,7 @@ namespace Mystie
             LevelManager.Instance.onStageSet += OnStageSet;
         }
 
-        public void OnDestroy()
+        public void OnDisable()
         {
             dossierUI.Unsub();
             dossierUI.state.onDisplay -= UpdateUI;

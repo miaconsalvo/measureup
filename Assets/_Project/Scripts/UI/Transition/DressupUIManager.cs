@@ -26,13 +26,24 @@ namespace Mystie.UI
 
         [field: SerializeField] public DossierUI dossierUI { get; private set; }
         [field: SerializeField] public StoreStage storeUI { get; private set; }
+        [field: SerializeField] public DialogueStage interviewUI { get; private set; }
+        [field: SerializeField] public DialogueStage postCatwalkUI { get; private set; }
+        [field: SerializeField] public TabletStage preChatUI { get; private set; }
+        [field: SerializeField] public TabletStage postChatUI { get; private set; }
 
         public void Initialize(LevelManager levelManager)
         {
             this.levelManager = levelManager;
+            EpisodeScriptable episode = levelManager.episode;
 
-            dossierUI.Initialize(levelManager.episode);
-            storeUI.Initialize(levelManager.episode);
+            dossierUI.Initialize(episode);
+            storeUI.Initialize(episode);
+
+            interviewUI.nodeStart = episode.interviewNode;
+            postCatwalkUI.nodeStart = episode.postCatwalkNode;
+
+            preChatUI.nodeStart = episode.preChatNode;
+            postChatUI.nodeStart = episode.postChatNode;
         }
 
         public void Cleanup()

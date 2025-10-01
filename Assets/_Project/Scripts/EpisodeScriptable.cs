@@ -16,6 +16,13 @@ namespace Mystie
         public StyleRuleScriptable trendingRule;
         public CommentCollection socialMediaComments;
 
+        [Header("Narrative")]
+
+        public string preChatNode;
+        public string interviewNode;
+        public string postCatwalkNode;
+        public string postChatNode;
+
         [Header("Dossier")]
 
         public LocalizedString logline;

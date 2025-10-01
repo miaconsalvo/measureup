@@ -16,6 +16,10 @@ MonoBehaviour:
   styleRule: {fileID: 11400000, guid: 10d88f6780ed48d4ebf67ec1790aa511, type: 2}
   trendingRule: {fileID: 11400000, guid: f0bfb4ce66b48fe4f8f66ad2150f97dd, type: 2}
   socialMediaComments: {fileID: 11400000, guid: e9545bf04a6b5874e8ad7d9b2cdea76e, type: 2}
+  preChatNode: PreGC
+  interviewNode: HeatherInterviewStart
+  postCatwalkNode: PCW
+  postChatNode: PostGC
   logline:
     m_TableReference:
       m_TableCollectionName: GUID:ba909b3975bf8d249ba74c36ea758ded
