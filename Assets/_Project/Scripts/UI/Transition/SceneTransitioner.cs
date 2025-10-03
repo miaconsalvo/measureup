@@ -15,8 +15,21 @@ namespace Mystie.UI.Transition
 
         public static SceneTransitioner Instance
         {
-            get => instance;
+            get
+            {
+                if (instance == null) instance = Create();
+                return instance;
+            }
             private set => instance = value;
+        }
+
+        private const string sceneTransitionerPath = "Scene Transitioner";
+
+        public static SceneTransitioner Create()
+        {
+            SceneTransitioner transitionerPrefab = Resources.Load<SceneTransitioner>(sceneTransitionerPath);
+            if (transitionerPrefab == null) Debug.LogError("GameManager: Scene Transitioner not found.");
+            return Instantiate(transitionerPrefab.gameObject).GetComponent<SceneTransitioner>();
         }
 
         private Canvas transitionCanvas;
@@ -26,20 +39,21 @@ namespace Mystie.UI.Transition
         private AbstractSceneTransitionScriptable activeTransition;
 
         [SerializeField] private bool playTransitionOnStart;
-        [SerializeField][ShowIf("playTransitionOnStart")] 
+        [SerializeField]
+        [ShowIf("playTransitionOnStart")]
         private AbstractSceneTransitionScriptable startTransition;
 
         private void Awake()
         {
-            if (Instance != null)
+            /*if (Instance != null)
             {
                 Debug.LogWarning("Invalid configuration. Duplicate Instances found! First one:" + Instance.name);
                 Destroy(gameObject);
                 return;
-            }
+            }*/
 
             SceneManager.activeSceneChanged += HandleSceneChange;
-            Instance = this;
+            instance = this;
             DontDestroyOnLoad(gameObject);
 
             transitionCanvas = GetComponent<Canvas>();
@@ -49,29 +63,44 @@ namespace Mystie.UI.Transition
         private void Start()
         {
             if (playTransitionOnStart)
-            {
-                transitionCanvas.enabled = true;
-                activeTransition = startTransition;
-                StartCoroutine(EnterScene());
-            }
+                PlayTransitionIn(startTransition);
         }
 
-        public void LoadScene(string scene, SceneTransitionMode transitionMode = SceneTransitionMode.None, LoadSceneMode loadMode = LoadSceneMode.Single)
+        public void PlayTransitionIn(AbstractSceneTransitionScriptable transition)
         {
-            loadLevelOp = SceneManager.LoadSceneAsync(scene, loadMode);
+            transitionCanvas.enabled = true;
+            activeTransition = startTransition;
+            StartCoroutine(EnterScene());
+        }
 
+        public void LoadScene(string scene, SceneTransitionMode transitionMode = SceneTransitionMode.Fade, LoadSceneMode loadMode = LoadSceneMode.Single)
+        {
             Transition transition = transitions.Find((transition) => transition.mode == transitionMode);
-            if (transition != null)
-            {
-                loadLevelOp.allowSceneActivation = false;
-                transitionCanvas.enabled = true;
-                activeTransition = transition.animationScriptable;
-                StartCoroutine(ExitScene());
-            }
+
+            if (transition != null) LoadScene(scene, transition.animationScriptable, loadMode);
             else
             {
                 Debug.LogWarning($"No transition found for TransitionMode {transitionMode}" +
                     $" Missing configuration.");
+            }
+        }
+
+        public void LoadScene(string scene, AbstractSceneTransitionScriptable transition, LoadSceneMode loadMode = LoadSceneMode.Single)
+        {
+            if (transition == null)
+            {
+                Debug.LogWarning($"No transition set");
+                return;
+            }
+
+            loadLevelOp = SceneManager.LoadSceneAsync(scene, loadMode);
+
+            if (transition != null)
+            {
+                loadLevelOp.allowSceneActivation = false;
+                transitionCanvas.enabled = true;
+                activeTransition = transition;
+                StartCoroutine(ExitScene());
             }
         }
 

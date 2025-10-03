@@ -28,9 +28,7 @@ namespace Mystie.Dressup
 
         [SerializeField] private LocalizedString purchaseConfirmText;
 
-        [Space]
-
-        [SerializeField] private List<ClothingKitScriptable> kits = new List<ClothingKitScriptable>();
+        private List<ClothingKitScriptable> kits;
 
         protected override void Awake()
         {
@@ -44,8 +42,9 @@ namespace Mystie.Dressup
             purchaseButton.onClick.RemoveListener(OnPurchase);
         }
 
-        private void Start()
+        public void Initialize(EpisodeScriptable episode)
         {
+            kits = episode.kitsOnSale;
             kitUIs = new List<ClothingKitUI>();
             foreach (Transform child in kitPreviewsAnchor)
             {
@@ -121,7 +120,7 @@ namespace Mystie.Dressup
             {
                 detailsPanel.SetPurchased();
                 selectedKitUI.SetPurchased();
-                InventoryManager.Instance.AddClothes(selectedKitUI.clothingKit);
+                levelManager.inventory.AddClothes(selectedKitUI.clothingKit);
                 OnKitDeselect();
                 //purchaseButton.interactable = false;
             }

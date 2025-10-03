@@ -8,7 +8,7 @@ using System;
 using Mystie.Core;
 using DG.Tweening;
 using UnityEngine.Serialization;
-using NaughtyAttributes;
+using VInspector;
 
 namespace Mystie.UI
 {

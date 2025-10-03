@@ -1,4 +1,5 @@
 using MeasureUp.Core;
+using Mystie.UI.Transition;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,11 +19,13 @@ namespace Mystie.Core
         public static event Action onPause;
         public static event Action onUnpause;
 
+        public SaveManager saveManager { get; private set; }
         public GameSettings gameSettings { get; private set; }
         public SystemDataScriptable systemData { get; private set; }
+        public SceneTransitioner sceneTransitioner { get; private set; }
         public InputActionAsset actions { get; private set; }
         public Controls controls { get; private set; }
-        public SmartFormatter stringFormatter { get; private set; }
+        //public SmartFormatter stringFormatter { get; private set; }
 
         public static bool isPaused = false;
         public static GameState gameState { get; private set; }
@@ -31,10 +34,7 @@ namespace Mystie.Core
 
         public static string playername = "Cindy";
         [YarnFunction("playername")]
-        public static string Playername()
-        {
-            return playername;
-        }
+        public static string Playername() { return playername; }
 
         #region Singleton
 
@@ -42,8 +42,7 @@ namespace Mystie.Core
         {
             get
             {
-                if (instance == null)
-                    instance = FindObjectOfType<GameManager>();
+                if (instance == null) Instantiate();
                 return instance;
             }
         }
@@ -52,31 +51,38 @@ namespace Mystie.Core
 
         #endregion
 
-        private void Awake()
+        private static GameManager Instantiate()
         {
-            if (Instance != this)
-            {
-                Destroy(gameObject);
-                return;
-            }
+            GameObject gmObj = new GameObject("Game Manager");
+            instance = gmObj.AddComponent<GameManager>();
+            instance.Initialize();
 
+            return instance;
+        }
+
+        private void Initialize()
+        {
             DontDestroyOnLoad(gameObject);
 
             //gameState = GameState.StartScreen;
 
             isPaused = false;
 
-            controls = new Controls();
-            controls.UI.Enable();
-
-            //SceneManager.sceneLoaded += OnSceneLoaded;
-
             systemData = Resources.Load<SystemDataScriptable>(systemDataPath);
             if (systemData == null) Debug.LogError("GameManager: System Data not found.");
 
+            gameSettings = new GameSettings(systemData);
+
+            //Cursor.visible = false;
+            //cursor = Instantiate(systemData.cursorPrefab);
+
+            controls = new Controls();
+            //controls.UI.Enable();
             actions = systemData.actions;
 
-            gameSettings = new GameSettings(systemData);
+            //SceneManager.sceneLoaded += OnSceneLoaded;
+
+            sceneTransitioner = SceneTransitioner.Instance;
         }
 
         IEnumerator Start()
@@ -85,13 +91,7 @@ namespace Mystie.Core
             // Wait for the localization system to initialize, loading Locales, preloading etc.
             yield return LocalizationSettings.InitializationOperation;
             gameSettings.LoadLocale();
-            stringFormatter = LocalizationSettings.StringDatabase.SmartFormatter;
-
-            List<Dressup.ItemScriptable> items = new List<Dressup.ItemScriptable>();
-            items.Add(new Dressup.ItemScriptable());
-            items.Add(new Dressup.ItemScriptable());
-
-            //Debug.Log($"Test 1: {stringFormatter.Format("{items:clothing(comfy)}", new { items = items })}");
+            //stringFormatter = LocalizationSettings.StringDatabase.SmartFormatter;
         }
 
         public static void SetGameState(GameState state)

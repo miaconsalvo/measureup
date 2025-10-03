@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: Episode 1/Logline
     m_Metadata:
       m_Items: []
+  - m_Id: 41204127916359680
+    m_Key: Episode 2/Logline
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

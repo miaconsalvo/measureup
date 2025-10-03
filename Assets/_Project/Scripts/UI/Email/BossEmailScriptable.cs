@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mystie.Core;
 using Mystie.Dressup;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -37,8 +38,8 @@ namespace Mystie
             {
                 string bodyText = "";
 
-                bool style = DressupManager.Instance.CheckStyleRule();
-                bool trending = DressupManager.Instance.CheckTrending();
+                bool style = LevelManager.Instance.dressup.CheckStyleRule();
+                bool trending = LevelManager.Instance.dressup.CheckTrending();
 
                 if (style && trending)
                 {

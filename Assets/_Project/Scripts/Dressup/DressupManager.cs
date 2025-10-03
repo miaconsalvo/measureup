@@ -14,20 +14,11 @@ namespace Mystie.Dressup
 
     public class DressupManager : MonoBehaviour
     {
-        private static DressupManager instance;
-
-        // todo improve
-        public static DressupManager Instance
-        {
-            get { return instance; }
-        }
-
         public event Action<ItemScriptable> onItemAdded;
         public event Action<ItemScriptable> onItemRemoved;
 
-        public EpisodeScriptable episode;
-        public ContestantData contestant;
-        public Reaction reaction;
+        public ContestantData contestant { get; private set; }
+        public Reaction reaction { get; private set; }
         [SerializeField] private Dictionary<ItemType, ItemScriptable> items;
 
         public List<ClothingTag> currentTags;
@@ -41,16 +32,15 @@ namespace Mystie.Dressup
         [SerializeField] private Dictionary<ItemType, ItemScriptable> startingItems;
         [SerializeField] private Dictionary<ItemType, ItemScriptable> underwearItems;
 
-        public void Awake()
+        public void Initialize(ContestantData contestantData)
         {
-            instance = this;
-
             items = new Dictionary<ItemType, ItemScriptable>();
 
             currentTags = new List<ClothingTag>();
             opinionsAvailable = new List<LocalizedString>();
             opinionsUsed = new List<LocalizedString>();
 
+            contestant = contestantData;
             SetModel(contestant);
         }
 
@@ -95,7 +85,7 @@ namespace Mystie.Dressup
                 LocalizedString opinion = opinionsAvailable[rand];
                 //opinionsAvailable.RemoveAt(rand)
                 opinionsUsed.Add(opinion);
-                return opinion.GetLocalizedString(new { items = instance.items.Values.ToList() });
+                return opinion.GetLocalizedString(new { items = items.Values.ToList() });
             }
             else
             {
@@ -213,7 +203,7 @@ namespace Mystie.Dressup
         public static bool HasTag(string s)
         {
             //Debug.Log("Has tag " + s);
-            foreach (ClothingTag tag in instance.currentTags)
+            foreach (ClothingTag tag in LevelManager.Instance.dressup.currentTags)
             {
                 if (tag.name == s) return true;
             }
@@ -223,13 +213,13 @@ namespace Mystie.Dressup
         [YarnFunction("neg_tags")]
         public static int GetNegativeTags()
         {
-            return instance.negativeCount;
+            return LevelManager.Instance.dressup.negativeCount;
         }
 
         [YarnFunction("pos_tags")]
         public static int GetPositiveTag()
         {
-            return instance.positiveCount;
+            return LevelManager.Instance.dressup.positiveCount;
         }
 
         [YarnFunction("get_item")]
@@ -237,7 +227,7 @@ namespace Mystie.Dressup
         {
             if (!HasTag(s)) return null;
 
-            foreach (ItemScriptable item in instance.items.Values)
+            foreach (ItemScriptable item in LevelManager.Instance.dressup.items.Values)
             {
                 if (item.HasTag(s)) return item.displayName.GetLocalizedString().ToLower();
             }
@@ -248,13 +238,13 @@ namespace Mystie.Dressup
         [YarnCommand("set_reaction")]
         public static void SetReaction(int reaction)
         {
-            instance.reaction = (Reaction)reaction;
+            LevelManager.Instance.dressup.reaction = (Reaction)reaction;
         }
 
         [YarnFunction("get_reaction")]
         public static int GetReaction()
         {
-            return (int)instance.reaction;
+            return (int)LevelManager.Instance.dressup.reaction;
         }
     }
 }

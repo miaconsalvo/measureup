@@ -16,8 +16,6 @@ namespace Mystie.Dressup
         public event Action<List<ItemScriptable>> onItemListUpdate;
         public event Action<List<ItemUI>> onItemUIListUpdate;
 
-        public ContestantData contestant;
-
         [SerializeField] private DressupManager model;
         [SerializeField] private Transform itemAnchor;
         [SerializeField] private ItemUI itemPrefab;
@@ -81,7 +79,7 @@ namespace Mystie.Dressup
         public void UpdateItems()
         {
             if (itemsUI == null) itemsUI = new List<ItemUI>();
-            clothes = InventoryManager.Instance.clothes;
+            clothes = levelManager.inventory.clothes;
 
             for (int i = 0; i < clothes.Count; i++)
             {

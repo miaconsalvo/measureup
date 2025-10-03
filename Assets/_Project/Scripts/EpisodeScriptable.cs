@@ -16,6 +16,13 @@ namespace Mystie
         public StyleRuleScriptable trendingRule;
         public CommentCollection socialMediaComments;
 
+        [Header("Narrative")]
+
+        public string preChatNode;
+        public string interviewNode;
+        public string postCatwalkNode;
+        public string postChatNode;
+
         [Header("Dossier")]
 
         public LocalizedString logline;
@@ -24,6 +31,9 @@ namespace Mystie
         [Header("Interview")]
         public int maxQuestions = 3;
         public List<InterviewQuestion> interviewNotes;
+
+        [field: SerializeField] public List<ItemScriptable> startingClothes { get; private set; }
+        [field: SerializeField] public List<ClothingKitScriptable> kitsOnSale { get; private set; }
     }
 
     [Serializable]

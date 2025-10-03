@@ -29,6 +29,8 @@ namespace Mystie
             if (completeStageButton != null)
                 completeStageButton.gameObject.SetActive(false);
             dialogueRunner.StartDialogue(nodeStart);
+
+            Debug.Log("On stage enter");
         }
 
         protected override void OnStageComplete()

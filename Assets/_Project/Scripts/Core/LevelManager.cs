@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mystie.Dressup;
+using Mystie.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,9 +32,14 @@ namespace Mystie.Core
 
         #endregion
 
+        public EpisodeManager episodeManager { get; private set; }
         [field: SerializeField] public EpisodeScriptable episode { get; private set; }
-        [field: SerializeField] public DossierManager dossier { get; private set; }
+        public ContestantData contestant { get; private set; }
+
+        [field: SerializeField] public DressupUIManager uiManager { get; private set; }
         [field: SerializeField] public DressupManager dressup { get; private set; }
+        [field: SerializeField] public InventoryManager inventory { get; private set; }
+        [field: SerializeField] public DossierManager dossier { get; private set; }
 
         private int stageIndex;
         public List<LevelStageType> stages = new List<LevelStageType>();
@@ -50,11 +56,28 @@ namespace Mystie.Core
                 return;
             }
 
-            dossier = FindObjectOfType<DossierManager>();
-            dossier.SetEpisode(episode);
+            episodeManager = EpisodeManager.Instance;
+            episode = episodeManager.episodes[episodeManager.index];
+            InitializeComponents();
         }
 
-        private void Start()
+        public void Start()
+        {
+            Initialize();
+        }
+
+        public void InitializeComponents()
+        {
+            contestant = episode.contestant;
+
+            uiManager = DressupUIManager.Instance;
+
+            uiManager.Initialize(this);
+            dressup.Initialize(contestant);
+            inventory.Initialize(episode);
+        }
+
+        private void Initialize()
         {
             Debug.Log("Level manager start");
 
@@ -83,7 +106,9 @@ namespace Mystie.Core
         public void OnLevelComplete()
         {
             Debug.Log("Level Complete!");
-            GameManager.Instance.LoadMainMenu();
+            episodeManager.CompleteEpisode();
+            episodeManager.LoadNextEpisode();
+            //GameManager.Instance.LoadMainMenu();
         }
     }
 }
