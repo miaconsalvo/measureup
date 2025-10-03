@@ -41,9 +41,9 @@ position: 1581.8624877929688,384.9552917480469
 ---
 <<set_reaction 0>>
 Heather: This makeover process has been… interesting I guess?
-Heather: I don’t know what I expected going into it.
-Heather:  I’m not sure how I really feel about the new look yet.
-Heather: I’ll give it a try though, it can’t hurt. I’ll see if it grows on me.
+Heather: I don't know what I expected going into it.
+Heather:  I'm not sure how I really feel about the new look yet.
+Heather: I'll give it a try though, it can't hurt. I'll see if it grows on me.
 <<jump PCWEnd>>
 ===
 title: HeatherPCWSkirt
@@ -51,9 +51,9 @@ tags:
 position: -488.34183168411255,385.89215087890625
 ---
 <<set_reaction 2>>
-Heather: I hope I don’t sound ungrateful, this has been a neat experience, but to be honest...
+Heather: I hope I don't sound ungrateful, this has been a neat experience, but to be honest...
 Heather: I don't know when I would wear this outfit... 
-Heather: There’s a reason I don’t own any skirts. 
+Heather: There's a reason I don't own any skirts. 
 Heather: They remind me of being a kid on The Family Tree, and I have outgrown that.
 <<jump PCWEnd>>
 ===
@@ -63,8 +63,8 @@ position: -274.1782684326172,380.0409240722656
 ---
 <<set_reaction 2>>
 Heather: Oh wow...
-Heather: I don’t think I’ve worn these colours since I played little Jenny on TV as a kid. 
-Heather: I’m not sure how I feel about it, but if the stylist thinks it suits me, I guess I could try it out… we will see…
+Heather: I don't think I've worn these colours since I played little Jenny on TV as a kid. 
+Heather: I'm not sure how I feel about it, but if the stylist thinks it suits me, I guess I could try it out… we will see…
 <<jump PCWEnd>>
 ===
 title: HeatherPCWFlashyImpractical
@@ -73,8 +73,8 @@ position: -53.888526916503906,380.81392669677734
 ---
 <<set_reaction 2>>
 Heather: This is a cool look, not something I would come up with on my own. 
-Heather: I’m not sure about when I would actually wear something like this though. 
-Heather: It isn’t the most practical for my life right now. 
+Heather: I'm not sure about when I would actually wear something like this though. 
+Heather: It isn't the most practical for my life right now. 
 Heather: I guess I could try to see if I get used to it but, yeah, we will see.
 <<jump PCWEnd>>
 ===
@@ -95,11 +95,11 @@ tags:
 position: 397.72467613220215,385.6652603149414
 ---
 <<set_reaction 0>>
-Heather: I hope I don’t sound difficult but...
-Heather: I don’t know if the stylist really understood what I was looking for in my new look. 
-Heather: This outfit isn’t really “me”, you know? I don’t know if I would ever realistically wear it. 
-Heather: I’d love to see something to make it feel more “me”.
-Heather: Don’t get me wrong, it’s an OK outfit for someone else, but yeah, not for me. 
+Heather: I hope I don't sound difficult but...
+Heather: I don't know if the stylist really understood what I was looking for in my new look. 
+Heather: This outfit isn't really “me”, you know? I don't know if I would ever realistically wear it. 
+Heather: I'd love to see something to make it feel more “me”.
+Heather: Don't get me wrong, it's an OK outfit for someone else, but yeah, not for me. 
 <<jump PCWEnd>>
 ===
 title: HeatherPCWSame
@@ -108,7 +108,7 @@ position: 601.0851212739944,393.70613861083984
 ---
 <<set_reaction 0>>
 Heather: Well, I like the outfit! 
-Heather: It’s honestly not that different from what I was wearing before though… 
+Heather: It's honestly not that different from what I was wearing before though… 
 Heather: I guess this is all I can pull off anymore? 
 Heather: At least I got some free clothes out of this “makeover”!
 <<jump PCWEnd>>
@@ -155,8 +155,8 @@ title: HeatherPCWBusiness
 tags: 
 position: 736,513
 ---
-Heather: This isn’t the kind of outfit I expected to be put in! 
-Heather: I can see this working for someone with a different lifestyle to me… but I don’t know if it works for me as a stay-at-home mom. 
-Heather: I don’t know… maybe I’ll get used to it…?
+Heather: This isn't the kind of outfit I expected to be put in! 
+Heather: I can see this working for someone with a different lifestyle to me… but I don't know if it works for me as a stay-at-home mom. 
+Heather: I don't know… maybe I'll get used to it…?
 <<jump PCWEnd>>
 ===
