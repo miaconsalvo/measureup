@@ -32,6 +32,7 @@ namespace Mystie
         public int maxQuestions = 3;
         public List<InterviewQuestion> interviewNotes;
 
+        [field: SerializeField] public List<ItemScriptable> startingClothes { get; private set; }
         [field: SerializeField] public List<ClothingKitScriptable> kitsOnSale { get; private set; }
     }
 

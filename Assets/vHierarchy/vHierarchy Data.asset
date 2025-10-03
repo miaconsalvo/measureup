@@ -15,12 +15,31 @@ MonoBehaviour:
   sceneDatas_byGuid:
     keys:
     - 874e024ad61f33a458cf629373233e24
+    - 4e87d76324a36084495c328488ce9a08
     values:
     - goDatas_byGlobalId:
         keys:
         - globalObjectIdString: GlobalObjectId_V1-2-874e024ad61f33a458cf629373233e24-112415974-0
         - globalObjectIdString: GlobalObjectId_V1-2-874e024ad61f33a458cf629373233e24-482965375-0
         - globalObjectIdString: GlobalObjectId_V1-2-874e024ad61f33a458cf629373233e24-1441529950-0
+        values:
+        - colorIndex: 0
+          iconNameOrGuid: AudioSource Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 0
+          iconNameOrGuid: Settings Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 0
+          iconNameOrGuid: Settings Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+    - goDatas_byGlobalId:
+        keys:
+        - globalObjectIdString: GlobalObjectId_V1-2-4e87d76324a36084495c328488ce9a08-112415974-0
+        - globalObjectIdString: GlobalObjectId_V1-2-4e87d76324a36084495c328488ce9a08-482965375-0
+        - globalObjectIdString: GlobalObjectId_V1-2-4e87d76324a36084495c328488ce9a08-1441529950-0
         values:
         - colorIndex: 0
           iconNameOrGuid: AudioSource Icon

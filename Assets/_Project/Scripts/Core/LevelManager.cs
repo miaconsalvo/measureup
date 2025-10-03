@@ -32,6 +32,7 @@ namespace Mystie.Core
 
         #endregion
 
+        public EpisodeManager episodeManager { get; private set; }
         [field: SerializeField] public EpisodeScriptable episode { get; private set; }
         public ContestantData contestant { get; private set; }
 
@@ -55,6 +56,8 @@ namespace Mystie.Core
                 return;
             }
 
+            episodeManager = EpisodeManager.Instance;
+            episode = episodeManager.episodes[episodeManager.index];
             InitializeComponents();
         }
 
@@ -71,6 +74,7 @@ namespace Mystie.Core
 
             uiManager.Initialize(this);
             dressup.Initialize(contestant);
+            inventory.Initialize(episode);
         }
 
         private void Initialize()
@@ -102,7 +106,9 @@ namespace Mystie.Core
         public void OnLevelComplete()
         {
             Debug.Log("Level Complete!");
-            GameManager.Instance.LoadMainMenu();
+            episodeManager.CompleteEpisode();
+            episodeManager.LoadNextEpisode();
+            //GameManager.Instance.LoadMainMenu();
         }
     }
 }

@@ -10,29 +10,32 @@ namespace Mystie.UI
 {
     public class MainMenuUI : MonoBehaviour
     {
-        [SerializeField]
-        private SceneTransitionMode transitionMode;
-        [SerializeField]
-        private Button playBtn;
-
-        [Space]
-
-        [SerializeField]
-        private string startScene;
+        public EpisodeManager episodeManager { get; private set; }
+        [SerializeField] private Button newGameBtn;
+        [SerializeField] private Button continueBtn;
 
         private void OnEnable()
         {
-            if (playBtn != null) playBtn.onClick.AddListener(OnPlay);
+            if (newGameBtn != null) newGameBtn.onClick.AddListener(NewGame);
+            if (continueBtn != null) continueBtn.onClick.AddListener(Continue);
         }
 
         private void OnDisable()
         {
-            if (playBtn != null) playBtn.onClick.RemoveListener(OnPlay);
+            if (newGameBtn != null) newGameBtn.onClick.RemoveListener(NewGame);
+            if (continueBtn != null) continueBtn.onClick.RemoveListener(Continue);
         }
 
-        private void OnPlay()
+        private void NewGame()
         {
-            SceneTransitioner.Instance.LoadScene(startScene, transitionMode);
+            EpisodeManager.Instance.LoadEpisode(0);
+            //SceneTransitioner.Instance.LoadScene(startScene, transitionMode);
+        }
+
+        private void Continue()
+        {
+            EpisodeManager.Instance.LoadNextEpisode();
+            //SceneTransitioner.Instance.LoadScene(startScene, transitionMode);
         }
     }
 }

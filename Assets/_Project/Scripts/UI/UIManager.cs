@@ -10,7 +10,7 @@ namespace Mystie.UI
 {
     public class UIManager : MonoBehaviour
     {
-        //private GameManager gameManager;
+        private GameManager gameManager;
 
         #region Singleton
 
@@ -50,14 +50,15 @@ namespace Mystie.UI
                 return;
             }
 
-            //gameManager = GameManager.Instance;
-            //controls = gameManager.controls;
-            controls = new Controls();
-            controls.UI.Enable();
+            gameManager = GameManager.Instance;
+            controls = gameManager.controls;
+            //controls = new Controls();
+
         }
 
         protected void OnEnable()
         {
+            controls.UI.Enable();
             if (controls != null)
             {
                 controls.UI.Submit.started += OnSubmit;
@@ -69,6 +70,7 @@ namespace Mystie.UI
 
         protected void OnDisable()
         {
+            controls.UI.Disable();
             if (controls != null)
             {
                 controls.UI.Submit.started -= OnSubmit;

@@ -8,9 +8,9 @@ namespace Mystie.Dressup
     {
         [field: SerializeField] public List<ItemScriptable> clothes { get; private set; }
 
-        public void Initialize()
+        public void Initialize(EpisodeScriptable episode)
         {
-
+            AddClothes(episode.startingClothes);
         }
 
         public void AddClothes(List<ItemScriptable> newClothes)
