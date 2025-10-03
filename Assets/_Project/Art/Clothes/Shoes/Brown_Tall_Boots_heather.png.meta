@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Brown_Tall_Boots_heather_0: -1068394052952445464
+      Brown_Tall_Boots_heather_1: 2685639719491320530
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
