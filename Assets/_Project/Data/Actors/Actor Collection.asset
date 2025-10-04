@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ef89f7bd38647a4cbe83a54eb9c4a0d, type: 3}
   m_Name: Actor Collection
   m_EditorClassIdentifier: 
-  actors:
-  - name: Heather
-    character: {fileID: 11400000, guid: a280ec2ec23d79a46a27b862a3b1a990, type: 2}
+  <actors>k__BackingField:
+    serializedKvps:
+    - Key: Jo
+      Value: {fileID: 11400000, guid: 4408677c070288e42ab131b03e380bb4, type: 2}
+      index: 0
+      isKeyRepeated: 0
+      isKeyNull: 0
+    dividerPos: 0.33

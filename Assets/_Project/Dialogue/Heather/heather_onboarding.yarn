@@ -2,6 +2,7 @@ title: OnboardingBoss
 tags: 
 position: -302,185
 ---
+<<Scene  boss_office>>
 Boss: Oh hi... 
 Boss: You must be the new stylist we hired. 
 Boss: Welcome, make yourself at home. Feel free to get to work now.
@@ -28,16 +29,17 @@ Boss: I am going to pass you off to our top PA Jo here, they'll give you this we
     
 Jo: Hi there. You're the new stylist? 
 Jo: Nice to meet you, I'm Jo. 
-
-    <<jump OnboardingJo>>
+<<HideAll>>
+<<jump OnboardingJo>>
 ===
 
 title: OnboardingJo
 tags: 
 position: 86,183
 ---
-//<<Act Jo center lower 0>>
-//<<FadeIn  Jo 0.5>>
+<<Scene  dressing_room>>
+<<Act Jo center lower 0>>
+<<FadeIn  Jo 0.5>>
 
 Jo: Here's this week's [bold]dossier[/bold].
 //bring up dossier in screen

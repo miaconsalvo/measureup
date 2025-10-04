@@ -104,13 +104,13 @@ position: -671.1591758728027,313.6760482788086
 <<set $randomDialogue = random_range(0, 2)>>
 
 <<if $randomDialogue == 0>>
-    Heather: Oh, this {$brightItem} is really… uh... bright. 
+    Heather: Oh, this {$brightItem} is really... uh... bright. 
     Heather: I wouldn’t usually pick this colour for myself.
 <<elseif $randomDialogue == 1>>
     Heather: Hmm, I mean, the {$brightItem} is okay...
     Heather: ...but does it maybe come in a different colour?
 <<elseif $randomDialogue == 2>>
-    Heather: Ahh.. the outfit is interesting but I’m not sure about the colours…
+    Heather: Ahh.. the outfit is interesting but I’m not sure about the colours...
     Heather: It is very bright...
 <<endif>>
 ===
@@ -121,7 +121,7 @@ position: -459.0853633880615,302.2767868041992
 <<set $randomDialogue = random_range(0, 2)>>
 
 <<if $randomDialogue == 0>>
-    Heather: This outfit is… ok… but I’m not usually one for skirts.
+    Heather: This outfit is... ok... but I’m not usually one for skirts.
 <<elseif $randomDialogue == 1>>
     Heather: Oh, uh, did I mention that I kind of hate skirts? Sorry.
 <<elseif $randomDialogue == 2>>
@@ -138,7 +138,7 @@ position: -21.13407325744629,325.6742706298828
 <<if $randomDialogue == 0>>
     Heather: This is super cute, but I can’t see myself ever wearing it if I am being honest..
 <<elseif $randomDialogue == 1>>
-    Heather: Imagine the weird looks I would get dropping the kids off at school in this…
+    Heather: Imagine the weird looks I would get dropping the kids off at school in this...
 <<endif>>
 ===
 title: HeatherDressupUncomfy
@@ -219,7 +219,7 @@ position: 1146.8139457702637,329.30665588378906
 <<set $randomDialogue = random_range(0, 2)>>
 
 <<if $randomDialogue == 0>>
-    Heather: Hmmm… yeah this is okay.
+    Heather: Hmmm... yeah this is okay.
 <<elseif $randomDialogue == 1>>
     Heather: Uh.. I guess I don’t hate it.
 <<elseif $randomDialogue == 2>>
@@ -239,7 +239,7 @@ position: 340.34469985961914,520.0117034912109
 <<set $randomDialogue = random_range(0, 2)>>
 
 <<if $randomDialogue == 0>>
-    Heather: Oh interesting… idk if business attire is really my thing though…
+    Heather: Oh interesting... idk if business attire is really my thing though...
 <<elseif $randomDialogue == 1>>
     Heather: I don’t feel like myself in this! I don't think I've ever considered wearing business clothing...
 <<elseif $randomDialogue == 2>>

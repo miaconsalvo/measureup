@@ -861,7 +861,7 @@ namespace VFolders
                                 substring = substring.Trim();
 
                                 if (addEllipsis)
-                                    substring += "…";
+                                    substring += "...";
 
 
 

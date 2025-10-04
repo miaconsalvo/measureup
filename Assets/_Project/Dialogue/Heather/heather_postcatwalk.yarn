@@ -10,6 +10,7 @@ position: 357.24005126953125,143.65028381347656
 //set appropriate variables to true
 //set neg and pos tag variable numbers
 
+<<Scene catwalk>>
 <<if has_tag("skirt") == true>>
     << jump HeatherPCWSkirt>>
 <<elseif has_tag("bright") == true>>
@@ -145,12 +146,6 @@ Heather: I love how they gave me a new look while still working with what I like
 Heather: I can see myself wearing this all the time!
 <<jump PCWEnd>>
 ===
-title: PCWEnd
-tags: 
-position: 357,626
----
-The episode ends.
-===
 title: HeatherPCWBusiness
 tags: 
 position: 736,513
@@ -159,4 +154,10 @@ Heather: This isn't the kind of outfit I expected to be put in!
 Heather: I can see this working for someone with a different lifestyle to me… but I don't know if it works for me as a stay-at-home mom. 
 Heather: I don't know… maybe I'll get used to it…?
 <<jump PCWEnd>>
+===
+title: PCWEnd
+tags: 
+position: 357,626
+---
+<<HideAll>>
 ===

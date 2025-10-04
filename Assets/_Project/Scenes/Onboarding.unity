@@ -1589,37 +1589,11 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 1000
   m_LayoutPriority: 1
---- !u!1 &223793079
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 223793080}
-  m_Layer: 0
-  m_Name: Locations
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &223793080
+--- !u!4 &223793080 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 168542012770843782, guid: b35399d8e78d8154a9c9c940bf2405c2, type: 3}
+  m_PrefabInstance: {fileID: 6746742136765718169}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223793079}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &247333417
 GameObject:
   m_ObjectHideFlags: 0
@@ -14250,7 +14224,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 113996655}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.77272725
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16438,7 +16412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7417885277615536138, guid: f16cc2eceb7d9b44cb1c7c1464de5269, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000010254605
+      value: 0.00007650167
       objectReference: {fileID: 0}
     - target: {fileID: 7955703879850810431, guid: f16cc2eceb7d9b44cb1c7c1464de5269, type: 3}
       propertyPath: m_AnchorMax.y
@@ -19712,30 +19686,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 24833695}
     m_Modifications:
-    - target: {fileID: 212833175644405937, guid: b35399d8e78d8154a9c9c940bf2405c2, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212833175644405937, guid: b35399d8e78d8154a9c9c940bf2405c2, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212833175644405937, guid: b35399d8e78d8154a9c9c940bf2405c2, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1880
-      objectReference: {fileID: 0}
-    - target: {fileID: 212833175644405937, guid: b35399d8e78d8154a9c9c940bf2405c2, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212833175644405937, guid: b35399d8e78d8154a9c9c940bf2405c2, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 960
-      objectReference: {fileID: 0}
-    - target: {fileID: 212833175644405937, guid: b35399d8e78d8154a9c9c940bf2405c2, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -540
-      objectReference: {fileID: 0}
     - target: {fileID: 3375051643227248325, guid: b35399d8e78d8154a9c9c940bf2405c2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -19792,10 +19742,6 @@ PrefabInstance:
       propertyPath: nameplateBG
       value: 
       objectReference: {fileID: 1119416347}
-    - target: {fileID: 4216539184174171353, guid: b35399d8e78d8154a9c9c940bf2405c2, type: 3}
-      propertyPath: locationsParent
-      value: 
-      objectReference: {fileID: 223793080}
     - target: {fileID: 4837735411270985746, guid: b35399d8e78d8154a9c9c940bf2405c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -19840,14 +19786,6 @@ PrefabInstance:
       propertyPath: pauseState
       value: 
       objectReference: {fileID: 1191095718}
-    - target: {fileID: 8037680587393676437, guid: b35399d8e78d8154a9c9c940bf2405c2, type: 3}
-      propertyPath: m_Alpha
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8037680587393676437, guid: b35399d8e78d8154a9c9c940bf2405c2, type: 3}
-      propertyPath: m_BlocksRaycasts
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9004612551759762205, guid: b35399d8e78d8154a9c9c940bf2405c2, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -20948,4 +20886,3 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1544308632}
   - {fileID: 24833695}
-  - {fileID: 223793080}
