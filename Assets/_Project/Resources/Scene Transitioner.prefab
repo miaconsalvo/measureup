@@ -102,4 +102,4 @@ MonoBehaviour:
   - mode: 2
     animationScriptable: {fileID: 11400000, guid: 5544e6f20d831a840bbdc57b0954f2d5, type: 2}
   playTransitionOnStart: 1
-  startTransition: {fileID: 11400000, guid: f377cbd7f14d3e243bf72ff4d4015815, type: 2}
+  startTransition: {fileID: 11400000, guid: d529e19af3f2941499e2a42b1c50c6bb, type: 2}

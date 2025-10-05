@@ -61,8 +61,9 @@ namespace Mystie.Core
             InitializeComponents();
         }
 
-        public void Start()
+        public IEnumerator Start()
         {
+            yield return null;
             Initialize();
         }
 

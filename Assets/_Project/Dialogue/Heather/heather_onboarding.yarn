@@ -27,8 +27,6 @@ Boss: If it's in the dossier, I better see it to the final episode. If it's not 
 Boss: Now, I have a meeting with some potential sponsors. 
 Boss: I am going to pass you off to our top PA Jo here, they'll give you this week's dossier.
     
-Jo: Hi there. You're the new stylist? 
-Jo: Nice to meet you, I'm Jo. 
 <<HideAll>>
 <<jump OnboardingJo>>
 ===
@@ -38,10 +36,16 @@ tags:
 position: 86,183
 ---
 <<Scene  dressing_room>>
-<<Act Jo center lower 0>>
+<<Act Jo base.neutral center lower 0>>
 <<FadeIn  Jo 0.5>>
 
+<<once>>
+Jo: Hi there. You're the new stylist? 
+Jo: Nice to meet you, I'm Jo. 
+<<endonce>>
+
 Jo: Here's this week's [bold]dossier[/bold].
+<<open_dossier>>
 //bring up dossier in screen
 Jo: The dossier contains information about this week's contestant and the style rule we are trying to demonstrate in this week's episode. 
 Jo: Boss really cares about the [bold]style rules[/bold], so don't forget about them, OK? Make sure you follow them in the final outfit.
@@ -55,7 +59,7 @@ Jo: Last but not least, you style the contestant! Pick out a nice outfit you thi
 Jo: Ok, I think that's everything! Are you ready to get started?
     -> I'm ready!
         Jo: Great! Your first contestant is waiting!
-        <<jump OnboardingEnd>>
+        <<return>>
     -> Wait, could you go over that again?
         Jo: Of course!
         <<jump OnboardingJo>>

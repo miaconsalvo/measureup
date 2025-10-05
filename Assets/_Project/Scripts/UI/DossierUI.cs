@@ -15,7 +15,8 @@ namespace Mystie
 {
     public class DossierUI : MonoBehaviour
     {
-        [field: SerializeField] public NavButton dossierUI { get; private set; }
+        [field: SerializeField] public NavButton dossierButton { get; private set; }
+        [field: SerializeField] public UIState uiState { get; private set; }
         [field: SerializeField] public RectTransform dossierRect { get; private set; }
         [SerializeField] private List<LevelStageType> stagesWithDossier;
         private EpisodeScriptable episode;
@@ -42,16 +43,16 @@ namespace Mystie
 
         public void OnEnable()
         {
-            dossierUI.Sub(UIManager.Instance);
-            dossierUI.state.onDisplay += UpdateUI;
+            dossierButton.Sub(UIManager.Instance);
+            uiState.onDisplay += UpdateUI;
 
             LevelManager.Instance.onStageSet += OnStageSet;
         }
 
         public void OnDisable()
         {
-            dossierUI.Unsub();
-            dossierUI.state.onDisplay -= UpdateUI;
+            dossierButton.Unsub();
+            uiState.onDisplay -= UpdateUI;
 
             LevelManager.Instance.onStageSet -= OnStageSet;
         }
@@ -98,7 +99,7 @@ namespace Mystie
 
         private void OnStageSet(LevelStageType type)
         {
-            dossierUI.btn.gameObject.SetActive(stagesWithDossier.Contains(type));
+            dossierButton.btn.gameObject.SetActive(stagesWithDossier.Contains(type));
         }
 
         [YarnCommand("add_note")]
@@ -154,6 +155,12 @@ namespace Mystie
         {
             return DressupUIManager.Instance.dossierUI.questionsAsked.Count
                 >= DressupUIManager.Instance.dossierUI.episode.maxQuestions;
+        }
+
+        [YarnCommand("open_dossier")]
+        public static void OpenDossier()
+        {
+            DressupUIManager.Instance.dossierUI.uiState.SetState();
         }
     }
 }

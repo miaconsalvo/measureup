@@ -123,7 +123,7 @@ namespace Mystie.UI
             {
                 canvas.alpha = 0;
                 //canvasFocused.DOFade(0, fadeOutTime);
-                canvas.blocksRaycasts = true;
+                canvas.blocksRaycasts = false;
             }
         }
 
@@ -182,6 +182,12 @@ namespace Mystie.UI
         {
             if (closeStateOnCancel) manager.CloseState();
             onCancel?.Invoke();
+        }
+
+        public virtual void SetState()
+        {
+            if (manager.CurrentState != this)
+                manager.SetState(this);
         }
 
         public virtual void Pause()
