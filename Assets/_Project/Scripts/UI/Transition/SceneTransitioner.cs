@@ -35,7 +35,8 @@ namespace Mystie.UI.Transition
         private Canvas transitionCanvas;
         [SerializeField] private List<Transition> transitions = new();
 
-        private AsyncOperation loadLevelOp;
+        private string sceneToLoad;
+        private LoadSceneMode loadMode;
         private AbstractSceneTransitionScriptable activeTransition;
 
         [SerializeField] private bool playTransitionOnStart;
@@ -93,29 +94,27 @@ namespace Mystie.UI.Transition
                 return;
             }
 
-            loadLevelOp = SceneManager.LoadSceneAsync(scene, loadMode);
+            sceneToLoad = scene;
+            this.loadMode = loadMode;
 
-            if (transition != null)
-            {
-                loadLevelOp.allowSceneActivation = false;
-                transitionCanvas.enabled = true;
-                activeTransition = transition;
-                StartCoroutine(ExitScene());
-            }
+            transitionCanvas.enabled = true;
+            activeTransition = transition;
+            StartCoroutine(ExitScene());
         }
 
         private IEnumerator ExitScene()
         {
             yield return StartCoroutine(activeTransition.Exit(transitionCanvas));
-            loadLevelOp.allowSceneActivation = true;
 
+            // Load scene synchronously
+            SceneManager.LoadScene(sceneToLoad, loadMode);
         }
 
         private IEnumerator EnterScene()
         {
             yield return StartCoroutine(activeTransition.Enter(transitionCanvas));
             transitionCanvas.enabled = false;
-            loadLevelOp = null;
+            sceneToLoad = null;
             activeTransition = null;
         }
 

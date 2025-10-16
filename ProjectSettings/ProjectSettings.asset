@@ -140,9 +140,11 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: Alpha.1.0
+  bundleVersion: Alpha.1.1
   preloadedAssets:
   - {fileID: 11400000, guid: 39f08aa0fca9cfa4987e1f1083c5b593, type: 2}
+  - {fileID: 11400000, guid: 32c7f20bee8834d49be6a7475f8b3516, type: 2}
+  - {fileID: -944628639613478452, guid: 51ff1258f2f21b54abd5dc198042f3ff, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -391,6 +393,9 @@ PlayerSettings:
   m_BuildTargetBatching:
   - m_BuildTarget: WebGL
     m_StaticBatching: 0
+    m_DynamicBatching: 0
+  - m_BuildTarget: Standalone
+    m_StaticBatching: 1
     m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
@@ -692,7 +697,7 @@ PlayerSettings:
     PS5: DOTWEEN
     QNX: DOTWEEN
     Stadia: DOTWEEN
-    Standalone: DOTWEEN
+    Standalone: DOTWEEN;LETAI_TRUESHADOW
     VisionOS: DOTWEEN
     WebGL: DOTWEEN;LETAI_TRUESHADOW
     Windows Store Apps: DOTWEEN
