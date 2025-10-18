@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Mystie
-  productName: Measure Up!
+  productName: Measure Up
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -140,7 +140,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: Alpha.1.1
+  bundleVersion: Alpha.1.2
   preloadedAssets:
   - {fileID: 11400000, guid: 39f08aa0fca9cfa4987e1f1083c5b593, type: 2}
   - {fileID: 11400000, guid: 32c7f20bee8834d49be6a7475f8b3516, type: 2}

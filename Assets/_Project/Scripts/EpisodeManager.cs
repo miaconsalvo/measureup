@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Mystie.Core;
 using Mystie.UI.Transition;
 using NaughtyAttributes;
 using UnityEngine;
@@ -37,9 +38,17 @@ namespace Mystie
             DontDestroyOnLoad(gameObject);
         }
 
+        public void SetEpisodeIndex(int i)
+        {
+            index = i;
+        }
+
         public void LoadNextEpisode()
         {
+            SetEpisodeIndex(index);
             LoadEpisode(index);
+            GameManager.Instance.saveManager.gameData.episodeIndex = index;
+            GameManager.Instance.saveManager.SaveGame();
         }
 
         public void LoadEpisode(int i)

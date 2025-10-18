@@ -32,9 +32,9 @@ namespace Mystie.Core
 
         public const string systemDataPath = "System Data";
 
-        public static string playername = "Cindy";
+        public static string playerName = "Cindy";
         [YarnFunction("playername")]
-        public static string Playername() { return playername; }
+        public static string Playername() { return playerName; }
 
         #region Singleton
 
@@ -72,6 +72,9 @@ namespace Mystie.Core
             if (systemData == null) Debug.LogError("GameManager: System Data not found.");
 
             gameSettings = new GameSettings(systemData);
+            saveManager = new SaveManager();
+
+            saveManager.LoadSaveFiles();
 
             //Cursor.visible = false;
             //cursor = Instantiate(systemData.cursorPrefab);

@@ -22,7 +22,7 @@ namespace Mystie.Core
         {
             LoadAudioBuses(data);
             inputActions = data.actions;
-            
+
             string rebinds = PlayerPrefs.GetString(REBIND_KEY);
             if (!string.IsNullOrEmpty(rebinds))
                 inputActions.LoadBindingOverridesFromJson(rebinds);

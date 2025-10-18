@@ -14,6 +14,13 @@ namespace Mystie.UI
         [SerializeField] private Button newGameBtn;
         [SerializeField] private Button continueBtn;
 
+        public void Start()
+        {
+            GameManager.Instance.saveManager.LoadSaveFiles();
+            bool hasSave = GameManager.Instance.saveManager.HasSave();
+            if (continueBtn != null) continueBtn.gameObject.SetActive(hasSave);
+        }
+
         private void OnEnable()
         {
             if (newGameBtn != null) newGameBtn.onClick.AddListener(NewGame);
@@ -28,12 +35,14 @@ namespace Mystie.UI
 
         private void NewGame()
         {
+            GameManager.Instance.saveManager.NewGame();
             EpisodeManager.Instance.LoadEpisode(0);
             //SceneTransitioner.Instance.LoadScene(startScene, transitionMode);
         }
 
         private void Continue()
         {
+            GameManager.Instance.saveManager.LoadGame();
             EpisodeManager.Instance.LoadNextEpisode();
             //SceneTransitioner.Instance.LoadScene(startScene, transitionMode);
         }

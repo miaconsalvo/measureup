@@ -2,12 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using Yarn.Unity;
 using FMODUnity;
 using FMOD.Studio;
 using System.Linq;
-using Yarn.Unity.Legacy;
 using System.Threading;
 using Mystie.Utils;
 
