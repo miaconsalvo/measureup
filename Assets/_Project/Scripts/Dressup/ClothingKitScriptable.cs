@@ -10,6 +10,7 @@ namespace Mystie.Dressup
     public class ClothingKitScriptable : ScriptableObject
     {
         public string name = "Clothing Kit";
+        public string id;
         public LocalizedString displayName;
         public int price = 400;
         public string priceRange = "$";

@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
+  m_Name: Distressed Jeans
+  m_EditorClassIdentifier: 
+  name: Distressed Jeans
+  id: 6fcc66df-177a-4efe-8e81-2dac8ef6c54f
+  <type>k__BackingField: 1
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
+    m_TableEntryReference:
+      m_KeyId: 2343560883732480
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
+    m_TableEntryReference:
+      m_KeyId: 3409725458923520
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  brand: {fileID: 0}
+  icon: {fileID: 21300000, guid: ceb3604b3402c4e419da0764de4ca7ed, type: 3}
+  sprite: {fileID: 21300000, guid: f22fbb5af9593024c9006f2ea6b99ca7, type: 3}
+  sprites: []
+  tags:
+  - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
+  - {fileID: 11400000, guid: e92b940437bf51c4bbd846942fc3b02c, type: 2}
+  - {fileID: 11400000, guid: 62dc69857624ecb4c807fbd001c128ce, type: 2}
+  - {fileID: 11400000, guid: 47fa92b562b53834aa7cc45e5e7de466, type: 2}
+  - {fileID: 11400000, guid: 455c649ab1b8d7c41b71195a6ef72f17, type: 2}
+  - {fileID: 11400000, guid: 5a0100448d9cace4c8ef3cfa958a5706, type: 2}
+  - {fileID: 11400000, guid: f193d6eade1f4d34298d783d8cf05f88, type: 2}
+  references:
+    version: 2
+    RefIds: []

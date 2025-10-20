@@ -43,12 +43,10 @@ namespace Mystie
             index = i;
         }
 
-        public void LoadNextEpisode()
+        public void LoadCurrentEpisode()
         {
             SetEpisodeIndex(index);
             LoadEpisode(index);
-            GameManager.Instance.saveManager.gameData.episodeIndex = index;
-            GameManager.Instance.saveManager.SaveGame();
         }
 
         public void LoadEpisode(int i)

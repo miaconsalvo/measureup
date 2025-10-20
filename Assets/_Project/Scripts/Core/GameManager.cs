@@ -1,4 +1,5 @@
 using MeasureUp.Core;
+using Mystie.Dressup;
 using Mystie.UI.Transition;
 using System;
 using System.Collections;
@@ -19,7 +20,6 @@ namespace Mystie.Core
         public static event Action onPause;
         public static event Action onUnpause;
 
-        public SaveManager saveManager { get; private set; }
         public GameSettings gameSettings { get; private set; }
         public SystemDataScriptable systemData { get; private set; }
         public SceneTransitioner sceneTransitioner { get; private set; }
@@ -72,9 +72,9 @@ namespace Mystie.Core
             if (systemData == null) Debug.LogError("GameManager: System Data not found.");
 
             gameSettings = new GameSettings(systemData);
-            saveManager = new SaveManager();
 
-            saveManager.LoadSaveFiles();
+            InventoryManager.LoadClothingData();
+            SaveManager.LoadSaveFiles();
 
             //Cursor.visible = false;
             //cursor = Instantiate(systemData.cursorPrefab);

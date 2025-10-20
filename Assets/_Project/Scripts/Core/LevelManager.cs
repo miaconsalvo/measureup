@@ -18,7 +18,9 @@ namespace Mystie.Core
             get
             {
                 if (instance == null)
+                {
                     instance = FindObjectOfType<LevelManager>();
+                }
 
                 return instance;
             }
@@ -73,9 +75,9 @@ namespace Mystie.Core
 
             uiManager = DressupUIManager.Instance;
 
-            uiManager.Initialize(this);
             dressup.Initialize(contestant);
             inventory.Initialize(episode);
+            uiManager.Initialize(this);
         }
 
         private void Initialize()
@@ -108,7 +110,12 @@ namespace Mystie.Core
         {
             Debug.Log("Level Complete!");
             episodeManager.CompleteEpisode();
-            episodeManager.LoadNextEpisode();
+            episodeManager.LoadCurrentEpisode();
+            SaveDataManager.SaveEpisodeIndex(episodeManager.index);
+
+            inventory.SaveInventory();
+
+            SaveDataManager.SaveGameData();
             //GameManager.Instance.LoadMainMenu();
         }
     }

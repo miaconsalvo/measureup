@@ -16,6 +16,7 @@ MonoBehaviour:
     keys:
     - 874e024ad61f33a458cf629373233e24
     - 4e87d76324a36084495c328488ce9a08
+    - 6ed2bfc09aab83844acd1f8794efe999
     values:
     - goDatas_byGlobalId:
         keys:
@@ -40,6 +41,24 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-4e87d76324a36084495c328488ce9a08-112415974-0
         - globalObjectIdString: GlobalObjectId_V1-2-4e87d76324a36084495c328488ce9a08-482965375-0
         - globalObjectIdString: GlobalObjectId_V1-2-4e87d76324a36084495c328488ce9a08-1441529950-0
+        values:
+        - colorIndex: 0
+          iconNameOrGuid: AudioSource Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 0
+          iconNameOrGuid: Settings Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 0
+          iconNameOrGuid: Settings Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+    - goDatas_byGlobalId:
+        keys:
+        - globalObjectIdString: GlobalObjectId_V1-2-6ed2bfc09aab83844acd1f8794efe999-112415974-0
+        - globalObjectIdString: GlobalObjectId_V1-2-6ed2bfc09aab83844acd1f8794efe999-482965375-0
+        - globalObjectIdString: GlobalObjectId_V1-2-6ed2bfc09aab83844acd1f8794efe999-1441529950-0
         values:
         - colorIndex: 0
           iconNameOrGuid: AudioSource Icon

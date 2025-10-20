@@ -47,7 +47,6 @@ namespace Mystie.Dressup
 
         public void Set(ClothingKitScriptable kit)
         {
-
             clothingKit = kit;
 
             if (kit == null)
@@ -102,7 +101,7 @@ namespace Mystie.Dressup
                     if (priceRangeLabel != null) priceRangeLabel.text = clothingKit.priceRange;
                 }
             }
-
+            transform.SetAsLastSibling();
         }
 
         public void OnSelect()

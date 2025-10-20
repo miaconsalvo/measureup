@@ -15,6 +15,8 @@ namespace Mystie
 {
     public class DossierUI : MonoBehaviour
     {
+        private LevelManager levelManager;
+
         [field: SerializeField] public NavButton dossierButton { get; private set; }
         [field: SerializeField] public UIState uiState { get; private set; }
         [field: SerializeField] public RectTransform dossierRect { get; private set; }
@@ -41,12 +43,17 @@ namespace Mystie
         private List<LocalizedString> likesList;
         private List<LocalizedString> dislikesList;
 
+        public void Awake()
+        {
+            levelManager = LevelManager.Instance;
+        }
+
         public void OnEnable()
         {
             dossierButton.Sub(UIManager.Instance);
             uiState.onDisplay += UpdateUI;
 
-            LevelManager.Instance.onStageSet += OnStageSet;
+            levelManager.onStageSet += OnStageSet;
         }
 
         public void OnDisable()
@@ -54,7 +61,7 @@ namespace Mystie
             dossierButton.Unsub();
             uiState.onDisplay -= UpdateUI;
 
-            LevelManager.Instance.onStageSet -= OnStageSet;
+            levelManager.onStageSet -= OnStageSet;
         }
 
         public void Initialize(EpisodeScriptable episode)

@@ -6,29 +6,24 @@ using UnityEngine;
 
 namespace Mystie
 {
-    public class SaveManager
+    public static class SaveManager
     {
-        private string savePath => Application.persistentDataPath + "/savefile.json";
-        public GameData gameData { get; private set; }
-        public List<GameData> loadedSaveFiles { get; private set; }
+        private static string savePath => Application.persistentDataPath + "/savefile.json";
+        public static List<GameData> loadedSaveFiles { get; private set; } = new List<GameData>();
 
-        public SaveManager()
+        public static void NewGame()
         {
-            loadedSaveFiles = new List<GameData>();
-        }
-
-        public void NewGame()
-        {
-            gameData = new GameData();
+            SaveDataManager.LoadGameData(new GameData());
+            EpisodeManager.Instance.LoadEpisode(0);
             Debug.Log("SaveManager: New game started.");
         }
 
-        public bool HasSave()
+        public static bool HasSave()
         {
             return !loadedSaveFiles.IsNullOrEmpty();
         }
 
-        public GameData GetSave()
+        public static GameData GetSave()
         {
             if (File.Exists(savePath))
             {
@@ -43,7 +38,7 @@ namespace Mystie
             }
         }
 
-        public void LoadSaveFiles()
+        public static void LoadSaveFiles()
         {
             loadedSaveFiles = new List<GameData>();
             GameData save = GetSave();
@@ -51,15 +46,14 @@ namespace Mystie
             Debug.Log("SaveManager: Save files loaded.");
         }
 
-        public void LoadGame()
+        public static void LoadGame()
         {
-            if (!loadedSaveFiles.IsNullOrEmpty() && loadedSaveFiles.Count > 0)
+            if (!loadedSaveFiles.IsNullOrEmpty()
+                && loadedSaveFiles.Count > 0
+                && loadedSaveFiles[0] != null)
             {
-                gameData = loadedSaveFiles[0];
-
-                GameManager.playerName = gameData.playerName;
-                EpisodeManager.Instance.SetEpisodeIndex(gameData.episodeIndex);
-
+                SaveDataManager.LoadGameData(loadedSaveFiles[0]);
+                EpisodeManager.Instance.LoadCurrentEpisode();
 
                 Debug.Log("SaveManager: Game loaded!");
             }
@@ -70,20 +64,11 @@ namespace Mystie
             }
         }
 
-        public void SaveGame()
+        public static void SaveGameToFile(GameData gameData)
         {
             string json = JsonUtility.ToJson(gameData, true);
             File.WriteAllText(savePath, json);
             Debug.Log("SaveManager: Game saved to: " + savePath);
         }
-    }
-
-    [Serializable]
-    public class GameData
-    {
-        public string playerName = "Cindy";
-        public int moneyAmount = 0;
-        public int episodeIndex = 0;
-        public string versionNumber = Application.version;
     }
 }

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
+  m_Name: Grey Dress Pants
+  m_EditorClassIdentifier: 
+  name: Grey Dress Pants
+  id: 65171f4f-ef32-4718-a789-f858ff74d825
+  <type>k__BackingField: 1
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
+    m_TableEntryReference:
+      m_KeyId: 2343638239281152
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
+    m_TableEntryReference:
+      m_KeyId: 3410093702037504
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  brand: {fileID: 0}
+  icon: {fileID: 21300000, guid: 8c040ff261790c1469aee43f815372ab, type: 3}
+  sprite: {fileID: 21300000, guid: 35cc5b6e88d0bd44cb8dc06d39b5c43e, type: 3}
+  sprites: []
+  tags:
+  - {fileID: 11400000, guid: 879a62e18b8ddef49be4113368d9f11a, type: 2}
+  - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}
+  - {fileID: 11400000, guid: b739dd24505919541bee74a638139d25, type: 2}
+  - {fileID: 11400000, guid: b9ea74aeb487b8444a46e29887668b1c, type: 2}
+  references:
+    version: 2
+    RefIds: []

@@ -9,7 +9,6 @@ Donna: and so she somehow managed to get the whole visit comped lol
 Alex: your mother is a force to be reckoned with
 Alex: i both respect and fear her
 Calvin: i respectfully fear her
-
 <<if get_reaction() == 0>>
     <<jump PostGC_Neutral>>
 <<elseif get_reaction() == 1>>

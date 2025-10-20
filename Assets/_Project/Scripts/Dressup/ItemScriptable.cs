@@ -11,6 +11,7 @@ namespace Mystie.Dressup
     public class ItemScriptable : ScriptableObject
     {
         public string name = "Item";
+        public string id;
         [field: SerializeField] public ItemType type { get; private set; }
         public LocalizedString displayName;
         public LocalizedString description;

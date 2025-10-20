@@ -79,7 +79,7 @@ namespace Mystie.Dressup
         public void UpdateItems()
         {
             if (itemsUI == null) itemsUI = new List<ItemUI>();
-            clothes = levelManager.inventory.clothes;
+            clothes = levelManager.inventory.ownedClothing;
 
             for (int i = 0; i < clothes.Count; i++)
             {

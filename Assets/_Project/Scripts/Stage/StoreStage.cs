@@ -11,6 +11,7 @@ namespace Mystie.Dressup
 {
     public class StoreStage : LevelStage
     {
+        public InventoryManager inventory { get; private set; }
         [SerializeField] private ClothingKitUI detailsPanel;
         [SerializeField] private Transform kitPreviewsAnchor;
         [SerializeField] private ClothingKitUI kitPreviewPrefab;
@@ -22,7 +23,7 @@ namespace Mystie.Dressup
 
         [SerializeField] private Button purchaseButton;
         [SerializeField] private LabelUI moneyUI;
-        [SerializeField] private int money;
+        //[SerializeField] private int money;
 
         [Space]
 
@@ -33,18 +34,26 @@ namespace Mystie.Dressup
         protected override void Awake()
         {
             base.Awake();
+
+            inventory = levelManager.inventory;
+            inventory.onMoneyUpdated += UpdateMoneyUI;
+
             purchaseButton.onClick.AddListener(OnPurchase);
         }
 
         protected override void OnDestroy()
         {
             base.OnDestroy();
+
+            inventory.onMoneyUpdated -= UpdateMoneyUI;
+
             purchaseButton.onClick.RemoveListener(OnPurchase);
         }
 
         public void Initialize(EpisodeScriptable episode)
         {
             kits = episode.kitsOnSale;
+            // Todo Disable owned kits on start
             kitUIs = new List<ClothingKitUI>();
             foreach (Transform child in kitPreviewsAnchor)
             {
@@ -60,8 +69,17 @@ namespace Mystie.Dressup
                 kitUIs.Add(clothingKitUI);
             }
 
+            foreach (ClothingKitUI kitUI in kitUIs)
+            {
+                Debug.Log($"Kit ui: {kitUI.clothingKit}. Owned: {inventory.ownedKits.Contains(kitUI.clothingKit)}");
+                if (inventory.ownedKits.Contains(kitUI.clothingKit))
+                {
+                    kitUI.SetPurchased();
+                }
+            }
+
             detailsPanel.gameObject.SetActive(false);
-            UpdateMoneyUI();
+            UpdateMoneyUI(inventory.moneyAmount);
         }
 
         private void OnKitSelected(ClothingKitUI kitUI, ClothingKitScriptable kit)
@@ -87,24 +105,19 @@ namespace Mystie.Dressup
 
         public void GainMoney(int amount)
         {
-            money += amount;
-            UpdateMoneyUI();
-            Debug.Log(amount + "$ gained. New total is " + money + "$.");
+            inventory.GainMoney(amount);
         }
 
         public bool CanBuy(int price)
         {
-            return price <= money;
+            return price <= inventory.moneyAmount;
         }
 
         public bool Purchase(int price)
         {
             if (!CanBuy(price)) return false;
 
-            money = Math.Max(money - price, 0);
-            Debug.Log(price + "$ spent. New total is " + money + "$.");
-
-            UpdateMoneyUI();
+            inventory.GainMoney(-price);
 
             return true;
         }
@@ -120,15 +133,15 @@ namespace Mystie.Dressup
             {
                 detailsPanel.SetPurchased();
                 selectedKitUI.SetPurchased();
-                levelManager.inventory.AddClothes(selectedKitUI.clothingKit);
+                levelManager.inventory.AddClothingKit(selectedKitUI.clothingKit);
                 OnKitDeselect();
                 //purchaseButton.interactable = false;
             }
         }
 
-        public void UpdateMoneyUI()
+        public void UpdateMoneyUI(int moneyAmount)
         {
-            moneyUI.Set("$" + String.Format("{0:0.00}", money));
+            moneyUI.Set("$" + String.Format("{0:0.00}", moneyAmount));
         }
     }
 }

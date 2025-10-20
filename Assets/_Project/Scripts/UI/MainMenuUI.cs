@@ -16,8 +16,8 @@ namespace Mystie.UI
 
         public void Start()
         {
-            GameManager.Instance.saveManager.LoadSaveFiles();
-            bool hasSave = GameManager.Instance.saveManager.HasSave();
+            SaveManager.LoadSaveFiles();
+            bool hasSave = SaveManager.HasSave();
             if (continueBtn != null) continueBtn.gameObject.SetActive(hasSave);
         }
 
@@ -35,15 +35,13 @@ namespace Mystie.UI
 
         private void NewGame()
         {
-            GameManager.Instance.saveManager.NewGame();
-            EpisodeManager.Instance.LoadEpisode(0);
+            SaveManager.NewGame();
             //SceneTransitioner.Instance.LoadScene(startScene, transitionMode);
         }
 
         private void Continue()
         {
-            GameManager.Instance.saveManager.LoadGame();
-            EpisodeManager.Instance.LoadNextEpisode();
+            SaveManager.LoadGame();
             //SceneTransitioner.Instance.LoadScene(startScene, transitionMode);
         }
     }
