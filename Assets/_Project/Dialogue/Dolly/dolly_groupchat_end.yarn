@@ -1,0 +1,116 @@
+title: DollyGroupchatEnd
+position: -133,-171
+---
+<<Them>>
+Alex: Donnaaaaa 
+Alex: you can't ignore me all week
+Donna: i'm not
+Donna: i'm ghosting you
+Donna: not so nice huh?
+Elie: Player it felt like production went really hard on Dolly being a grandma in the promo
+Elie: like distractingly so
+Calvin: over her having a wife and all the pride flags in her house during the testimonial bit?
+Elie: yeah 
+Elie: it was clear where they wanted the focus
+Elie: i expected better in today's media
+Elie: easier to sell her as old in need of a makeover i guess
+
+//get dolly reaction
+//0 = neutral, 1= good, 2= negative
+
+<<if get_reaction() == 0>>
+    <<jump DollyGroupchatDNeutral>>
+<<elseif get_reaction() == 1>>
+    <<jump DollyGroupchatDPos>>
+<<elseif get_reaction() == 2>>
+    <<jump DollyGroupchatDNeg>>
+<<endif>>
+===
+
+title: DollyGroupchatDNeg
+position: 30,-40
+---
+//this can be for both business or an outfit Dolly is unhappy in
+<<Them>>
+Calvin: {playername()} I can't believe you put her in that
+Alex: hey now
+Alex: i'm sure there's a reason
+<<Me>>
+-> I thought it was good!
+    <<Them>>
+    Donna: oof
+    Alex: i revoke my earlier statement lol
+    Calvin: i get that her before outfit was a little yikes but at least she was happy
+    Donna: at least she got to experience the makeover as a fan of the old show
+    Donna: the bad we-don't-listen-to-you-kind 
+    Donna: like that one with the girl and the camo print
+    Calvin: oh god i forgot that one
+-> I'm trying, people. It is not as easy as it looks.
+    <<Them>>
+    Calvin: you're putting clothes on people who are telling you what they like, how hard can that be?
+    Calvin: lesbians need to be fashion icons
+    Calvin: in that "too cool to care what i put on" kinda way
+    Calvin: you clipped her wings {playername()}
+<<Them>>
+Elie: {playername()} you have to remember
+Elie: Dolly basically had to be a closeted version of herself for the office
+Elie: in both person and dress
+Elie: and now she's free of that and you kinda put her back in there
+Elie: i thought the point of this show was for them to embrace who they are through clothes
+<<Me>>
+-> Appreciate the support everyone
+-> I'm tired I'll chat with you all later
+-> I hear you
+<<Them>>
+Alex: Sorry {playername()} i think we're just a little surprised is all
+Donna: you're usually our fashion compass
+<<jump DollyGroupchatEpEnd>>
+===
+title: DollyGroupchatDNeutral
+position: -244,4
+---
+Alex: she seemed chill with the fit you picked!
+Calvin: yeah!
+Calvin: it wasn't groundbreaking 
+Calvin: it also wasn't a disaster
+Elie: i'm really glad you didn't try to put her in any business attire
+Elie: Dolly basically had to be a closeted version of herself for the office
+Elie: in both person and dress
+Elie: now she gets to be herself
+Calvin: we love to see a happily retired woman!
+Calvin: the grind in heteronormative hell paid off
+Alex: yeah for her
+Alex: our generation is screwed on that front lol
+Calvin: ugh don't remind me
+<<jump DollyGroupchatEpEnd>>
+===
+title: DollyGroupchatDPos
+position: 301,-139
+---
+Calvin: {playername()} she looked SO GOOD
+Alex: her wife was so cute about the makeover toooooo
+Elie: i'm really glad you didn't try to put her in any business attire
+Elie: Dolly basically had to be a closeted version of herself for the office
+Elie: in both person and dress
+Elie: now she gets to be herself
+Calvin: we love to see a happily retired woman!
+Calvin: the grind in heteronormative hell paid off
+Alex: yeah for her
+Alex: our generation is screwed on that front lol
+Calvin: ugh don't remind me
+Calvin: but for real bless you for not making her all frumpy and granny looking
+Donna: she def flinched at the sight of those knits
+<<jump DollyGroupchatEpEnd>>
+===
+title: DollyGroupchatEpEnd
+position: 4,243
+---
+Alex: also Donna
+Alex: i messaged them 
+Alex: i spoke my feelings
+Alex: i will hold for applause
+Calvin: you are a disaster
+Elie: you're definitely going to have to pay for Donna's tab on our next wine night
+Donna: how expensive it'll be depends on how nice you were to them in those messages
+Alex: ah hell
+===

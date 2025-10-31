@@ -1,0 +1,77 @@
+title: PostGC
+tags: 
+position: 22,169
+---
+//get heather reaction 
+// 0 = neutral, 1 = good, 2 = neg
+<<Them>>
+Donna: and so she somehow managed to get the whole visit comped lol
+Alex: your mother is a force to be reckoned with
+Alex: i both respect and fear her
+Calvin: i respectfully fear her
+<<if get_reaction() == 0>>
+    <<jump PostGC_Neutral>>
+<<elseif get_reaction() == 1>>
+    <<jump PostGC_Pos>>
+<<elseif get_reaction() == 2>>
+    <<jump PostGC_Neg>>
+<<endif>>
+===
+title: PostGC_Neg
+tags: 
+position: 241,397
+---
+<<Them>>
+Alex: i mean ...i thought the outfit was nice
+Alex: even if she wasn't super into it
+Calvin: girl she hated that outfit lol
+
+<<jump PostGC_End>>
+===
+title: PostGC_Pos
+tags: 
+position: -178,399
+---
+Alex: omg that was such a wholesome show!!!
+Calvin: look at you changing lives and shit
+Calvin: legit tho she looked fire in that fit
+Elie: it would have been really depressing to see you put her in that skirt she clearly hated and pulled on all her childhood trauma
+Alex: yeah... that
+<<Me>>
+-> Yeah but now my boss is on my ass
+->I just couldn't do it to her
+-> idk this show is about getting out of your comfort zone a bit
+<<Them>>
+Donna: don't get all up in your head about it
+Calvin: yeah just go with what feels right to you
+
+<<jump PostGC_End>>
+===
+title: PostGC_Neutral
+tags: 
+position: 33,392
+---
+<<Them>>
+Donna: well that was definitely an outfit of somekind
+Alex: it was fine!
+Calvin: yeah it wasn't like BAD or anything
+Donna: or GOOD lol
+Alex: it was fiiiine don't be jerks about it
+<<Me>>
+-> No I definitely whiffed on this one
+-> I thought it was cute!
+-> She seemed really picky honestly
+<<Them>>
+Calvin: this is like your practice run don't sweat it
+
+<<jump PostGC_End>>
+===
+title: PostGC_End
+tags: 
+position: 36,602
+---
+<<Them>>
+Elie: don't put too much pressure on yourself
+Elie: let's go for drinks tonight! we can gab about it all
+Alex: yessss
+===

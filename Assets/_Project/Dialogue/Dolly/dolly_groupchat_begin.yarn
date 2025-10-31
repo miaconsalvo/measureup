@@ -1,0 +1,66 @@
+title: DollyGroupchatStart
+position: -220,24
+---
+<<Them>>
+Alex: so i had to ghost them
+Calvin: hear hear
+Elie: do you think maybe you could have just talked to them about how you were feeling?
+Alex: ...
+Alex: ew no
+Alex: but speaking about feelings!
+Alex: {playername()} feeling good about today?
+
+//this is based off of how the last episode went for Heather's reaction
+// 0=neut 1=good 2=bad
+<<if get_reaction() == 0>>
+    <<jump DollyGroupchatDNeutral>>
+<<elseif get_reaction() == 1>>
+    <<jump DollyGroupchatHGood>>
+<<elseif get_reaction() == 2>>
+    <<jump DollyGroupchatHBad>>
+<<endif>>
+
+===
+title: DollyGroupchatHNeutral
+---
+<<Me>>
+-> I think so?
+-> Yeah!
+<<jump DollyGroupchatFinish>>
+===
+title: DollyGroupchatHBad
+position: 39,-165
+---
+<<Me>>
+-> I think I missed the mark with Heather
+-> I still think the outfit I picked last episode was good
+<<Them>>
+Calvin: It definitely could have gone... better?
+<<Me>>
+-> Hopefully this contestant likes what I pick for them this time.
+    <<jump DollyGroupchatFinish>>
+-> I'm feeling like maybe I need to listen better this time around.
+    <<jump DollyGroupchatFinish>>
+===
+title:DollyGroupchatHGood
+position: 26,175
+---
+<<Me>>
+-> yeah, I'm just gearing up for whatever is in that dossier this time around
+    <<jump DollyGroupchatFinish>>
+-> Honestly yeah! It was genuinely nice making a difference with Heather!
+    <<jump DollyGroupchatFinish>>
+===
+title: DollyGroupchatFinish
+position: 329,-22
+---
+<<Them>>
+Calvin: tbh this contestant seems like an I C O N 
+Calvin: Dolly the powerhouse
+Calvin: obssessed
+Alex: especially surviving the corporate world for like 40 years?
+Calvin: truly suffocating in that proverbial closet
+Calvin: pun intended
+Donna: wait what was this about ghosting someone?
+Donna: ARE YOU GHOSTING MY COUSIN ALEX?
+===
