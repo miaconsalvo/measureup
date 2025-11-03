@@ -8,14 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 497954096719861398, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
-      propertyPath: m_PreferredWidth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 497954096719861398, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
-      propertyPath: m_PreferredHeight
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 525754550652265682, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -42,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 525754550652265682, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 525754550652265682, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 525754550652265682, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -100,10 +92,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothing Item Dressup
       objectReference: {fileID: 0}
+    - target: {fileID: 4078209191644073987, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4204628378015064517, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
       propertyPath: button
       value: 
       objectReference: {fileID: 2415282369724070214}
+    - target: {fileID: 4204628378015064517, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
+      propertyPath: isDraggable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204628378015064517, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
+      propertyPath: isSelectableUnequip
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7326497275430987215, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -161,18 +165,18 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 7203727773764166562}
+  m_TargetGraphic: {fileID: 4525149973999244910}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7203727773764166562 stripped
+--- !u!114 &4525149973999244910 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7326497275430987215, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4078209191644073987, guid: 3275718c1a96c66469c3c971ef636bd2, type: 3}
   m_PrefabInstance: {fileID: 456053552179725933}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2765584273129360391}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 141109fb25f0083469e71ce8cb3e75c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

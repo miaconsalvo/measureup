@@ -1,0 +1,248 @@
+title: HeatherDressupSetup
+tags: 
+position: -184,-112
+---
+//declare all relevant tags
+
+<<declare $randomDialogue = 0>>
+<<declare $opinionsAsked = 0>>
+
+//pos tags
+<<declare $comfy = false>>
+<<declare $pattern = false>>
+<<declare $practical = false>>
+<<declare $sporty = false>>
+
+<<declare $posTags =0>>
+
+//neg tags
+<<declare $bright = false>>
+<<declare $skirt = false>>
+<<declare $flashy = false>>
+<<declare $impractical = false>>
+<<declare $uncomfy = false>>
+<<declare $business = false>>
+
+<<declare $negTags = 0>>
+<<declare $posTags = 0>>
+
+//specific item tags
+<<declare $comfyItem = "null">>
+<<declare $brightItem = "null">>
+<<declare $patternItem = "null">>
+
+//check for outfit tags
+//set appropriate variables to true
+
+<<if $comfy == true>>
+//set comfy item variable
+<<endif>>
+<<if $pattern == true>>
+//set comfy item variable
+<<endif>>
+<<if $bright == true>>
+//set bright item variable
+<<endif>>
+//when button pressed in game
+<<jump HeatherOpinionAsked>>
+===
+title: HeatherOpinionAsked
+tags: 
+position: -182,108
+---
+//check current outfit and set all variables
+
+<<set $opinionsAsked = $opinionsAsked +1>>
+<<if $opinionsAsked >= 3>>
+    <<jump HeatherOutofOpinions>>
+<<endif>>
+
+
+<<if $bright == true>>
+    <<jump HeatherDressupBright>>
+<<elseif $skirt == true>>
+    <<jump HeatherDressupSkirt>>
+<<elseif $flashy == true>>
+    <<jump HeatherDressupFlashyImpractical>>
+<<elseif $impractical == true>>
+    <<jump HeatherDressupFlashyImpractical>>
+<<elseif $uncomfy == true>>
+    <<jump HeatherDressupUncomfy>>
+<<elseif $business == true>>
+    <<jump HeatherDressUpBusiness>>
+<<elseif $negTags > 1>>
+    <<HeatherDressupNegative>>
+<<elseif $comfy == true and $uncomfy == false>>
+    <<jump HeatherDressupComfy>>
+<<elseif $pattern == true>>
+    <<jump HeatherDressupPattern>>
+<<elseif $posTags > 1 and $negTags == 0>>
+    <<jump HeatherDressupPositive>>
+<<else>>
+    <<jump HeatherDressupNoRelTags>>
+<<endif>>
+===
+title: HeatherOutofOpinions
+tags: 
+position: 47.50228500366211,110.83866691589355
+---
+<<declare $randomDialogue = 0>>
+<<set $randomDialogue = random_range(0, 2)>>
+
+<<if $randomDialogue == 0>>
+    Jo: You almost done? We gotta get filming!
+<<elseif $randomDialogue == 1>>
+    Jo: Hurry up! We are falling behind schedule. 
+<<elseif $randomDialogue == 2>>
+    Jo: Are you done yet? We are all waiting on you. 
+<<endif>>
+===
+title: HeatherDressupBright
+tags: 
+position: -671.1591758728027,313.6760482788086
+---
+<<set $randomDialogue = random_range(0, 2)>>
+
+<<if $randomDialogue == 0>>
+    Heather: Oh, this {$brightItem} is really... uh... bright. 
+    Heather: I wouldn’t usually pick this colour for myself.
+<<elseif $randomDialogue == 1>>
+    Heather: Hmm, I mean, the {$brightItem} is okay...
+    Heather: ...but does it maybe come in a different colour?
+<<elseif $randomDialogue == 2>>
+    Heather: Ahh.. the outfit is interesting but I’m not sure about the colours...
+    Heather: It is very bright...
+<<endif>>
+===
+title: HeatherDressupSkirt
+tags: 
+position: -459.0853633880615,302.2767868041992
+---
+<<set $randomDialogue = random_range(0, 2)>>
+
+<<if $randomDialogue == 0>>
+    Heather: This outfit is... ok... but I’m not usually one for skirts.
+<<elseif $randomDialogue == 1>>
+    Heather: Oh, uh, did I mention that I kind of hate skirts? Sorry.
+<<elseif $randomDialogue == 2>>
+    Heather: Sorry but I really don’t like skirts. 
+    Heather: They remind me of when I was a little kid on the Family Tree.
+<<endif>>
+===
+title: HeatherDressupFlashyImpractical
+tags: 
+position: -21.13407325744629,325.6742706298828
+---
+<<set $randomDialogue = random_range(0, 1)>>
+
+<<if $randomDialogue == 0>>
+    Heather: This is super cute, but I can’t see myself ever wearing it if I am being honest..
+<<elseif $randomDialogue == 1>>
+    Heather: Imagine the weird looks I would get dropping the kids off at school in this...
+<<endif>>
+===
+title: HeatherDressupUncomfy
+tags: 
+position: -248.3309097290039,317.8919677734375
+---
+<<set $randomDialogue = random_range(0, 2)>>
+
+<<if $randomDialogue == 0>>
+    Heather: This is pretty, but sooo uncomfortable.
+<<elseif $randomDialogue == 1>>
+    Heather: Do you have anything more comfortable?
+<<elseif $randomDialogue == 2>>
+    Heather: This is ok... but I wish it was more comfortable. 
+<<endif>>
+===
+title: HeatherDressupNegative
+tags: 
+position: 206.07556915283203,331.31920623779297
+---
+<<set $randomDialogue = random_range(0, 2)>>
+
+<<if $randomDialogue == 0>>
+    Heather: I’m sorry to be difficult but this outfit really isn’t very “me”.
+<<elseif $randomDialogue == 1>>
+    Heather: Oh wow – the outfit is ok but, maybe for someone else?
+<<elseif $randomDialogue == 2>>
+    Heather: Uh, hmm, I don’t really know when I would ever wear this. 
+<<endif>>
+===
+title: HeatherDressupComfy
+tags: 
+position: 463.8276424407959,332.97754669189453
+---
+<<set $randomDialogue = random_range(0, 2)>>
+
+<<if $randomDialogue == 0>>
+    Heather: I love how comfortable this {$comfyItem} is!
+<<elseif $randomDialogue == 1>>
+    Heather: I could totally see myself wearing this to run errands.
+<<elseif $randomDialogue == 2>>
+    Heather: Wow this {$comfyItem} is seriously so comfy!
+<<endif>>
+===
+title: HeatherDressupPattern
+tags: 
+position: 687.6765289306641,332.7734069824219
+---
+<<set $randomDialogue = random_range(0, 2)>>
+
+<<if $randomDialogue == 0>>
+    Heather: I really love this pattern!
+<<elseif $randomDialogue == 1>>
+    Heather: Woah, this {$patternItem} is so fun!
+<<elseif $randomDialogue == 2>>
+    Heather: The pattern on this {$patternItem} is so amazing!
+<<endif>>
+===
+title: HeatherDressupPositive
+tags: 
+position: 905.4650497436523,328.4099578857422
+---
+<<set $randomDialogue = random_range(0, 2)>>
+
+<<if $randomDialogue == 0>>
+    Heather: I am seriously obsessed with this outfit!
+    Heather: It's like you read my mind!
+<<elseif $randomDialogue == 1>>
+    Heather: I love everything about this!
+<<elseif $randomDialogue == 2>>
+    Heather: Wow! I LOVE this outfit!
+<<endif>>
+===
+title: HeatherDressupNoRelTags
+tags: 
+position: 1146.8139457702637,329.30665588378906
+---
+<<set $randomDialogue = random_range(0, 2)>>
+
+<<if $randomDialogue == 0>>
+    Heather: Hmmm... yeah this is okay.
+<<elseif $randomDialogue == 1>>
+    Heather: Uh.. I guess I don’t hate it.
+<<elseif $randomDialogue == 2>>
+    Heather: Oh. Sure I guess I would wear this.
+<<endif>>
+===
+title: EndHeatherDressup
+tags: 
+position: -134.89876556396484,554.7522735595703
+---
+
+===
+title: HeatherDressUpBusiness
+tags: 
+position: 340.34469985961914,520.0117034912109
+---
+<<set $randomDialogue = random_range(0, 2)>>
+
+<<if $randomDialogue == 0>>
+    Heather: Oh interesting... idk if business attire is really my thing though...
+<<elseif $randomDialogue == 1>>
+    Heather: I don’t feel like myself in this! I don't think I've ever considered wearing business clothing...
+<<elseif $randomDialogue == 2>>
+    Heather: Hmm... this feels like something I could wear at an office job, but I’m a stay at home mom!
+<<endif>>
+===

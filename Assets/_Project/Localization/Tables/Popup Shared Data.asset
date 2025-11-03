@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Popup Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Popup
+  m_TableCollectionNameGuidString: c44585f9b040f264d883d3de8c96dfe3
+  m_Entries:
+  - m_Id: 15791292416
+    m_Key: Confirm Purchase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 985224970240
+    m_Key: Finish Shopping
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65599279202304
+    m_Key: Confirm Dressup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5960569462718464
+    m_Key: Finish Week
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6919069441458176
+    m_Key: Skip Onboarding
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 819228970296803342
+  references:
+    version: 2
+    RefIds:
+    - rid: 819228970296803342
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1747689104475

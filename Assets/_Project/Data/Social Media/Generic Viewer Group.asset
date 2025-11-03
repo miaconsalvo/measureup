@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b8f2a0eaa5059645aaefdd3bca1c7c9, type: 3}
+  m_Name: Generic Viewer Group
+  m_EditorClassIdentifier: 
+  groupName: Generic
+  condition: {fileID: 0}
+  alwaysShowNeutralComments: 1
+  neutralComments:
+  - handle: joguy
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 2427214102528
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: jessie89
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 2457727664128
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: some123
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 2474861395968
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: tatimatti
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 2489990250496
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: 
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 2525268541440
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: 
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 2542792343552
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  posComments: []
+  negComments: []
+  references:
+    version: 2
+    RefIds: []

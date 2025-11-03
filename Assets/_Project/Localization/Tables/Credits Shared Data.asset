@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Credits Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Credits
+  m_TableCollectionNameGuidString: 0338cc0f186c9b1479ae2941eb77f354
+  m_Entries:
+  - m_Id: 7167803392
+    m_Key: Programmer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23315873792
+    m_Key: Artist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113568907264
+    m_Key: Writer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 257051852800
+    m_Key: Project Lead
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1580853886976
+    m_Key: Game Designer
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 2721914839475683338
+  references:
+    version: 2
+    RefIds:
+    - rid: 2721914839475683338
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1749203260802

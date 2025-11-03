@@ -1,11 +1,16 @@
 using MeasureUp.Core;
+using Mystie.Dressup;
+using Mystie.UI.Transition;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Localization.Settings;
+using UnityEngine.Localization.SmartFormat;
 using UnityEngine.SceneManagement;
+using Yarn.Unity;
 
 namespace Mystie.Core
 {
@@ -17,13 +22,19 @@ namespace Mystie.Core
 
         public GameSettings gameSettings { get; private set; }
         public SystemDataScriptable systemData { get; private set; }
+        public SceneTransitioner sceneTransitioner { get; private set; }
         public InputActionAsset actions { get; private set; }
         public Controls controls { get; private set; }
+        //public SmartFormatter stringFormatter { get; private set; }
 
         public static bool isPaused = false;
         public static GameState gameState { get; private set; }
 
         public const string systemDataPath = "System Data";
+
+        public static string playerName = "Cindy";
+        [YarnFunction("playername")]
+        public static string Playername() { return playerName; }
 
         #region Singleton
 
@@ -31,8 +42,7 @@ namespace Mystie.Core
         {
             get
             {
-                if (instance == null) 
-                    instance = FindObjectOfType<GameManager>();
+                if (instance == null) Instantiate();
                 return instance;
             }
         }
@@ -41,38 +51,50 @@ namespace Mystie.Core
 
         #endregion
 
-        private void Awake()
+        private static GameManager Instantiate()
         {
-            if (Instance != this)
-            {
-                Destroy(gameObject);
-                return;
-            }
+            GameObject gmObj = new GameObject("Game Manager");
+            instance = gmObj.AddComponent<GameManager>();
+            instance.Initialize();
 
+            return instance;
+        }
+
+        private void Initialize()
+        {
             DontDestroyOnLoad(gameObject);
 
             //gameState = GameState.StartScreen;
 
             isPaused = false;
 
-            controls = new Controls();
-            controls.UI.Enable();
-
-            //SceneManager.sceneLoaded += OnSceneLoaded;
-
             systemData = Resources.Load<SystemDataScriptable>(systemDataPath);
             if (systemData == null) Debug.LogError("GameManager: System Data not found.");
 
+            gameSettings = new GameSettings(systemData);
+
+            InventoryManager.LoadClothingData();
+            SaveManager.LoadSaveFiles();
+
+            //Cursor.visible = false;
+            //cursor = Instantiate(systemData.cursorPrefab);
+
+            controls = new Controls();
+            //controls.UI.Enable();
             actions = systemData.actions;
 
-            gameSettings = new GameSettings(systemData);
+            //SceneManager.sceneLoaded += OnSceneLoaded;
+
+            sceneTransitioner = SceneTransitioner.Instance;
         }
 
         IEnumerator Start()
         {
+            Debug.Log("Game Manager Start");
             // Wait for the localization system to initialize, loading Locales, preloading etc.
             yield return LocalizationSettings.InitializationOperation;
             gameSettings.LoadLocale();
+            //stringFormatter = LocalizationSettings.StringDatabase.SmartFormatter;
         }
 
         public static void SetGameState(GameState state)

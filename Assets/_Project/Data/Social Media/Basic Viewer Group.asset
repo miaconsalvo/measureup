@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b8f2a0eaa5059645aaefdd3bca1c7c9, type: 3}
+  m_Name: Basic Viewer Group
+  m_EditorClassIdentifier: 
+  groupName: Basic
+  condition: {fileID: 11400000, guid: ab30509787dad9b408cd41041271ae99, type: 2}
+  alwaysShowNeutralComments: 0
+  neutralComments: []
+  posComments:
+  - handle: rosa0304
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 147005898752
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: violet12
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1363437944832
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: momoffour
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1403489353728
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  negComments:
+  - handle: rosa0304
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1425874354176
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - handle: violet12
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8028b2bae03f23f45abae95d6f590af1
+      m_TableEntryReference:
+        m_KeyId: 1456496967680
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

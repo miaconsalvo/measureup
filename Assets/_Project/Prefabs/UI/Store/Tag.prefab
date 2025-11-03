@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 41.739998, y: -25}
-  m_SizeDelta: {x: 43.48, y: 50}
+  m_AnchoredPosition: {x: 34.495, y: -15}
+  m_SizeDelta: {x: 28.99, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7182831030771264034
 CanvasRenderer:
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -159,11 +159,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5682109443505737129}
   - component: {fileID: 659685488616482005}
+  - component: {fileID: -956164975001388573}
   - component: {fileID: 8464287505942207398}
-  - component: {fileID: 2379309713657227229}
   - component: {fileID: 2343579695506970649}
-  - component: {fileID: 4160239865435382759}
   - component: {fileID: 1093651028610137660}
+  - component: {fileID: 4160239865435382759}
   - component: {fileID: 3803416862339236057}
   m_Layer: 5
   m_Name: Tag
@@ -212,6 +212,25 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &-956164975001388573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074727912100652073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822b9aaa72d33c647a25c89ea2b7baa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  <isVisible>k__BackingField: 1
+  labelLocalized: {fileID: 8464287505942207398}
+  label: {fileID: 3607802437045911902}
+  bg: {fileID: 2343579695506970649}
+  icon: {fileID: 0}
+  <fadeTime>k__BackingField: 0
 --- !u!114 &8464287505942207398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,19 +271,6 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
---- !u!114 &2379309713657227229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9074727912100652073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad484d63e1f6f9d4b8b94804e36542d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  label: {fileID: 3607802437045911902}
 --- !u!114 &2343579695506970649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +321,20 @@ MonoBehaviour:
   m_NStarPolygonSideCount: 3
   m_NStarPolygonInset: 2
   m_NStarPolygonCornerRadius: 0
+--- !u!114 &1093651028610137660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074727912100652073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 1
+  m_VerticalFit: 2
 --- !u!114 &4160239865435382759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,9 +350,9 @@ MonoBehaviour:
   m_Padding:
     m_Left: 20
     m_Right: 20
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
+    m_Top: 3
+    m_Bottom: 3
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -341,20 +361,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1093651028610137660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9074727912100652073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 1
-  m_VerticalFit: 2
 --- !u!222 &3803416862339236057
 CanvasRenderer:
   m_ObjectHideFlags: 0

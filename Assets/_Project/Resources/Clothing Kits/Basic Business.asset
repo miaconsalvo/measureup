@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac65f3b549756749bbcde476d226756, type: 3}
+  m_Name: Basic Business
+  m_EditorClassIdentifier: 
+  name: Basic Business
+  id: basicbusiness
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:9b488de41f12d8b44a0e611d909df40a
+    m_TableEntryReference:
+      m_KeyId: 63672151703552
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  price: 900
+  priceRange: $$
+  garments:
+  - {fileID: 11400000, guid: f137bac69401609468ce77b47c27f5c3, type: 2}
+  - {fileID: 11400000, guid: c2d540129c1142e4d933c45510fb2f15, type: 2}
+  - {fileID: 11400000, guid: a49c1e31b3cdd754a9c016312e28b40d, type: 2}
+  - {fileID: 11400000, guid: 308eba012ccefdf488816bad39d02dd6, type: 2}
+  - {fileID: 11400000, guid: da1ec2035f04f464e9bd93eaa25de180, type: 2}
+  tags:
+  - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}
+  - {fileID: 11400000, guid: b739dd24505919541bee74a638139d25, type: 2}
+  references:
+    version: 2
+    RefIds: []

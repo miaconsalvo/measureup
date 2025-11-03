@@ -90,6 +90,22 @@ MonoBehaviour:
     m_Localized: Recommencer
     m_Metadata:
       m_Items: []
+  - m_Id: 69662896195108864
+    m_Localized: Age
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69662922698915840
+    m_Localized: Occupation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69663003619622912
+    m_Localized: Notes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69662868026163200
+    m_Localized: Participante
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

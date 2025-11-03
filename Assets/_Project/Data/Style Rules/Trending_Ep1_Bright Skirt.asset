@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8314b44e8a2c18428c58d20fb258138, type: 3}
+  m_Name: Trending_Ep1_Bright Skirt
+  m_EditorClassIdentifier: 
+  ruleName:
+    m_TableReference:
+      m_TableCollectionName: GUID:186f780181f63cf4592323b302052e67
+    m_TableEntryReference:
+      m_KeyId: 126223212347392
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  ruleDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:186f780181f63cf4592323b302052e67
+    m_TableEntryReference:
+      m_KeyId: 6769344512
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  rules:
+  - op: 0
+    not: 1
+    tags:
+    - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
+    - {fileID: 11400000, guid: 46da594aa093a314ca17348cd4a39004, type: 2}
+  references:
+    version: 2
+    RefIds: []

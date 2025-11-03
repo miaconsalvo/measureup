@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac65f3b549756749bbcde476d226756, type: 3}
+  m_Name: Elevated Basics
+  m_EditorClassIdentifier: 
+  name: Elevated Basics
+  id: elevatedbasics
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:9b488de41f12d8b44a0e611d909df40a
+    m_TableEntryReference:
+      m_KeyId: 6376500059963392
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  price: 360
+  priceRange: $
+  garments:
+  - {fileID: 11400000, guid: 30a462b5608348e47be05751538a9c8c, type: 2}
+  - {fileID: 11400000, guid: d0c532c85beec494bb34e29c1d3740c1, type: 2}
+  - {fileID: 11400000, guid: 16c4e77806213e046a137be48a626b30, type: 2}
+  - {fileID: 11400000, guid: 7fc1d04bb63217b43a21df39a47cb024, type: 2}
+  - {fileID: 11400000, guid: 60f16a2c38dd04642bbf452d16059cb4, type: 2}
+  - {fileID: 11400000, guid: 5350f1df4eace2342a11b6e73ff26f56, type: 2}
+  tags:
+  - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
+  - {fileID: 11400000, guid: b739dd24505919541bee74a638139d25, type: 2}
+  - {fileID: 11400000, guid: f7c0109afcb5ab749a73d95ed2733663, type: 2}
+  - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
+  m_Name: White Sneakers
+  m_EditorClassIdentifier: 
+  name: White Sneakers
+  id: 93fc9f11-0724-486e-8761-99df800823f4
+  <type>k__BackingField: 2
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
+    m_TableEntryReference:
+      m_KeyId: 2344196551475200
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
+    m_TableEntryReference:
+      m_KeyId: 3406606222147584
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  brand: {fileID: 0}
+  icon: {fileID: 21300000, guid: 51ed41aafdf4cbb44887acdbfb1a4d86, type: 3}
+  sprite: {fileID: 21300000, guid: 2e8f5ff08df8fa549901b918753dd81a, type: 3}
+  sprites: []
+  tags:
+  - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
+  - {fileID: 11400000, guid: ea4b614b55f4d6f4fb9558e7edca74d0, type: 2}
+  - {fileID: 11400000, guid: cbeb23e41baf0ad429d46c94024c2519, type: 2}
+  - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
+  - {fileID: 11400000, guid: 3dd5bee944a9892499537f489a2e5591, type: 2}
+  - {fileID: 11400000, guid: 62dc69857624ecb4c807fbd001c128ce, type: 2}
+  references:
+    version: 2
+    RefIds: []

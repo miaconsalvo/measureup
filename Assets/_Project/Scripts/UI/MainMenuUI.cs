@@ -10,29 +10,39 @@ namespace Mystie.UI
 {
     public class MainMenuUI : MonoBehaviour
     {
-        [SerializeField]
-        private SceneTransitionMode transitionMode;
-        [SerializeField]
-        private Button playBtn;
+        public EpisodeManager episodeManager { get; private set; }
+        [SerializeField] private Button newGameBtn;
+        [SerializeField] private Button continueBtn;
 
-        [Space]
-
-        [SerializeField]
-        private string startScene;
+        public void Start()
+        {
+            SaveManager.LoadSaveFiles();
+            bool hasSave = SaveManager.HasSave();
+            if (continueBtn != null) continueBtn.gameObject.SetActive(hasSave);
+        }
 
         private void OnEnable()
         {
-            if (playBtn != null) playBtn.onClick.AddListener(OnPlay);
+            if (newGameBtn != null) newGameBtn.onClick.AddListener(NewGame);
+            if (continueBtn != null) continueBtn.onClick.AddListener(Continue);
         }
 
         private void OnDisable()
         {
-            if (playBtn != null) playBtn.onClick.RemoveListener(OnPlay);
+            if (newGameBtn != null) newGameBtn.onClick.RemoveListener(NewGame);
+            if (continueBtn != null) continueBtn.onClick.RemoveListener(Continue);
         }
 
-        private void OnPlay()
+        private void NewGame()
         {
-            SceneTransitioner.Instance.LoadScene(startScene, transitionMode);
+            SaveManager.NewGame();
+            //SceneTransitioner.Instance.LoadScene(startScene, transitionMode);
+        }
+
+        private void Continue()
+        {
+            SaveManager.LoadGame();
+            //SceneTransitioner.Instance.LoadScene(startScene, transitionMode);
         }
     }
 }

@@ -254,11 +254,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4e36c07ba7cd4a43bb1153bd459a230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 1333320754025734961}
   nameLabel: {fileID: 3900409442067628615}
   priceLabel: {fileID: 0}
   priceRangeLabel: {fileID: 3419902165810728452}
-  clothingKit: {fileID: 0}
+  <isPurchased>k__BackingField: 0
   itemsAnchor: {fileID: 7879546606043312419}
+  tagsAnchor: {fileID: 0}
+  tagUIPrefab: {fileID: 0}
+  <clothingKit>k__BackingField: {fileID: 0}
 --- !u!114 &8078030767964235604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,7 +610,7 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: -1
-  m_PreferredWidth: 50
+  m_PreferredWidth: 100
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
