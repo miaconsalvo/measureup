@@ -44,6 +44,7 @@ namespace Mystie.Core
         [field: SerializeField] public DossierManager dossier { get; private set; }
 
         private int stageIndex;
+        public bool stagesOverride;
         public List<LevelStageType> stages = new List<LevelStageType>();
         public LevelStageType CurrentStage
         {
@@ -74,6 +75,7 @@ namespace Mystie.Core
             contestant = episode.contestant;
 
             uiManager = DressupUIManager.Instance;
+            if (stagesOverride) stages = episode.stages;
 
             dressup.Initialize(contestant);
             inventory.Initialize(episode);

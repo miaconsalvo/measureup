@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Onboarding.unity
     guid: 4e87d76324a36084495c328488ce9a08
   - enabled: 1
-    path: Assets/_Project/Scenes/Heather.unity
+    path: Assets/_Project/Scenes/Episode.unity
     guid: 874e024ad61f33a458cf629373233e24
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 7f463741fd17c284abd23606d9c2e81a, type: 2}

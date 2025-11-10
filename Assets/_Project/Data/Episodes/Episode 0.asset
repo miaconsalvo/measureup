@@ -16,6 +16,7 @@ MonoBehaviour:
   styleRule: {fileID: 11400000, guid: 10d88f6780ed48d4ebf67ec1790aa511, type: 2}
   trendingRule: {fileID: 11400000, guid: f0bfb4ce66b48fe4f8f66ad2150f97dd, type: 2}
   socialMediaComments: {fileID: 11400000, guid: e9545bf04a6b5874e8ad7d9b2cdea76e, type: 2}
+  stages: 06000000
   preChatNode: PreGC
   interviewNode: HeatherInterviewStart
   postCatwalkNode: PCW
@@ -234,6 +235,7 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
+  <startingClothes>k__BackingField: []
   <kitsOnSale>k__BackingField:
   - {fileID: 11400000, guid: 4f0fff8ae5b8c9f4eb3824dd5eaaaa38, type: 2}
   - {fileID: 11400000, guid: 8e7a8d3ffa2dbff4092da16cf476980e, type: 2}

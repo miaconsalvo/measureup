@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Mystie.Core;
 using NaughtyAttributes;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.UI;
@@ -16,7 +15,8 @@ namespace Mystie.Dressup
         public event Action<List<ItemScriptable>> onItemListUpdate;
         public event Action<List<ItemUI>> onItemUIListUpdate;
 
-        [SerializeField] private DressupManager model;
+        private DressupManager dressupManager;
+        [field: SerializeField] public DressupModelUI modelUI { get; private set; }
         [SerializeField] private Transform itemAnchor;
         [SerializeField] private ItemUI itemPrefab;
 
@@ -41,15 +41,18 @@ namespace Mystie.Dressup
         private List<ItemScriptable> clothes;
         private List<ItemUI> itemsUI;
 
-        private void Start()
+        public void Initialize(EpisodeScriptable episode)
         {
-            if (itemDetailsPanelUI != null) itemDetailsPanelUI.Hide(false);
+            dressupManager = LevelManager.Instance.dressup;
+            modelUI.Initialize(episode);
             UpdateItems();
         }
 
         protected override void OnEnable()
         {
             base.OnEnable();
+            if (itemDetailsPanelUI != null)
+                itemDetailsPanelUI.Hide(false);
             fitCheckButton.onClick.AddListener(OnFitCheck);
         }
 
@@ -100,7 +103,7 @@ namespace Mystie.Dressup
         private ItemUI CreateItemUI(ItemScriptable c)
         {
             ItemUI itemUI = Instantiate(itemPrefab.gameObject, itemAnchor).GetComponent<ItemUI>();
-            itemUI.Init(c, OnItemSelected, model.AddItem, (item) => { model.RemoveItem(item); });
+            itemUI.Init(c, OnItemSelected, dressupManager.AddItem, (item) => { dressupManager.RemoveItem(item); });
             itemsUI.Add(itemUI);
             return itemUI;
         }
@@ -141,14 +144,14 @@ namespace Mystie.Dressup
         public void OnFitCheck()
         {
             string comment = null;
-            if (!model.IsFitAppropriate())
+            if (!dressupManager.IsFitAppropriate())
             {
                 comment = inappropriateFitComment.GetLocalizedString();
             }
             else if (fitChecksDone < fitChecksMax)
             {
                 fitChecksDone++;
-                comment = model.FitCheck();
+                comment = dressupManager.FitCheck();
             }
             else
             {
@@ -171,12 +174,6 @@ namespace Mystie.Dressup
 
             opinionBox.Set(opinion);
             opinionBox.ShowForDuration(opinionDuration);
-        }
-
-        [Button]
-        public void Validate()
-        {
-
         }
     }
 }

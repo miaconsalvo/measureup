@@ -50,7 +50,7 @@ namespace Mystie
         public void Set(SpriteLayered sprite, string[] spriteParams)
         {
             (Sprite[] sprites, Vector2 offset) = GetSprites(spriteParams);
-            sprite.Set(sprites, offset);
+            sprite.Set(sprites, offset, false);
         }
     }
 }

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2104838e4fb1ee4880cbc8d2839a90a, type: 3}
-  m_Name: HeatherPreferences
+  m_Name: Jo Contestant
   m_EditorClassIdentifier: 
-  name: Heather
+  name: Jo
   age: 37
   occupation:
     m_TableReference:
@@ -23,7 +23,8 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  actor: {fileID: 11400000, guid: a280ec2ec23d79a46a27b862a3b1a990, type: 2}
+  <model>k__BackingField: {fileID: 21300000, guid: c68587dcd7dab5d4f835015c32445e5b, type: 3}
+  actor: {fileID: 11400000, guid: 4408677c070288e42ab131b03e380bb4, type: 2}
   startingClothes: []
   underwear:
   - {fileID: 11400000, guid: 1fe112ceb73469c418312d74fe818f7f, type: 2}

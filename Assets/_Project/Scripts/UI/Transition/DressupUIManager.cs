@@ -26,6 +26,7 @@ namespace Mystie.UI
 
         [field: SerializeField] public DossierUI dossierUI { get; private set; }
         [field: SerializeField] public StoreStage storeUI { get; private set; }
+        [field: SerializeField] public DressupStage dressupUI { get; private set; }
         [field: SerializeField] public DialogueStage interviewUI { get; private set; }
         [field: SerializeField] public DialogueStage postCatwalkUI { get; private set; }
         [field: SerializeField] public TabletStage preChatUI { get; private set; }
@@ -38,6 +39,7 @@ namespace Mystie.UI
 
             dossierUI.Initialize(episode);
             storeUI.Initialize(episode);
+            dressupUI.Initialize(episode);
 
             interviewUI.nodeStart = episode.interviewNode;
             postCatwalkUI.nodeStart = episode.postCatwalkNode;

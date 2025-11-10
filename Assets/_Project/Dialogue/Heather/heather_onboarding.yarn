@@ -12,7 +12,7 @@ Boss: Look, I'm not here to coddle you.
 Boss: I can give you a quick overview of your job, but in this business, you need to be a self-starter.
 Boss: You need to be able to think on your feet, and roll with the punches, okay?
 Boss: Alright, As I'm sure you know, our goal here at Measure Up! is to empower women.
-Boss: You've seen the think pieces about the original show, how it was problematic… or “unfeminist”… or whatever…
+Boss: You've seen the think pieces about the original show, how it was problematic... or "unfeminist"... or whatever...
 Boss: but we're doing something different here on the reboot.
 Boss: We aren't telling women how to dress, we are showing them how to be the best versions of themselves.
 Boss: And to do that, they need to be shown how to dress. Got it?
@@ -38,6 +38,7 @@ position: 86,183
 <<Scene  dressing_room>>
 <<Act Jo base.neutral center lower 0>>
 <<FadeIn  Jo 0.5>>
+<<wait  0.5>>
 
 <<once>>
 Jo: Hi there. You're the new stylist? 

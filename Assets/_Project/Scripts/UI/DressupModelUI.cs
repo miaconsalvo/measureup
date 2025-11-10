@@ -1,64 +1,87 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Mystie.Core;
+using Mystie.Dialogue;
 using Mystie.Dressup;
 using UnityEngine;
 using UnityEngine.UI;
+using VInspector;
 
 namespace Mystie
 {
     public class DressupModelUI : MonoBehaviour
     {
-        [SerializeField] private DressupManager model;
-        [SerializeField] private Transform modelAnchor;
-        [SerializeField] private Image clothingImage;
-        [SerializeField] private List<ItemType> layerOrder;
+        private DressupManager dressupManager;
+        //[SerializeField] private Image clothingImage;
+        //[SerializeField] private Transform modelAnchor;
+        //[SerializeField] private Image clothingImage;
+        //[SerializeField] private List<ItemType> layerOrder;
+        [field: SerializeField] public SpriteLayered model { get; private set; }
+        //[SerializeField] private SpriteLayered dialogueModel;
+        [SerializeField] private Image modelImage;
 
-        private Dictionary<ItemType, Image> itemsUI;
+        [SerializeField] private SerializedDictionary<ItemType, Image> itemsUI;
 
-        private void Awake()
+        public void Initialize(EpisodeScriptable episode)
         {
-            itemsUI = new Dictionary<ItemType, Image>();
-            clothingImage.gameObject.SetActive(false);
-            InitializeLayers();
+            dressupManager = LevelManager.Instance.dressup;
 
-            model.onItemAdded += OnItemAdded;
-            model.onItemRemoved += OnItemRemoved;
+            modelImage.sprite = episode.contestant.model;
+
+            dressupManager.onItemAdded += OnItemAdded;
+            dressupManager.onItemRemoved += OnItemRemoved;
+        }
+
+        private void Start()
+        {
+            //itemsUI = new Dictionary<ItemType, Image>();
+            //clothingImage.gameObject.SetActive(false);
+
+            //InitializeLayers();
         }
 
         private void OnDestroy()
         {
-            model.onItemAdded -= OnItemAdded;
-            model.onItemRemoved -= OnItemRemoved;
+            if (dressupManager != null)
+            {
+                dressupManager.onItemAdded -= OnItemAdded;
+                dressupManager.onItemRemoved -= OnItemRemoved;
+            }
         }
 
         public void AddItem(ItemScriptable item)
         {
             if (item == null) return;
-            model.AddItem(item);
+            dressupManager.AddItem(item);
         }
 
-        public void InitializeLayers()
+        /*public void InitializeLayers()
         {
             foreach (ItemType type in layerOrder)
             {
                 Image img = Instantiate(clothingImage.gameObject, modelAnchor).GetComponent<Image>();
                 itemsUI.Add(type, img);
             }
-        }
+        }*/
 
         public void OnItemAdded(ItemScriptable item)
         {
             if (item == null) return;
 
-            if (!itemsUI.ContainsKey(item.type))
+            /*if (!itemsUI.ContainsKey(item.type))
             {
                 Image img = Instantiate(clothingImage.gameObject, modelAnchor).GetComponent<Image>();
                 itemsUI.Add(item.type, img);
-            }
+            }*/
 
-            itemsUI[item.type].gameObject.SetActive(item.sprite != null);
-            itemsUI[item.type].sprite = item.sprite;
-            itemsUI[item.type].SetNativeSize();
+            if (itemsUI.ContainsKey(item.type))
+            {
+                itemsUI[item.type].gameObject.SetActive(item.sprite != null);
+                itemsUI[item.type].sprite = item.sprite;
+                itemsUI[item.type].SetNativeSize();
+                //dialogueModel.Set(model);
+            }
         }
 
         public void OnItemRemoved(ItemScriptable item)
@@ -67,6 +90,7 @@ namespace Mystie
             {
                 itemsUI[item.type].gameObject.SetActive(false);
                 itemsUI[item.type].sprite = null;
+                //dialogueModel.Set(model);
             }
         }
     }

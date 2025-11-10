@@ -1,3 +1,5 @@
+using Mystie.Core;
+using Mystie.UI;
 using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
@@ -13,9 +15,19 @@ namespace Mystie.Dialogue
             DialogueManager.Instance.DoSceneChange(locationName);
         }
 
+        [YarnCommand("Contestant")]
+        public static void SetActorEpisode(string actorName, string spriteName, string positionX = "", string positionY = "", float alpha = 1f, string colorHex = "")
+        {
+            //string actorName = LevelManager.Instance.episode.name;
+            SpriteLayered dialogueModel = Object.Instantiate<SpriteLayered>(DressupUIManager.Instance.dressupUI.modelUI.model);
+
+            DialogueManager.Instance.AddSprite(actorName, dialogueModel, Vector2.zero, 0f);
+            DialogueManager.Instance.SetActor(actorName, spriteName, positionX, positionY, alpha, colorHex);
+        }
+
         /// <summary>
-		/// SetActor(actorName,spriteName,positionX,positionY,color) main
-		/// function for moving / adjusting characters</summary>
+        /// SetActor(actorName,spriteName,positionX,positionY,color) main
+        /// function for moving / adjusting characters</summary>
         [YarnCommand("Act")]
         public static void SetActor(string actorName, string spriteName, string positionX = "", string positionY = "", float alpha = 1f, string colorHex = "")
         {

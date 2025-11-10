@@ -16,6 +16,11 @@ MonoBehaviour:
   styleRule: {fileID: 11400000, guid: 59932e43d51e955458d9d4a8252f3fa6, type: 2}
   trendingRule: {fileID: 11400000, guid: e36d992e108c98340adeda3046acb865, type: 2}
   socialMediaComments: {fileID: 11400000, guid: e9545bf04a6b5874e8ad7d9b2cdea76e, type: 2}
+  stages: 000000000100000002000000030000000400000005000000
+  preChatNode: 
+  interviewNode: 
+  postCatwalkNode: 
+  postChatNode: 
   logline:
     m_TableReference:
       m_TableCollectionName: GUID:ba909b3975bf8d249ba74c36ea758ded
@@ -230,6 +235,7 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
+  <startingClothes>k__BackingField: []
   <kitsOnSale>k__BackingField:
   - {fileID: 11400000, guid: 4f0fff8ae5b8c9f4eb3824dd5eaaaa38, type: 2}
   - {fileID: 11400000, guid: 8e7a8d3ffa2dbff4092da16cf476980e, type: 2}

@@ -19,4 +19,19 @@ MonoBehaviour:
       index: 0
       isKeyRepeated: 0
       isKeyNull: 0
+    - Key: Heather
+      Value: {fileID: 11400000, guid: a280ec2ec23d79a46a27b862a3b1a990, type: 2}
+      index: 1
+      isKeyRepeated: 0
+      isKeyNull: 0
+    - Key: Dolly
+      Value: {fileID: 11400000, guid: 401fb3180d36c674ba6eff947731a45f, type: 2}
+      index: 2
+      isKeyRepeated: 0
+      isKeyNull: 0
+    - Key: Sophie
+      Value: {fileID: 11400000, guid: 8aec0dce2cc80504180fc98a86c95f16, type: 2}
+      index: 3
+      isKeyRepeated: 0
+      isKeyNull: 0
     dividerPos: 0.33

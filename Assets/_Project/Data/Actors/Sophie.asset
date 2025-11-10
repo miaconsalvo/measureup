@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 319cbde8e915dd643a3ebb60550f0ef8, type: 3}
-  m_Name: Heather
+  m_Name: Sophie
   m_EditorClassIdentifier: 
-  name: Heather
+  name: Sophie
   code: 
   poses:
   - name: base
-    sprite: {fileID: 21300000, guid: 3b6613d9706f48c49aab7064be2db671, type: 3}
+    sprite: {fileID: 21300000, guid: 1fc69e33af7f14f40a3efba544ffa44e, type: 3}
     offset: {x: 0, y: 0}
   expressions:
   - name: neutral

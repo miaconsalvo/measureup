@@ -14,8 +14,9 @@ namespace Mystie.Dressup
         public string age;
         public LocalizedString occupation;
 
-        [Space]
+        [field: Space]
 
+        [field: SerializeField] public Sprite model { get; private set; }
         public ActorScriptable actor;
         public List<ItemScriptable> startingClothes;
         public List<ItemScriptable> underwear;

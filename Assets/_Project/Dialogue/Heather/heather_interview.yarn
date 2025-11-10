@@ -2,6 +2,10 @@ title: HeatherInterviewStart
 tags: 
 position: -574,40
 ---
+<<Contestant Heather base.neutral center lower 0>>
+<<FadeIn Heather 0.5>>
+<<wait 0.5>>
+
 Heather: Oh hi! You must be the stylist, nice to meet you I'm Heather.
     -> Hi, nice to meet you!
     -> How are you doing?
@@ -90,5 +94,7 @@ title: HeatherInterviewEnd
 tags: 
 position: 497,5
 ---
-Interview ends.
+<<FadeOut Heather 0.5>>
+<<wait 0.5>>
+<<HideAll>>
 ===

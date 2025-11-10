@@ -20,12 +20,12 @@ MonoBehaviour:
       isKeyRepeated: 0
       isKeyNull: 0
     - Key: bottom
-      Value: -0.35
+      Value: -0.15
       index: 1
       isKeyRepeated: 0
       isKeyNull: 0
     - Key: lower
-      Value: -0.35
+      Value: -0.15
       index: 2
       isKeyRepeated: 0
       isKeyNull: 0
@@ -40,12 +40,12 @@ MonoBehaviour:
       isKeyRepeated: 0
       isKeyNull: 0
     - Key: top
-      Value: 0.35
+      Value: 0.15
       index: 5
       isKeyRepeated: 0
       isKeyNull: 0
     - Key: upper
-      Value: 0.35
+      Value: 0.15
       index: 6
       isKeyRepeated: 0
       isKeyNull: 0

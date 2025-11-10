@@ -11,7 +11,6 @@ namespace Mystie
         public RectTransform rectTransform { get; private set; }
 
         public Color color = Color.white;
-        public List<SpriteRenderer> renderers;
         public List<Image> renderersUI;
 
         private List<Vector2> basePositions = new List<Vector2>();
@@ -41,26 +40,63 @@ namespace Mystie
             Set(new Sprite[] { sprite });
         }
 
-        public void Set(Sprite[] sprites, Vector2 offset = default)
+        public void Set(SpriteLayered copy)
         {
-            UpdateColors();
+            if (copy == null || copy.renderersUI == null) return;
 
-            for (int i = 0; i < renderers.Count; i++)
-            {
-                renderers[i].sprite = i < sprites.Length ? sprites[i] : null;
-                renderers[i].enabled = renderers[i].sprite != null;
-
-                if (i > 0)
-                {
-                    renderers[i].transform.localPosition = offset;
-                }
-                else renderers[i].transform.localPosition = Vector3.zero;
-            }
+            // Get the sprites from the copy object
+            int count = Mathf.Min(renderersUI.Count, copy.renderersUI.Count);
 
             for (int i = 0; i < renderersUI.Count; i++)
             {
-                renderersUI[i].sprite = i < sprites.Length ? sprites[i] : null;
-                renderersUI[i].enabled = renderersUI[i].sprite != null;
+                if (i < count && copy.renderersUI[i] != null)
+                {
+                    // Copy the sprite from the corresponding renderer
+                    renderersUI[i].sprite = copy.renderersUI[i].sprite;
+                    renderersUI[i].enabled = copy.renderersUI[i].enabled;
+
+                    if (renderersUI[i].sprite != null)
+                    {
+                        renderersUI[i].SetNativeSize();
+
+                        // Calculate offset from copy's base position
+                        Vector2 basePos = i < basePositions.Count ? basePositions[i] : Vector2.zero;
+                        Vector2 copyBasePos = i < copy.basePositions.Count ? copy.basePositions[i] : Vector2.zero;
+                        Vector2 offset = copy.renderersUI[i].rectTransform.anchoredPosition - copyBasePos;
+
+                        if (i > 0)
+                            renderersUI[i].rectTransform.anchoredPosition = basePos + offset;
+                        else
+                            renderersUI[i].rectTransform.anchoredPosition = basePos;
+                    }
+                }
+                else
+                {
+                    // Clear any extra renderers that don't have a corresponding copy
+                    renderersUI[i].sprite = null;
+                    renderersUI[i].enabled = false;
+                }
+            }
+
+            UpdateColors();
+        }
+
+        public void Set(Sprite[] sprites, Vector2 offset = default, bool overwrite = true)
+        {
+            UpdateColors();
+
+            for (int i = 0; i < renderersUI.Count; i++)
+            {
+                if (overwrite)
+                {
+                    renderersUI[i].sprite = i < sprites.Length ? sprites[i] : null;
+                    renderersUI[i].enabled = renderersUI[i].sprite != null;
+                }
+                else
+                {
+                    if (i < sprites.Length) renderersUI[i].sprite = sprites[i];
+                    if (renderersUI[i].sprite != null) renderersUI[i].enabled = true;
+                }
 
                 if (renderersUI[i].sprite != null)
                 {
@@ -78,11 +114,6 @@ namespace Mystie
             foreach (Image image in renderersUI)
             {
                 if (image != null) image.color = color;
-            }
-
-            foreach (SpriteRenderer sprite in renderers)
-            {
-                if (sprite != null) sprite.color = color;
             }
         }
 
@@ -109,7 +140,6 @@ namespace Mystie
 
         public void Reset()
         {
-            renderers = GetComponentsInChildren<SpriteRenderer>().ToList();
             renderersUI = GetComponentsInChildren<Image>().ToList();
         }
     }

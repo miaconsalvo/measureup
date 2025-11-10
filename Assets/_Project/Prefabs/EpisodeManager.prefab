@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb3506480b1ba0047b0823226d3cc4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  episodeScene: Heather
+  episodeScene: Episode
   onbardingScene: Onboarding
   endScene: Main Menu
   <index>k__BackingField: 0
@@ -52,3 +52,5 @@ MonoBehaviour:
   <episodes>k__BackingField:
   - {fileID: 11400000, guid: 16b0a50991ff1894897e1d8639d5074c, type: 2}
   - {fileID: 11400000, guid: 21907f80f0a76724a911d0ff96f50668, type: 2}
+  - {fileID: 11400000, guid: 489ed185eb13b704ab0148524f375f10, type: 2}
+  - {fileID: 11400000, guid: 9f174e8d3463aa3438ab7244bd101cc7, type: 2}

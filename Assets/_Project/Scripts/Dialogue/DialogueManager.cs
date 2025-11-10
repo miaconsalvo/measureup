@@ -493,9 +493,27 @@ namespace Mystie.Dialogue
 			}
 		}
 
-		SpriteLayered SetSpriteActual(string actorName, string[] spriteParams, Vector2 position, float alpha = 1f)
+		public void AddSprite(string actorName, SpriteLayered sprite, Vector2 position, float alpha = 1f)
+		{
+			if (!sprites.ContainsKey(actorName))
+			{
+				sprite.transform.parent = genericSprite.transform.parent;
+				sprites.Add(actorName, sprite);
+				sprite.name = actorName;
+			}
+			else
+			{
+				Debug.Log($"Sprite {actorName} already exists.");
+			}
+
+			sprite.color.a = alpha;
+			sprite.rectTransform.anchoredPosition = Vector2.Scale(position, screenSize);
+		}
+
+		public SpriteLayered SetSpriteActual(string actorName, string[] spriteParams, Vector2 position, float alpha = 1f)
 		{
 			SpriteLayered sprite;
+
 			if (sprites.ContainsKey(actorName))
 			{
 				sprite = sprites[actorName];

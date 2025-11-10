@@ -6,7 +6,7 @@ using Mystie.UI;
 using UnityEngine;
 using UnityEngine.Localization;
 
-namespace Mystie
+namespace Mystie.Core
 {
     [CreateAssetMenu(fileName = "Episode", menuName = "Data/Episode", order = 0)]
     public class EpisodeScriptable : ScriptableObject
@@ -15,6 +15,8 @@ namespace Mystie
         public StyleRuleScriptable styleRule;
         public StyleRuleScriptable trendingRule;
         public CommentCollection socialMediaComments;
+
+        public List<LevelStageType> stages = new List<LevelStageType>();
 
         [Header("Narrative")]
 
