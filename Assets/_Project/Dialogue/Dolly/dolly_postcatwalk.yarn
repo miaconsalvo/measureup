@@ -1,0 +1,134 @@
+title: DollyPCWStart
+tags: 
+color: blue
+position: 552,-98
+---
+<<declare $girlyItem = "null">>
+<<declare $brightItem = "null">>
+//0 = NEUTRAL, 1 = POSITIVE, 2 = NEGATIVE
+<<declare $sameTagsDolly = 0>>
+<<declare $same_outfit = false>>
+
+//check for outfit tags
+//set appropriate variables to true
+//set neg and pos tag variable numbers
+
+<<Scene catwalk>>
+
+//negative reactions
+<<if has_tag("business") == true>>
+    << jump DollyPCWBusiness>>
+<<elseif has_tag("simple") == true && has_tag("bright")== false && has_tag("simple") == false >>
+    << jump DollyPCWSimple>>
+<<elseif has_tag("modest") == true && has_tag("risque")== false>>
+    << jump DollyPCWModest>>
+<<elseif has_tag("muted") == true && has_tag("bright")== false>>
+    << jump DollyPCWMuted >>
+
+// //neutral reaction
+// <<elseif same_outfit() == true>>
+//     <<jump DollyPCWSameOutfit>>
+
+//postitive reactions
+<<elseif has_tag("girly") == true && neg_tags() == 0>>
+    <<set $girlyItem = get_item("girly")>> 
+    << jump DollyPCWGirly >>
+<<elseif has_tag("young") == true && neg_tags() == 0>>
+    << jump DollyPCWYoung >>
+<<elseif has_tag("bright") == true && neg_tags() == 0>>
+    <<set $brightItem = get_item("bright")>> 
+    << jump DollyPCWBright >>
+<<elseif has_tag("skirt") == true && has_tag("business") == false>>
+    <<jump DollyPCWSkirt>>
+<<elseif has_tag("heels") == true>>
+    <<jump DollyPCWHeels>>
+
+//irrelevant ie. same outfit
+<<else>>
+   << jump DollyPCWNeutral >>
+
+<<endif>>
+===
+
+title: DollyPCWBusiness
+color: red 
+---
+Dolly: doesn't like business
+===
+
+title: DollyPCWSimple
+color: red 
+---
+null
+===
+
+title: DollyPCWModest
+color: red 
+---
+null
+===
+
+title: DollyPCWMuted
+color: red 
+---
+null
+===
+
+title: DollyPCWNeutral
+color: yellow 
+---
+null
+===
+
+title: DollyPCWSameOutfit
+color: yellow 
+---
+null
+===
+
+title: DollyPCWGirly
+color: green 
+---
+null
+===
+
+title: DollyPCWYoung
+color: green 
+---
+null
+===
+
+title: DollyPCWBright
+color: green 
+---
+null
+===
+
+title: DollyPCWFlashy
+color: green 
+---
+null
+===
+
+title: DollyPCWSkirt
+color: green 
+---
+null
+===
+title: DollyPCWHeels
+color: green 
+---
+null
+===
+
+title: DollyPCWEnd
+tags: 
+position: 357,626
+---
+<<HideAll>>
+===
+title: Node
+position: 391,262
+---
+
+===
