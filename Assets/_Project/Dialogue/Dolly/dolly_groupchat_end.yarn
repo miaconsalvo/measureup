@@ -18,11 +18,11 @@ Elie: easier to sell her as old in need of a makeover i guess
 //get dolly reaction
 //0 = neutral, 1= good, 2= negative
 
-<<if get_reaction() == 0>>
+<<if get_reaction("dolly") == 0>>
     <<jump DollyGroupchatDNeutral>>
-<<elseif get_reaction() == 1>>
+<<elseif get_reaction("dolly") == 1>>
     <<jump DollyGroupchatDPos>>
-<<elseif get_reaction() == 2>>
+<<elseif get_reaction("dolly") == 2>>
     <<jump DollyGroupchatDNeg>>
 <<endif>>
 ===

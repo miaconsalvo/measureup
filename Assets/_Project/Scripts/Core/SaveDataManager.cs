@@ -58,6 +58,11 @@ namespace Mystie
             gameData.moneyAmount = newMoneyAmount;
         }
 
+        public static void SaveReaction(string name, Reaction reaction)
+        {
+            gameData.reactions[name] = reaction;
+        }
+
         public static void SaveInventory(List<ItemScriptable> ownedClothing, List<ClothingKitScriptable> ownedKits)
         {
             gameData.inventoryData.ownedClothingIds = ownedClothing.Select(c => c.id).ToList();
@@ -78,6 +83,7 @@ namespace Mystie
         public int episodeIndex;
         public string versionNumber;
         public InventoryData inventoryData;
+        public Dictionary<string, Reaction> reactions;
 
         public GameData()
         {
@@ -86,6 +92,7 @@ namespace Mystie
             episodeIndex = 0;
             versionNumber = Application.version;
             inventoryData = new InventoryData();
+            reactions = new Dictionary<string, Reaction>();
         }
     }
 

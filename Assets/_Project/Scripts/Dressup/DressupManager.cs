@@ -236,15 +236,17 @@ namespace Mystie.Dressup
         }
 
         [YarnCommand("set_reaction")]
-        public static void SetReaction(int reaction)
+        public static void SetReaction(string name, int reaction)
         {
             LevelManager.Instance.dressup.reaction = (Reaction)reaction;
+            SaveDataManager.SaveReaction(name, (Reaction)reaction);
         }
 
         [YarnFunction("get_reaction")]
-        public static int GetReaction()
+        public static int GetReaction(string name)
         {
-            return (int)LevelManager.Instance.dressup.reaction;
+            return (int)SaveDataManager.gameData.reactions[name];
+            //return (int)LevelManager.Instance.dressup.reaction;
         }
     }
 }

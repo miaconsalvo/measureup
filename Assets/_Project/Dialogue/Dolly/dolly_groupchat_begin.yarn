@@ -12,11 +12,11 @@ Alex: {playername()} feeling good about today?
 
 //this is based off of how the last episode went for Heather's reaction
 // 0=neut 1=good 2=bad
-<<if get_reaction() == 0>>
+<<if get_reaction("heather") == 0>>
     <<jump DollyGroupchatDNeutral>>
-<<elseif get_reaction() == 1>>
+<<elseif get_reaction("heather") == 1>>
     <<jump DollyGroupchatHGood>>
-<<elseif get_reaction() == 2>>
+<<elseif get_reaction("heather") == 2>>
     <<jump DollyGroupchatHBad>>
 <<endif>>
 
