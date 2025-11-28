@@ -265,7 +265,6 @@ GameObject:
   - component: {fileID: 482965376}
   - component: {fileID: 482965378}
   - component: {fileID: 482965379}
-  - component: {fileID: 482965380}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -289,11 +288,8 @@ MonoBehaviour:
   <uiManager>k__BackingField: {fileID: 24833694}
   <dressup>k__BackingField: {fileID: 482965379}
   <inventory>k__BackingField: {fileID: 482965378}
-  <revenueSocialMediaPositive>k__BackingField: 1000
-  <revenueSocialMediaNeutral>k__BackingField: 750
-  <revenueSocialMediaNegative>k__BackingField: 250
-  <bossBonusPerGroup>k__BackingField: 150
-  <bossBonusMax>k__BackingField: 600
+  episodeIndexOverride: 1
+  episodeIndex: 1
   stagesOverride: 1
   stages: 01000000030000000400000005000000
 --- !u!4 &482965377
@@ -339,21 +335,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTags: []
---- !u!114 &482965380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482965375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e28a11682d20984e8cb4165abf2ce7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Mystie.EmailManager
-  <levelManager>k__BackingField: {fileID: 0}
-  <episode>k__BackingField: {fileID: 0}
-  emails: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,10 +629,6 @@ PrefabInstance:
     - target: {fileID: 6399156813852857194, guid: 5e955edfbb83d3247aedeba4faf18303, type: 3}
       propertyPath: m_Name
       value: EpisodeManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6804190998932188173, guid: 5e955edfbb83d3247aedeba4faf18303, type: 3}
-      propertyPath: <index>k__BackingField
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

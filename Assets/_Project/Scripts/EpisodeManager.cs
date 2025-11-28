@@ -11,6 +11,7 @@ namespace Mystie
         [Scene, SerializeField] private string episodeScene;
         [SerializeField, Scene] private string onbardingScene;
         [SerializeField, Scene] private string endScene;
+        public bool indexOverride;
         [field: SerializeField] public int index { get; private set; } = 0;
         [SerializeField] private SceneTransitionMode transitionMode;
         [field: SerializeField] public List<EpisodeScriptable> episodes { get; private set; }

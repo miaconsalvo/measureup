@@ -14,11 +14,6 @@ namespace Mystie
 
         protected bool open;
 
-        protected virtual void Awake()
-        {
-
-        }
-
         public virtual void OnOpen()
         {
             if (open == true) return;

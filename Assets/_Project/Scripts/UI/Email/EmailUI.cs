@@ -22,11 +22,6 @@ namespace Mystie.UI
         private List<Email> emails;
         private Email currentEmail;
 
-        public void Start()
-        {
-            emailManager = LevelManager.Instance.emailManager;
-        }
-
         public override void OnOpen()
         {
             base.OnOpen();
@@ -39,6 +34,7 @@ namespace Mystie.UI
             for (int i = emailPreviewsAnchor.childCount - 1; i >= 0; i--)
                 Destroy(emailPreviewsAnchor.GetChild(i).gameObject);
 
+            if (emailManager == null) emailManager = LevelManager.Instance.emailManager;
             emails = emailManager.emails;
 
             foreach (Email email in emailManager.emails)

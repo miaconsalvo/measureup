@@ -6,6 +6,7 @@ using Mystie.Dressup;
 using Mystie.UI;
 using UnityEngine;
 using UnityEngine.UI;
+using VInspector;
 
 namespace Mystie.Core
 {
@@ -46,23 +47,17 @@ namespace Mystie.Core
         [field: SerializeField] public DossierManager dossier { get; private set; }
         [field: SerializeField] public EmailManager emailManager { get; private set; }
 
-        [field: SerializeField] public int revenueSocialMediaPositive { get; private set; } = 1000;
-        [field: SerializeField] public int revenueSocialMediaNeutral { get; private set; } = 750;
-        [field: SerializeField] public int revenueSocialMediaNegative { get; private set; } = 250;
-
-        [field: Space]
-
-        [field: SerializeField] public int bossBonusPerGroup { get; private set; } = 150;
-        [field: SerializeField] public int bossBonusMax { get; private set; } = 600;
-
         public bool IsBossReactionPositive
         {
             get => dressup.CheckStyleRule() && dressup.CheckTrending();
         }
 
+        public bool episodeIndexOverride;
+        [ShowIf("episodeIndexOverride")] public int episodeIndex;
+
         private int stageIndex;
         public bool stagesOverride;
-        public List<LevelStageType> stages = new List<LevelStageType>();
+        [ShowIf("stagesOverride")] public List<LevelStageType> stages = new List<LevelStageType>();
         public LevelStageType CurrentStage
         {
             get => stageIndex < stages.Count ? stages[stageIndex] : stages[stages.Count - 1];
@@ -70,13 +65,16 @@ namespace Mystie.Core
 
         public void Awake()
         {
+            Debug.Log("Level manager");
             if (Instance != this)
             {
                 Destroy(gameObject);
                 return;
             }
+            Debug.Log("Level manager 2");
 
             episodeManager = EpisodeManager.Instance;
+            if (episodeIndexOverride) episodeManager.SetEpisodeIndex(episodeIndex);
             episode = episodeManager.episodes[episodeManager.index];
             InitializeComponents();
         }
@@ -152,7 +150,7 @@ namespace Mystie.Core
         public int GetRevenue()
         {
             int positiveReactions = 0;
-            int revenue = revenueSocialMediaNeutral;
+            int revenue = episode.revenueSocialMediaNeutral;
             foreach (ViewerGroupScriptable group in episode.socialMediaComments.viewerGroups)
             {
                 switch (group.GetReaction(dressup))
@@ -170,12 +168,12 @@ namespace Mystie.Core
                 }
             }
 
-            if (positiveReactions >= 3) revenue = revenueSocialMediaPositive;
-            else if (positiveReactions <= 3) revenue = revenueSocialMediaNegative;
+            if (positiveReactions >= 3) revenue = episode.revenueSocialMediaPositive;
+            else if (positiveReactions <= 3) revenue = episode.revenueSocialMediaNegative;
 
             bool bossPositiveReaction = IsBossReactionPositive;
             int bossBonus = bossPositiveReaction ?
-                Math.Clamp(positiveReactions * bossBonusPerGroup, 0, bossBonusMax)
+                Math.Clamp(positiveReactions * episode.bossBonusPerGroup, 0, episode.bossBonusMax)
                 : 0;
 
             Debug.Log($"Total revenue: {revenue}$"

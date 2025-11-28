@@ -37,10 +37,21 @@ namespace Mystie.Core
         [field: SerializeField] public List<ItemScriptable> startingClothes { get; private set; }
         [field: SerializeField] public List<ClothingKitScriptable> kitsOnSale { get; private set; }
 
-        [field: Space]
+        [Header("Emails")]
 
         [field: SerializeField] public List<EmailScriptable> startEmails { get; private set; }
         [field: SerializeField] public List<EmailScriptable> endEmails { get; private set; }
+
+        [Header("Revenue")]
+
+        [field: SerializeField] public int revenueSocialMediaPositive { get; private set; } = 1000;
+        [field: SerializeField] public int revenueSocialMediaNeutral { get; private set; } = 750;
+        [field: SerializeField] public int revenueSocialMediaNegative { get; private set; } = 250;
+
+        [field: Space]
+
+        [field: SerializeField] public int bossBonusPerGroup { get; private set; } = 150;
+        [field: SerializeField] public int bossBonusMax { get; private set; } = 600;
     }
 
     [Serializable]
