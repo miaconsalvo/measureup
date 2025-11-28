@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 
 namespace Mystie
 {
-    [CreateAssetMenu(fileName = "System Data", menuName = "CustomData/System Data", order = 0)]
+    [CreateAssetMenu(fileName = "System Data", menuName = "Data/System Data", order = 0)]
     public class SystemDataScriptable : ScriptableObject
     {
         public new string name = GameManager.systemDataPath;

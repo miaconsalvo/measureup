@@ -36,6 +36,11 @@ namespace Mystie.Core
 
         [field: SerializeField] public List<ItemScriptable> startingClothes { get; private set; }
         [field: SerializeField] public List<ClothingKitScriptable> kitsOnSale { get; private set; }
+
+        [field: Space]
+
+        [field: SerializeField] public List<EmailScriptable> startEmails { get; private set; }
+        [field: SerializeField] public List<EmailScriptable> endEmails { get; private set; }
     }
 
     [Serializable]

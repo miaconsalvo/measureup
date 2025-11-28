@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Mystie.UI.Transition
 {
-    [CreateAssetMenu(fileName = "Fade Transition", menuName = "CustomData/Scene Transitions/Fade")]
+    [CreateAssetMenu(fileName = "Fade Transition", menuName = "Data/Scene Transitions/Fade")]
     public class FadeTransitionScriptable : AbstractSceneTransitionScriptable
     {
         public Color color = Color.black;
@@ -16,7 +16,7 @@ namespace Mystie.UI.Transition
 
             float time = 0;
             Color startColor = color;
-            Color endColor = new Color(0,0,0,0);
+            Color endColor = new Color(0, 0, 0, 0);
             while (time < 1)
             {
                 animObj.color = Color.Lerp(startColor, endColor, time);

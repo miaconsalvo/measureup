@@ -73,19 +73,26 @@ namespace Mystie.Core
 
             gameSettings = new GameSettings(systemData);
 
-            InventoryManager.LoadClothingData();
-            SaveManager.LoadSaveFiles();
-
-            //Cursor.visible = false;
-            //cursor = Instantiate(systemData.cursorPrefab);
-
             controls = new Controls();
             //controls.UI.Enable();
             actions = systemData.actions;
 
+            sceneTransitioner = SceneTransitioner.Instance;
+
+            InventoryManager.LoadClothingData();
+            SaveDataManager.LoadGameData(new GameData());
+            SaveManager.LoadSaveFiles();
+
+
+
+            //Cursor.visible = false;
+            //cursor = Instantiate(systemData.cursorPrefab);
+
+
+
             //SceneManager.sceneLoaded += OnSceneLoaded;
 
-            sceneTransitioner = SceneTransitioner.Instance;
+
         }
 
         IEnumerator Start()

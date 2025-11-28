@@ -10,6 +10,7 @@ namespace Mystie.UI
         private Animator animator;
 
         public Button button { get; private set; }
+        public Email email;
         public string readAnimParam = "read";
         private bool isRead;
 
@@ -25,9 +26,17 @@ namespace Mystie.UI
             if (button != null) button.onClick.RemoveAllListeners();
         }
 
+        public void Set(Email email)
+        {
+            this.email = email;
+            SetText(email.subject, email.sender);
+            SetRead(email.read);
+        }
+
         public void SetRead(bool read)
         {
             isRead = read;
+            email.read = isRead;
             if (animator != null) animator.SetBool(readAnimParam, read);
         }
     }

@@ -69,14 +69,23 @@ namespace Mystie
             gameData.inventoryData.ownedKitIds = ownedKits.Select(k => k.id).ToList();
         }
 
+        public static List<Email> GetEmails()
+        {
+            return gameData.emails;
+        }
+
+        public static void SaveEmails(List<Email> emails)
+        {
+            gameData.emails = emails;
+        }
+
         #endregion
     }
 
     [System.Serializable]
     public class GameData
     {
-        public static string DEFAULT_NAME = "Cindy";
-        public static int STARTING_MONEY = 1000;
+        private const string baseSaveDataPath = "Save Data";
 
         public string playerName;
         public int moneyAmount;
@@ -84,15 +93,23 @@ namespace Mystie
         public string versionNumber;
         public InventoryData inventoryData;
         public Dictionary<string, Reaction> reactions;
+        public List<Email> emails;
 
         public GameData()
         {
-            playerName = DEFAULT_NAME;
-            moneyAmount = STARTING_MONEY;
+            SaveDataScriptable s = Resources.Load<SaveDataScriptable>(baseSaveDataPath);
+            if (s == null)
+            {
+                Debug.LogError("SaveManager: Save Data not found.");
+            }
+
+            playerName = "";
+            moneyAmount = s.startingMoney;
             episodeIndex = 0;
             versionNumber = Application.version;
             inventoryData = new InventoryData();
             reactions = new Dictionary<string, Reaction>();
+            emails = new List<Email>();
         }
     }
 
@@ -101,8 +118,5 @@ namespace Mystie
     {
         public List<string> ownedClothingIds = new List<string>();
         public List<string> ownedKitIds = new List<string>();
-
-
     }
-
 }

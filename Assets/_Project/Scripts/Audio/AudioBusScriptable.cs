@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace Mystie.Audio
 {
-    [CreateAssetMenu(fileName = "Audio Bus", menuName = "CustomData/Audio Bus")]
+    [CreateAssetMenu(fileName = "Audio Bus", menuName = "Data/Audio Bus")]
     public class AudioBusScriptable : ScriptableObject
     {
         public string key;

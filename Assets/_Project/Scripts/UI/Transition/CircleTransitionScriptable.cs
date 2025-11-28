@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Mystie.UI.Transition
 {
-    [CreateAssetMenu(fileName = "Circle Transition", menuName = "CustomData/Scene Transitions/Circle")]
+    [CreateAssetMenu(fileName = "Circle Transition", menuName = "Data/Scene Transitions/Circle")]
     public class CircleTransitionScriptable : AbstractSceneTransitionScriptable
     {
         public Sprite circleSprite;
@@ -17,7 +17,7 @@ namespace Mystie.UI.Transition
 
             float time = 0;
             float size = Mathf.Sqrt(
-                Mathf.Pow(Screen.width,2) + Mathf.Pow(Screen.height,2) );
+                Mathf.Pow(Screen.width, 2) + Mathf.Pow(Screen.height, 2));
             Vector2 initialSize = new Vector2(size, size);
             while (time < 1)
             {

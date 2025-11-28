@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Febucci.UI.Styles;
 using Mystie.Dressup;
 using Mystie.UI;
 using UnityEngine;
@@ -31,6 +32,7 @@ namespace Mystie.Core
         #region Events
 
         public event Action<LevelStageType> onStageSet;
+        public event Action<LevelStageType> onStageComplete;
 
         #endregion
 
@@ -42,6 +44,21 @@ namespace Mystie.Core
         [field: SerializeField] public DressupManager dressup { get; private set; }
         [field: SerializeField] public InventoryManager inventory { get; private set; }
         [field: SerializeField] public DossierManager dossier { get; private set; }
+        [field: SerializeField] public EmailManager emailManager { get; private set; }
+
+        [field: SerializeField] public int revenueSocialMediaPositive { get; private set; } = 1000;
+        [field: SerializeField] public int revenueSocialMediaNeutral { get; private set; } = 750;
+        [field: SerializeField] public int revenueSocialMediaNegative { get; private set; } = 250;
+
+        [field: Space]
+
+        [field: SerializeField] public int bossBonusPerGroup { get; private set; } = 150;
+        [field: SerializeField] public int bossBonusMax { get; private set; } = 600;
+
+        public bool IsBossReactionPositive
+        {
+            get => dressup.CheckStyleRule() && dressup.CheckTrending();
+        }
 
         private int stageIndex;
         public bool stagesOverride;
@@ -75,10 +92,13 @@ namespace Mystie.Core
             contestant = episode.contestant;
 
             uiManager = DressupUIManager.Instance;
-            if (stagesOverride) stages = episode.stages;
+            if (!stagesOverride) stages = episode.stages;
+
+            emailManager = new EmailManager();
 
             dressup.Initialize(contestant);
             inventory.Initialize(episode);
+            emailManager.Initialize(episode);
             uiManager.Initialize(this);
         }
 
@@ -90,10 +110,17 @@ namespace Mystie.Core
             onStageSet?.Invoke(CurrentStage);
         }
 
+        private void OnDestroy()
+        {
+            emailManager.Clean();
+        }
+
         public void CompleteStage(LevelStageType stage)
         {
             if (CurrentStage == stage)
             {
+                onStageComplete?.Invoke(CurrentStage);
+
                 stageIndex++;
 
                 if (stageIndex >= stages.Count)
@@ -115,10 +142,47 @@ namespace Mystie.Core
             episodeManager.LoadCurrentEpisode();
             SaveDataManager.SaveEpisodeIndex(episodeManager.index);
 
+            inventory.GainMoney(GetRevenue());
             inventory.SaveInventory();
 
             SaveDataManager.SaveGameData();
             //GameManager.Instance.LoadMainMenu();
+        }
+
+        public int GetRevenue()
+        {
+            int positiveReactions = 0;
+            int revenue = revenueSocialMediaNeutral;
+            foreach (ViewerGroupScriptable group in episode.socialMediaComments.viewerGroups)
+            {
+                switch (group.GetReaction(dressup))
+                {
+                    case Reaction.Positive:
+                        positiveReactions += 1;
+                        break;
+                    case Reaction.Negative:
+                        positiveReactions -= 1;
+                        break;
+                    case Reaction.Neutral:
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            if (positiveReactions >= 3) revenue = revenueSocialMediaPositive;
+            else if (positiveReactions <= 3) revenue = revenueSocialMediaNegative;
+
+            bool bossPositiveReaction = IsBossReactionPositive;
+            int bossBonus = bossPositiveReaction ?
+                Math.Clamp(positiveReactions * bossBonusPerGroup, 0, bossBonusMax)
+                : 0;
+
+            Debug.Log($"Total revenue: {revenue}$"
+            + $"\nSocial media score: {positiveReactions}."
+            + $"\nBoss reaction positive: {bossPositiveReaction} ({bossBonus}$).");
+
+            return revenue;
         }
     }
 }

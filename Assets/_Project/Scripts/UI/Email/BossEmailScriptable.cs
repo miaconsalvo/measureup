@@ -37,6 +37,7 @@ namespace Mystie
             get
             {
                 string bodyText = "";
+                string signatureText = "";
 
                 bool style = LevelManager.Instance.dressup.CheckStyleRule();
                 bool trending = LevelManager.Instance.dressup.CheckTrending();
@@ -44,25 +45,27 @@ namespace Mystie
                 if (style && trending)
                 {
                     bodyText += bodyPositive.GetLocalizedString();
-                    bodyText += "\n\n" + signaturePositive.GetLocalizedString();
+                    signatureText += "\n\n" + signaturePositive.GetLocalizedString();
                 }
                 else if (style)
                 {
                     bodyText += bodyStyle.GetLocalizedString();
-                    bodyText += "\n\n" + signatureNeutral.GetLocalizedString();
+                    signatureText += "\n\n" + signatureNeutral.GetLocalizedString();
                 }
                 else if (trending)
                 {
                     bodyText += bodyTrending.GetLocalizedString();
-                    bodyText += "\n\n" + signatureNeutral.GetLocalizedString();
+                    signatureText += "\n\n" + signatureNeutral.GetLocalizedString();
                 }
                 else
                 {
                     bodyText += bodyNegative.GetLocalizedString();
-                    bodyText += "\n\n" + signatureBad.GetLocalizedString();
+                    signatureText += "\n\n" + signatureBad.GetLocalizedString();
                 }
 
-                return bodyText;
+                string revenueText = $"Revenue: {LevelManager.Instance.GetRevenue()}$";
+
+                return bodyText + "\n\n" + revenueText + "\n\n" + signatureText;
             }
         }
     }
