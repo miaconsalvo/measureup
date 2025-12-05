@@ -1,50 +1,99 @@
 title: DollyGroupchatStart
 position: -220,24
 ---
-<<Them>>
-Alex: so i had to ghost them
-Calvin: hear hear
-Elie: do you think maybe you could have just talked to them about how you were feeling?
-Alex: ...
-Alex: ew no
-Alex: but speaking about feelings!
-Alex: {playername()} feeling good about today?
-
 //this is based off of how the last episode went for Heather's reaction
 // 0=neut 1=good 2=bad
-<<if get_reaction("heather") == 0>>
+<<if get_reaction("heather") == 0 and get_reaction("sophie") == 0>>
     <<jump DollyGroupchatDNeutral>>
-<<elseif get_reaction("heather") == 1>>
+<<elseif get_reaction("heather") == 1 and get_reaction("sophie") == 1>>
     <<jump DollyGroupchatHGood>>
-<<elseif get_reaction("heather") == 2>>
+<<elseif get_reaction("heather") == 2 and get_reaction("sophie") == 2>>
     <<jump DollyGroupchatHBad>>
 <<endif>>
 
 ===
 title: DollyGroupchatHNeutral
 ---
+<<Them>>
+Calvin: {playername()}?
+Calvin: we haven't seen you out in a hot minute
+Donna: she's too famous for us now lol
 <<Me>>
 -> I think so?
 -> Yeah!
+<<Me>>
+//not sure what to put before colon here, so will put player in the meantime
+Player: I've been knee deep in prep for the next episodes
+Player: I feel like I'm missing something
+Player: like, the contestants' aren't complaining
+Player: the network seems relatively content
+Player: idk
+<<Them>>
+Alex: well good luck with this contestant
+Elie: she seems like she might have a clear idea of what she'd like
 <<jump DollyGroupchatFinish>>
 ===
 title: DollyGroupchatHBad
 position: 39,-165
 ---
-<<Me>>
--> I think I missed the mark with Heather
--> I still think the outfit I picked last episode was good
 <<Them>>
-Calvin: It definitely could have gone... better?
+Calvin: I'm gonna be honest {playername()} we are trying to support you but
+Calvin: the girlies are clearly not loving what you're doing
+
 <<Me>>
--> Hopefully this contestant likes what I pick for them this time.
-    <<jump DollyGroupchatFinish>>
--> I'm feeling like maybe I need to listen better this time around.
-    <<jump DollyGroupchatFinish>>
+-> But my boss is happy!
+    Player: but my boss is happy!
+    Player: our ratings are pretty good for a reboot
+    Player: especially with the timeslot we have on the network
+    Player: like we're making good money 
+-> I don't know what the problem is!
+    Player: I don't know why!
+    Player: I really think they look good in what I'm putting them in!
+-> They need to get on board
+    Player: They need to go outside their comfort zone!
+    Player: It's a makeover show
+    Player: Why go on it?!
+<<Them>>
+Alex: but you MUST see that they aren't happy {playername()}
+<<jump DollyGroupchatFinish>>
 ===
 title:DollyGroupchatHGood
 position: 26,175
 ---
+<<Them>>
+Calvin: How we feeling {playername()}??
+Calvin: two solid episodes under your belt!
+<<Me>>
+-> Not sure about the network
+    Player: Yeah, I'm getting the sense that maybe my boss doesn't give a rats ass about these women…
+    Player: there was a network meeting yesterday and I heard shouting
+    <<Them>>
+    Alex: well at least they weren't shouting at you?
+    <<Me>>
+    Player: no… but my boss did lol
+    <<Them>>
+    Alex: ah i see
+    Calvin: what a jerk
+    Calvin: way to be a stereotype boss man
+    Calvin: Taylor Swift was right
+    Alex: anyway
+-> Happy to help them
+    Player: They're all such lovely people!
+    Player: Part of my job is making them shine.
+    <<Them>>
+    Calvin: you're doing so good
+    Calvin: lots of the show fans are popping off about it too
+    Alex: right??
+    <<Me>>
+    Player: ah, there's some grumps still out there
+    <<Them>>
+    Alex: ignore them
+    <<Me>>
+    Player: you have not seen my mentions and DMs
+    Player: it is HARD to ignore
+    <<Them>>
+    Alex: well anyway
+    Alex: you're giving these women your best and that's all you can do!
 <<Me>>
 -> yeah, I'm just gearing up for whatever is in that dossier this time around
     <<jump DollyGroupchatFinish>>
@@ -56,11 +105,10 @@ position: 329,-22
 ---
 <<Them>>
 Calvin: tbh this contestant seems like an I C O N 
-Calvin: Dolly the powerhouse
+Calvin: Dolly the pantsuit powerhouse
 Calvin: obssessed
 Alex: especially surviving the corporate world for like 40 years?
 Calvin: truly suffocating in that proverbial closet
 Calvin: pun intended
-Donna: wait what was this about ghosting someone?
-Donna: ARE YOU GHOSTING MY COUSIN ALEX?
+
 ===
