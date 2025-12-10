@@ -65,28 +65,6 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
-    - name: Practical
-      type: 0
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 43369680781180928
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-    - name: Skirt
-      type: 1
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 43369029615484928
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
     - name: Uncomfy
       type: 1
       text:
@@ -133,6 +111,17 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
+    - name: Bright
+      type: 1
+      text:
+        m_TableReference:
+          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
+        m_TableEntryReference:
+          m_KeyId: 390078398464
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
   - question: 'C. What is your most loved item in your wardrobe?
 
       -> What you
@@ -160,17 +149,6 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
-    - name: Bright
-      type: 1
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 390078398464
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
   - question: 'C. What is your most loved item in your wardrobe?
 
       -> What you
@@ -183,6 +161,28 @@ MonoBehaviour:
           m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
         m_TableEntryReference:
           m_KeyId: 50532712448
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+    - name: Practical
+      type: 0
+      text:
+        m_TableReference:
+          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
+        m_TableEntryReference:
+          m_KeyId: 43369680781180928
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+    - name: Pattern
+      type: 0
+      text:
+        m_TableReference:
+          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
+        m_TableEntryReference:
+          m_KeyId: 43369614649589760
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0
@@ -245,6 +245,11 @@ MonoBehaviour:
   <startEmails>k__BackingField: []
   <endEmails>k__BackingField:
   - {fileID: 11400000, guid: df394daf795f91240a9e6a90ff7dc3de, type: 2}
+  <revenueSocialMediaPositive>k__BackingField: 1000
+  <revenueSocialMediaNeutral>k__BackingField: 750
+  <revenueSocialMediaNegative>k__BackingField: 250
+  <bossBonusPerGroup>k__BackingField: 150
+  <bossBonusMax>k__BackingField: 600
   references:
     version: 2
     RefIds: []
