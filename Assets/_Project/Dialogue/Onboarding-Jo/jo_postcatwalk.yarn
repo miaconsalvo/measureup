@@ -1,0 +1,48 @@
+title: JoPCW
+tags: 
+color: blue
+position: 552,-98
+---
+<<declare $fancyItem = "null">>
+<<declare $ChelseaBoots = false>>
+
+//check for outfit tags
+//set appropriate variables to true
+//set neg and pos tag variable numbers
+
+<<Scene catwalk>>
+
+//negative reactions
+<<if has_tag("fancy") == true>>
+    << jump JoPCWFancy>>
+<<else>>
+   << jump JoPCWPositive >>
+<<endif>>
+===
+
+title: JoPCWFancy
+color: red 
+---
+Jo: Well, I thought I mentioned that I don’t like fancy clothes, so I am not a huge fan of the {fancyItem}.
+Jo: I mean, you can dress contestants in stuff they don’t like, but they might have something to say about it.
+Jo: You've been warned!
+Jo: Alright, now you can style your first real contesant!
+<<jump JoPCWEnd>>
+===
+
+title: JoPCWPositive
+color: green 
+---
+Jo: Awesome work! I really like the outfit you put together. 
+<<if $ChelseaBoots == true >>
+    Jo: And you followed the style rule and the trending item!
+    Jo: That will keep the boss happy.
+<<endif>>
+Jo: I think you're ready to style an actual contestant!
+<<jump PCWEnd>>
+===
+
+title: JoPCWEnd
+---
+//PCW ends.
+===
