@@ -2,17 +2,23 @@ title: DollyGroupchatEnd
 position: -133,-171
 ---
 <<Them>>
-Alex: Donnaaaaa 
-Alex: you can't ignore me all week
-Donna: i'm not
-Donna: i'm ghosting you
-Donna: not so nice huh?
-Elie: Player it felt like production went really hard on Dolly being a grandma in the promo
+Alex: so now i have three bridesmaids mad at me for requesting money!
+Donna: that's why i could never be a maid of honour
+Donna: also what's with brides wanting a 5 star resort bachelorette party
+Donna: what happened to get trashed at a local bar
+Alex: influencers
+Alex: influencers happened
+Calvin: yeah but also if bride's parents are rich you get a free holiday <3
+Calvin: although beware of poolside drink tabs
+Alex: ah hell i didn't factor that into my budget
+Elie: {playername()} it felt like production went really hard on Dolly being a grandma in the promo
 Elie: like distractingly so
 Calvin: over her having a wife and all the pride flags in her house during the testimonial bit?
-Elie: yeah 
+Elie: yeah
 Elie: it was clear where they wanted the focus
-Elie: i expected better in today's media
+Elie: i expected better especially after last episode
+{playername()}: yeah the network got complaints so they pivoted the edits
+{playername()}: i chatted with the editor and they were not happy
 Elie: easier to sell her as old in need of a makeover i guess
 
 //get dolly reaction
@@ -32,6 +38,7 @@ position: 30,-40
 ---
 //this can be for both business or an outfit Dolly is unhappy in
 <<Them>>
+Calvin: with that in mind
 Calvin: {playername()} I can't believe you put her in that
 Alex: hey now
 Alex: i'm sure there's a reason
@@ -42,13 +49,13 @@ Alex: i'm sure there's a reason
     Alex: i revoke my earlier statement lol
     Calvin: i get that her before outfit was a little yikes but at least she was happy
     Donna: at least she got to experience the makeover as a fan of the old show
-    Donna: the bad we-don't-listen-to-you-kind 
+    Donna: the bad we-don't-listen-to-you-kind of experience 
     Donna: like that one with the girl and the camo print
     Calvin: oh god i forgot that one
 -> I'm trying, people. It is not as easy as it looks.
     <<Them>>
     Calvin: you're putting clothes on people who are telling you what they like, how hard can that be?
-    Calvin: lesbians need to be fashion icons
+    Calvin: lesbians are fashion icons
     Calvin: in that "too cool to care what i put on" kinda way
     Calvin: you clipped her wings {playername()}
 <<Them>>
@@ -61,9 +68,29 @@ Elie: i thought the point of this show was for them to embrace who they are thro
 -> Appreciate the support everyone
 -> I'm tired I'll chat with you all later
 -> I hear you
-<<Them>>
-Alex: Sorry {playername()} i think we're just a little surprised is all
-Donna: you're usually our fashion compass
+<<if get_reaction("heather") == 1 and get_reaction("sophie") == 1>>
+    <<Them>>
+    Alex: Sorry {playername()} i think we're just a little surprised is all
+    Donna: you're usually our fashion compass
+    <<jump DollyGroupchatEpEnd>>
+<<elseif get_reaction("heather") == 2 and get_reaction("sophie") == 2>>
+    <<Them>>
+        Donna: it isn't just this contestant though
+        Donna: like none of them have been happy
+        Donna: but this one was distinctly bad
+        <<Me>>
+        -> you don't understand the pressures of this job
+            <<Them>>
+            Calvin: that is a rough excuse
+            Calvin: just fight back???
+            Calvin: she deserved better than that
+        -> can you all just back off
+            <<Them>>
+            Elie: i think the point is made folks
+            Elie: let's hash it out some other time
+            Calvin: what's there to hash out!
+            Calvin: i am struggling to understand
+<<endif>>
 <<jump DollyGroupchatEpEnd>>
 ===
 title: DollyGroupchatDNeutral
@@ -105,12 +132,11 @@ Donna: she def flinched at the sight of those knits
 title: DollyGroupchatEpEnd
 position: 4,243
 ---
-Alex: also Donna
-Alex: i messaged them 
-Alex: i spoke my feelings
-Alex: i will hold for applause
-Calvin: you are a disaster
-Elie: you're definitely going to have to pay for Donna's tab on our next wine night
-Donna: how expensive it'll be depends on how nice you were to them in those messages
-Alex: ah hell
+Alex: we'll have to see the mid season recap
+Calvin: shame that limited series are like 6 episodes
+Calvin: 3 episodes is a short amount to recap lol
+Elie: its because people have shows on in the background now
+Elie: you have to remind them what they didn't actually watch
+Donna: they have to stop cancelling shows i do watch and then i'll actually commit to watching them
+Calvin: so true
 ===

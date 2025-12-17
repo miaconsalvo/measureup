@@ -1,0 +1,103 @@
+title: SophieGroupchatStart
+---
+<<Them>>
+Alex: so i had to ghost them
+Calvin: hear hear
+Elie: do you think maybe you could have just talked to them about how you were feeling?
+Alex: ...
+Alex: ew no
+Alex: but speaking about feelings!
+Alex: {playername()} feeling good about today?
+<<if get_reaction("heather") == 2>>
+    <<jump SophieGroupchatBadStart>>
+<<elseif get_reaction("heather") == 1>>
+    <<jump SophieGroupchatGoodStart>>
+<<elseif get_reaction("heather") == 0>>
+    <<jump SophieGroupchatNeutStart>>
+<<endif>>
+===
+
+title: SophieGroupchatBadStart
+position: 301,-119
+---
+<<Me>>
+-> I think I missed the mark with Heather
+-> I still think the outfit I picked last episode was good
+<<Them>>
+Calvin: It definitely could have gone... better?
+Calvin: maybe just really listen to this one
+Alex: yeah from what you've said Sophie seems really lovely
+Alex: be kind to her
+Elie: gender affirming care extends to feeling confident in her clothes 
+Elie: please think about that
+<<Me>>
+-> Hopefully this contestant likes what I pick for them this time.
+    <<jump SophieGroupchatFinish>>
+-> I'm feeling like maybe I need to listen better this time around.
+    <<jump SophieGroupchatFinish>>
+-> There's just a lot of things to consider.
+    <<jump SophieGroupchatFinish>>
+===
+
+title: SophieGroupchatGoodStart
+position: 224,157
+---
+<<Them>>
+Alex: I'm so stoked for your next episode
+Calvin: if you dress her like you've dressed Heather she's in for a treat
+Alex: good luck with this contestant!
+Elie: she seems like such a sweetheart!!
+Elie: also wild that the show isn't avoiding things and giving her a platform to talk about her experiences
+Elie: especially in this social climate
+<<Me>>
+{playername()}: yeah there were some stupid arguments in a meeting a couple weeks ago
+{playername()}: folks threatened to walk if they cut her from the roster
+<<Them>>
+Calvin: ugh how stupid 
+Calvin: protect the dolls <3
+Alex: Exactly!
+Donna: plus, who cares about how you dress genderwise??
+Donna: there's definitely days that i like to lean more masculine in my attire
+Calvin: i love me a skirt moment when it presents itself
+Donna: Exactly
+Donna: but i say this also meaning that it 100% contributes to feeling more femme or masc
+Donna: so don't mess this up {playername()} <3
+Alex: lol 
+<<Me>>
+{playername()}: Oop gotta go!!
+{playername()}: thanks squad!
+===
+
+title: SophieGroupchatNeutStart
+---
+<<Me>>
+{playername()}: i think so?
+<<Them>>
+Alex: good luck with this contestant!
+Elie: she seems like such a sweetheart!!
+Elie: also wild that the show isn't avoiding things and giving her a platform to talk about her experiences
+Elie: especially in this social climate
+<<Me>>
+{playername()}: yeah there were some stupid arguments in a meeting a couple weeks ago
+{playername()}: folks threatened to walk if they cut her from the roster
+<<Them>>
+Calvin: protect the dolls <3
+Alex: Exactly!
+Donna: plus, who cares about how you dress genderwise??
+Donna: there's definitely days that i like to lean more masculine in my attire
+Calvin: i love me a skirt moment when it presents itself
+Donna: Exactly
+Donna: but i say this also meaning that it 100% contributes to feeling more femme or masc
+Donna: so don't mess this up {playername()} <3
+Alex: lol 
+<<Me>>
+{playername()}: Oop gotta go!!
+{playername()}: thanks squad!
+<<jump SophieGroupchatFinish>>
+===
+
+title: SophieGroupchatFinish
+---
+Donna: wait what was this about ghosting someone?
+Donna: ARE YOU GHOSTING MY COUSIN ALEX?
+===

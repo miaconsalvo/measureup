@@ -1,0 +1,186 @@
+title: SophieGroupchatEnd
+position: -260,108
+---
+<<Them>>
+Alex: Donnaaaaa 
+Alex: you can't ignore me all week
+Donna: i'm not
+Donna: i'm ghosting you
+Donna: not so nice huh?
+<<if get_reaction("sophie") == 0>>
+    <<jump SophieGroupchatNeutEnd>>
+<<elseif get_reaction("sophie") == 1>>
+    <<jump SophieGroupchatGoodEnd>>
+<<elseif get_reaction("sophie") == 2>>
+    <<jump SophieGroupchatBadEnd>>
+<<endif>>
+===
+
+title: SophieGroupchatNeutEnd
+position: 229,-157
+---
+<<Me>>
+-> …Did you all see the episode?
+	<<Them>>
+	Calvin: oh yeah! She seemed happy enough?
+	Donna: i've got it on my watch backlog, i'll get to it later this week
+	Alex: sorry {playername()} i was on MOH duty and forgot to say you did good! I worried briefly at one of your initial choices, but it seems like you both found a good middle ground?
+		-> I wasn't aiming for a middle ground lol
+            Calvin: its fiiiine
+            Calvin: don't sweat it
+            Calvin: drinks tonight???
+		-> I'm just happy it went smoothly
+			Elie: regardless, Sophie getting to share her story almost matters more than the outfit imho
+			Elie: we need more of these stories
+			Elie: remind people we're all just humans figuring out life for the first time
+			Calvin: mid-season break now!
+            Calvin: can't wait to see the recap
+-> No snappy responses to the episode today??
+	<<Them>>
+	Calvin: appreciate you calling us snappy instead of bitchy lol
+	Calvin: the outfit was cute!
+	Donna: that's Calvin-code for boring lol
+	Calvin: and that's Donna-code for shut up
+	Alex: i thought the outfit was nice!
+	Alex: a good middle ground.
+        <<Me>>
+		-> I wasn't aiming for a middle ground lol
+            Calvin: its fiiiine
+            Calvin: don't sweat it
+            Calvin: drinks tonight???
+            Alex: also Donna
+            Alex: i messaged them 
+            Alex: i spoke my feelings
+            Alex: i will hold for applause
+            Calvin: you are a disaster
+            Elie: you're definitely going to have to pay for Donna's tab tonight
+            Donna: how expensive it'll be depends on how nice you were to them in those messages
+            Alex: ah hell
+		-> I'm just happy it went smoothly
+			Elie: regardless, Sophie getting to share her story almost matters more than the outfit imho
+			Elie: we need more of these stories
+			Elie: remind people we're all just humans figuring out life for the first time
+            Calvin: drinks tonight???
+            Alex: also Donna
+            Alex: i messaged them 
+            Alex: i spoke my feelings
+            Alex: i will hold for applause
+            Calvin: you are a disaster
+            Elie: you're definitely going to have to pay for Donna's tab tonight
+            Donna: how expensive it'll be depends on how nice you were to them in those messages
+            Alex: ah hell
+===
+
+title: SophieGroupchatGoodEnd
+position: -73,-166
+---
+<<Them>>
+Alex: {playername()} what an EPISODE
+Alex: omg she was GLOWING
+Elie: you nailed it
+Calvin: cannot describe the ugly cry i did at the reveal
+<<Me>>
+-> it was worth it to ignore some of the dossier
+    <<Them>>
+    Elie: you gotta focus on the person
+    Elie: i know that you have pressure to do the promo stuff but
+    Elie: you made a difference
+    Elie: Sophie really looked so confident and gorgeous
+    Elie: you changed a life today
+    Donna: okay okay let's bring things down a notch
+    Donna: i don't think this is THAT life changing
+    Donna: i agree that it helps affirm things but more than clothes do that
+    Elie: no Donna! This really matters
+    Alex: it really does!!
+    Alex: other folks are going to feel so validated watching this episode
+    Alex: especially if for some clothes are their only place to start
+    Alex: it'll let someone know that it isn't wrong to try a floral pattern in their wardrobe 
+    Alex: see that it makes them feel more like themselves
+    Alex: or play with eyeliner styles at home
+    Alex: and go from that to the version of sophie we got to see in today's episode!
+<<Me>>
+-> thank you all i really wanted to get this right
+    Alex: omg are you kidding???
+    <<if get_reaction("heather") == 2>>
+        Alex: i know Heather didn't go well but you course corrected!
+        Calvin: facts
+        Alex: other folks are going to feel so validated watching this episode
+        Alex: especially if for some clothes are their only place to start
+        Alex: it'll let someone know that it isn't wrong to try a floral pattern in their wardrobe 
+        Alex: see that it makes them feel more like themselves
+        Alex: or play with eyeliner styles at home
+        Alex: and go from that to the version of sophie we got to see in today's episode!
+    <<elseif get_reaction("heather") == 1>>
+	    Alex: you nailed Heather as well! You are clearly good at this!
+	    Calvin: 100% success rate
+        Alex: other folks are going to feel so validated watching this episode
+        Alex: especially if for some clothes are their only place to start
+        Alex: it'll let someone know that it isn't wrong to try a floral pattern in their wardrobe 
+        Alex: see that it makes them feel more like themselves
+        Alex: or play with eyeliner styles at home
+        Alex: and go from that to the version of sophie we got to see in today's episode!
+    <<else>>
+	    Alex: I get your anxiety
+	    Alex: but you did so good
+	    Alex: other folks are going to feel so validated watching this episode
+        Alex: especially if for some clothes are their only place to start
+        Alex: it'll let someone know that it isn't wrong to try a floral pattern in their wardrobe 
+        Alex: see that it makes them feel more like themselves
+        Alex: or play with eyeliner styles at home
+        Alex: and go from that to the version of sophie we got to see in today's episode!
+    <<endif>>
+Alex: also Donna
+Alex: i messaged them 
+Alex: i spoke my feelings
+Alex: i will hold for applause
+Calvin: you are a disaster
+Elie: you're definitely going to have to pay for Donna's tab tonight
+Donna: how expensive it'll be depends on how nice you were to them in those messages
+Alex: ah hell
+
+===
+
+title: SophieGroupchatBadEnd
+position: 164,173
+---
+<<Them>>
+Alex: alright i'll say it
+
+<<if has_tag("boyish") == true>>
+    Alex: that was not okay {playername()}
+    Calvin: wow the libra isn't appeasing
+    Calvin: that's how you know you messed up
+    Alex: no for real
+    Alex: you couldn't have ignored her more.
+    Alex: you put her in that outfit knowing she wouldn't like it 
+    Alex: like how disrespectful can you get
+    Elie: idk what you were thinking
+    <<if get_reaction("heather") == 2>>
+        Donna: same for last episode 
+        Donna: you aren't listening to your contestants
+    <<elseif get_reaction("heather") == 1>>
+        Alex: you did so well for Heather
+        Alex: this shouldn't have been any different
+    <<endif>>
+<<elseif has_tag("pink") == true>>
+    Alex: you totally ignored her about not wanting pink
+    Alex: and she had such a valid reason
+    Alex: it wasn't just "oh i don't like it"
+    Calvin: wow the libra isn't appeasing
+    Calvin: that's how you know she mad
+    Alex: i am! 
+<<elseif has_tag("boyish") == true and has_tag("pink") == true>>
+    Alex: that was not okay {playername()}
+    Calvin: wow the libra isn't appeasing
+    Calvin: that's how you know you messed up
+    Alex: no for real
+    Alex: you couldn't have ignored her more.
+    Alex: you put her in that outfit knowing she wouldn't like it 
+    Alex: like how disrespectful can you get
+    Elie: idk what you were thinking
+    Elie: she clearly told you she didn't like it
+<<endif>>
+Calvin: im out on this chat for a bit
+Alex: yeah me too
+Elie: lets chat in a couple days when things have cooled off okay??
+===
