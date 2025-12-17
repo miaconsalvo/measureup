@@ -1,0 +1,116 @@
+title: SophiePCW
+tags: 
+color: blue
+position: 552,-98
+---
+<<declare $boyishItemSophie = "null">>
+<<declare $patternItemSophie = "null">>
+<<declare $businessItemSophie = "null">>
+//0 = NEUTRAL, 1 = POSITIVE, 2 = NEGATIVE
+<<declare $sameTagsSophie = 0>>
+<<declare $same_Sophieoutfit = false>>
+
+//check for outfit tags
+//set appropriate variables to true
+//set neg and pos tag variable numbers
+
+<<Scene catwalk>>
+
+//negative reactions
+<<if has_tag("pink") == true>>
+    << jump SophiePCWPink>>
+<<elseif has_tag("boyish") == true >>
+    << jump SophiePCWBoyish>>
+
+//neutral reaction
+<<elseif same_outfit() == true>>
+    <<jump SophiePCWSameOutfit>>
+
+//postitive reactions
+<<elseif has_tag("pattern") == true && neg_tags() == 0>>
+    <<set $patternItemSophie = get_item("pattern")>> 
+    << jump SophiePCWpattern >>
+
+<<elseif has_tag("business") == true && neg_tags() == 0>>
+    <<set $businessItemSophie = get_item("business")>> 
+    << jump SophiePCWbusiness >>
+
+<<elseif has_tag("skirt") == true && neg_tags() == 0>>
+    << jump SophiePCWSkirt >>
+
+<<elseif has_tag("young") == true>>
+    <<jump SophiePCWYoung>>
+
+//irrelevant ie. same outfit
+<<else>>
+   << jump SophiePCWNeutral >>
+
+<<endif>>
+===
+
+title: SophiePCWPink
+color: red 
+---
+Sophie: Ugh, I already went through a pink, girly phase with my style and I feel like I am right back in it again. 
+Sophie: I don’t even mind girly clothes, I love skirts!
+Sophie:  But pink, I can’t do it. It doesn’t feel like me at all. 
+Sophie: I’m probably never going to wear this outfit again, unfortunately. 
+===
+
+title: SophiePCWBoyish
+color: red 
+---
+Sophie: Ugh... I know I wanted to dress more professional for my new job, but does that have to mean dressing more masculine as well?
+Sophie: Isn’t there a way to dress feminine and professionally? 
+Sophie: I doubt I wear this outfit again to be honest, even to work… the {$boyishItemSophie} especially is just not for me. 
+===
+
+title: SophiePCWSameOutfit
+color: yellow 
+---
+Sophie: Wait I’m confused, are we done?
+Sophie: I thought this was a makeover show? 
+Sophie: ...
+===
+
+title: SophiePCWNeutral
+color: yellow
+---
+Sophie: Well, okay! 
+Sophie: Thanks for the new outfit!... 
+Sophie: I guess I’ll wear this to work!
+===
+
+
+title: SophiePCWpattern
+color: green 
+---
+Sophie: I really love the pattern in this outfit!
+Sophie: This {$patternItemSophie} is something I would pick out for myself and I love how the stylist put it together in this outfit. 
+Sophie:  I wonder what my new colleagues and students will think?
+===
+
+title: SophiePCWbusiness
+color: green 
+---
+Sophie: This is exactly the kind of outfit I needed help putting together!
+Sophie: I can totally wear this {$businessItemSophie} to my new job.
+Sophie: The stylist did a great job, I already feel a lot more confident! 
+===
+
+title: SophiePCWSkirt
+color: green 
+---
+Sophie: I love skirts, so this outfit is really perfect for me!
+Sophie:  I wonder if this outfit would work for my new job?
+Sophie: I could also totally wear this on the weekend, maybe to book club? Or on a fun date night? 
+Sophie: It’s so cute!
+===
+
+title: SophiePCWYoung
+color: green 
+---
+Sophie: I don’t know if I could wear this to work to be honest, but I do love the outfit!
+Sophie: I can totally see myself wearing this on the weekend, maybe to my friend’s house for board game night.
+Sophie: I still need to find some more clothes for work, but this has its’ place in my closet too, I think. 
+===
