@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Denim Mini Skirt
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: a2bbe79c-bdfe-4080-9c92-1c1742c016e9
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pink Flowy Blouse
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: 99dc1dab-f78d-43f4-9014-00bd162c4e85
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

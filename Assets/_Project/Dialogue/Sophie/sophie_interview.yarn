@@ -32,7 +32,7 @@ color: red
 ---
 Sophie: Right now my day-to-day wardrobe has a lot of skirts and patterns in it!
 Sophie: I especially like wearing skirts if I want to feel cute for a date night.
-Sophie: I don’t know if my current wardrobe is professional enough for my new job, but I do actually like business clothes too!
+Sophie: I don't know if my current wardrobe is professional enough for my new job, but I do actually like business clothes too!
 //(reveals likes skirts, pattern, business)
 <<jump SophieInterviewQuestions>>
 ===
@@ -41,8 +41,8 @@ title: SophieInterviewQuestionB
 color: red
 position: -400,231
 ---
-Sophie: Lately, I’ve been avoiding the colour pink.
-Sophie: I went through a phase of wearing pink all the time, until I finally realized that it’s just not my colour.
+Sophie: Lately, I've been avoiding the colour pink.
+Sophie: I went through a phase of wearing pink all the time, until I finally realized that it's just not my colour.
 Sophie: My recent closet clean-out was basically just me purging my closet of everything pink and boyish.
 //(reveals dislikes pink and boyish)
 <<jump SophieInterviewQuestions>>
@@ -54,7 +54,7 @@ position: -105,233
 ---
 Sophie: I have this fun floral blouse that I love a lot! 
 Sophie: The cut and fabric make it feel kind of business-y, but the floral pattern is really pretty.
-Sophie: It’s my go-to when I need to feel put-together and professional but still feel cute!
+Sophie: It's my go-to when I need to feel put-together and professional but still feel cute!
 // (reveals likes pattern and business)
 <<jump SophieInterviewQuestions>>
 ===
@@ -63,12 +63,12 @@ title: SophieInterviewQuestionD
 color: red
 position: 161,266
 ---
-Sophie: Honestly, some solid direction for how to dress, especially now that I’m starting this new job. 
-Sophie: Over the past few years, basically since coming out and starting my transition, I’ve experimented a lot with my clothes.
-Sophie: I’ve found the whole process really fun sometimes, really overwhelming at others.
-Sophie: But now, I finally think I have a good understanding of what I like and what I don’t like. I just need help actually using that knowledge!
-Sophie: I’ve found it surprisingly hard to put together nice outfits that work in a professional setting, but still feel like “me”. I like business clothes, but I also love patterns and “younger” clothing. 
-Sophie: I’d love to figure out how to find the balance between that while getting dressed each morning.
+Sophie: Honestly, some solid direction for how to dress, especially now that I'm starting this new job. 
+Sophie: Over the past few years, basically since coming out and starting my transition, I've experimented a lot with my clothes.
+Sophie: I've found the whole process really fun sometimes, really overwhelming at others.
+Sophie: But now, I finally think I have a good understanding of what I like and what I don't like. I just need help actually using that knowledge!
+Sophie: I've found it surprisingly hard to put together nice outfits that work in a professional setting, but still feel like “me”. I like business clothes, but I also love patterns and “younger” clothing. 
+Sophie: I'd love to figure out how to find the balance between that while getting dressed each morning.
 //(reveals, likes business, pattern, and young)
 <<jump SophieInterviewQuestions>>
 ===
@@ -77,10 +77,10 @@ title: SophieInterviewQuestionE
 color: red
 position: 385,159
 ---
-Sophie: Well, there’s a lot! A recent one that comes to mind is this pink dress I wore to my friend’s wedding a few summers ago.
-ophie: It wasn’t very long after coming out, and I had never really been dress shopping before.
+Sophie: Well, there's a lot! A recent one that comes to mind is this pink dress I wore to my friend's wedding a few summers ago.
+ophie: It wasn't very long after coming out, and I had never really been dress shopping before.
 ophie: I had no clue what I wanted and I let the salesperson kind of take the lead. I was going through a bit of a hyper-girly phase, and I ended up in this sequin pink dress.
-ophie: It was pretty, but it didn’t feel like me at all. I’d never wear that dress - or honestly anything pink - ever again!
+ophie: It was pretty, but it didn't feel like me at all. I'd never wear that dress - or honestly anything pink - ever again!
 // (reveals dislikes pink)
 <<jump SophieInterviewQuestions>>
 ===

@@ -23,8 +23,8 @@ position: 552,-98
 title: JoPCWFancy
 color: red 
 ---
-Jo: Well, I thought I mentioned that I don’t like fancy clothes, so I am not a huge fan of the {fancyItem}.
-Jo: I mean, you can dress contestants in stuff they don’t like, but they might have something to say about it.
+Jo: Well, I thought I mentioned that I don't like fancy clothes, so I am not a huge fan of the {get_item("fancy")}.
+Jo: I mean, you can dress contestants in stuff they don't like, but they might have something to say about it.
 Jo: You've been warned!
 Jo: Alright, now you can style your first real contesant!
 <<jump JoPCWEnd>>

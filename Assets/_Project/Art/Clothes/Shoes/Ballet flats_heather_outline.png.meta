@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ballet flats_heather_outline_0: -892697458529487022
+      Ballet flats_heather_outline_1: 6278320231268026614
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

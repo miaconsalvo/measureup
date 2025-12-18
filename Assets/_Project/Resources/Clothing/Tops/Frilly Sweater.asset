@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Frilly Sweater
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: c0ed11cc-ada8-449f-afe3-01c699999951
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

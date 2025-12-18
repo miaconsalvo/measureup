@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rainbow Sandals
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: c809c1d0-61d1-40e3-8eb1-b8783e5f57d8
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

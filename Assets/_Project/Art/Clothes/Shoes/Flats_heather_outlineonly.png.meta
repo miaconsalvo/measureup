@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Flats_heather_outlineonly_0: 1590567531817526883
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Oxfords_icon_0: 5078290179504917834
+      Oxfords_icon_1: 7159360879787209942
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

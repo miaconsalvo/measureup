@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fitted blazer_heather_outlineonly_0: 6728405283894544565
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

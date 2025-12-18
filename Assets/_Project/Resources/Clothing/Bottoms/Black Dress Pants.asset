@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Black Dress Pants
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: 7e0d7ce0-eb4f-4fea-9fea-e35724780b1d
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

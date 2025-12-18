@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bunny Flats_icon_0: 1272839070461572571
+      Bunny Flats_icon_1: -1659668362394531526
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Brown Loafers
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: 81f36880-4fe2-4068-943f-e2a97b6105a7
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

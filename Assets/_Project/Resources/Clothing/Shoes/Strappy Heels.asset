@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Strappy Heels
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: 76c43f6b-6ea4-4c6f-b877-fb633b04ca0e
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

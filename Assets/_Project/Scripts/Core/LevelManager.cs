@@ -53,11 +53,14 @@ namespace Mystie.Core
         }
 
         public bool episodeIndexOverride;
-        [ShowIf("episodeIndexOverride")] public int episodeIndex;
+        [ShowIf("episodeIndexOverride")]
+        public int episodeIndex;
 
         private int stageIndex;
         public bool stagesOverride;
-        [ShowIf("stagesOverride")] public List<LevelStageType> stages = new List<LevelStageType>();
+        [ShowIf("stagesOverride")]
+        public List<LevelStageType> stages = new List<LevelStageType>();
+
         public LevelStageType CurrentStage
         {
             get => stageIndex < stages.Count ? stages[stageIndex] : stages[stages.Count - 1];

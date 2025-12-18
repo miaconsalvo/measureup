@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Grey Long Skirt
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: bcbb367d-9cde-45e0-b29d-4009d14f155d
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

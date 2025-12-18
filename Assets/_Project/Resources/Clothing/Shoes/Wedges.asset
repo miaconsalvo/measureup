@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wedges
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: bbfbfd1b-d5b2-48c8-ba65-7c8ca743f9dc
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cashmere Sweater
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: 476ed6f5-eb60-425c-b323-cea17512b7ac
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

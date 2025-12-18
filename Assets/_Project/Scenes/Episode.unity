@@ -290,7 +290,7 @@ MonoBehaviour:
   <inventory>k__BackingField: {fileID: 482965378}
   episodeIndexOverride: 1
   episodeIndex: 1
-  stagesOverride: 1
+  stagesOverride: 0
   stages: 01000000030000000400000005000000
 --- !u!4 &482965377
 Transform:
@@ -629,6 +629,14 @@ PrefabInstance:
     - target: {fileID: 6399156813852857194, guid: 5e955edfbb83d3247aedeba4faf18303, type: 3}
       propertyPath: m_Name
       value: EpisodeManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804190998932188173, guid: 5e955edfbb83d3247aedeba4faf18303, type: 3}
+      propertyPath: indexOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804190998932188173, guid: 5e955edfbb83d3247aedeba4faf18303, type: 3}
+      propertyPath: <index>k__BackingField
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

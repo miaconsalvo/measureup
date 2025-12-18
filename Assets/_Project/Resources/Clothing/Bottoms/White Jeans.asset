@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: White Jeans
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: 1c376d94-8f8a-49ec-bb5b-63d6918d11e2
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

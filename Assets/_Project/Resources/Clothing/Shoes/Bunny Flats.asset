@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bunny Flats
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: e1e28f3c-8f22-49a0-b43c-8a7e84aef0f9
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

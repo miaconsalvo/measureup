@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cableknit sweater_heather_outline_0: 9172041451752651087
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

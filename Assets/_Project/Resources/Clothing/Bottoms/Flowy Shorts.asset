@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Flowy Shorts
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: a151275b-93b5-44db-8f55-ad064cf33448
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

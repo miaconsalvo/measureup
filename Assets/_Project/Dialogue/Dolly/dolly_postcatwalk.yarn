@@ -54,18 +54,18 @@ title: DollyPCWBusiness
 color: red 
 ---
 Dolly: Is this a joke? Am I actually on one of those prank shows?
-Dolly: Why the hell would I want to dress like this now that I’m retired?
-Dolly: That stylist does not know what they’re doing. When will I wear this? To walk the dogs?
-Dolly: I’m throwing this whole outfit in the donation bin as soon as I get home. Can I change yet?
+Dolly: Why the hell would I want to dress like this now that I'm retired?
+Dolly: That stylist does not know what they're doing. When will I wear this? To walk the dogs?
+Dolly: I'm throwing this whole outfit in the donation bin as soon as I get home. Can I change yet?
 ===
 
 title: DollyPCWSimple
 color: red 
 ---
 Dolly: This outfit is boooooring. B-o-r-i-n-g boring.
-Dolly: I like to consider myself open-minded, but with this outfit, I don’t see the vision.
+Dolly: I like to consider myself open-minded, but with this outfit, I don't see the vision.
 Dolly: It doesn't have anything going for it.
-Dolly: I might wear some of these things, but I’d wear them with something brighter or flashier, not like this. 
+Dolly: I might wear some of these things, but I'd wear them with something brighter or flashier, not like this. 
 Dolly: You guys should hire me to replace your stylist!
 <<jump DollyPCWEnd>>
 ===
@@ -74,16 +74,16 @@ title: DollyPCWModest
 color: red 
 ---
 Dolly: I was really curious to see how they would dress an old lady like me on this show, you know the original version, back when I used to watch, never showed anyone my age!
-Dolly: So I was curious. I guess, it makes sense, they say in the women’s magazines that women my age should wear modest clothing, dress our age.
-Dolly: I know this is how people expect me to dress, but I’m tired of dressing how everyone else thinks I should!
+Dolly: So I was curious. I guess, it makes sense, they say in the women's magazines that women my age should wear modest clothing, dress our age.
+Dolly: I know this is how people expect me to dress, but I'm tired of dressing how everyone else thinks I should!
 <<jump DollyPCWEnd>>
 ===
 
 title: DollyPCWMuted
 color: red 
 ---
-Dolly: That stylist doesn’t know what the heck they’re doing. I’m going to fall asleep just looking at this outfit, I mean look at it.
-Dolly: Where’s the colour? Did my kids pay you guys off to dress me like this?
+Dolly: That stylist doesn't know what the heck they're doing. I'm going to fall asleep just looking at this outfit, I mean look at it.
+Dolly: Where's the colour? Did my kids pay you guys off to dress me like this?
 Dolly: At least add something with a little bit of pizazz, ya know?
 <<jump DollyPCWEnd>>
 ===
@@ -91,8 +91,8 @@ Dolly: At least add something with a little bit of pizazz, ya know?
 title: DollyPCWNeutral
 color: yellow 
 ---
-Dolly: I can’t believe I am saying this, but I have no strong feelings about this outfit.
-Dolly: The shoes are… and the top is… I don’t know!
+Dolly: I can't believe I am saying this, but I have no strong feelings about this outfit.
+Dolly: The shoes are… and the top is… I don't know!
 Dolly: I mean, I had fun being on TV.  Another thing to cross off the bucket list!
 <<jump DollyPCWEnd>>
 ===
@@ -117,10 +117,10 @@ Dolly: The [item] is my favorite part of the whole thing. I get to keep all of t
 title: DollyPCWYoung
 color: green 
 ---
-Dolly: My kids really thought they’d get me to “dress my age” by coming on this show, ha! 
-Dolly: This will show them! Don’t they know their old mom’s always right?
-Dolly: I love this outfit, it makes me feel like I’m 25 again! 
-Dolly: I know I’ll get strange looks wearing this kinda thing around town, but I don’t care!
+Dolly: My kids really thought they'd get me to “dress my age” by coming on this show, ha! 
+Dolly: This will show them! Don't they know their old mom's always right?
+Dolly: I love this outfit, it makes me feel like I'm 25 again! 
+Dolly: I know I'll get strange looks wearing this kinda thing around town, but I don't care!
 <<jump DollyPCWEnd>>
 ===
 
@@ -128,7 +128,7 @@ title: DollyPCWBright
 color: green 
 ---
 Dolly: Wowzah what a look!
-Dolly: This [item] is so bright I feel like I’m lighting up the whole room! 
+Dolly: This [item] is so bright I feel like I'm lighting up the whole room! 
 Dolly: This stuff is gunna fit right in with my current wardrobe.
 <<jump DollyPCWEnd>>
 ===
@@ -137,8 +137,8 @@ title: DollyPCWFlashy
 color: green 
 ---
 Dolly: Oh wow this is flashy! I love it!
-Dolly: This is the exact kind of thing women’s magazines tell women my age not to wear, ya know.
-Dolly: But I think it’s great! I've never been one to like following asinine rules.
+Dolly: This is the exact kind of thing women's magazines tell women my age not to wear, ya know.
+Dolly: But I think it's great! I've never been one to like following asinine rules.
 <<jump DollyPCWEnd>>
 ===
 
@@ -147,16 +147,16 @@ color: green
 ---
 Dolly: I love skirts!
 Dolly: I love dancing in skirt, twirling around in skirts, walking the dogs in my skirts.
-Dolly: I’ll wear this outfit again for sure.
+Dolly: I'll wear this outfit again for sure.
 <<jump DollyPCWEnd>>
 ===
 
 title: DollyPCWHeels
 color: green 
 ---
-Dolly: I can’t believe my friends my age don’t like wearing heels anymore.
-Dolly: Look how great I look in them! They’re so fun. 
-Dolly: This outfit is great! I’ll definitely wear this again.
+Dolly: I can't believe my friends my age don't like wearing heels anymore.
+Dolly: Look how great I look in them! They're so fun. 
+Dolly: This outfit is great! I'll definitely wear this again.
 <<jump DollyPCWEnd>>
 ===
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Old Money Sandals
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: 939005a9-958f-46e1-a2d9-39effd20a019
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

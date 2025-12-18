@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      White Button-Up_heather_outline_0: 5802779418445705132
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

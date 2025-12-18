@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Low Rise Jeans
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: 286a6c5a-23ee-4bf0-9e0d-a52619e46ce8
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

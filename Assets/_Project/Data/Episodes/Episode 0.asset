@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c71bdd2891fe1a479bbc64f1486f3ff, type: 3}
   m_Name: Episode 0
   m_EditorClassIdentifier: 
-  contestant: {fileID: 11400000, guid: 7749c355ff86d8e459f6715becae6f25, type: 2}
-  styleRule: {fileID: 11400000, guid: 10d88f6780ed48d4ebf67ec1790aa511, type: 2}
-  trendingRule: {fileID: 11400000, guid: f0bfb4ce66b48fe4f8f66ad2150f97dd, type: 2}
-  socialMediaComments: {fileID: 11400000, guid: e9545bf04a6b5874e8ad7d9b2cdea76e, type: 2}
-  stages: 06000000
-  preChatNode: PreGC
-  interviewNode: HeatherInterviewStart
-  postCatwalkNode: PCW
-  postChatNode: PostGC
+  contestant: {fileID: 11400000, guid: e890be3842fee654e993b62dd2f2d218, type: 2}
+  styleRule: {fileID: 11400000, guid: e23545181d685a045a79b6e641e443a6, type: 2}
+  trendingRule: {fileID: 11400000, guid: 77b8136b084e91a4594358d318a561b4, type: 2}
+  socialMediaComments: {fileID: 0}
+  stages: 0600000002000000010000000300000005000000
+  preChatNode: 
+  interviewNode: JoInterviewStart
+  postCatwalkNode: JoPCW
+  postChatNode: 
   logline:
     m_TableReference:
       m_TableCollectionName: GUID:ba909b3975bf8d249ba74c36ea758ded
@@ -238,12 +238,13 @@ MonoBehaviour:
   <startingClothes>k__BackingField: []
   <kitsOnSale>k__BackingField:
   - {fileID: 11400000, guid: 4f0fff8ae5b8c9f4eb3824dd5eaaaa38, type: 2}
-  - {fileID: 11400000, guid: 8e7a8d3ffa2dbff4092da16cf476980e, type: 2}
-  - {fileID: 11400000, guid: 2e2b704aa96f75d4a9a90ab790017933, type: 2}
-  - {fileID: 11400000, guid: 6f062856129934340baee7844f8ea4b0, type: 2}
-  - {fileID: 11400000, guid: 877a0cf81aaba424baec5c0f01166c23, type: 2}
   <startEmails>k__BackingField: []
   <endEmails>k__BackingField: []
+  <revenueSocialMediaPositive>k__BackingField: 1000
+  <revenueSocialMediaNeutral>k__BackingField: 750
+  <revenueSocialMediaNegative>k__BackingField: 250
+  <bossBonusPerGroup>k__BackingField: 150
+  <bossBonusMax>k__BackingField: 600
   references:
     version: 2
     RefIds: []

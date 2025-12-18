@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Patterned Pants
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: 6aecd63d-5946-4e58-8e08-c5784651b244
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

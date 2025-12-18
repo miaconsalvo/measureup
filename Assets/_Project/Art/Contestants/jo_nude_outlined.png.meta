@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jo_nude_outlined_0: -4692519230162935265
+      jo_nude_outlined_1: -5993809890406234535
+      jo_nude_outlined_2: -1034561736525618345
+      jo_nude_outlined_3: -842244127471872621
+      jo_nude_outlined_4: 3105339445996655083
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

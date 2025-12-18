@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tie-up sandals
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: 59980980-d046-430e-9103-aeea6c4f7a79
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

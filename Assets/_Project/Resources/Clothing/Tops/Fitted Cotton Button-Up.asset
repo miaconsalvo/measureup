@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fitted Cotton Button-Up
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: beac1f9d-6556-4122-929a-549ddb4cf06f
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

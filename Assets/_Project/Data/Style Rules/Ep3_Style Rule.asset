@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8314b44e8a2c18428c58d20fb258138, type: 3}
+  m_Name: Ep3_Style Rule
+  m_EditorClassIdentifier: 
+  ruleName:
+    m_TableReference:
+      m_TableCollectionName: GUID:784eba9945baabd489ba977f69982914
+    m_TableEntryReference:
+      m_KeyId: 13962575872
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  ruleDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:784eba9945baabd489ba977f69982914
+    m_TableEntryReference:
+      m_KeyId: 1499446640640
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  rules:
+  - op: 0
+    not: 1
+    tags:
+    - {fileID: 11400000, guid: 3e95c84e0193e2f4aae2f5e9108678e9, type: 2}
+    - {fileID: 11400000, guid: f8a1eef32fae65f4290a8fc77836a745, type: 2}
+  - op: 0
+    not: 1
+    tags:
+    - {fileID: 11400000, guid: 3e95c84e0193e2f4aae2f5e9108678e9, type: 2}
+    - {fileID: 11400000, guid: 400ab15c8b6af234d8f1173edbcda38d, type: 2}
+  - op: 0
+    not: 1
+    tags:
+    - {fileID: 11400000, guid: d9cf19646980d9c4eb718fcb1fa07a11, type: 2}
+    - {fileID: 11400000, guid: 18c49181e6541284b9c634a10f4eae20, type: 2}
+  - op: 0
+    not: 1
+    tags:
+    - {fileID: 11400000, guid: 777d4d8a95f1ac94d803a85155e2e3a9, type: 2}
+    - {fileID: 11400000, guid: 95bf4b37ba9e8154b8ff3680689084b7, type: 2}
+  references:
+    version: 2
+    RefIds: []

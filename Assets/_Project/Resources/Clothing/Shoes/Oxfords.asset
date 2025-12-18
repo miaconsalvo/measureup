@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Oxfords
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: df4fd45f-0921-44f4-bfd1-bea967adea29
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

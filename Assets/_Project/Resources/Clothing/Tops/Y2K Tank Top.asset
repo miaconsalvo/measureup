@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Y2K Tank Top
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: d7107efe-8efc-487a-b17d-db67b5951b3c
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

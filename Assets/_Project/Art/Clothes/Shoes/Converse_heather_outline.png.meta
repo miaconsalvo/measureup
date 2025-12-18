@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Converse_heather_outline_0: 2589808352253039490
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

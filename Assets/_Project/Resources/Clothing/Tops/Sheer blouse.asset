@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sheer blouse
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: e4a65066-42fd-48bb-bf63-34b1f12e92e4
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

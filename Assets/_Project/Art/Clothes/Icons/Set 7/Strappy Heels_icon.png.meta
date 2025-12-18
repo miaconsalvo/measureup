@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Strappy Heels_icon_0: -5126326248200869373
+      Strappy Heels_icon_1: 4607142445593908952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

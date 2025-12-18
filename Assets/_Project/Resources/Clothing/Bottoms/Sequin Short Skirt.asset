@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sequin Short Skirt
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: 74ca0a45-c3d4-4bc2-918f-21a25651d000
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

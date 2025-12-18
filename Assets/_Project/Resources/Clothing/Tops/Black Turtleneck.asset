@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Black Turtleneck
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: 7f099c0a-5edd-493f-af69-e10929fce0aa
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

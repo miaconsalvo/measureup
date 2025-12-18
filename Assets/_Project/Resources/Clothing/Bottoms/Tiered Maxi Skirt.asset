@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tiered Maxi Skirt
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: fea4ccaf-c5e6-4db3-8d1b-389775453ea3
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

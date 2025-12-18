@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Basic White T-Shirt_heather_outlineonly_0: -2730115898574142053
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

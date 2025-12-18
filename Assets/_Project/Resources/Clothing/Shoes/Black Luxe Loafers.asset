@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Black Luxe Loafers
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: 20062a00-0a79-4145-9a0f-f9b5247b04ca
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8314b44e8a2c18428c58d20fb258138, type: 3}
-  m_Name: Trending_Ep2
+  m_Name: Ep3_Trending
   m_EditorClassIdentifier: 
   ruleName:
     m_TableReference:

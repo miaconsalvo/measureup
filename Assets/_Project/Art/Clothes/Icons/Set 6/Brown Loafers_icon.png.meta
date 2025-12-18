@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Brown Loafers_icon_0: -494044695841796255
+      Brown Loafers_icon_1: 8872986862520640726
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

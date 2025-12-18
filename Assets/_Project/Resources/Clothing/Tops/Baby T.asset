@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Baby T
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: 4584fb48-0979-49c0-8dd9-5d302b9b9de2
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Platform Flip Flops
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Item
-  id: 
+  id: bc875d6a-1d1a-4939-8a37-4210043930f4
   <type>k__BackingField: 0
   displayName:
     m_TableReference:
