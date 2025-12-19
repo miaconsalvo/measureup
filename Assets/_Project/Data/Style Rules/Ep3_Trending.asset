@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ruleName:
     m_TableReference:
-      m_TableCollectionName: GUID:186f780181f63cf4592323b302052e67
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
     m_TableEntryReference:
-      m_KeyId: 126223212347392
+      m_KeyId: 77207567871238144
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:186f780181f63cf4592323b302052e67
     m_TableEntryReference:
-      m_KeyId: 6769344512
+      m_KeyId: 70300720266469376
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

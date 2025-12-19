@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Episode 3
   m_EditorClassIdentifier: 
   contestant: {fileID: 11400000, guid: 33aef9671a38d464fb8e2935105f33e5, type: 2}
-  styleRule: {fileID: 11400000, guid: 59932e43d51e955458d9d4a8252f3fa6, type: 2}
-  trendingRule: {fileID: 11400000, guid: e36d992e108c98340adeda3046acb865, type: 2}
-  socialMediaComments: {fileID: 11400000, guid: e9545bf04a6b5874e8ad7d9b2cdea76e, type: 2}
+  styleRule: {fileID: 11400000, guid: b475a46808084e046b0fdbe69c911c29, type: 2}
+  trendingRule: {fileID: 11400000, guid: 95c9475a78df11f4896f8962ec5dcd3f, type: 2}
+  socialMediaComments: {fileID: 11400000, guid: 3f1a79a2cc21ea14b990ded9ff9020a6, type: 2}
   stages: 000000000100000002000000030000000400000005000000
   preChatNode: 
   interviewNode: 
@@ -32,9 +32,9 @@ MonoBehaviour:
     m_LocalVariables: []
   trendingDescription:
     m_TableReference:
-      m_TableCollectionName: GUID:186f780181f63cf4592323b302052e67
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
     m_TableEntryReference:
-      m_KeyId: 6769344512
+      m_KeyId: 74879134629617664
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -245,6 +245,11 @@ MonoBehaviour:
   <startEmails>k__BackingField: []
   <endEmails>k__BackingField:
   - {fileID: 11400000, guid: df394daf795f91240a9e6a90ff7dc3de, type: 2}
+  <revenueSocialMediaPositive>k__BackingField: 1000
+  <revenueSocialMediaNeutral>k__BackingField: 750
+  <revenueSocialMediaNegative>k__BackingField: 250
+  <bossBonusPerGroup>k__BackingField: 150
+  <bossBonusMax>k__BackingField: 600
   references:
     version: 2
     RefIds: []

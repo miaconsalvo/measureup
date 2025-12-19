@@ -12,32 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
   m_Name: Bunny Flats
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
-  name: Item
+  name: Bunny Flats
   id: e1e28f3c-8f22-49a0-b43c-8a7e84aef0f9
-  <type>k__BackingField: 0
+  <type>k__BackingField: 2
   displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 77207590688251904
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 74879179357675520
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  brand: {fileID: 0}
+  brand: {fileID: 11400000, guid: 1c5f6fd50af6101438919d23064d6175, type: 2}
   icon: {fileID: 21300000, guid: 95b212594b37b4148b7cafdc411f12b3, type: 3}
   sprite: {fileID: 0}
   sprites: []
-  tags: []
+  tags:
+  - {fileID: 11400000, guid: 238b34ce3ccdcb3418a3ed93684cfcc0, type: 2}
+  - {fileID: 11400000, guid: e92b940437bf51c4bbd846942fc3b02c, type: 2}
+  - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
+  - {fileID: 11400000, guid: ea4b614b55f4d6f4fb9558e7edca74d0, type: 2}
   references:
     version: 2
     RefIds: []

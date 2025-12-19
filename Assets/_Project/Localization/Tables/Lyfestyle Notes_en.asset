@@ -26,6 +26,38 @@ MonoBehaviour:
     m_Localized: Wants to branch out
     m_Metadata:
       m_Items: []
+  - m_Id: 72248085902778368
+    m_Localized: Recently and happily retired
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72248348470403072
+    m_Localized: Spends lots of time with friends and family
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72248468058398720
+    m_Localized: Learning to play the guitar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72248564527390720
+    m_Localized: Loves to read
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72248644693123072
+    m_Localized: Does regular board game nights with her friends
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72248648350556160
+    m_Localized: Goes for hikes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72248827359256576
+    m_Localized: Likes to spend time with her dog, Troy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72249030904635392
+    m_Localized: Enjoys baking
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
   m_Name: Old Money Sandals
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
-  name: Item
+  name: Old Money Sandals
   id: 939005a9-958f-46e1-a2d9-39effd20a019
-  <type>k__BackingField: 0
+  <type>k__BackingField: 2
   displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 77208142377639936
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 74881841004273664
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -37,7 +37,11 @@ MonoBehaviour:
   icon: {fileID: 0}
   sprite: {fileID: 0}
   sprites: []
-  tags: []
+  tags:
+  - {fileID: 11400000, guid: b739dd24505919541bee74a638139d25, type: 2}
+  - {fileID: 11400000, guid: 62dc69857624ecb4c807fbd001c128ce, type: 2}
+  - {fileID: 11400000, guid: f7c0109afcb5ab749a73d95ed2733663, type: 2}
+  - {fileID: 11400000, guid: f8a1eef32fae65f4290a8fc77836a745, type: 2}
   references:
     version: 2
     RefIds: []

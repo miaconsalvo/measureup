@@ -187,6 +187,10 @@ MonoBehaviour:
     m_Key: Impractical
     m_Metadata:
       m_Items: []
+  - m_Id: 120573038301274112
+    m_Key: "Heels\t"
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

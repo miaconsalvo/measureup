@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac65f3b549756749bbcde476d226756, type: 3}
+  m_Name: Maximalist
+  m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ClothingKitScriptable
+  name: Maximalist
+  id: maximalist
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:9b488de41f12d8b44a0e611d909df40a
+    m_TableEntryReference:
+      m_KeyId: 77206089773342720
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  price: 900
+  priceRange: $$
+  garments:
+  - {fileID: 11400000, guid: f0e7a9764556211459366fe6917ec40f, type: 2}
+  - {fileID: 11400000, guid: 8a1478cbd2c0d1448940c5c0cae60446, type: 2}
+  - {fileID: 11400000, guid: d2526267b3a16864e900145bca032519, type: 2}
+  - {fileID: 11400000, guid: b47527335d4691048a2432238cf8b6aa, type: 2}
+  - {fileID: 11400000, guid: 6e9580afdea6f1848b7dc0efb29eb491, type: 2}
+  - {fileID: 11400000, guid: b489f3141a8c2cb419a4ec4890b27ac0, type: 2}
+  tags:
+  - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
+  - {fileID: 11400000, guid: b306f85d40a227544a48f7fd47ea8136, type: 2}
+  - {fileID: 11400000, guid: e92b940437bf51c4bbd846942fc3b02c, type: 2}
+  - {fileID: 11400000, guid: 47fa92b562b53834aa7cc45e5e7de466, type: 2}
+  references:
+    version: 2
+    RefIds: []

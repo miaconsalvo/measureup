@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
   m_Name: Platform Flip Flops
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
-  name: Item
+  name: Platform Flip-Flops
   id: bc875d6a-1d1a-4939-8a37-4210043930f4
-  <type>k__BackingField: 0
+  <type>k__BackingField: 2
   displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 77207980670443520
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 74879709706444800
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -37,7 +37,12 @@ MonoBehaviour:
   icon: {fileID: 0}
   sprite: {fileID: 0}
   sprites: []
-  tags: []
+  tags:
+  - {fileID: 11400000, guid: 47fa92b562b53834aa7cc45e5e7de466, type: 2}
+  - {fileID: 11400000, guid: 62dc69857624ecb4c807fbd001c128ce, type: 2}
+  - {fileID: 11400000, guid: e92b940437bf51c4bbd846942fc3b02c, type: 2}
+  - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
+  - {fileID: 11400000, guid: ffbc53d61e4d91345896b8b2a1ed5355, type: 2}
   references:
     version: 2
     RefIds: []

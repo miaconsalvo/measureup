@@ -25,6 +25,18 @@ MonoBehaviour:
       to \u201Cwow\u201D?\r"
     m_Metadata:
       m_Items: []
+  - m_Id: 70296742535356416
+    m_Localized: Sophie is a newly hired professor in Economics, so she needs to
+      be taken seriously by her department, but more importantly, her students. We're
+      going to help her go from outmoded to a la mode in her classes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41204127916359680
+    m_Localized: Dolly recently retired from the corporate world and is loving her
+      new found freedom in life. She has ditched drab pantsuits and blazers for something
+      a little more... out there, much to the embarrassment of her family.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -12,32 +12,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
   m_Name: Patterned Pants
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
-  name: Item
+  name: Patterned Pants
   id: 6aecd63d-5946-4e58-8e08-c5784651b244
   <type>k__BackingField: 0
   displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:186f780181f63cf4592323b302052e67
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 70300473100328960
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:186f780181f63cf4592323b302052e67
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 70300720266469376
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   brand: {fileID: 0}
   icon: {fileID: 21300000, guid: 53048b867a2bf694eb5a3faa0dad81e9, type: 3}
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 53048b867a2bf694eb5a3faa0dad81e9, type: 3}
   sprites: []
-  tags: []
+  tags:
+  - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
+  - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
+  - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
+  - {fileID: 11400000, guid: e92b940437bf51c4bbd846942fc3b02c, type: 2}
+  - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
+  - {fileID: 11400000, guid: 414c9a81232c1bb44800b619223c5168, type: 2}
+  - {fileID: 11400000, guid: 400ab15c8b6af234d8f1173edbcda38d, type: 2}
   references:
     version: 2
     RefIds: []

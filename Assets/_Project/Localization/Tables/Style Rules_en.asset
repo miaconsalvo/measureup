@@ -38,6 +38,24 @@ MonoBehaviour:
     m_Localized: Dress Your Age!
     m_Metadata:
       m_Items: []
+  - m_Id: 73816146296430592
+    m_Localized: Break the rules!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 73816203406073856
+    m_Localized: Who can demand heels, make-up, and impractical attire at the office
+      in this day and age? Set your own dress code for professional attire in the
+      WFH era!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 73817289038749696
+    m_Localized: Chelsea Boots are where it's at!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 73817323566260224
+    m_Localized: Chelsea boots are a great, versatile shoe that goes with any outfit!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

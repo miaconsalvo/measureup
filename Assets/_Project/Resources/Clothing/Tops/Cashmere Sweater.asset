@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
   m_Name: Cashmere Sweater
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
-  name: Item
+  name: Cashmere Sweater
   id: 476ed6f5-eb60-425c-b323-cea17512b7ac
   <type>k__BackingField: 0
   displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 77208072341151744
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 74881698335023104
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -37,7 +37,10 @@ MonoBehaviour:
   icon: {fileID: 0}
   sprite: {fileID: 0}
   sprites: []
-  tags: []
+  tags:
+  - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
+  - {fileID: 11400000, guid: b739dd24505919541bee74a638139d25, type: 2}
+  - {fileID: 11400000, guid: b9ea74aeb487b8444a46e29887668b1c, type: 2}
   references:
     version: 2
     RefIds: []

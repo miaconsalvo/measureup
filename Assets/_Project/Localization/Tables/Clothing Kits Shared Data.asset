@@ -35,6 +35,26 @@ MonoBehaviour:
     m_Key: Elevated Basics
     m_Metadata:
       m_Items: []
+  - m_Id: 77206044374196224
+    m_Key: Business Luxe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77206089773342720
+    m_Key: Maximalist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77206142999060480
+    m_Key: Boho Chic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77206226075639808
+    m_Key: Y2K
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77206228227317760
+    m_Key: Quiet Luxury
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

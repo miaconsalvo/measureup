@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac65f3b549756749bbcde476d226756, type: 3}
+  m_Name: Boho Chic
+  m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ClothingKitScriptable
+  name: Boho Chic
+  id: bohoChic
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:9b488de41f12d8b44a0e611d909df40a
+    m_TableEntryReference:
+      m_KeyId: 77206142999060480
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  price: 900
+  priceRange: $$
+  garments:
+  - {fileID: 11400000, guid: 27ce13126491c9a42982ecb0fa930c51, type: 2}
+  - {fileID: 11400000, guid: 92aed5e9c4b9b2e45bedf64f23658791, type: 2}
+  - {fileID: 11400000, guid: 1385e766be400304d911bec309acf7f9, type: 2}
+  - {fileID: 11400000, guid: 01a8010fc162d3c449eccd2e1ac2e271, type: 2}
+  - {fileID: 11400000, guid: 9172301f5acad404a92cbfaf354d3ad7, type: 2}
+  - {fileID: 11400000, guid: 152c6e45dffcaae4ca2ca01ab3f0245d, type: 2}
+  tags:
+  - {fileID: 11400000, guid: 238b34ce3ccdcb3418a3ed93684cfcc0, type: 2}
+  - {fileID: 11400000, guid: e92b940437bf51c4bbd846942fc3b02c, type: 2}
+  - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
+  references:
+    version: 2
+    RefIds: []
