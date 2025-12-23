@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
+  m_Name: Black Dress Pants
+  m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
+  name: Black Dress Pants
+  id: 7e0d7ce0-eb4f-4fea-9fea-e35724780b1d
+  <type>k__BackingField: 1
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
+    m_TableEntryReference:
+      m_KeyId: 77207393149116416
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
+    m_TableEntryReference:
+      m_KeyId: 74878809482977280
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  brand: {fileID: 0}
+  icon: {fileID: 21300000, guid: 30eaea67721672444bdc6acc473a66d2, type: 3}
+<<<<<<< HEAD
+  sprite: {fileID: 21300000, guid: c2816110a7f9e494a80e67f17279fd14, type: 3}
+=======
+  sprite: {fileID: 21300000, guid: 30eaea67721672444bdc6acc473a66d2, type: 3}
+>>>>>>> data-entry-KT
+  sprites: []
+  tags:
+  - {fileID: 11400000, guid: f7c0109afcb5ab749a73d95ed2733663, type: 2}
+  - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}
+  - {fileID: 11400000, guid: b739dd24505919541bee74a638139d25, type: 2}
+  - {fileID: 11400000, guid: 3e95c84e0193e2f4aae2f5e9108678e9, type: 2}
+  references:
+    version: 2
+    RefIds: []
