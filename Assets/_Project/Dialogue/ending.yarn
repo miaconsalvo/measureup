@@ -1,4 +1,110 @@
-﻿title: ending
+﻿title: endingStart
+position: -375,-237
 ---
-This is an example of a Yarn Spinner script. Write your dialogue here!
+Host: Welcome to the season finale of Measure Up!, the show where we empower our contestants to live their best lives by showing them how to dress!
+Host: We spent the season teaching our contestants the style rules they needed to live a fulfilling and fashionable life, and revealed their true potential using simple style tips.
+Host: Today we are checking in with our contestants and seeing how their lives changed post-makeover. 
+Host: Did they remember and implement what they learned, or did they slip back into their frumpy, unstylish, and improper styles?
+Host: Today we catch up with Heather, Sophie, and Dolly, to see how their lives have been changed by their makeovers.
+
+<<jump HeatherEnding>>
+===
+
+//0 = NEUTRAL, 1 = POSITIVE, 2 = NEGATIVE
+
+title: HeatherEnding
+color: blue
+position: -372,-32
+---
+Host: First, we are visiting our childhood-star turned stay-at-home mom, Heather! 
+ <<if get_reaction("heather") == 0 >>
+    <<jump HeatherEndingNeutral>>
+<<elseif get_reaction("heather") == 1>>
+    <<jump HeatherEndingPos>>
+<<elseif get_reaction("heather") == 2>>
+    <<jump HeatherEndingNeg>>
+<<endif>>
+===
+
+title:HeatherEndingNeutral
+color: blue
+position: -57,-154
+---
+Heather: Leaving the show, I didn’t have strong feelings about the makeover one way or the other, and that’s still pretty much how I feel.
+<<if $same_outfit == true>>
+    Heather: This “new” look isn’t exactly new.
+    Heather:  I guess this is just how I have to dress now that I’m a mom?
+<<elseif has_tag("sporty")== true>>
+    Heather: This “new” look is very similar to how I’ve always dressed. 
+    Heather: Comfortable, kinda sporty… I mean it works, even if my gramma insists that “leggings aren’t pants”.
+<<else>>
+    Heather: The new look got mixed reviews from my friends, but I don’t hate it so I think I’ll keep wearing it.
+<<endif>>
+
+Host: Glad to see Heather is still looking great in her new look!
+Host: Let's check in with our next contestant now!
+<<jump SophieEnding>>
+===
+
+title: HeatherEndingNeg
+color: blue
+position: -49,107
+---
+Heather: Well, I was really unsure when I left the show how I felt about the new look, it didn’t feel like me, but I decided to give it a try anyways.
+Heather: But… the new look didn’t last more than a day. It didn’t suit me at all.
+<<if has_tag("bright") == true>>
+    Heather: Unfortunately, the bright colours just didn’t work for me.
+    Heather: They made me feel like people were looking at me, like I was a kid on TV again. 
+    Heather: I know they probably weren’t, but that’s how it felt.
+<<elseif has_tag("skirt") == true>>
+    Heather:The skirts are collecting dust in my closet, I’ll probably throw them in the kids’ dress-up bin. 
+    Heather: I did notice that people were treating me differently when I wore skirts instead of my old athleisure, like I was being taken more seriously?
+    Heather: Or people were nicer to me maybe?
+    Heather: But I didn’t feel like myself at all. I wish I could dress less frumpy without feeling so… girly?
+<<elseif has_tag("flashy") == true || has_tag("impractical")>>
+    Heather: My friends and kids really loved the makeover look. 
+    Heather: But it wasn’t practical at all for my daily life.
+    Heather: I got the impression that the other parents thought I was trying too hard, they made a couple passive aggressive comments. 
+    Heather: They’re probably right… I need to accept that I’m a mom now, not a TV star.
+<<elseif has_tag("uncomfy") == true>>
+    Heather: I actually liked the makeover’s look, I even got some compliments from the other parents at school.
+    Heather: But, the clothes were just soooo uncomfortable. I’d put them on and be changing back into my sweats within an hour.
+    Heather: I gave the pieces away to some of my more fashionable friends.
+    Heather: I don’t look amazing in my sweats, but at least I am comfy.
+<<elseif has_tag("business")>>
+    Heather: I tried to wear the new look… but it felt too formal to wear on my day to day.
+    Heather: Everyone kept asking me if I was working “again” – as if being a stay-at-home mom isn’t work.
+    Heather: But I get why they were asking questions – it’s not the right kind of clothes for my lifestyle.
+<<endif>>
+
+Host: I guess there is a reason Heather wasn’t in show business anymore!
+Host: Let’s see if our next contestant did more with our advice. 
+
+<<jump SophieEnding>>
+===
+
+title: HeatherEndingPos
+color: blue
+position: -50,-22
+---
+Heather: When I left the show, I really liked the new look the stylist gave me.
+
+<<if has_tag("comfy") ==true>>
+    Heather: I still love how comfy the clothes are!
+    Heather: I did get some comments that I shouldn’t prioritize comfort over looking good… but I don’t know if I agree.
+<<elseif has_tag("pattern") ==true>>
+    Heather: But, when I wore the new look to pick up the kids from school another mom joked that her baby’s onesie was the same pattern as my {$patternedItem}.
+    Heather: Are patterned clothes just for kids now? Since when?
+<<endif>>
+
+Host: It’s great to see Heather looking fresh and stylish, even as a mom!
+Host: Let’s see what our next contestant is up to now. 
+<<jump SophieEnding>>
+===
+title: SophieEnding
+color: purple
+position: -371,318
+---
+Host: We helped Sophie revamp her wardrobe before starting her new job as an economics professor. 
+Host: Time to find out how those lessons played out in the classroom!
 ===
