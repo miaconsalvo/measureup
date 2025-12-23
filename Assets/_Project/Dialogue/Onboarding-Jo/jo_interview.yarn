@@ -2,8 +2,8 @@ title: JoInterviewStart
 tags: 
 position: -145,-211
 ---
-Dolly: Well hello! Are you the one who is going to be doing my makeover?! How exciting!
-Dolly: Should we get started?!
+Jo: Well hello! Are you the one who is going to be doing my makeover?! How exciting!
+Jo: Should we get started?!
 <<jump JoInterviewQuestions>>
 ===
 
@@ -12,7 +12,7 @@ tags:
 position: -135,-9
 ---
 << if max_questions() == true>>
-    <<jump DollyInterviewEnd>>
+    <<jump JoInterviewEnd>>
 <<endif>>
 
 -> A. How would you describe your day-to-day wardrobe? <<if question_asked(0) == false>>
@@ -61,7 +61,7 @@ color: red
 position: 161,266
 ---
 Jo: My sister got married last fall, and I was her maid of honour. 
-Jo:  I hate dancy clothes but for her I put on a fancy jumpsuit and a pair of heels. Never again! I hate fancy clothing.
+Jo: I hate dancy clothes but for her I put on a fancy jumpsuit and a pair of heels. Never again! I hate fancy clothing.
 //reveals dislikes fancy 
 <<jump JoInterviewQuestions>>
 ===

@@ -288,7 +288,7 @@ MonoBehaviour:
   <uiManager>k__BackingField: {fileID: 24833694}
   <dressup>k__BackingField: {fileID: 482965379}
   <inventory>k__BackingField: {fileID: 482965378}
-  episodeIndexOverride: 1
+  episodeIndexOverride: 0
   episodeIndex: 1
   stagesOverride: 0
   stages: 01000000030000000400000005000000
@@ -3437,6 +3437,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6428313329480644528, guid: cb1a9df42ac703c44a338d8ee6ac6f4c, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497917360519939989, guid: cb1a9df42ac703c44a338d8ee6ac6f4c, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497917360519939989, guid: cb1a9df42ac703c44a338d8ee6ac6f4c, type: 3}
+      propertyPath: m_BlocksRaycasts
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6501177171860142172, guid: cb1a9df42ac703c44a338d8ee6ac6f4c, type: 3}

@@ -35,6 +35,7 @@ namespace Mystie
 
         protected override void OnStageComplete()
         {
+            DialogueManagerCommands.ResetScene();
             dialogueRunner.onDialogueComplete.RemoveListener(OnDialogueComplete);
 
             if (skipButton != null)

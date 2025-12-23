@@ -27,7 +27,7 @@ Boss: If it's in the dossier, I better see it to the final episode. If it's not 
 Boss: Now, I have a meeting with some potential sponsors. 
 Boss: I am going to pass you off to our top PA Jo here, they'll give you this week's dossier.
     
-<<HideAll>>
+<<Reset>>
 <<jump OnboardingJo>>
 ===
 
@@ -72,5 +72,5 @@ position: 557,207
 Let's get started!
 <<FadeOut  Jo 0.5>>
 <<wait  0.5>>
-<<HideAll>>
+<<Reset>>
 ===

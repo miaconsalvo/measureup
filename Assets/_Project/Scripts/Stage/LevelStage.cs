@@ -36,14 +36,14 @@ namespace Mystie.Core
 
         protected virtual void OnEnable()
         {
-            levelManager.onStageSet += OnStageSet;
+            if (levelManager != null) levelManager.onStageSet += OnStageSet;
 
             //uiState.onSubmit += CompleteStage;
         }
 
         protected virtual void OnDisable()
         {
-            levelManager.onStageSet -= OnStageSet;
+            if (levelManager != null) levelManager.onStageSet -= OnStageSet;
 
             //uiState.onSubmit -= CompleteStage;
         }

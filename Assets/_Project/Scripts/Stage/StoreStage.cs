@@ -80,6 +80,8 @@ namespace Mystie.Dressup
 
             detailsPanel.gameObject.SetActive(false);
             UpdateMoneyUI(inventory.moneyAmount);
+
+            completeStageButton.interactable = inventory.ownedKits.Count > 0;
         }
 
         private void OnKitSelected(ClothingKitUI kitUI, ClothingKitScriptable kit)
@@ -136,6 +138,7 @@ namespace Mystie.Dressup
                 levelManager.inventory.AddClothingKit(selectedKitUI.clothingKit);
                 OnKitDeselect();
                 //purchaseButton.interactable = false;
+                completeStageButton.interactable = inventory.ownedKits.Count > 0;
             }
         }
 

@@ -8,6 +8,7 @@ namespace Mystie
 {
     public class EpisodeManager : MonoBehaviour
     {
+        [SerializeField, Scene] private string mainMenuScene;
         [Scene, SerializeField] private string episodeScene;
         [SerializeField, Scene] private string onbardingScene;
         [SerializeField, Scene] private string endScene;
@@ -61,7 +62,8 @@ namespace Mystie
             SetEpisodeIndex(i);
             if (index == 0) SceneTransitioner.Instance.LoadScene(onbardingScene);
             else if (index < episodes.Count) SceneTransitioner.Instance.LoadScene(episodeScene);
-            else SceneTransitioner.Instance.LoadScene(endScene);
+            else if (index == episodes.Count) SceneTransitioner.Instance.LoadScene(endScene);
+            else SceneTransitioner.Instance.LoadScene(mainMenuScene);
         }
 
         public void CompleteEpisode()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.Localization;
+using VInspector;
 
 namespace Mystie.Dressup
 {
@@ -29,7 +30,8 @@ namespace Mystie.Dressup
         [field: SerializeField] public LocalizedString opinionDefault { get; private set; }
         public List<OpinionCondition> opinionConditions = new List<OpinionCondition>();
 
-        private void OnValidate()
+        [Button]
+        private void Validate()
         {
             startingClothes = startingClothes
                 .GroupBy(item => item.type)

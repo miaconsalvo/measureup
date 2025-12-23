@@ -36,6 +36,7 @@ namespace Mystie.UI
 
         public static Controls controls;
 
+        [SerializeField] public float startDelay;
         [SerializeField] public List<UIState> startStates = new List<UIState>();
         protected Stack<UIState> stateStack = new Stack<UIState>();
 
@@ -53,7 +54,6 @@ namespace Mystie.UI
             gameManager = GameManager.Instance;
             controls = gameManager.controls;
             //controls = new Controls();
-
         }
 
         protected void OnEnable()
@@ -82,8 +82,10 @@ namespace Mystie.UI
             GameManager.Unpause();
         }
 
-        public void Start()
+        public IEnumerator Start()
         {
+            yield return new WaitForSeconds(startDelay);
+
             foreach (UIState state in startStates)
                 if (state != null) SetState(state);
         }

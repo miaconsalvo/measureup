@@ -295,6 +295,7 @@ namespace Mystie.Dialogue
 
 		public void SetFade(Image image, float startAlpha = 0, float endAlpha = 1, float fadeTime = 1)
 		{
+			if (image == null) return;
 			// do the fade
 			StartCoroutine(FadeCoroutine(image, image.color, startAlpha, endAlpha, fadeTime));
 		}

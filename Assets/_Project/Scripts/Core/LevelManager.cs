@@ -68,13 +68,11 @@ namespace Mystie.Core
 
         public void Awake()
         {
-            Debug.Log("Level manager");
             if (Instance != this)
             {
                 Destroy(gameObject);
                 return;
             }
-            Debug.Log("Level manager 2");
 
             episodeManager = EpisodeManager.Instance;
             if (episodeIndexOverride) episodeManager.SetEpisodeIndex(episodeIndex);
@@ -139,9 +137,9 @@ namespace Mystie.Core
         public void OnLevelComplete()
         {
             Debug.Log("Level Complete!");
+            SaveDataManager.SaveEpisodeIndex(episodeManager.index + 1);
             episodeManager.CompleteEpisode();
             episodeManager.LoadCurrentEpisode();
-            SaveDataManager.SaveEpisodeIndex(episodeManager.index);
 
             inventory.GainMoney(GetRevenue());
             inventory.SaveInventory();

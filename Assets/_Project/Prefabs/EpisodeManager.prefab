@@ -44,9 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb3506480b1ba0047b0823226d3cc4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuScene: Main Menu
   episodeScene: Episode
   onbardingScene: Onboarding
-  endScene: Main Menu
+  endScene: Ending
+  indexOverride: 0
   <index>k__BackingField: 0
   transitionMode: 1
   <episodes>k__BackingField:
