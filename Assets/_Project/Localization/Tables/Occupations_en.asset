@@ -22,6 +22,18 @@ MonoBehaviour:
     m_Localized: Stay at home mom
     m_Metadata:
       m_Items: []
+  - m_Id: 73790611457564672
+    m_Localized: Newly-hired Economics Professor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 73790614418743296
+    m_Localized: Recently Retired
+    m_Metadata:
+      m_Items: []
+  - m_Id: 73805278229815296
+    m_Localized: Production Assistant
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

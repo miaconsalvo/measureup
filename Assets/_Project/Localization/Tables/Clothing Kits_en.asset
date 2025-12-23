@@ -38,6 +38,26 @@ MonoBehaviour:
     m_Localized: Elevated Basics
     m_Metadata:
       m_Items: []
+  - m_Id: 77206044374196224
+    m_Localized: Business Luxe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77206089773342720
+    m_Localized: Maximalist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77206142999060480
+    m_Localized: Boho Chic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77206226075639808
+    m_Localized: Y2K
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77206228227317760
+    m_Localized: Quiet Luxury
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

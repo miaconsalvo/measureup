@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
   m_Name: Tiered Maxi Skirt
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
-  name: Item
+  name: Tiered Maxi Skirt
   id: fea4ccaf-c5e6-4db3-8d1b-389775453ea3
-  <type>k__BackingField: 0
+  <type>k__BackingField: 1
   displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 77207658908606464
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 74879292943622144
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -37,7 +37,12 @@ MonoBehaviour:
   icon: {fileID: 0}
   sprite: {fileID: 0}
   sprites: []
-  tags: []
+  tags:
+  - {fileID: 11400000, guid: 5dfc8ea14049d26438b13de9c26e0e81, type: 2}
+  - {fileID: 11400000, guid: e92b940437bf51c4bbd846942fc3b02c, type: 2}
+  - {fileID: 11400000, guid: 238b34ce3ccdcb3418a3ed93684cfcc0, type: 2}
+  - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
+  - {fileID: 11400000, guid: 46da594aa093a314ca17348cd4a39004, type: 2}
   references:
     version: 2
     RefIds: []

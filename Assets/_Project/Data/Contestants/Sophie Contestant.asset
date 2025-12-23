@@ -13,55 +13,53 @@ MonoBehaviour:
   m_Name: Sophie Contestant
   m_EditorClassIdentifier: 
   name: Sophie
-  age: 37
+  age: 29
   occupation:
     m_TableReference:
       m_TableCollectionName: GUID:f03f2fe8fa8d33c458424d23ac2e6d18
     m_TableEntryReference:
-      m_KeyId: 192219667234816
+      m_KeyId: 73790611457564672
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   <model>k__BackingField: {fileID: 0}
   actor: {fileID: 11400000, guid: 8aec0dce2cc80504180fc98a86c95f16, type: 2}
-  startingClothes: []
+  startingClothes:
+  - {fileID: 0}
   underwear:
   - {fileID: 11400000, guid: 1fe112ceb73469c418312d74fe818f7f, type: 2}
   - {fileID: 11400000, guid: 297297d9adfb9394faf593dd8751b544, type: 2}
   - {fileID: 11400000, guid: 32491044177b82f4aa8931a5a806314b, type: 2}
   positiveTags:
-  - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
-  - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
-  - {fileID: 11400000, guid: 3dd5bee944a9892499537f489a2e5591, type: 2}
-  - {fileID: 11400000, guid: cbeb23e41baf0ad429d46c94024c2519, type: 2}
-  negativeTags:
-  - {fileID: 11400000, guid: 46da594aa093a314ca17348cd4a39004, type: 2}
-  - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
   - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}
-  - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
-  - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
+  - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
+  - {fileID: 11400000, guid: e92b940437bf51c4bbd846942fc3b02c, type: 2}
+  - {fileID: 11400000, guid: 46da594aa093a314ca17348cd4a39004, type: 2}
+  negativeTags:
+  - {fileID: 11400000, guid: 78720b0e8379ef548ac85e241ddd1e31, type: 2}
+  - {fileID: 11400000, guid: 95bf4b37ba9e8154b8ff3680689084b7, type: 2}
   <opinionDefault>k__BackingField:
     m_TableReference:
       m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
     m_TableEntryReference:
-      m_KeyId: 6500692688371712
+      m_KeyId: 71417656526233600
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   opinionConditions:
-  - name: Bright
+  - name: Pink
     requiredTags:
-    - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
+    - {fileID: 11400000, guid: 95bf4b37ba9e8154b8ff3680689084b7, type: 2}
     excludedTags: []
-    minNegativeTags: 0
+    minNegativeTags: 1
     minPositiveTags: 0
     opinions:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6082297979469824
+        m_KeyId: 71380301106896896
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -69,7 +67,7 @@ MonoBehaviour:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6085783861329920
+        m_KeyId: 71380374897287168
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -77,22 +75,22 @@ MonoBehaviour:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6085826123137024
+        m_KeyId: 71380452848427008
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - name: Flashy
+  - name: Boyish
     requiredTags:
-    - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
+    - {fileID: 11400000, guid: 78720b0e8379ef548ac85e241ddd1e31, type: 2}
     excludedTags: []
-    minNegativeTags: 0
+    minNegativeTags: 1
     minPositiveTags: 0
     opinions:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6085943311990784
+        m_KeyId: 71380503217823744
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -100,7 +98,7 @@ MonoBehaviour:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6085979156512768
+        m_KeyId: 71380536843558912
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -108,108 +106,7 @@ MonoBehaviour:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6086012115353600
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-  - name: Impractical
-    requiredTags:
-    - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
-    - {fileID: 11400000, guid: 47fa92b562b53834aa7cc45e5e7de466, type: 2}
-    excludedTags: []
-    minNegativeTags: 0
-    minPositiveTags: 0
-    opinions:
-    - m_TableReference:
-        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
-      m_TableEntryReference:
-        m_KeyId: 6086953371697152
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    - m_TableReference:
-        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
-      m_TableEntryReference:
-        m_KeyId: 6086959969337344
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-  - name: Uncomfy
-    requiredTags:
-    - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
-    excludedTags: []
-    minNegativeTags: 0
-    minPositiveTags: 0
-    opinions:
-    - m_TableReference:
-        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
-      m_TableEntryReference:
-        m_KeyId: 6086656058458112
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-  - name: Negative
-    requiredTags: []
-    excludedTags: []
-    minNegativeTags: 2
-    minPositiveTags: 0
-    opinions:
-    - m_TableReference:
-        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
-      m_TableEntryReference:
-        m_KeyId: 6086756814028800
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    - m_TableReference:
-        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
-      m_TableEntryReference:
-        m_KeyId: 6086795305156608
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    - m_TableReference:
-        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
-      m_TableEntryReference:
-        m_KeyId: 6086832407969792
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-  - name: Comfy
-    requiredTags:
-    - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
-    excludedTags:
-    - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
-    minNegativeTags: 0
-    minPositiveTags: 0
-    opinions:
-    - m_TableReference:
-        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
-      m_TableEntryReference:
-        m_KeyId: 6087483217149952
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    - m_TableReference:
-        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
-      m_TableEntryReference:
-        m_KeyId: 6087518554161152
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    - m_TableReference:
-        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
-      m_TableEntryReference:
-        m_KeyId: 6087526322012160
+        m_KeyId: 71380536843558912
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -217,15 +114,14 @@ MonoBehaviour:
   - name: Pattern
     requiredTags:
     - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
-    excludedTags:
-    - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
+    excludedTags: []
     minNegativeTags: 0
     minPositiveTags: 0
     opinions:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6087085882343424
+        m_KeyId: 71380980525424640
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -233,7 +129,7 @@ MonoBehaviour:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6087125606596608
+        m_KeyId: 71381015287816192
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -241,22 +137,22 @@ MonoBehaviour:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6087146833969152
+        m_KeyId: 71381017103949824
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - name: Opinion
-    requiredTags: []
-    excludedTags:
-    - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
+  - name: Business
+    requiredTags:
+    - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}
+    excludedTags: []
     minNegativeTags: 0
-    minPositiveTags: 2
+    minPositiveTags: 0
     opinions:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6087622958776320
+        m_KeyId: 71381253637529600
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -264,7 +160,7 @@ MonoBehaviour:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6087631724871680
+        m_KeyId: 71381441680760832
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -272,7 +168,75 @@ MonoBehaviour:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6087644307783680
+        m_KeyId: 71381561377808384
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Skirt
+    requiredTags:
+    - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}
+    excludedTags: []
+    minNegativeTags: 0
+    minPositiveTags: 0
+    opinions:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 71381253637529600
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 71381441680760832
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 71381561377808384
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Young
+    requiredTags:
+    - {fileID: 11400000, guid: e92b940437bf51c4bbd846942fc3b02c, type: 2}
+    excludedTags: []
+    minNegativeTags: 1
+    minPositiveTags: 0
+    opinions:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 71381811266052096
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 71381561377808384
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - name: Neutral
+    requiredTags: []
+    excludedTags: []
+    minNegativeTags: 0
+    minPositiveTags: 0
+    opinions:
+    - m_TableReference:
+        m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
+      m_TableEntryReference:
+        m_KeyId: 71417656526233600
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0

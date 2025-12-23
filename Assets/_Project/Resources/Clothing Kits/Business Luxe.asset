@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac65f3b549756749bbcde476d226756, type: 3}
+  m_Name: Business Luxe
+  m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ClothingKitScriptable
+  name: Business Luxe
+  id: businessluxe
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:9b488de41f12d8b44a0e611d909df40a
+    m_TableEntryReference:
+      m_KeyId: 77206044374196224
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  price: 0
+  priceRange: $$$
+  garments:
+  - {fileID: 11400000, guid: f3e5b70a6fcf4424a922d4fedbb8b44f, type: 2}
+  - {fileID: 11400000, guid: ed02ddb4d9b04a2438a2dedb7b398be9, type: 2}
+  - {fileID: 11400000, guid: 528ebc18781b8414d84bcf2d8157d12f, type: 2}
+  - {fileID: 11400000, guid: 7e5b40b8b4bd3ce48a414a6a2f5f46d9, type: 2}
+  - {fileID: 11400000, guid: 05ea56c28dbd57346a3278efb3d69dd1, type: 2}
+  - {fileID: 11400000, guid: 64f864c8da514ab47ac25ea65eb4d212, type: 2}
+  tags:
+  - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}
+  - {fileID: 11400000, guid: f7c0109afcb5ab749a73d95ed2733663, type: 2}
+  - {fileID: 11400000, guid: 96d860e45a4d4a8458144f6efa22a0ed, type: 2}
+  references:
+    version: 2
+    RefIds: []

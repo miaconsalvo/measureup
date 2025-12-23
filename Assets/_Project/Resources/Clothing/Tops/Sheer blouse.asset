@@ -12,32 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
   m_Name: Sheer blouse
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
-  name: Item
+  name: Sheer Blouse
   id: e4a65066-42fd-48bb-bf63-34b1f12e92e4
   <type>k__BackingField: 0
   displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 77207508177903616
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 74879092690771968
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  brand: {fileID: 0}
+  brand: {fileID: 11400000, guid: 1c5f6fd50af6101438919d23064d6175, type: 2}
   icon: {fileID: 21300000, guid: 360905268b99d4345bd81c88f1ff3e88, type: 3}
   sprite: {fileID: 21300000, guid: 93a3e7e27a3cb8c4ca9001e5f405caa5, type: 3}
   sprites: []
-  tags: []
+  tags:
+  - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
+  - {fileID: 11400000, guid: b306f85d40a227544a48f7fd47ea8136, type: 2}
+  - {fileID: 11400000, guid: e92b940437bf51c4bbd846942fc3b02c, type: 2}
+  - {fileID: 11400000, guid: 47fa92b562b53834aa7cc45e5e7de466, type: 2}
   references:
     version: 2
     RefIds: []

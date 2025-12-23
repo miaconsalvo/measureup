@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac65f3b549756749bbcde476d226756, type: 3}
+  m_Name: Quiet Luxury
+  m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ClothingKitScriptable
+  name: Quiet Luxury
+  id: quietLuxury
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:9b488de41f12d8b44a0e611d909df40a
+    m_TableEntryReference:
+      m_KeyId: 77206228227317760
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  price: 0
+  priceRange: SSS
+  garments:
+  - {fileID: 11400000, guid: 0cc2480aa3336904486b6dd16b97abb3, type: 2}
+  - {fileID: 11400000, guid: d063ec79cec0e5144b35863b06baa797, type: 2}
+  - {fileID: 11400000, guid: 439f6f3f3b1678b4ea645e66a7c7f30f, type: 2}
+  - {fileID: 11400000, guid: 916c07cde41b2074d9b0ae4c8ef6d9b5, type: 2}
+  - {fileID: 11400000, guid: 23bf0e15ee0f93843aa9bb8acb5ea203, type: 2}
+  - {fileID: 11400000, guid: 93377e8a67fe5434e8775a012a97f915, type: 2}
+  - {fileID: 11400000, guid: 8aef38701e999c743ab205bf547b80d3, type: 2}
+  tags:
+  - {fileID: 11400000, guid: 96d860e45a4d4a8458144f6efa22a0ed, type: 2}
+  - {fileID: 11400000, guid: f7c0109afcb5ab749a73d95ed2733663, type: 2}
+  - {fileID: 11400000, guid: b739dd24505919541bee74a638139d25, type: 2}
+  references:
+    version: 2
+    RefIds: []

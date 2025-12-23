@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac65f3b549756749bbcde476d226756, type: 3}
+  m_Name: Y2K
+  m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ClothingKitScriptable
+  name: Y2K
+  id: y2k
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:9b488de41f12d8b44a0e611d909df40a
+    m_TableEntryReference:
+      m_KeyId: 77206226075639808
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  price: 400
+  priceRange: $
+  garments:
+  - {fileID: 11400000, guid: 1c8a13a2ba56ca746acda3e9b22fc2a4, type: 2}
+  - {fileID: 11400000, guid: c7adb33845188464f9e7c1103f76a545, type: 2}
+  - {fileID: 11400000, guid: 9e0a3628c1eca1a468f69b48fc84fbd6, type: 2}
+  - {fileID: 11400000, guid: a6d82e72df17fa147a0cd7c2dcfa0d3b, type: 2}
+  - {fileID: 11400000, guid: 051c5868ac44faf4e85a1c9449ac1bc2, type: 2}
+  tags:
+  - {fileID: 11400000, guid: e92b940437bf51c4bbd846942fc3b02c, type: 2}
+  - {fileID: 11400000, guid: 47fa92b562b53834aa7cc45e5e7de466, type: 2}
+  - {fileID: 11400000, guid: 62dc69857624ecb4c807fbd001c128ce, type: 2}
+  references:
+    version: 2
+    RefIds: []

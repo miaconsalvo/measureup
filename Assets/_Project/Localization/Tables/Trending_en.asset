@@ -27,6 +27,31 @@ MonoBehaviour:
     m_Localized: Bright skirts!
     m_Metadata:
       m_Items: []
+  - m_Id: 70300464984350720
+    m_Localized: Anything pink!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70300467400269824
+    m_Localized: Our socials team has determined that pink is where it's at!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70300473100328960
+    m_Localized: Patterned pants!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70300720266469376
+    m_Localized: Our social media team has determined that patterned pants are trending
+      this week!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70300851837591552
+    m_Localized: Chelsea Boots!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70300854152847360
+    m_Localized: Chelsea boots are everywhere online right now!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

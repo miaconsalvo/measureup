@@ -76,6 +76,81 @@ MonoBehaviour:
     m_Localized: This week's episode.
     m_Metadata:
       m_Items: []
+  - m_Id: 70211377501822976
+    m_Localized: 'The style rule was good. I was hesitant to include Dolly, but I
+      see now that this demographic really needs help in their styling. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70211156680105984
+    m_Localized: "Hello,\r\n\r\nJust finished watching Dolly\u2019s episode. \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70210950114828288
+    m_Localized: This week episode feedback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70210898877210624
+    m_Localized: "Hello,\r\n\r\nJust finished watching Sophie\u2019s episode. \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70210626549440512
+    m_Localized: 'M&H is not happy with the final outfit. Their clothes need to be
+      featured, now I have an inbox full of angry emails and a sponsor relationship
+      to repair. I am not impressed. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70210559033729024
+    m_Localized: "Why was there no pink in the outfit? We spend a lot of time researching
+      trends - follow them. Remember you do not have to listen to the contestant.
+      If they didn\u2019t need our help they would not be here. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70210463005138944
+    m_Localized: 'You completely ignored the style rule for this episode, which is
+      unacceptable. Remember the episodes are entirely structured around the style
+      rule. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70210363310727168
+    m_Localized: "Interested to see how next week\u2019s episode goes. \r\n\r\n-Boss\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70210269622558720
+    m_Localized: M&H was happy to see their clothing in the final outfit, they asked
+      if next time we could use even more of their pieces. Something to keep in mind.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70210128828162048
+    m_Localized: 'The pink was great to see. Happy to see Measure Up staying on trend. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70209952906469376
+    m_Localized: 'This style rule worked out well, as I expected. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70209790096171008
+    m_Localized: Sophie Episode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70211379376676864
+    m_Localized: 'I have no clue why you ignored the style rule. Our contestant was
+      not dressed for her age. The style rule was there for a reason. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70211436255633408
+    m_Localized: 'Our socials team was happy that you included patterned pants. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70211438101127168
+    m_Localized: Nothing in this final outfit was trending. Pay attention to the
+      trends, it is important that our audience views Measure Up as fashion experts.
+      We cannot come across as outdated.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70211532196143104
+    m_Localized: "We will see how the rest of the season goes. \r\n\r\n-Boss\r\n"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

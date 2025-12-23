@@ -182,6 +182,136 @@ MonoBehaviour:
     m_Localized: Sport mode activated.
     m_Metadata:
       m_Items: []
+  - m_Id: 74878410168459264
+    m_Localized: Throw on a boxy blazer ot make any outfit feel put together!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74878659456917504
+    m_Localized: This wardrobe staple is perfect for a last minute "The Rock" Halloween
+      costume.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74878700456239104
+    m_Localized: Just for loafin' around!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74878758106947584
+    m_Localized: Every girl needs a classic pair of Oxfords.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74878809482977280
+    m_Localized: Black dress pants are a wardrobe staple in any young professional's
+      wardrobe!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74878858568916992
+    m_Localized: Nothing says dark academia like a luxe sweater vest!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74878912595746816
+    m_Localized: Move over diamonds, heels are a girls best friend. Dress up any
+      outfit with these M&H strappy heels!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74878987392770048
+    m_Localized: Stay cozy and fashionable in this gorgoues sweater from M&H!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879033832103936
+    m_Localized: Sequins are forever! Light up the room everywhere you go in this
+      M&H skirt!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879092690771968
+    m_Localized: A sheer blouse is perfect for layering with your other fav M&H staples!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879134629617664
+    m_Localized: Turn heads in these M&H pants with an unexpected pattern!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879179357675520
+    m_Localized: These M&H flats will have you hopping everywhere you go! From our
+      new eco line!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879238786768896
+    m_Localized: Comfy and stylish!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879292943622144
+    m_Localized: 'This flowy skirt brings a casual but girly vibe to any outfit. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879323385880576
+    m_Localized: Feel pretty in pink in this flowy boho blouse!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879478067617792
+    m_Localized: 'Bring all the colours of the rainbow to the beach with these comfy
+      sandals!
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879475924328448
+    m_Localized: Bring your outfit to new heights with these boho wedges!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879480286404608
+    m_Localized: Nothing ties an outfit together like these chic tie-up sandals!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879700541890560
+    m_Localized: The mini skirt was an icon of women's liberation in the 60s - thanks
+      Mary Quant!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879702756483072
+    m_Localized: Can't we leave these in the 2000s where they belong? - Signed, a
+      tired millenial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879704971075584
+    m_Localized: Eternal brat summer anyone?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879707051450368
+    m_Localized: Layer these for an iconic Y2K look and still be cold!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74879709706444800
+    m_Localized: Lizzie McGuire would die for these shoes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74881590990200832
+    m_Localized: Wear with caution around... everything.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74881619071066112
+    m_Localized: 'She''s demure. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74881642898907136
+    m_Localized: 'Quality over quantity. Ethical production comes with a price tag. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74881698335023104
+    m_Localized: So soft!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74881733030305792
+    m_Localized: 'Smart and sophisticated. Ready for the boardroom. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74881807248515072
+    m_Localized: 'Nothing says "capital gains" quite like these. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74881841004273664
+    m_Localized: Oh, these old things?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

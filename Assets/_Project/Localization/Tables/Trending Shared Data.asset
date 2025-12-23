@@ -23,6 +23,30 @@ MonoBehaviour:
     m_Key: Bright Skirts
     m_Metadata:
       m_Items: []
+  - m_Id: 70300464984350720
+    m_Key: Pink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70300467400269824
+    m_Key: Pink/Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70300473100328960
+    m_Key: Patterned Pants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70300720266469376
+    m_Key: Patterned Pants/Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70300851837591552
+    m_Key: Chelsea Boots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70300854152847360
+    m_Key: Chelsea Boots/Description
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
