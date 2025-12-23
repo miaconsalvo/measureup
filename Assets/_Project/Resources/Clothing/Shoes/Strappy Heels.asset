@@ -35,7 +35,7 @@ MonoBehaviour:
     m_LocalVariables: []
   brand: {fileID: 0}
   icon: {fileID: 21300000, guid: bbcf857f3b773794bb57a8ef966050b5, type: 3}
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 9430ecbd934777143a888ac9a6fa42e2, type: 3}
   sprites: []
   tags: []
   references:
