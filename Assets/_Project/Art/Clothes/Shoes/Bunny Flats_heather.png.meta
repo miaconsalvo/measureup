@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bunny Flats_heather_0: 8513367599114375768
+      Bunny Flats_heather_1: 6345222028165675776
+      Bunny Flats_heather_2: 459447524112810736
+      Bunny Flats_heather_3: 5640303986076853966
+      Bunny Flats_heather_4: -5391634408162541484
+      Bunny Flats_heather_5: -6995701822980428769
+      Bunny Flats_heather_6: -7746634392860400379
+      Bunny Flats_heather_7: -4884379595334385775
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

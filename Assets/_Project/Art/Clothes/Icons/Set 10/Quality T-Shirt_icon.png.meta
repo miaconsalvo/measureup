@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Quality T-Shirt_icon_0: 7945696255392747851
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

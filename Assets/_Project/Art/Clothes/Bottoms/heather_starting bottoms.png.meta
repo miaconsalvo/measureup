@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      heather_starting bottoms_0: 5497858141605583287
+      heather_starting bottoms_1: -2669182766596528050
+      heather_starting bottoms_2: 5393353634488550936
+      heather_starting bottoms_3: -1432733260998169433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

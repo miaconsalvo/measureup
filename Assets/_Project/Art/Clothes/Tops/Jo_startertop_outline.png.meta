@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jo_startertop_outline_0: -3967627854902631689
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
