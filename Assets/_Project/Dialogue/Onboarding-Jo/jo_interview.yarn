@@ -2,8 +2,8 @@ title: JoInterviewStart
 tags: 
 position: -145,-211
 ---
-Dolly: Well hello! Are you the one who is going to be doing my makeover?! How exciting!
-Dolly: Should we get started?!
+Jo: You will have time to ask each contestant three questions. 
+Jo: Choose wisely!
 <<jump JoInterviewQuestions>>
 ===
 
@@ -12,7 +12,7 @@ tags:
 position: -135,-9
 ---
 << if max_questions() == true>>
-    <<jump DollyInterviewEnd>>
+    <<jump JoInterviewEnd>>
 <<endif>>
 
 -> A. How would you describe your day-to-day wardrobe? <<if question_asked(0) == false>>
