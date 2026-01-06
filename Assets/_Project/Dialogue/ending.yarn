@@ -1,6 +1,9 @@
 ﻿title: endingStart
 position: -375,-237
 ---
+
+<<declare $youngItem = "null">>
+
 Host: Welcome to the season finale of Measure Up!, the show where we empower our contestants to live their best lives by showing them how to dress!
 Host: We spent the season teaching our contestants the style rules they needed to live a fulfilling and fashionable life, and revealed their true potential using simple style tips.
 Host: Today we are checking in with our contestants and seeing how their lives changed post-makeover. 
@@ -87,6 +90,7 @@ title: HeatherEndingPos
 color: blue
 position: -50,-22
 ---
+//set $patternedItem if relevant
 Heather: When I left the show, I really liked the new look the stylist gave me.
 
 <<if has_tag("comfy") ==true>>
@@ -103,8 +107,198 @@ Host: Let’s see what our next contestant is up to now.
 ===
 title: SophieEnding
 color: purple
-position: -371,318
+position: -339,517
 ---
 Host: We helped Sophie revamp her wardrobe before starting her new job as an economics professor. 
 Host: Time to find out how those lessons played out in the classroom!
+ <<if get_reaction("sophie") == 0 >>
+    <<jump SophieEndingNeutral>>
+<<elseif get_reaction("sophie") == 1>>
+    <<jump SophieEndingPos>>
+<<elseif get_reaction("sophie") == 2>>
+    <<jump SophieEndingNeg>>
+<<endif>>
+===
+
+title: SophieEndingNeutral
+color: purple
+position: -40,321
+---
+<<if $same_outfit == true>>
+    Sophie: So, I’ve just been dressing the same as I usually do and it’s... fine I guess.
+    Sophie: I still feel like I don’t know how to dress for work.
+    Sophie: If I dress too professionally, then my students don’t think I’m approachable,
+    Sophie: But, if I dress too casually then my colleagues don’t take me seriously.
+    Sophie: I guess there is no winning. 
+<<else>>
+    Sophie: I still feel like I don’t know how to dress for work.
+    Sophie: If I dress too professionally, then my students don’t think I’m approachable,
+    Sophie: But, if I dress too casually then my colleagues don’t take me seriously.
+    Sophie: I guess there is no winning. 
+<<endif>>
+
+Host: We think Sophie looks great, but you can't please everyone! 
+Host: Time to check in with our final contestant!
+<<jump DollyEnding>>
+===
+
+title: SophieEndingNeg
+color: purple
+position: -43,521
+---
+Sophie: Well, I gave the new look a chance...
+
+<<if has_tag("pink") == true>>
+    Sophie: I know I said I like dressing girly, but pink? It's not fot me!
+    Sophie: It reminds me of when I wore almost all pink everyday. I’m so over it.
+    Sophie: I tried to trust the stylist and keep wearing the new look, but I feel uncomfortable in this outfit.
+    Sophie: This will probably be the last time I wear this outfit. 
+<<elseif has_tag("boyish") == true>>
+    Sophie: I’ve been wearing the look to work, but honestly, I hate it.
+    Sophie: The boyish clothes are not for me, I don’t want to dress like this!
+    Sophie: It’s bringing me down and making it hard for me to be present and happy while teaching. 
+<<endif>>
+
+Host: Well, unfortunately for Sophie, fashion is not graded on a curve!
+Host: Looks like she failed to make the new look work for her. 
+Host: Oh well, it’s time to check in on our last contestant!
+<<jump DollyEnding>>
+===
+
+title: SophieEndingPos
+color: purple
+position: -42,679
+---
+Sophie: I have been loving my new outfit!!!
+<<if has_tag("young") == true>>
+    Sophie: I was hesitant to wear it to work, but I think it helps me feel approachable to my students.
+    Sophie: I have definitely gotten some looks from my fellow colleague though...
+    Sophie: I don't think they respect me very much...
+    Sophie: ...but, I love the new outfit, so it's fine.
+<<elseif has_tag("pattern") == true>>
+    Sophie: I love the pattern in this outfit so much!
+    Sophie: I've been wearing it every chance I get. 
+<<elseif has_tag("business") == true>>
+    Sophie: This look is almost perfect for my new job. 
+    Sophie: Sometimes I feel out of place in the classroom when my students show up in sweatpants, and casual clothes,
+    Sophie: But, I think my co-workers take me seriously. 
+<<elseif has_tag("skirt") == true>>
+    Sophie: The skirt is great. 
+    Sophie: I’ve been wearing it to work, or really anytime I want to feel cute and feminine.
+    Sophie: I am super happy with it!
+<<endif>>
+
+Host: Sophie gave our stylist an "A" for her new look!
+Host: Time to check in with our last contestant!
+
+<<jump DollyEnding>>
+===
+
+title: DollyEnding
+color: green
+position: -383,1044
+---
+Host: The last time we saw Dolly, we taught her how to get all dolled up, but in an age-appropriate way!
+Host: Let’s see if our lessons stood the test of time!
+
+ <<if get_reaction("dolly") == 0 >>
+    <<jump DollyEndingNeutral>>
+<<elseif get_reaction("dolly") == 1>>
+    <<jump DollyEndingPos>>
+<<elseif get_reaction("dolly") == 2>>
+    <<jump DollyEndingNeg>>
+<<endif>>
+===
+
+title: DollyEndingNeutral
+color: green
+position: -59,883
+---
+Dolly: I thought going on a makeover show would be more interesting.
+
+<<if $same_outfit == true>>
+    Dolly: Why’d the stylist just send me out in the outfit I came in?
+    Dolly: I know I already dress pretty great, but it would have been fun to get a new outfit out of the experience. 
+<<else>>
+    Dolly: I didn’t care about the outfit your stylist gave me, one way or the other.
+    Dolly: It was boring!
+    Dolly: So, I just went back to how I liked to dress before. 
+<<endif>>
+
+Host: Yikes! Even our brilliant stylist couldn’t convince Dolly.
+Host: Some people are beyond help!
+<<jump ShowEnding>>
+===
+
+title: DollyEndingNeg
+color: green
+position: -64,1034
+---
+Dolly: The look your fancy stylist gave me didn’t last one day.
+Dolly: They weren’t paying attention to what I wanted or what I like at all!
+Dolly: Have you fired them yet?
+
+<<if has_tag("business") == true>>
+    Dolly: I spent decades dressing up in business clothes!
+    Dolly: Why would I want to keep dressing like that now that I’m retired?
+<<elseif has_tag("simple") == true || has_tag("muted") && has_tag("flashy") == false && has_tag("bright") == false>>
+    Dolly: Do you think old ladies want to dress in simple boring clothes just because we are old?
+    Dolly:  So an old lady wants to dress more flashy? Big whoop. Why can’t I?
+<<elseif has_tag("modest") == true && has_tag("risque") == false>>
+    Dolly: Your stylist put me in the exact kind of outfit a women's magazine would tell someone my age to wear.
+    Dolly: I hated it!
+    Dolly: I get hot flashes at my age you know, I don't want to be covered head to toe in modest clothing. 
+<<endif>>
+
+Host: Yikes! I guess even our stylist couldn’t help Dolly.
+Host: We did our best but we just can’t keep her from her juvenile wardrobe. 
+<<jump ShowEnding>>
+===
+
+title: DollyEndingPos
+position: -66,1168
+color: green
+---
+//set $girlyItem or $youngItem if relevant
+
+Dolly: I loved being on the show!
+Dolly: The stylist really knocked it out of the park!
+Dolly: I've been wearing my new outfit all around town!
+
+<<if has_tag("girly")>>
+    Dolly: The {$girlyItem} is just to die for, it's so girly!
+    Dolly: My kids give me a hard time when I wear it, they say it's too girly for someone my age. 
+    Dolly: But honestly, what do they know? I think it's great!
+<<elseif has_tag("young")>>
+    Dolly: Sometimes I get an odd look, especially when I wear the {$youngItem}.
+    Dolly: My wife say's it's because people don't expect to see something like that on someone my age. 
+    Dolly: Jeez, people should mind their own business.
+<<elseif has_tag("bright") || has_tag("flashy")>>
+    Dolly: I really turn heads in this outfit!
+    Dolly: The other day I went to the mall with my daughter, I think I embarrassed her! Ha!
+    Dolly: She really regrets signing me up for this show now!
+<<elseif has_tag("skirt")>>
+    Dolly: I just love a good skirt! They are so fun!
+    Dolly: I’ve been wearing this one every chance I get!
+    Dolly: A couple of my friends say I’m too old to be wearing skirts.
+    Dolly: Too old for skirts? Who put that idea in their heads?
+<<elseif has_tag("heels")>>
+    Dolly: The heels are my favourite part of the outfit!
+    Dolly: A good pair of heels just makes any outfit amazing, don’t you think?
+    Dolly: My kids tried to tell me someone my age shouldn’t wear heels anymore, but I won’t be having any of that.
+<<endif>>
+
+Host: Well age-appropriate or not, our contestant seems happy with the new look! 
+Host: And at the end of the day that’s what matters... right?
+
+<<jump ShowEnding>>
+===
+
+title: ShowEnding
+color: yellow
+position: -391,1405
+---
+Host: Well, there you have it folks!
+Host: What a season, thank you to our contestants for participating and to you, our audience, for tuning in!
+Host: We will see you next time!
 ===

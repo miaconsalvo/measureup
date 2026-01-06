@@ -3,8 +3,8 @@ tags:
 position: -145,-211
 ---
 <<Scene  dressing_room>>
-Jo: Well hello! Are you the one who is going to be doing my makeover?! How exciting!
-Jo: Should we get started?!
+Jo: You will have time to ask each contestant three questions. 
+Jo: Choose wisely!
 <<jump JoInterviewQuestions>>
 ===
 
