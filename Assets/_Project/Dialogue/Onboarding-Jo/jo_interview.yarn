@@ -2,6 +2,7 @@ title: JoInterviewStart
 tags: 
 position: -145,-211
 ---
+<<Scene  dressing_room>>
 Jo: Well hello! Are you the one who is going to be doing my makeover?! How exciting!
 Jo: Should we get started?!
 <<jump JoInterviewQuestions>>

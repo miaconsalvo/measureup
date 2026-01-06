@@ -1,7 +1,10 @@
 using MeasureUp.Core;
 using Mystie.Core;
+using Mystie.Utils;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.InputSystem.InputAction;
@@ -40,7 +43,13 @@ namespace Mystie.UI
         [SerializeField] public List<UIState> startStates = new List<UIState>();
         protected Stack<UIState> stateStack = new Stack<UIState>();
 
-        public UIState CurrentState { get { return (stateStack.Count > 0) ? stateStack.Peek() : null; } }
+        public UIState CurrentState => (stateStack.Count > 0) ? stateStack.Peek() : null;
+
+        private float lastStateChangeTime = 0f;
+        private const float INPUT_BUFFER_TIME = 0.1f; // 100ms buffer
+        private bool IsInputBuffer { get => Time.unscaledTime - lastStateChangeTime >= INPUT_BUFFER_TIME; }
+
+        [SerializeField] private bool showDebug;
 
         void Awake()
         {
@@ -90,43 +99,89 @@ namespace Mystie.UI
                 if (state != null) SetState(state);
         }
 
+        public void OnStateChange()
+        {
+            lastStateChangeTime = Time.unscaledTime;
+        }
+
         public void SetState(UIState newState)
         {
             if (newState == null) return;
 
-            if (CurrentState != null) CurrentState.PauseState(); // pause the current state
+            if (CurrentState != null)
+            {
+                if (showDebug) Debug.Log("UIManager: Paused state: " + CurrentState.name);
+                CurrentState.PauseState(); // pause the current state
+            }
+            if (showDebug) Debug.Log("UIManager: Set state: " + newState.name);
 
-            newState.DisplayState();
-
+            OnStateChange();
             stateStack.Push(newState); // we push the new state on top of the stack
+            StartCoroutine(newState.DisplayState());
         }
 
-        public void CloseState()
+        public void CloseState(bool immediate = false)
         {
             if (CurrentState == null) return;
 
-            stateStack.Pop().CloseState(); // we close the current state
-            if (CurrentState != null) CurrentState?.DisplayState();
-        }
+            if (showDebug) Debug.Log("UIManager: Closing State " + CurrentState.name);
 
-        private IEnumerator CloseStateCoroutine()
-        {
+            OnStateChange();
 
-            yield return new WaitForSeconds(0);
-            stateStack.Pop().CloseState(); // we close the current state
-            if (CurrentState != null) CurrentState?.DisplayState();
+            StartCoroutine(stateStack.Pop().HideState(immediate)); // we close the current state
+            if (CurrentState != null) CurrentState?.ResumeState();
         }
 
         public void ClearStates()
         {
-            while (CurrentState != null) CloseState();
+            if (showDebug) Debug.Log("UIManager: Clear all states");
+            while (CurrentState != null) CloseState(true);
         }
 
+        public void OnSubmit(CallbackContext ctx) { if (IsInputBuffer) CurrentState?.Submit(); }
 
-        public void OnSubmit(CallbackContext ctx) { CurrentState?.Submit(); }
+        public void OnCancel(CallbackContext ctx) { if (IsInputBuffer) CurrentState?.Cancel(); }
 
-        public void OnCancel(CallbackContext ctx) { CurrentState?.Cancel(); }
+        public void OnEscape() { if (IsInputBuffer) CurrentState?.Escape(); }
 
         public void OnPause(CallbackContext ctx) { CurrentState?.Pause(); }
+
+        public string GetStateStackString()
+        {
+            string s = "UIManager: State Stack\n";
+
+            foreach (UIState state in stateStack)
+            {
+                s += "\n\tUI State: " + state.gameObject.name;
+            }
+
+            return s;
+        }
+
+#if UNITY_EDITOR
+        protected virtual void OnGUI()
+        {
+            if (showDebug && Selection.Contains(gameObject))
+            {
+                GUIStyle style = new GUIStyle();
+                float ratio = UIManager.ScreenScale;
+                style.fontSize = (int)Math.Ceiling(24 * ratio);
+                style.normal.textColor = Color.black;
+
+                Vector2 size = new Vector2(200f, 200f) * ratio;
+                Vector2 offset = new Vector2(48f, 48f) * ratio;
+                Vector2 gap = new Vector2(0f, 24f) * ratio;
+
+                //RectData rect = new RectData(200f, 40f, Screen.width - (300f), Screen.height - 90f, 0f, 50f);
+                //RectData rect = new RectData(size.x, size.y, Screen.width - size.x - offset.x, Screen.height - size.y - offset.y, gap.x, gap.y);
+                RectData rect = new RectData(size.x, size.y, offset.x, offset.y, gap.x, gap.y);
+
+                //string displayText = "UI State: " + (CurrentState != null ? CurrentState.name : "null");
+                string displayText = GetStateStackString();
+
+                GUI.Label(rect.GetRect(0), displayText, style);
+            }
+        }
+#endif
     }
 }

@@ -60,8 +60,8 @@ namespace Mystie
             }
 
             SetEpisodeIndex(i);
-            if (index == 0) SceneTransitioner.Instance.LoadScene(onbardingScene);
-            else if (index < episodes.Count) SceneTransitioner.Instance.LoadScene(episodeScene);
+            //if (index == 0) SceneTransitioner.Instance.LoadScene(onbardingScene);
+            if (index < episodes.Count) SceneTransitioner.Instance.LoadScene(episodeScene);
             else if (index == episodes.Count) SceneTransitioner.Instance.LoadScene(endScene);
             else SceneTransitioner.Instance.LoadScene(mainMenuScene);
         }

@@ -62,6 +62,7 @@ namespace Mystie.Dialogue
         [YarnCommand("Reset")]
         public static void ResetScene()
         {
+            Debug.Log("ResetScene called");
             DialogueManager.Instance.ResetScene();
             HideAllSprites();
             FadeInBG(0);

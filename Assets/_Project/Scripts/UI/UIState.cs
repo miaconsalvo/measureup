@@ -9,6 +9,7 @@ using Mystie.Core;
 using DG.Tweening;
 using UnityEngine.Serialization;
 using VInspector;
+using UnityEngine.Localization;
 
 namespace Mystie.UI
 {
@@ -47,31 +48,25 @@ namespace Mystie.UI
         [SerializeField] private EventReference displaySFX;
         [SerializeField] private EventReference closeSFX;
 
+        [Space]
+
+        [SerializeField] protected LocalizedString submitPopupText;
+        [SerializeField] protected LocalizedString closePopupText;
+
+        private Tween canvasTween, canvasBGTween;
+
         protected virtual void Awake()
         {
             rect = GetComponent<RectTransform>();
             manager = UIManager.Instance;
-            if (canvas != null)
-            {
-                canvas.alpha = 0;
-                canvas.blocksRaycasts = false;
-            }
 
-            if (canvasBackground != null)
-            {
-                canvasBackground.alpha = 0;
-                canvasBackground.blocksRaycasts = false;
-            }
-
-            if (manager.CurrentState != this)
-                CloseState();
+            Hide();
         }
 
         protected virtual void OnEnable()
         {
             if (submitBtn != null) submitBtn.onClick.AddListener(Submit);
-            if (closeBtn != null) closeBtn.onClick.AddListener(Close);
-            if (submitPopup != null) submitPopup.onSubmit += OnSubmit;
+            if (closeBtn != null) closeBtn.onClick.AddListener(CloseState);
 
             foreach (NavButton navButton in navButtons)
             {
@@ -82,8 +77,7 @@ namespace Mystie.UI
         protected virtual void OnDisable()
         {
             if (submitBtn != null) submitBtn.onClick.RemoveListener(Submit);
-            if (closeBtn != null) closeBtn.onClick.RemoveListener(Close);
-            if (submitPopup != null) submitPopup.onSubmit -= OnSubmit;
+            if (closeBtn != null) closeBtn.onClick.RemoveListener(CloseState);
 
             foreach (NavButton navButton in navButtons)
             {
@@ -91,21 +85,20 @@ namespace Mystie.UI
             }
         }
 
-        public virtual void DisplayState()
+        public virtual IEnumerator DisplayState()
         {
+            StopCoroutine(HideState());
+
             if (canvas != null)
-            {
-                canvas.alpha = 1f;
-                //canvas.DOFade(1, fadeInTime);
-                canvas.blocksRaycasts = true;
-            }
+                canvasTween = canvas.DOFade(1, fadeInTime).SetUpdate(true);
 
             if (canvasBackground != null)
-            {
-                canvasBackground.alpha = 1f;
-                //canvasFocused.DOFade(1, fadeInTime);
-                canvasBackground.blocksRaycasts = true;
-            }
+                canvasBGTween = canvasBackground.DOFade(1, fadeInTime).SetUpdate(true);
+
+            yield return new WaitForSecondsRealtime(fadeInTime);
+
+            if (canvas != null) canvas.blocksRaycasts = true;
+            if (canvasBackground != null) canvasBackground.blocksRaycasts = true;
 
             if (rect != null) LayoutRebuilder.ForceRebuildLayoutImmediate(rect);
 
@@ -115,46 +108,94 @@ namespace Mystie.UI
                 RuntimeManager.PlayOneShot(displaySFX);
 
             onDisplay?.Invoke();
+
+            yield break;
+        }
+
+        public virtual void ResumeState()
+        {
+            StopCoroutine(HideState());
+            canvasTween?.Kill();
+            canvasBGTween?.Kill();
+
+            if (canvas != null)
+            {
+                canvas.alpha = 1;
+                canvas.blocksRaycasts = true;
+            }
         }
 
         public virtual void PauseState()
         {
+            StopCoroutine(DisplayState());
+            canvasTween?.Kill();
+            canvasBGTween?.Kill();
+
             if (canvas != null)
             {
                 canvas.alpha = 0;
-                //canvasFocused.DOFade(0, fadeOutTime);
                 canvas.blocksRaycasts = false;
             }
+        }
+
+        public virtual IEnumerator HideState(bool immediate = false)
+        {
+            StopCoroutine(DisplayState());
+            canvasTween?.Kill();
+            canvasBGTween?.Kill();
+
+            if (immediate)
+            {
+                if (canvas != null)
+                {
+                    canvas.alpha = 0;
+                    canvas.blocksRaycasts = false;
+                }
+
+                if (canvasBackground != null)
+                {
+                    canvasBackground.alpha = 0;
+                    canvasBackground.blocksRaycasts = false;
+                }
+            }
+            else
+            {
+                if (canvas != null)
+                {
+                    canvasTween = canvas.DOFade(0, fadeOutTime).SetUpdate(true);
+                    canvas.blocksRaycasts = false;
+                }
+
+                if (canvasBackground != null)
+                {
+                    canvasBGTween = canvasBackground.DOFade(0, fadeOutTime).SetUpdate(true);
+                    canvasBackground.blocksRaycasts = false;
+                }
+
+                if (!closeSFX.IsNull)
+                    RuntimeManager.PlayOneShot(closeSFX);
+
+                yield return new WaitForSecondsRealtime(fadeOutTime);
+            }
+
+            onExit?.Invoke();
+
+            yield break;
+        }
+
+        public virtual void SetState()
+        {
+            if (manager.CurrentState != this)
+                manager.SetState(this);
         }
 
         public virtual void CloseState()
         {
-            if (canvas != null)
-            {
-                canvas.alpha = 0;
-                //canvas.DOFade(0, fadeOutTime);
-                canvas.blocksRaycasts = false;
-            }
+            if (manager.CurrentState != this) return;
 
-            if (canvasBackground != null)
-            {
-                canvasBackground.alpha = 0;
-                //canvasFocused.DOFade(0, fadeOutTime);
-                canvasBackground.blocksRaycasts = false;
-            }
-
-            if (!closeSFX.IsNull)
-                RuntimeManager.PlayOneShot(closeSFX);
-
-            //Debug.Log("Close state : " + gameObject.name);
-
-            onExit?.Invoke();
-        }
-
-        public virtual void Close()
-        {
-            if (manager.CurrentState == this)
-                manager.CloseState();
+            if (!closePopupText.IsEmpty)
+                PopupEvents.RequestConfirmation(closePopupText, OnClose);
+            else OnClose();
         }
 
         public virtual void Escape()
@@ -165,29 +206,28 @@ namespace Mystie.UI
 
         public virtual void Submit()
         {
-            if (submitPopup != null)
-            {
-                manager.SetState(submitPopup);
-            }
+            if (manager.CurrentState != this) return;
+
+            if (!submitPopupText.IsEmpty)
+                PopupEvents.RequestConfirmation(submitPopupText, OnSubmit);
             else OnSubmit();
         }
 
         public virtual void OnSubmit()
         {
-            if (closeStateOnSubmit) manager.CloseState();
             onSubmit?.Invoke();
+            if (closeStateOnSubmit) manager.CloseState();
+        }
+
+        public virtual void OnClose()
+        {
+            manager.CloseState();
         }
 
         public virtual void Cancel()
         {
-            if (closeStateOnCancel) manager.CloseState();
             onCancel?.Invoke();
-        }
-
-        public virtual void SetState()
-        {
-            if (manager.CurrentState != this)
-                manager.SetState(this);
+            if (closeStateOnCancel) manager.CloseState();
         }
 
         public virtual void Pause()

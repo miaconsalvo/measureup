@@ -33,7 +33,7 @@ namespace Mystie.Dialogue
 		[SerializeField] private ActorCollection actorsCollection;
 		[SerializeField] private LocationCollection loadLocations;
 
-		private GameObject currentLocation;
+		public GameObject currentLocation { get; private set; }
 		private Dictionary<string, GameObject> locationsDict;
 
 		//[Tooltip("if enabled: will automatically load all Sprites and AudioClips in any /Resources/ folder including any subfolders")]
@@ -83,7 +83,13 @@ namespace Mystie.Dialogue
 		{
 			//bgImage.sprite = FetchAsset<Sprite>(spriteName);
 
-			if (currentLocation) currentLocation.SetActive(false);
+			Debug.Log($"DoSceneChange called: {locationName}");
+
+			if (currentLocation)
+			{
+				Debug.Log($"Deactivating current location: {currentLocation.name}");
+				currentLocation.SetActive(false);
+			}
 			if (!locationsDict.ContainsKey(locationName))
 			{
 				Debug.Log("Location " + locationName + " not found", this);
@@ -91,6 +97,7 @@ namespace Mystie.Dialogue
 			}
 
 			currentLocation = locationsDict[locationName];
+			Debug.Log($"Activating new location: {currentLocation.name}");
 			currentLocation.SetActive(true);
 			//bgImage.sprite = FetchAsset<Sprite>( spriteName );
 		}
@@ -214,6 +221,16 @@ namespace Mystie.Dialogue
 		/// <summary>Reset doesn't actually use any parameters</summary>
 		public void ResetScene()
 		{
+			Debug.Log("DialogueManager.ResetScene (instance) called");
+			Debug.Log("Current location: " + (currentLocation != null ? currentLocation.name : "null"));
+
+			if (currentLocation != null)
+			{
+				Debug.Log("Deactivating current location: " + currentLocation.name);
+				currentLocation.SetActive(false);
+				currentLocation = null;
+			}
+
 			if (bgImage != null) bgImage.sprite = null;
 			HideAllSprites();
 			//SetFade(fadeBG, 0);

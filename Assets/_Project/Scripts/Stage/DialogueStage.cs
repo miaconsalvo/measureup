@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Mystie.Core;
-using Mystie.Dialogue;
+using Mystie.UI;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.UI;
@@ -11,38 +11,27 @@ namespace Mystie
 {
     public class DialogueStage : LevelStage
     {
-        public DialogueRunner dialogueRunner;
         public string nodeStart;
+        public bool skippable;
         [SerializeField] protected Button skipButton;
         [SerializeField] protected LocalizedString skipPopupText;
 
         protected override void OnStageEnter()
         {
-            base.OnStageEnter();
+            uiState.onExit += OnDialogueComplete;
 
-            dialogueRunner.onDialogueComplete.AddListener(OnDialogueComplete);
-            if (skipButton != null)
-            {
-                skipButton.gameObject.SetActive(true);
-                skipButton.onClick.AddListener(OnSkipDialogue);
-            }
             if (completeStageButton != null)
                 completeStageButton.gameObject.SetActive(false);
-            dialogueRunner.StartDialogue(nodeStart);
+            ((UIDialogueState)uiState).SetDialogue(nodeStart, skippable);
+
+            base.OnStageEnter();
 
             Debug.Log("On stage enter");
         }
 
         protected override void OnStageComplete()
         {
-            DialogueManagerCommands.ResetScene();
-            dialogueRunner.onDialogueComplete.RemoveListener(OnDialogueComplete);
-
-            if (skipButton != null)
-            {
-                skipButton.gameObject.SetActive(false);
-                skipButton.onClick.RemoveListener(OnSkipDialogue);
-            }
+            uiState.onExit -= OnDialogueComplete;
 
             base.OnStageComplete();
         }
@@ -52,18 +41,6 @@ namespace Mystie
             if (completeStageButton != null)
                 completeStageButton.gameObject.SetActive(true);
             else OnStageComplete();
-        }
-
-        protected void SkipDialogue()
-        {
-            if (!skipPopupText.IsEmpty)
-                PopupEvents.RequestConfirmation(skipPopupText, OnStageComplete);
-            else OnStageComplete();
-        }
-
-        protected void OnSkipDialogue()
-        {
-            dialogueRunner.Stop();
         }
     }
 }

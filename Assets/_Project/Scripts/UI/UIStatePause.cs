@@ -8,10 +8,10 @@ namespace Mystie
 {
     public class UIStatePause : UIState
     {
-        public override void DisplayState()
+        public override IEnumerator DisplayState()
         {
             GameManager.Pause();
-            base.DisplayState();
+            yield return StartCoroutine(base.DisplayState());
         }
 
         public override void CloseState()
@@ -22,7 +22,7 @@ namespace Mystie
 
         public override void Pause()
         {
-            Close();
+            CloseState();
         }
     }
 }

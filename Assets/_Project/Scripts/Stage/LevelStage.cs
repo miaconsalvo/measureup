@@ -15,7 +15,6 @@ namespace Mystie.Core
         public event Action onStageComplete;
 
         public LevelManager levelManager { get; protected set; }
-        public UIManager uiManager { get; protected set; }
 
         public bool active { get; private set; }
 
@@ -31,7 +30,6 @@ namespace Mystie.Core
         protected virtual void Awake()
         {
             levelManager = LevelManager.Instance;
-            uiManager = UIManager.Instance;
         }
 
         protected virtual void OnEnable()
@@ -64,7 +62,7 @@ namespace Mystie.Core
         protected virtual void OnStageEnter()
         {
             active = true;
-            uiManager.SetState(uiState);
+            uiState.SetState();
             onStageEnter?.Invoke();
             if (completeStageButton != null)
                 completeStageButton.onClick.AddListener(CompleteStage);
@@ -82,7 +80,7 @@ namespace Mystie.Core
         {
             Debug.Log("Stage complete: " + stage, this);
             active = false;
-            uiManager.CloseState();
+            uiState.CloseState();
             onStageComplete?.Invoke();
             if (completeStageButton != null)
                 completeStageButton.onClick.RemoveListener(CompleteStage);
