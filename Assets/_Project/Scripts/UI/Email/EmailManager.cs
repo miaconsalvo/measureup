@@ -30,7 +30,7 @@ namespace Mystie
 
         private void OnStageComplete(LevelStageType type)
         {
-            if (type == LevelStageType.CATWALK)
+            if (type == LevelStageType.DRESSUP)
             {
                 foreach (EmailScriptable email in episode.endEmails)
                     if (email != null) AddEmail(email);

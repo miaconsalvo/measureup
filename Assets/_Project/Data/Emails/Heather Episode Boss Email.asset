@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 843a9e565f5be2247829d153e225f526, type: 3}
-  m_Name: Episode 1 Boss Email
+  m_Name: Heather Episode Boss Email
   m_EditorClassIdentifier: 
   sender: boss@measureup.com
   subject:

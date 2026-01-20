@@ -32,7 +32,7 @@ MonoBehaviour:
     m_LocalVariables: []
   rules:
   - op: 0
-    not: 1
+    not: 0
     tags:
     - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
     - {fileID: 11400000, guid: 46da594aa093a314ca17348cd4a39004, type: 2}

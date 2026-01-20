@@ -28,6 +28,9 @@ namespace Mystie
                 Destroy(tagsAnchor.GetChild(i).gameObject);
             }
 
+            tagsUI.Clear();
+            currentTagsUI.Clear();
+
             if (!tags.IsNullOrEmpty()) SetTags(tags);
             else if (disableWhenEmpty) tagsAnchor.gameObject.SetActive(false);
         }
@@ -86,7 +89,13 @@ namespace Mystie
         public void ClearTags()
         {
             currentTagsUI = new List<TagLabelUI>();
-            foreach (TagLabelUI tagUI in tagsUI) tagUI.Deactivate();
+            foreach (TagLabelUI tagUI in tagsUI)
+            {
+                if (tagUI != null)
+                {
+                    tagUI.Deactivate();
+                }
+            }
             if (disableWhenEmpty) tagsAnchor.gameObject.SetActive(false);
         }
     }

@@ -18,7 +18,9 @@ namespace Mystie.Dressup
         public BrandScriptable brand;
         public Sprite icon;
         public Sprite sprite;
+        public Sprite spriteOutline;
         public List<SpriteItem> sprites;
+        public int displayOrder;
 
         public List<ClothingTag> tags = new List<ClothingTag>();
 

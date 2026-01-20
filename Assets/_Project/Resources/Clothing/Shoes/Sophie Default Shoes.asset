@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sophie Default Shoes
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Sophie Default Shoes
-  id: 
+  id: 3b83ee95-fe5e-47dd-8f7b-618bfc4dcb2f
   <type>k__BackingField: 2
   displayName:
     m_TableReference:

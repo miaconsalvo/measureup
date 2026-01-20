@@ -3,6 +3,7 @@ using Mystie.Core;
 using Mystie.UI.Transition;
 using NaughtyAttributes;
 using UnityEngine;
+using VInspector;
 
 namespace Mystie
 {
@@ -51,6 +52,7 @@ namespace Mystie
             LoadEpisode(index);
         }
 
+        [VInspector.Button]
         public void LoadEpisode(int i)
         {
             if (i < 0)

@@ -524,6 +524,9 @@ MonoBehaviour:
       isKeyRepeated: 0
       isKeyNull: 0
     dividerPos: 0.33
+  itemsBgUI:
+    serializedKvps: []
+    dividerPos: 0.33
 --- !u!1 &3437832220953379695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,6 +1618,27 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  submitPopupText:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  closePopupText:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!225 &3782357023061548148
 CanvasGroup:
   m_ObjectHideFlags: 0

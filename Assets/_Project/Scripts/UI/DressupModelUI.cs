@@ -5,6 +5,7 @@ using Mystie.Core;
 using Mystie.Dialogue;
 using Mystie.Dressup;
 using UnityEngine;
+using UnityEngine.Localization.SmartFormat.Utilities;
 using UnityEngine.UI;
 using VInspector;
 
@@ -22,6 +23,7 @@ namespace Mystie
         [SerializeField] private Image modelImage;
 
         [SerializeField] private SerializedDictionary<ItemType, Image> itemsUI;
+        [SerializeField] private SerializedDictionary<ItemType, Image> itemsBgUI;
 
         public void Initialize(EpisodeScriptable episode)
         {
@@ -50,11 +52,11 @@ namespace Mystie
             }
         }
 
-        public void AddItem(ItemScriptable item)
+        /*public void AddItem(ItemScriptable item)
         {
             if (item == null) return;
             dressupManager.AddItem(item);
-        }
+        }*/
 
         /*public void InitializeLayers()
         {
@@ -82,6 +84,8 @@ namespace Mystie
                 itemsUI[item.type].SetNativeSize();
                 //dialogueModel.Set(model);
             }
+
+            ReorderItems();
         }
 
         public void OnItemRemoved(ItemScriptable item)
@@ -91,6 +95,24 @@ namespace Mystie
                 itemsUI[item.type].gameObject.SetActive(false);
                 itemsUI[item.type].sprite = null;
                 //dialogueModel.Set(model);
+            }
+
+            ReorderItems();
+        }
+
+        private void ReorderItems()
+        {
+            List<ItemScriptable> sortedItems = dressupManager.items.Values
+                .Where(item => item != null)
+                .OrderBy(item => item.displayOrder)
+                .ToList();
+
+            for (int i = 0; i < sortedItems.Count; i++)
+            {
+                if (itemsUI.ContainsKey(sortedItems[i].type))
+                {
+                    itemsUI[sortedItems[i].type].transform.SetSiblingIndex(i);
+                }
             }
         }
     }

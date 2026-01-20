@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
-  m_Name: Item
+  m_Name: Sophie Default Bottom
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Sophie Default Bottom
-  id: 
+  id: 1c98ed74-3eb5-47a4-a8c2-a2776c23730e
   <type>k__BackingField: 1
   displayName:
     m_TableReference:
@@ -37,6 +37,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   sprite: {fileID: 0}
   sprites: []
+  displayOrder: 5
   tags: []
   references:
     version: 2

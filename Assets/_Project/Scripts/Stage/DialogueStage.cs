@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using Mystie.Core;
 using Mystie.UI;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.UI;
 using Yarn.Unity;
 
-namespace Mystie
+namespace Mystie.Core
 {
     public class DialogueStage : LevelStage
     {

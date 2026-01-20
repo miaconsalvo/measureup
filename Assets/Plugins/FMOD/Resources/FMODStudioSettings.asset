@@ -467,7 +467,7 @@ MonoBehaviour:
   TargetBankFolder: 
   EventLinkage: 0
   SerializeGUIDsOnly: 0
-  LoggingLevel: 2
+  LoggingLevel: 0
   SpeakerModeSettings: []
   SampleRateSettings: []
   LiveUpdateSettings: []

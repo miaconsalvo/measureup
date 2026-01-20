@@ -19,7 +19,7 @@ namespace Mystie.Dressup
 
         public ContestantData contestant { get; private set; }
         public Reaction reaction { get; private set; }
-        [SerializeField] private Dictionary<ItemType, ItemScriptable> items;
+        [field: SerializeField] public Dictionary<ItemType, ItemScriptable> items { get; private set; }
 
         public List<ClothingTag> currentTags;
 
@@ -123,15 +123,14 @@ namespace Mystie.Dressup
             if (item == null || items.ContainsValue(item))
                 return;
 
-            if (items.ContainsKey(item.type))
+            if (items.ContainsKey(item.type)
+                && items[item.type] != null
+                && items[item.type] != item)
             {
-                if (items[item.type] != null && items[item.type] != item)
-                    RemoveItem(items[item.type], true);
-                items[item.type] = item;
+                RemoveItem(items[item.type], true);
             }
-            else items.Add(item.type, item);
-
-
+            //else items.Add(item.type, item);
+            items[item.type] = item;
 
             foreach (ClothingTag tag in item.tags)
             {

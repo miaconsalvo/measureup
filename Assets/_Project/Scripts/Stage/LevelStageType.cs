@@ -11,6 +11,7 @@ namespace Mystie.Core
         INTERVIEW,
         DRESSUP,
         CATWALK,
+        POSTCATWALK,
         POSTCHAT,
         ONBOARDING
     }

@@ -31,12 +31,11 @@ namespace Mystie.Dressup
 
         private List<ClothingKitScriptable> kits;
 
+        public bool debug = false;
+
         protected override void Awake()
         {
             base.Awake();
-
-            inventory = levelManager.inventory;
-            inventory.onMoneyUpdated += UpdateMoneyUI;
 
             purchaseButton.onClick.AddListener(OnPurchase);
         }
@@ -52,6 +51,10 @@ namespace Mystie.Dressup
 
         public void Initialize(EpisodeScriptable episode)
         {
+            levelManager = LevelManager.Instance;
+            inventory = levelManager.inventory;
+            inventory.onMoneyUpdated += UpdateMoneyUI;
+
             kits = episode.kitsOnSale;
             // Todo Disable owned kits on start
             kitUIs = new List<ClothingKitUI>();
@@ -71,7 +74,12 @@ namespace Mystie.Dressup
 
             foreach (ClothingKitUI kitUI in kitUIs)
             {
-                Debug.Log($"Kit ui: {kitUI.clothingKit}. Owned: {inventory.ownedKits.Contains(kitUI.clothingKit)}");
+                if (debug)
+                {
+                    Debug.Log($"Kit ui: {kitUI.clothingKit}.");
+                    Debug.Log($"Inventory: {inventory.ownedKits.Contains(kitUI.clothingKit)}");
+                    Debug.Log($"Owned: {inventory.ownedKits.Contains(kitUI.clothingKit)}");
+                }
                 if (inventory.ownedKits.Contains(kitUI.clothingKit))
                 {
                     kitUI.SetPurchased();

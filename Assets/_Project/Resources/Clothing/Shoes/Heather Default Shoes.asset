@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Heather Default Shoes
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Heather Default Shoes
-  id: 
+  id: 1c635f0d-2e43-489d-b9ef-96a7496bb4f1
   <type>k__BackingField: 2
   displayName:
     m_TableReference:

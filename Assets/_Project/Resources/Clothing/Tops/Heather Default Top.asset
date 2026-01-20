@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Heather Default Top
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Heather Default Top
-  id: 
+  id: 36f2723d-0759-4e39-8638-c683d1f12061
   <type>k__BackingField: 0
   displayName:
     m_TableReference:
@@ -37,6 +37,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: edba0df3676e30143bcc6664441c2bec, type: 3}
   sprite: {fileID: 21300000, guid: edba0df3676e30143bcc6664441c2bec, type: 3}
   sprites: []
+  displayOrder: 10
   tags: []
   references:
     version: 2

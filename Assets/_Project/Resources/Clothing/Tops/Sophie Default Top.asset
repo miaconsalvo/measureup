@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sophie Default Top
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Sophie Default Top
-  id: 
+  id: 99e824fe-79c1-41d7-a77b-4c6e219e9b40
   <type>k__BackingField: 0
   displayName:
     m_TableReference:
@@ -37,6 +37,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   sprite: {fileID: 0}
   sprites: []
+  displayOrder: 10
   tags: []
   references:
     version: 2

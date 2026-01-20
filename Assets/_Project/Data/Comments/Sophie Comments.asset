@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82bea0d9d270b5a4e81e421a2938e1cf, type: 3}
+  m_Name: Sophie Comments
+  m_EditorClassIdentifier: 
+  viewerGroups:
+  - {fileID: 11400000, guid: 7bf9482a07c664842acadaa33f8693ab, type: 2}
+  - {fileID: 11400000, guid: 7add09f7c654af9499e80ce30d015f55, type: 2}
+  - {fileID: 11400000, guid: ffe463f0bcc581d409fde9e55f83399e, type: 2}
+  - {fileID: 11400000, guid: 3a75ca536a6950b45b12ed6d4c9d83de, type: 2}
+  - {fileID: 11400000, guid: f9acc075edf57974788ba8f82bb6fac9, type: 2}

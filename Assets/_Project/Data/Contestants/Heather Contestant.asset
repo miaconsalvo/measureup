@@ -26,7 +26,9 @@ MonoBehaviour:
   <model>k__BackingField: {fileID: 21300000, guid: 3b6613d9706f48c49aab7064be2db671, type: 3}
   actor: {fileID: 11400000, guid: a280ec2ec23d79a46a27b862a3b1a990, type: 2}
   startingClothes:
+  - {fileID: 11400000, guid: aa1fa76366d6c824d8df6710fe4f45d2, type: 2}
   - {fileID: 11400000, guid: d58ba5c5502ba7341ab25cfce31ef109, type: 2}
+  - {fileID: 11400000, guid: 42a039b0b424d1544ae8ac82137f75b3, type: 2}
   underwear:
   - {fileID: 11400000, guid: 1fe112ceb73469c418312d74fe818f7f, type: 2}
   - {fileID: 11400000, guid: 297297d9adfb9394faf593dd8751b544, type: 2}

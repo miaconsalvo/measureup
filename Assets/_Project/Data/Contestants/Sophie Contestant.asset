@@ -23,10 +23,12 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  <model>k__BackingField: {fileID: 0}
+  <model>k__BackingField: {fileID: 21300000, guid: 23a6ea3f42c4242448a4641d3baed175, type: 3}
   actor: {fileID: 11400000, guid: 8aec0dce2cc80504180fc98a86c95f16, type: 2}
   startingClothes:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 99859306fc9c4604da0583ac1240b82e, type: 2}
+  - {fileID: 11400000, guid: 32ac0c56ebdeffd4ca7acf123de794c7, type: 2}
+  - {fileID: 11400000, guid: 63e3b93fff9a68140b96d0fe5da86a7b, type: 2}
   underwear:
   - {fileID: 11400000, guid: 1fe112ceb73469c418312d74fe818f7f, type: 2}
   - {fileID: 11400000, guid: 297297d9adfb9394faf593dd8751b544, type: 2}

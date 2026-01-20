@@ -10,31 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c71bdd2891fe1a479bbc64f1486f3ff, type: 3}
-  m_Name: Episode 3
+  m_Name: Episode 1 (Heather)
   m_EditorClassIdentifier: 
-  contestant: {fileID: 11400000, guid: 33aef9671a38d464fb8e2935105f33e5, type: 2}
-  styleRule: {fileID: 11400000, guid: b475a46808084e046b0fdbe69c911c29, type: 2}
-  trendingRule: {fileID: 11400000, guid: 95c9475a78df11f4896f8962ec5dcd3f, type: 2}
-  socialMediaComments: {fileID: 11400000, guid: 3f1a79a2cc21ea14b990ded9ff9020a6, type: 2}
-  stages: 000000000100000002000000030000000400000005000000
-  preChatNode: 
-  interviewNode: 
-  postCatwalkNode: 
-  postChatNode: 
+  contestant: {fileID: 11400000, guid: 7749c355ff86d8e459f6715becae6f25, type: 2}
+  styleRule: {fileID: 11400000, guid: 10d88f6780ed48d4ebf67ec1790aa511, type: 2}
+  trendingRule: {fileID: 11400000, guid: f0bfb4ce66b48fe4f8f66ad2150f97dd, type: 2}
+  socialMediaComments: {fileID: 11400000, guid: e9545bf04a6b5874e8ad7d9b2cdea76e, type: 2}
+  stages: 00000000010000000200000003000000040000000500000006000000
+  preChatNode: HeatherGroupchatStart
+  interviewNode: HeatherInterviewStart
+  postCatwalkNode: HeatherPCW
+  postChatNode: HeatherGroupchatEnd
   logline:
     m_TableReference:
       m_TableCollectionName: GUID:ba909b3975bf8d249ba74c36ea758ded
     m_TableEntryReference:
-      m_KeyId: 41204127916359680
+      m_KeyId: 16714039296
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   trendingDescription:
     m_TableReference:
-      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
+      m_TableCollectionName: GUID:186f780181f63cf4592323b302052e67
     m_TableEntryReference:
-      m_KeyId: 74879134629617664
+      m_KeyId: 6769344512
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -61,28 +61,6 @@ MonoBehaviour:
           m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
         m_TableEntryReference:
           m_KeyId: 50532712448
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-    - name: Practical
-      type: 0
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 43369680781180928
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-    - name: Skirt
-      type: 1
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 43369029615484928
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0
@@ -133,6 +111,17 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
+    - name: Bright
+      type: 1
+      text:
+        m_TableReference:
+          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
+        m_TableEntryReference:
+          m_KeyId: 390078398464
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
   - question: 'C. What is your most loved item in your wardrobe?
 
       -> What you
@@ -160,17 +149,6 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
-    - name: Bright
-      type: 1
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 390078398464
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
   - question: 'C. What is your most loved item in your wardrobe?
 
       -> What you
@@ -183,6 +161,28 @@ MonoBehaviour:
           m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
         m_TableEntryReference:
           m_KeyId: 50532712448
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+    - name: Practical
+      type: 0
+      text:
+        m_TableReference:
+          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
+        m_TableEntryReference:
+          m_KeyId: 43369680781180928
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+    - name: Pattern
+      type: 0
+      text:
+        m_TableReference:
+          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
+        m_TableEntryReference:
+          m_KeyId: 43369614649589760
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0

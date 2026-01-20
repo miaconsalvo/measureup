@@ -60,8 +60,8 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  dialogueRunner: {fileID: 0}
   nodeStart: PCW
+  skippable: 1
   skipButton: {fileID: 0}
   skipPopupText:
     m_TableReference:

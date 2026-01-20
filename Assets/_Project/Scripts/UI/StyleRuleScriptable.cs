@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Mystie.Core;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -15,9 +16,13 @@ namespace Mystie.Dressup
 
         public bool Check(List<ClothingTag> tags)
         {
+            Debug.Log($"Checking style rule {name}. Tags present: {string.Join(", ", tags.Select(t => t.name))}");
+
             foreach (TagRule rule in rules)
             {
-                if (!rule.Check(tags)) return false;
+                bool ruleResult = rule.Check(tags);
+                Debug.Log($"Rule check result: {ruleResult}");
+                if (!ruleResult) return false;
             }
 
             return true;

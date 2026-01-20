@@ -162,7 +162,8 @@ MonoBehaviour:
     m_Localized: This {items:clothing(modest)} is a little modest. You think an old
       lady like me has to be all covered up to look nice?
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 2721915193756483610
   - m_Id: 71375428755906560
     m_Localized: "Just because I\u2019m a gramma doesn\u2019t mean I have to dress
       like one."
@@ -172,7 +173,8 @@ MonoBehaviour:
     m_Localized: This {items:clothing(muted)} is an awful colour. Just dreadful.
       I feel sad just looking at it.
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 2721915193756483610
   - m_Id: 71375826916990976
     m_Localized: This outfit needs more colour!
     m_Metadata:
@@ -188,17 +190,20 @@ MonoBehaviour:
   - m_Id: 71376214839779328
     m_Localized: I love how girly this {items:clothing(girly)} is!
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 2721915193756483610
   - m_Id: 71376216613969920
     m_Localized: You really nailed it with this look, kid! This {items:clothing(girly)}
       is so girly, I love it!
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 2721915193756483610
   - m_Id: 71376607116255232
     m_Localized: Oh my gosh! The young girl who walks our dogs has an {items:clothing(young)}
       just like this one! I love it!
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 2721915193756483610
   - m_Id: 71376647524179968
     m_Localized: "I feel like I\u2019m 23 again in this! Love it!"
     m_Metadata:
@@ -218,7 +223,8 @@ MonoBehaviour:
   - m_Id: 71377097514278912
     m_Localized: This {items:clothing(bright)} is a GORGEOUS colour!
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 2721915193756483610
   - m_Id: 71377318113697792
     m_Localized: "I\u2019ll be turning heads in this outfit for sure!"
     m_Metadata:
@@ -281,17 +287,20 @@ MonoBehaviour:
   - m_Id: 71380503217823744
     m_Localized: 'Hmm, this {items:clothing(boyish)} is kind of boyish. '
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 2721915193756483610
   - m_Id: 71380536843558912
     m_Localized: 'I think that this {items:clothing(boyish)} is too boyish for my
       style. '
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 2721915193756483610
   - m_Id: 71380560134529024
     m_Localized: This doesn't feel like me, I think the {items:clothing(boyish)}
       is throwing me off.
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 2721915193756483610
   - m_Id: 71380980525424640
     m_Localized: Ohh, I love patterns!
     m_Metadata:
@@ -299,7 +308,8 @@ MonoBehaviour:
   - m_Id: 71381015287816192
     m_Localized: I really like the {items:clothing(pattern)}!
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 2721915193756483610
   - m_Id: 71381017103949824
     m_Localized: 'The pattern in this outfit is great. '
     m_Metadata:
@@ -307,11 +317,13 @@ MonoBehaviour:
   - m_Id: 71381253637529600
     m_Localized: Oh this {items:clothing(business)} will be perfect for work!
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 2721915193756483610
   - m_Id: 71381441680760832
     m_Localized: I love this {items:clothing(business)}!
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 2721915193756483610
   - m_Id: 71381561377808384
     m_Localized: Can totally see myself wearing this to work.
     m_Metadata:
@@ -336,7 +348,8 @@ MonoBehaviour:
     m_Localized: I like this {items:clothing(young)} - I wonder if I could wear it
       to work?
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 2721915193756483610
   - m_Id: 71382468425408512
     m_Localized: Try dressing me up in a different outfit!
     m_Metadata:
@@ -400,3 +413,16 @@ MonoBehaviour:
         - id: 6087125606596608
         - id: 6085783861329920
         - id: 6082297979469824
+        - id: 71375577817276416
+        - id: 71376607116255232
+        - id: 71376216613969920
+        - id: 71376214839779328
+        - id: 71380503217823744
+        - id: 71375044058537984
+        - id: 71377097514278912
+        - id: 71380536843558912
+        - id: 71380560134529024
+        - id: 71381015287816192
+        - id: 71381253637529600
+        - id: 71381441680760832
+        - id: 71381811266052096

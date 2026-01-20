@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dolly Default Shoes
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Dolly Defauly Shoes
-  id: 
+  id: fb92b74d-6028-403d-9edf-cae6a93e75f1
   <type>k__BackingField: 2
   displayName:
     m_TableReference:

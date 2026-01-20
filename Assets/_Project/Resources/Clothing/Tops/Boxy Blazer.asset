@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boxy Blazer
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Boxy Blazer and Fitted T-Shirt
-  id: 
+  id: c8c5792e-817f-4ab5-9ea1-44b2ef7bf39f
   <type>k__BackingField: 0
   displayName:
     m_TableReference:
@@ -37,6 +37,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   sprite: {fileID: 0}
   sprites: []
+  displayOrder: 10
   tags:
   - {fileID: 11400000, guid: 78720b0e8379ef548ac85e241ddd1e31, type: 2}
   - {fileID: 11400000, guid: 5a0100448d9cace4c8ef3cfa958a5706, type: 2}

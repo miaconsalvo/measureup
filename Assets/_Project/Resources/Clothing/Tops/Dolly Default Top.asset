@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dolly Default Top
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Dolly Default Top
-  id: 
+  id: a5e6d1c1-4a03-4590-95e2-1a71398c7afc
   <type>k__BackingField: 0
   displayName:
     m_TableReference:
@@ -37,6 +37,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   sprite: {fileID: 0}
   sprites: []
+  displayOrder: 10
   tags: []
   references:
     version: 2

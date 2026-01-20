@@ -33,9 +33,9 @@ namespace Mystie.UI
 
         public override IEnumerator HideState(bool immediate = false)
         {
-            Debug.Log("=== HideState START ===");
-            Debug.Log("Current location before reset: "
-            + (DialogueManager.Instance.currentLocation != null ? DialogueManager.Instance.currentLocation.name : "null"));
+            //Debug.Log("=== HideState START ===");
+            //Debug.Log("Current location before reset: "
+            //+(DialogueManager.Instance.currentLocation != null ? DialogueManager.Instance.currentLocation.name : "null"));
 
             startNode = string.Empty;
 
@@ -43,11 +43,11 @@ namespace Mystie.UI
 
             if (dialogueRunner.IsDialogueRunning)
             {
-                Debug.Log("Stopping dialogue runner");
+                //Debug.Log("Stopping dialogue runner");
                 dialogueRunner.Stop();
             }
 
-            Debug.Log("Calling DialogueManagerCommands.ResetScene()");
+            //Debug.Log("Calling DialogueManagerCommands.ResetScene()");
             DialogueManagerCommands.ResetScene();
 
             if (skipButton != null)
@@ -58,7 +58,7 @@ namespace Mystie.UI
 
             yield return StartCoroutine(base.HideState(immediate));
 
-            Debug.Log("=== HideState END ===");
+            //Debug.Log("=== HideState END ===");
 
             /*if (changeScene)
             {

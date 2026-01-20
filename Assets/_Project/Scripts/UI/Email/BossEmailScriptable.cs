@@ -14,6 +14,13 @@ namespace Mystie
 
         [Header("Body")]
 
+        [SerializeField] private LocalizedString trendingPositive;
+        [SerializeField] private LocalizedString trendingNegative;
+        [SerializeField] private LocalizedString stylePositive;
+        [SerializeField] private LocalizedString styleNegative;
+
+        [Header("Body Old")]
+
         [SerializeField] private LocalizedString bodyPositive;
         [SerializeField] private LocalizedString bodyStyle;
         [SerializeField] private LocalizedString bodyTrending;
