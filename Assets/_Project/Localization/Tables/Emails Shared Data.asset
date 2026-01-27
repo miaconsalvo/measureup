@@ -16,19 +16,19 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: f8984d560999a084891d7f7b462d8d8d
   m_Entries:
   - m_Id: 13920632832
-    m_Key: Episode 1/Perfect
+    m_Key: "Episode Heather/Intro\t"
     m_Metadata:
       m_Items: []
   - m_Id: 61484040192
-    m_Key: Episode 1/Style Rule
+    m_Key: Episode Heather/Style  Followed
     m_Metadata:
       m_Items: []
   - m_Id: 66420736000
-    m_Key: Episode 1/Trending
+    m_Key: Episode Heather/Style Ignored
     m_Metadata:
       m_Items: []
   - m_Id: 87455170560
-    m_Key: Episode 1/Bad
+    m_Key: Episode Heather/Trending Followed
     m_Metadata:
       m_Items: []
   - m_Id: 4077903413248
@@ -121,6 +121,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 70211532196143104
     m_Key: Episode Dolly/Signature
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84253513482231808
+    m_Key: Episode 1/Trending Ignored
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84253731011420160
+    m_Key: Episode Heather/Signature
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84254191449530368
+    m_Key: Episode Heather/Subject Line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84254262954024960
+    m_Key: Episode Dolly/Subject Line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84254292817469440
+    m_Key: Episode Sophie/Subject Line
     m_Metadata:
       m_Items: []
   m_Metadata:

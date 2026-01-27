@@ -19,31 +19,23 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 61484040192
-    m_Localized: "Hello,\r\n \r\nDid you get the memo from our socials team for this
-      week? Bright skirts were trending. Would have been good to include one. Please
-      read the dossier carefully for next ep.\r"
+    m_Localized: "This was a good style rule to start the season with. \nI'm sure
+      our audience learned a lot from this episode. "
     m_Metadata:
       m_Items: []
   - m_Id: 13920632832
-    m_Localized: "Hello,\r\n \r\nGood job on this week\u2019s episode. Including
-      that bright skirt will be sure to draw up some buzz online. Socials team is
-      happy.\r"
+    m_Localized: "Hello,\r\n\r\nJust finished watching Heather\u2019s episode. "
     m_Metadata:
       m_Items: []
   - m_Id: 66420736000
-    m_Localized: "Hello,\r\n \r\nJust watched back this week\u2019s episode. Why
-      did you dress her in clashing colours? Did you see the style rule? Please pay
-      attention to those, they are important. We are trying to teach our audience
-      how to improve their style!\r\n\nThanks for including the bright skirt, the
-      socials team was happy with that.\r"
+    m_Localized: "Why did you dress her in clashing colours? The style rule is the
+      whole premise of the show. \nWe are trying to teach our audience how to improve
+      their style..."
     m_Metadata:
       m_Items: []
   - m_Id: 87455170560
-    m_Localized: "Hello,\r\n \r\nJust checking in to make sure you got this week\u2019s
-      episode dossier. I didn\u2019t see any bright skirt and the style rule wasn\u2019t
-      followed. It is important we include trending items where we can and follow
-      the style rules. We are trying to teach our audience how to improve their style!\r\n\nPlease
-      pay more attention next week.\r"
+    m_Localized: "Including that bright skirt will be sure to draw up some buzz online.
+      \nThe socials team is happy. "
     m_Metadata:
       m_Items: []
   - m_Id: 4320908804096
@@ -73,7 +65,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 30562789883904
-    m_Localized: This week's episode.
+    m_Localized: Season Premiere Episode - Feedback
     m_Metadata:
       m_Items: []
   - m_Id: 70211377501822976
@@ -86,7 +78,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 70210950114828288
-    m_Localized: This week episode feedback
+    m_Localized: 'Feedback: "Dress Your Age" Episode'
     m_Metadata:
       m_Items: []
   - m_Id: 70210898877210624
@@ -129,7 +121,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 70209790096171008
-    m_Localized: Sophie Episode
+    m_Localized: M&H Sponsored Episode - Feedback
     m_Metadata:
       m_Items: []
   - m_Id: 70211379376676864
@@ -148,7 +140,29 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 70211532196143104
-    m_Localized: "We will see how the rest of the season goes. \r\n\r\n-Boss\r\n"
+    m_Localized: "We will see how this episode is received by our audience.  \r\n\n-Boss\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84253513482231808
+    m_Localized: "Bright skirts were trending this week...\nwhy didn't you include
+      one in the outfit? \nPay more attention to the dossier. This was a missed opportunity
+      to generate some online buzz. \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84253731011420160
+    m_Localized: "Overall... an interesting start to the season. \n\n-Boss"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84254191449530368
+    m_Localized: Season Premiere - Episode Feedback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84254262954024960
+    m_Localized: Dress your age Episode - Thoughts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84254292817469440
+    m_Localized: M&H Sponsored Episode - Feedback
     m_Metadata:
       m_Items: []
   references:
