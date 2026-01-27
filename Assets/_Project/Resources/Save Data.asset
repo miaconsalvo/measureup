@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Save Data
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.SaveDataScriptable
   <playerName>k__BackingField: Cindy
-  <startingMoney>k__BackingField: 1000
+  <startingMoney>k__BackingField: 0

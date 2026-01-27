@@ -240,11 +240,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4f0fff8ae5b8c9f4eb3824dd5eaaaa38, type: 2}
   <startEmails>k__BackingField: []
   <endEmails>k__BackingField: []
-  <revenueSocialMediaPositive>k__BackingField: 1000
-  <revenueSocialMediaNeutral>k__BackingField: 750
-  <revenueSocialMediaNegative>k__BackingField: 250
-  <bossBonusPerGroup>k__BackingField: 150
-  <bossBonusMax>k__BackingField: 600
+  <revenueSocialMediaPositive>k__BackingField: 0
+  <revenueSocialMediaNeutral>k__BackingField: 1000
+  <revenueSocialMediaNegative>k__BackingField: 0
+  <bossBonusPerGroup>k__BackingField: 0
+  <bossBonusMax>k__BackingField: 0
   references:
     version: 2
     RefIds: []

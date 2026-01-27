@@ -19,7 +19,7 @@ namespace Mystie
         [SerializeField] private LocalizedString stylePositive;
         [SerializeField] private LocalizedString styleNegative;
 
-        [Header("Body Old")]
+        /*[Header("Body Old")]
 
         [SerializeField] private LocalizedString bodyPositive;
         [SerializeField] private LocalizedString bodyStyle;
@@ -30,13 +30,14 @@ namespace Mystie
 
         [SerializeField] private LocalizedString ratingPositive;
         [SerializeField] private LocalizedString ratingNeutral;
-        [SerializeField] private LocalizedString ratingBad;
+        [SerializeField] private LocalizedString ratingBad;*/
 
         [Header("Signature")]
 
-        [SerializeField] private LocalizedString signaturePositive;
-        [SerializeField] private LocalizedString signatureNeutral;
-        [SerializeField] private LocalizedString signatureBad;
+        [SerializeField] private LocalizedString signature;
+        //[SerializeField] private LocalizedString signaturePositive;
+        //[SerializeField] private LocalizedString signatureNeutral;
+        //[SerializeField] private LocalizedString signatureBad;
 
         public override string Subject => subject.GetLocalizedString();
         public override string Body
@@ -49,7 +50,28 @@ namespace Mystie
                 bool style = LevelManager.Instance.dressup.CheckStyleRule();
                 bool trending = LevelManager.Instance.dressup.CheckTrending();
 
-                if (style && trending)
+                if (trending)
+                {
+                    bodyText += trendingPositive.GetLocalizedString();
+                }
+                else
+                {
+                    bodyText += trendingNegative.GetLocalizedString();
+                }
+
+                if (style)
+                {
+                    bodyText += stylePositive.GetLocalizedString();
+                }
+                else
+                {
+                    bodyText += styleNegative.GetLocalizedString();
+                }
+
+
+                signatureText += "\n\n" + signature.GetLocalizedString();
+
+                /*if (style && trending)
                 {
                     bodyText += bodyPositive.GetLocalizedString();
                     signatureText += "\n\n" + signaturePositive.GetLocalizedString();
@@ -68,7 +90,7 @@ namespace Mystie
                 {
                     bodyText += bodyNegative.GetLocalizedString();
                     signatureText += "\n\n" + signatureBad.GetLocalizedString();
-                }
+                }*/
 
                 string revenueText = $"Revenue: {LevelManager.Instance.GetRevenue()}$";
 
