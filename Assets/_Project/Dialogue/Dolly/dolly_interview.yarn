@@ -44,6 +44,7 @@ Dolly: Dolly: I spend most days with my wife or our friends, practicing guitar, 
 Dolly: My kids say I dress too young for my age, but to be honest with you, I don't really give a rat's ass what they think about my wardrobe. 
 Dolly: Oh, sorry, can I curse on this show?
 // (reveals likes girly, skirt, bright, young, reveals lifestyle hobbies)
+<<add_note 0 0>>
 <<jump DollyInterviewQuestions>>
 ===
 
@@ -61,6 +62,7 @@ Dolly:I really dressed the part so they would take me seriously, like a suit (ha
 Dolly: Pant suits, loafers, collars, the whole shebang. 
 Dolly: Well, never again! 
 // (reveals dislikes business, retired)
+<<add_note 1 1>>
 <<jump DollyInterviewQuestions>>
 ===
 
@@ -78,6 +80,7 @@ Dolly: She agreed, we spent the entire concert hanging out, and the rest is hist
 Dolly: The shirt is actually a bit simple for me, so I used to wear it with some of my flashy skirts and my favourite heels! 
 Dolly: Of course, I still have that shirt and now it really belongs to the both of us. I love it! 
 //(reveals likes flashy, heels, skirts dislikes simple)
+<<add_note 2 2>>
 <<jump DollyInterviewQuestions>>
 ===
 
@@ -92,6 +95,7 @@ Dolly: But then I thought, that's stupid, Dolly, that's all the more reason to g
 Dolly: I mean, I don't think there's anything wrong with how I dress right now. 
 Dolly: I love my girly, bright, wardrobe, but I'm curious how the makeover will go!
 //(reveals likes, girly and bright)
+<<add_note 3 3>>
 <<jump DollyInterviewQuestions>>
 ===
 
@@ -106,6 +110,7 @@ Dolly: So I wore this awful, modest business suit. It had a turtleneck in these 
 Dolly: I don't mind an uncomfy outfit if it looks good – I still love heels after all! – but this outfit didn't even look nice. I think my mom picked it out for me. 
 Dolly: I look back now and can't believe I dressed like that for over 40 years!
 //  (reveals dislikes muted, modest, likes heels)
+<<add_note 4 4>>
 <<jump DollyInterviewQuestions>>
 ===
 

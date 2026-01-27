@@ -36,7 +36,9 @@ MonoBehaviour:
   brand: {fileID: 0}
   icon: {fileID: 0}
   sprite: {fileID: 0}
+  spriteOutline: {fileID: 0}
   sprites: []
+  displayOrder: 0
   tags: []
   references:
     version: 2

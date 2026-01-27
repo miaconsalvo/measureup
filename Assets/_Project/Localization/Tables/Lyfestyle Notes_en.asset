@@ -58,6 +58,10 @@ MonoBehaviour:
     m_Localized: Enjoys baking
     m_Metadata:
       m_Items: []
+  - m_Id: 86699356428689408
+    m_Localized: Likes (almost!) everything
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

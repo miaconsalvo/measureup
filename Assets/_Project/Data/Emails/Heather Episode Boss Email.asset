@@ -22,34 +22,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  bodyPositive:
-    m_TableReference:
-      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
-    m_TableEntryReference:
-      m_KeyId: 13920632832
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  bodyStyle:
-    m_TableReference:
-      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
-    m_TableEntryReference:
-      m_KeyId: 61484040192
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  bodyTrending:
-    m_TableReference:
-      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
-    m_TableEntryReference:
-      m_KeyId: 66420736000
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  bodyNegative:
+  trendingPositive:
     m_TableReference:
       m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
     m_TableEntryReference:
@@ -58,56 +31,38 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  ratingPositive:
+  trendingNegative:
     m_TableReference:
       m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
     m_TableEntryReference:
-      m_KeyId: 5237787852800
+      m_KeyId: 84253513482231808
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  ratingNeutral:
+  stylePositive:
     m_TableReference:
       m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
     m_TableEntryReference:
-      m_KeyId: 5278623596544
+      m_KeyId: 61484040192
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  ratingBad:
+  styleNegative:
     m_TableReference:
       m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
     m_TableEntryReference:
-      m_KeyId: 5299628670976
+      m_KeyId: 66420736000
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  signaturePositive:
+  signature:
     m_TableReference:
-      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
+      m_TableCollectionName: 
     m_TableEntryReference:
-      m_KeyId: 4077903413248
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  signatureNeutral:
-    m_TableReference:
-      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
-    m_TableEntryReference:
-      m_KeyId: 4302198013952
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  signatureBad:
-    m_TableReference:
-      m_TableCollectionName: GUID:f8984d560999a084891d7f7b462d8d8d
-    m_TableEntryReference:
-      m_KeyId: 4320908804096
+      m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

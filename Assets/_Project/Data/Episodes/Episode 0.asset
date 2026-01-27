@@ -43,194 +43,52 @@ MonoBehaviour:
   interviewNotes:
   - question: A. How would you describe your day-to-day wardrobe?
     notes:
-    - name: Comfy
+    - name: Likes almost everything
       type: 0
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 440502321152
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-    - name: Sporty
-      type: 0
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 50532712448
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-    - name: Practical
-      type: 0
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 43369680781180928
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-    - name: Skirt
-      type: 1
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 43369029615484928
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-    - name: Uncomfy
-      type: 1
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 43368113776623616
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-    - name: Busy mom
-      type: 2
       text:
         m_TableReference:
           m_TableCollectionName: GUID:1dc154d288b6b1e48825fd49c1aa3b38
         m_TableEntryReference:
-          m_KeyId: 8652587008
+          m_KeyId: 86699356428689408
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
   - question: B. What would you never be caught dead wearing?
     notes:
-    - name: Skirts
+    - name: Fancy
       type: 1
       text:
         m_TableReference:
           m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
         m_TableEntryReference:
-          m_KeyId: 43369029615484928
+          m_KeyId: 481849769984
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
-    - name: Flashy
-      type: 1
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 43367828941438976
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-  - question: 'C. What is your most loved item in your wardrobe?
-
-      -> What you
-      wear the the most.'
+  - question: C. What is your most loved item in your wardrobe?
     notes:
-    - name: Sporty
+    - name: Likes almost everything
       type: 0
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 50532712448
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-    - name: Pattern
-      type: 0
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 43369614649589760
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-    - name: Bright
-      type: 1
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 390078398464
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-  - question: 'C. What is your most loved item in your wardrobe?
-
-      -> What you
-      love the most, regardless of how often you wear it. '
-    notes:
-    - name: Sporty
-      type: 0
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 50532712448
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-  - question: D. What do you want to get out of this makeover?
-    notes:
-    - name: Sporty
-      type: 0
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 50532712448
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-    - name: Branch out
-      type: 2
       text:
         m_TableReference:
           m_TableCollectionName: GUID:1dc154d288b6b1e48825fd49c1aa3b38
         m_TableEntryReference:
-          m_KeyId: 1655487332352
+          m_KeyId: 86699356428689408
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
   - question: E. What is an outfit you've worn that you'll never wear again?
     notes:
-    - name: Business
+    - name: Fancy
       type: 1
       text:
         m_TableReference:
           m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
         m_TableEntryReference:
-          m_KeyId: 408625610752
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-    - name: Uncomfy
-      type: 1
-      text:
-        m_TableReference:
-          m_TableCollectionName: GUID:5bc35b766c8020a45b1503db9ab49bd5
-        m_TableEntryReference:
-          m_KeyId: 43368113776623616
+          m_KeyId: 481849769984
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0
