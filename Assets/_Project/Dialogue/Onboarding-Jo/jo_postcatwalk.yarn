@@ -11,6 +11,9 @@ position: 552,-98
 //set neg and pos tag variable numbers
 
 <<Scene catwalk>>
+<<Contestant Jo base.neutral center lower 0>>
+<<FadeIn Jo 0.5>>
+<<wait 0.5>>
 
 //negative reactions
 <<if has_tag("fancy") == true>>
@@ -39,10 +42,12 @@ Jo: Awesome work! I really like the outfit you put together.
     Jo: That will keep the boss happy.
 <<endif>>
 Jo: I think you're ready to style an actual contestant!
-<<jump PCWEnd>>
+<<jump JoPCWEnd>>
 ===
 
 title: JoPCWEnd
 ---
-//PCW ends.
+<<FadeOut Jo 0.5>>
+<<wait 0.5>>
+<<HideAll>>
 ===

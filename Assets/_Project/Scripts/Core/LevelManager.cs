@@ -150,8 +150,17 @@ namespace Mystie.Core
 
         public int GetRevenue()
         {
-            int positiveReactions = 0;
             int revenue = episode.revenueSocialMediaNeutral;
+
+            if (episode.socialMediaComments == null
+            || episode.socialMediaComments.viewerGroups.IsNullOrEmpty())
+            {
+                Debug.Log($"Total revenue: {revenue}$");
+                return revenue;
+            }
+
+            int positiveReactions = 0;
+
             foreach (ViewerGroupScriptable group in episode.socialMediaComments.viewerGroups)
             {
                 switch (group.GetReaction(dressup))

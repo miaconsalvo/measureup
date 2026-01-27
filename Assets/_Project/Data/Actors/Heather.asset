@@ -16,7 +16,7 @@ MonoBehaviour:
   code: 
   poses:
   - name: base
-    sprite: {fileID: 21300000, guid: 3b6613d9706f48c49aab7064be2db671, type: 3}
+    sprite: {fileID: 21300000, guid: 9090f650ca6bef04a977138e9d895d90, type: 3}
     offset: {x: 0, y: 0}
   expressions:
   - name: neutral

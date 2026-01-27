@@ -290,7 +290,7 @@ MonoBehaviour:
   <inventory>k__BackingField: {fileID: 482965378}
   episodeIndexOverride: 0
   episodeIndex: 1
-  stagesOverride: 1
+  stagesOverride: 0
   stages: 010000000300000005000000
 --- !u!4 &482965377
 Transform:
@@ -2201,7 +2201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3528531432508356298, guid: cb1a9df42ac703c44a338d8ee6ac6f4c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000091030284
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 3546386349771096952, guid: cb1a9df42ac703c44a338d8ee6ac6f4c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3429,7 +3429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6417673053256726405, guid: cb1a9df42ac703c44a338d8ee6ac6f4c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00018310547
+      value: 0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 6428313329480644528, guid: cb1a9df42ac703c44a338d8ee6ac6f4c, type: 3}
       propertyPath: m_AnchorMax.y

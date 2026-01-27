@@ -16,7 +16,7 @@ MonoBehaviour:
   styleRule: {fileID: 11400000, guid: b475a46808084e046b0fdbe69c911c29, type: 2}
   trendingRule: {fileID: 11400000, guid: 95c9475a78df11f4896f8962ec5dcd3f, type: 2}
   socialMediaComments: {fileID: 11400000, guid: 3f1a79a2cc21ea14b990ded9ff9020a6, type: 2}
-  stages: 00000000010000000200000003000000040000000500000006000000
+  stages: 000000000100000002000000030000000500000006000000
   preChatNode: DollyGroupchatStart
   interviewNode: DollyInterviewStart
   postCatwalkNode: DollyPCW

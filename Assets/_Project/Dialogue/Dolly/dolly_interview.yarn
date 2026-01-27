@@ -2,6 +2,11 @@ title: DollyInterviewStart
 tags: 
 position: -145,-211
 ---
+<<Scene  dressing_room>>
+<<Contestant Dolly base.neutral center lower 0>>
+<<FadeIn Dolly 0.5>>
+<<wait 0.5>>
+
 Dolly: Well hello! Are you the one who is going to be doing my makeover?! How exciting!
 Dolly: Should we get started?!
 <<jump DollyInterviewQuestions>>
@@ -109,4 +114,7 @@ tags:
 position: -129,442
 ---
 Interview ends.
+<<FadeOut Dolly 0.5>>
+<<wait 0.5>>
+<<HideAll>>
 ===

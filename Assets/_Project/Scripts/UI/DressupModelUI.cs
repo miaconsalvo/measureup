@@ -71,6 +71,8 @@ namespace Mystie
         {
             if (item == null) return;
 
+            OnItemRemoved(item.type);
+
             /*if (!itemsUI.ContainsKey(item.type))
             {
                 Image img = Instantiate(clothingImage.gameObject, modelAnchor).GetComponent<Image>();
@@ -85,15 +87,35 @@ namespace Mystie
                 //dialogueModel.Set(model);
             }
 
+            if (itemsBgUI.ContainsKey(item.type))
+            {
+                itemsBgUI[item.type].gameObject.SetActive(item.spriteOutline != null);
+                itemsBgUI[item.type].sprite = item.spriteOutline;
+                itemsBgUI[item.type].SetNativeSize();
+                //dialogueModel.Set(model);
+            }
+
             ReorderItems();
         }
 
         public void OnItemRemoved(ItemScriptable item)
         {
-            if (itemsUI.ContainsKey(item.type))
+            OnItemRemoved(item.type);
+        }
+
+        public void OnItemRemoved(ItemType itemType)
+        {
+            if (itemsUI.ContainsKey(itemType))
             {
-                itemsUI[item.type].gameObject.SetActive(false);
-                itemsUI[item.type].sprite = null;
+                itemsUI[itemType].gameObject.SetActive(false);
+                itemsUI[itemType].sprite = null;
+                //dialogueModel.Set(model);
+            }
+
+            if (itemsBgUI.ContainsKey(itemType))
+            {
+                itemsBgUI[itemType].gameObject.SetActive(false);
+                itemsBgUI[itemType].sprite = null;
                 //dialogueModel.Set(model);
             }
 

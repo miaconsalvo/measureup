@@ -14,6 +14,9 @@ position: 552,-98
 //set neg and pos tag variable numbers
 
 <<Scene catwalk>>
+<<Contestant Dolly base.neutral center lower 0>>
+<<FadeIn Dolly 0.5>>
+<<wait 0.5>>
 
 //negative reactions
 <<if has_tag("business") == true>>
@@ -169,5 +172,7 @@ position: 357,626
 title: Node
 position: 391,262
 ---
-
+<<FadeOut Dolly 0.5>>
+<<wait 0.5>>
+<<HideAll>>
 ===
