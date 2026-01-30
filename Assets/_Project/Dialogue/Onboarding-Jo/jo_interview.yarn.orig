@@ -21,13 +21,13 @@ position: -135,-9
     <<jump JoInterviewEnd>>
 <<endif>>
 
--> A. How would you describe your day-to-day wardrobe? <<if question_asked(0) == false>>
+-> A. How would you describe your day-to-day wardrobe? <<once>>
     <<jump JoInterviewQuestionA>>
--> B. What would you never be caught dead wearing? <<if question_asked(1) == false>>
+-> B. What would you never be caught dead wearing? <<once>>
     <<jump JoInterviewQuestionB>>
--> C. What is your most loved item in your wardrobe? <<if question_asked(2) == false>>
+-> C. What is your most loved item in your wardrobe? <<once>>
     <<jump JoInterviewQuestionC>>
--> D. What is an outfit you've worn that you'll never wear again? <<if question_asked(3) == false>>
+-> D. What is an outfit you've worn that you'll never wear again? <<once>>
     <<jump JoInterviewQuestionD>>
 ===
     

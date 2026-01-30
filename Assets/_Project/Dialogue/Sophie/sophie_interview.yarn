@@ -2,6 +2,11 @@ title: SophieInterviewStart
 tags: 
 position: -145,-211
 ---
+<<Scene  dressing_room>>
+<<Contestant Sophie base.neutral center lower 0>>
+<<FadeIn Sophie 0.5>>
+<<wait 0.5>>
+
 <<jump SophieInterviewQuestions>>
 ===
 
@@ -13,15 +18,15 @@ position: -135,-9
     <<jump SophieInterviewEnd>>
 <<endif>>
 
--> A. How would you describe your day-to-day wardrobe? <<if question_asked(0) == false>>
+-> A. How would you describe your day-to-day wardrobe? <<once>>
     <<jump SophieInterviewQuestionA>>
--> B. What would you never be caught dead wearing? <<if question_asked(1) == false>>
+-> B. What would you never be caught dead wearing? <<once>>
     <<jump SophieInterviewQuestionB>>
--> C. What is your most loved item in your wardrobe? <<if question_asked(2) == false>>
+-> C. What is your most loved item in your wardrobe? <<once>>
     <<jump SophieInterviewQuestionC>>
--> D. What do you want to get out of this makeover? <<if question_asked(3) == false>>
+-> D. What do you want to get out of this makeover? <<once>>
     <<jump SophieInterviewQuestionD>>
--> E. What is an outfit you've worn that you'll never wear again? <<if question_asked(4) == false>>
+-> E. What is an outfit you've worn that you'll never wear again? <<once>>
     <<jump SophieInterviewQuestionE>>
 
     ===
@@ -34,6 +39,7 @@ Sophie: Right now my day-to-day wardrobe has a lot of skirts and patterns in it!
 Sophie: I especially like wearing skirts if I want to feel cute for a date night.
 Sophie: I don't know if my current wardrobe is professional enough for my new job, but I do actually like business clothes too!
 //(reveals likes skirts, pattern, business)
+<<add_note 0>>
 <<jump SophieInterviewQuestions>>
 ===
 
@@ -45,6 +51,7 @@ Sophie: Lately, I've been avoiding the colour pink.
 Sophie: I went through a phase of wearing pink all the time, until I finally realized that it's just not my colour.
 Sophie: My recent closet clean-out was basically just me purging my closet of everything pink and boyish.
 //(reveals dislikes pink and boyish)
+<<add_note 1>>
 <<jump SophieInterviewQuestions>>
 ===
 
@@ -56,6 +63,7 @@ Sophie: I have this fun floral blouse that I love a lot!
 Sophie: The cut and fabric make it feel kind of business-y, but the floral pattern is really pretty.
 Sophie: It's my go-to when I need to feel put-together and professional but still feel cute!
 // (reveals likes pattern and business)
+<<add_note 2>>
 <<jump SophieInterviewQuestions>>
 ===
 
@@ -70,6 +78,7 @@ Sophie: But now, I finally think I have a good understanding of what I like and 
 Sophie: I've found it surprisingly hard to put together nice outfits that work in a professional setting, but still feel like “me”. I like business clothes, but I also love patterns and “younger” clothing. 
 Sophie: I'd love to figure out how to find the balance between that while getting dressed each morning.
 //(reveals, likes business, pattern, and young)
+<<add_note 3>>
 <<jump SophieInterviewQuestions>>
 ===
 
@@ -82,6 +91,7 @@ ophie: It wasn't very long after coming out, and I had never really been dress s
 ophie: I had no clue what I wanted and I let the salesperson kind of take the lead. I was going through a bit of a hyper-girly phase, and I ended up in this sequin pink dress.
 ophie: It was pretty, but it didn't feel like me at all. I'd never wear that dress - or honestly anything pink - ever again!
 // (reveals dislikes pink)
+<<add_note 4>>
 <<jump SophieInterviewQuestions>>
 ===
 
@@ -90,4 +100,7 @@ tags:
 position: -129,442
 ---
 Interview ends.
+<<FadeOut Sophie 0.5>>
+<<wait 0.5>>
+<<HideAll>>
 ===

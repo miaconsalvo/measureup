@@ -2,6 +2,7 @@ title: HeatherInterviewStart
 tags: 
 position: -574,40
 ---
+<<Scene  dressing_room>>
 <<Contestant Heather base.neutral center lower 0>>
 <<FadeIn Heather 0.5>>
 <<wait 0.5>>
@@ -22,15 +23,15 @@ position: -376,44
     <<jump HeatherInterviewEnd>>
 <<endif>>
 
--> A. How would you describe your day-to-day wardrobe? <<if question_asked(0) == false>>
+-> A. How would you describe your day-to-day wardrobe? <<once>>
     <<jump HeatherInterviewQuestionA>>
--> B. What would you never be caught dead wearing? <<if question_asked(1) == false>>
+-> B. What would you never be caught dead wearing? <<once>>
     <<jump HeatherInterviewQuestionB>>
--> C. What is your most loved item in your wardrobe? <<if question_asked(2) == false>>
+-> C. What is your most loved item in your wardrobe? <<once>>
     <<jump HeatherInterviewQuestionC>>
--> D. What do you want to get out of this makeover? <<if question_asked(3) == false>>
+-> D. What do you want to get out of this makeover? <<once>>
     <<jump HeatherInterviewQuestionD>>
--> E. What is an outfit you've worn that you'll never wear again? <<if question_asked(4) == false>>
+-> E. What is an outfit you've worn that you'll never wear again? <<once>>
     <<jump HeatherInterviewQuestionE>>
 ===
 title: HeatherInterviewQuestionA
@@ -40,7 +41,7 @@ position: -192,-140
 Heather: Well, with the kids at school and in after school sports and activities I usually go with comfort over anything else. 
 Heather: Yoga pants are my go to. Usually a [tag]T-Shirt[/tag] with it, and then sneakers. 
 Heather: It's a pretty basic vibe.
-<<add_note 0 0>>
+<<add_note 0>>
 <<jump HeatherInterviewQuestions>>
 ===
 title: HeatherInterviewQuestionB
@@ -51,7 +52,7 @@ Heather: That's easy. Skirts.
 Heather: I hated when wardrobe would put the big frilly and flashy ones on me as Jenny on The Family Tree.
 Heather: I think that has stuck with me ever since. 
 Heather: It made sense for the character, I guess, but as a kid I haaaated them.
-<<add_note 1 1>>
+<<add_note 1>>
 Heather: Especially the really brightly coloured ones.
 <<jump HeatherInterviewQuestions>>
 ===
@@ -64,12 +65,12 @@ Heather: Hmm... like worn the most? Or what I love for its style the most?
     Heather: That would be my tried and true black yoga pants.
     Heather: I think I own like 5 pairs of the same ones. 
     Heather: Actually. I almost bought some patterned ones a few weeks ago, but I don't know if I can pull them off.
-    <<add_note 2 2>>
+    <<add_note 2>>
 -> What you love the most, regardless of how often you wear it. 
     Heather:  I have a designer letterman-style jacket that I'll wear to the kids games that they got me (well their dad did, but you know how it goes!). 
     Heather: I love that it's practical but I still feel stylish in it - the sleeves have this cool floral pattern on it.
     Heather: It isn't something I would usually choose for myself so it was a great gift.
-    <<add_note 2 3>>
+    <<add_note 3>>
 <<jump HeatherInterviewQuestions>>
 ===
 title: HeatherInterviewQuestionD
@@ -78,7 +79,7 @@ position: -119,103
 ---
 Heather: I'd like to feel like I have an outfit or style beyond the school run mom.
 Heather: As much as I live and die by my athleisure wardrobe, I know I can pull off some other looks - I just need a helping hand.
-<<add_note 3 4>>
+<<add_note 4>>
 <<jump HeatherInterviewQuestions>>
 ===
 title: HeatherInterviewQuestionE
@@ -87,7 +88,7 @@ position: 113,100
 ---
 Heather: I had to wear a blazer and suit pants to court, thanks to some actions of an old co-star who needed a character witness for a custody case.
 Heather: That day cost him two favours because I despise uncomfy, stuffy clothes, and dealing with lawyers, haha!
-<<add_note 4 5>>
+<<add_note 5>>
 <<jump HeatherInterviewQuestions>>
 ===
 title: HeatherInterviewEnd

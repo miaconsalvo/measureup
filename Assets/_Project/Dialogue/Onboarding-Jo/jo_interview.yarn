@@ -3,6 +3,10 @@ tags:
 position: -145,-211
 ---
 <<Scene  dressing_room>>
+<<Contestant Jo base.neutral center lower 0>>
+<<FadeIn Jo 0.5>>
+<<wait 0.5>>
+
 Jo: You will have time to ask each contestant three questions. 
 Jo: Choose wisely!
 <<jump JoInterviewQuestions>>
@@ -16,13 +20,13 @@ position: -135,-9
     <<jump JoInterviewEnd>>
 <<endif>>
 
--> A. How would you describe your day-to-day wardrobe? <<if question_asked(0) == false>>
+-> A. How would you describe your day-to-day wardrobe? <<once>>
     <<jump JoInterviewQuestionA>>
--> B. What would you never be caught dead wearing? <<if question_asked(1) == false>>
+-> B. What would you never be caught dead wearing? <<once>>
     <<jump JoInterviewQuestionB>>
--> C. What is your most loved item in your wardrobe? <<if question_asked(2) == false>>
+-> C. What is your most loved item in your wardrobe? <<once>>
     <<jump JoInterviewQuestionC>>
--> D. What is an outfit you've worn that you'll never wear again? <<if question_asked(3) == false>>
+-> D. What is an outfit you've worn that you'll never wear again? <<once>>
     <<jump JoInterviewQuestionD>>
 ===
     
@@ -34,6 +38,7 @@ Jo: I dress pretty casually!
 Jo: Especially running around on set all day, I tend to stick to things that are comfortable and practical.
 Jo: Outside of work, I've been known to wear almost anything under the sun - sporty, girly, boyish, you name it, I've probably worn it.
 //reveals likes (almost) everything
+<<add_note 0>>
 <<jump JoInterviewQuestions>>
 ===
 
@@ -44,6 +49,7 @@ position: -400,231
 Jo: I am down to wear almost anything - almost!
 Jo: I don't really like fancy clothes that much. I'm a more casual dresser.
 //reveals dislikes fancy
+<<add_note 1>>
 <<jump JoInterviewQuestions>>
 ===
 
@@ -54,6 +60,7 @@ position: -105,233
 Jo: Oh that's tricky. Depends on the day, my closet is pretty varied, I like almost everything. 
 Jo:  If I had to pick one thing though, I have a cozy, casual sweater that I wear all the time. I'll go with that.
 //reveals likes (almost) everything
+<<add_note 2>>
 <<jump JoInterviewQuestions>>
 ===
 
@@ -64,6 +71,7 @@ position: 161,266
 Jo: My sister got married last fall, and I was her maid of honour. 
 Jo: I hate dancy clothes but for her I put on a fancy jumpsuit and a pair of heels. Never again! I hate fancy clothing.
 //reveals dislikes fancy 
+<<add_note 3>>
 <<jump JoInterviewQuestions>>
 ===
 
@@ -73,4 +81,7 @@ position: -129,442
 ---
 Jo: Cool, now you can style me! Don't forget about the dossier I gave you earlier.  
 //go to Jo styling onboarding scene 
+<<FadeOut Jo 0.5>>
+<<wait 0.5>>
+<<HideAll>>
 ===

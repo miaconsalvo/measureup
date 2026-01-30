@@ -31,7 +31,8 @@ namespace Mystie
         public LocalizeStringEvent occupationText;
         public LocalizeStringEvent trendingText;
 
-        private List<int> questionsAsked;
+        //private List<int> questionsAsked;
+        private int questionsAsked = 0;
 
         [Space]
 
@@ -76,7 +77,8 @@ namespace Mystie
             contestantNameText.text = contestant.name + ", " + contestant.age;
             occupationText.StringReference = contestant.occupation;
 
-            questionsAsked = new List<int>();
+            //questionsAsked = new List<int>();
+            questionsAsked = 0;
             likesList = new List<LocalizedString>();
             dislikesList = new List<LocalizedString>();
             likes.text = "";
@@ -110,57 +112,57 @@ namespace Mystie
         }
 
         [YarnCommand("add_note")]
-        public static void AddNote(int q, int n)
+        public static void AddNote(int q)
         {
             DossierUI dossier = DressupUIManager.Instance.dossierUI;
-            InterviewQuestion question = LevelManager.Instance.episode.interviewNotes[n];
-            if (!dossier.questionsAsked.Contains(q))
-            {
-                foreach (InterviewNote note in question.notes)
-                {
-                    if (note == null || note.text.IsEmpty) continue;
+            InterviewQuestion question = LevelManager.Instance.episode.interviewNotes[q];
+            //if (!dossier.questionsAsked.Contains(q))
 
-                    switch (note.type)
-                    {
-                        case InterviewNote.InfoType.Like:
-                            if (!dossier.likesList.Contains(note.text))
-                            {
-                                dossier.likesList.Add(note.text);
-                                dossier.likes.text = GetList(dossier.likesList);
-                            }
-                            break;
-                        case InterviewNote.InfoType.Dislike:
-                            if (!dossier.dislikesList.Contains(note.text))
-                            {
-                                dossier.dislikesList.Add(note.text);
-                                dossier.dislikes.text = GetList(dossier.dislikesList);
-                            }
-                            break;
-                        case InterviewNote.InfoType.Lifestyle:
-                            LocalizeStringEvent noteString =
-                            Instantiate(dossier.lifestyleNotePrefab.gameObject
-                                , dossier.lifestyleAnchor)
-                                .GetComponent<LocalizeStringEvent>();
-                            noteString.StringReference = note.text;
-                            break;
-                    }
+            foreach (InterviewNote note in question.notes)
+            {
+                if (note == null || note.text.IsEmpty) continue;
+
+                switch (note.type)
+                {
+                    case InterviewNote.InfoType.Like:
+                        if (!dossier.likesList.Contains(note.text))
+                        {
+                            dossier.likesList.Add(note.text);
+                            dossier.likes.text = GetList(dossier.likesList);
+                        }
+                        break;
+                    case InterviewNote.InfoType.Dislike:
+                        if (!dossier.dislikesList.Contains(note.text))
+                        {
+                            dossier.dislikesList.Add(note.text);
+                            dossier.dislikes.text = GetList(dossier.dislikesList);
+                        }
+                        break;
+                    case InterviewNote.InfoType.Lifestyle:
+                        LocalizeStringEvent noteString =
+                        Instantiate(dossier.lifestyleNotePrefab.gameObject
+                            , dossier.lifestyleAnchor)
+                            .GetComponent<LocalizeStringEvent>();
+                        noteString.StringReference = note.text;
+                        break;
                 }
 
-                dossier.questionsAsked.Add(q);
+                dossier.questionsAsked++;
+                //dossier.questionsAsked.Add(q);
                 dossier.UpdateUI();
             }
         }
 
-        [YarnFunction("question_asked")]
+        /*[YarnFunction("question_asked")]
         public static bool IsQuestionAsked(int i)
         {
             return DressupUIManager.Instance.dossierUI.questionsAsked.Contains(i);
-        }
+        }*/
 
         [YarnFunction("max_questions")]
         public static bool MaxQuestions()
         {
-            return DressupUIManager.Instance.dossierUI.questionsAsked.Count
+            return DressupUIManager.Instance.dossierUI.questionsAsked
                 >= DressupUIManager.Instance.dossierUI.episode.maxQuestions;
         }
 
