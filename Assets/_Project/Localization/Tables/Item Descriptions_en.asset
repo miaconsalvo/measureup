@@ -182,6 +182,10 @@ MonoBehaviour:
     m_Localized: Sport mode activated.
     m_Metadata:
       m_Items: []
+  - m_Id: 92569759369154560
+    m_Localized: For when you have a day of smart errands ahead of you.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
