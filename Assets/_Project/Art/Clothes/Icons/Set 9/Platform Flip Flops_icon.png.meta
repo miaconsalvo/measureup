@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Platform Flip Flops_icon_0: -6884031162499433541
+      Platform Flip Flops_icon_1: 7003784997676051838
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

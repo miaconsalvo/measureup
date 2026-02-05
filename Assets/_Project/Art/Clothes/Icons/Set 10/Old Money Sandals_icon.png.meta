@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Old Money Sandals_icon_0: -352221213626952800
+      Old Money Sandals_icon_1: -2820019434896808446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

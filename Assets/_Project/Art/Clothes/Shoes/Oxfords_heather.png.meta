@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Oxfords_heather_0: -3175048974663616787
+      Oxfords_heather_1: -3412713687574503546
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

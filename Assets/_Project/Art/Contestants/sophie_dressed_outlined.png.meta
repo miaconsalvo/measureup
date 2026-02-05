@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sophie_dressed_outlined_0: -6207424893184019577
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

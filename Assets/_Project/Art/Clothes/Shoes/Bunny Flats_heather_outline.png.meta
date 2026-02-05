@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bunny Flats_heather_outline_0: 8876882236008459694
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

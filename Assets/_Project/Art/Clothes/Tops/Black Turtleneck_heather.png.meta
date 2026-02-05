@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Black Turtleneck_heather_0: 3544104733149900352
+      Black Turtleneck_heather_1: -3193025591695718338
+      Black Turtleneck_heather_2: -5428621918593522897
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

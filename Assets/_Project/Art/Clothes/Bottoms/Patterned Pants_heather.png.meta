@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Patterned Pants_heather_0: 6836520385351337700
+      Patterned Pants_heather_1: 1854602596131324905
+      Patterned Pants_heather_2: -4092594038656884259
+      Patterned Pants_heather_3: 7879525285275451496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

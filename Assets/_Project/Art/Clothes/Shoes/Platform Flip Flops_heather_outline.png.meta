@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Platform Flip Flops_heather_outline_0: -879233058456093164
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 1e66458a61136704686da3680d77cad7
+guid: 81fa9e88c4ed09e45a97af9c06387f48
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8751963428214480970
-    second: Grey Long Skirt_icon_0
+      213: 895932588543115430
+    second: Black Flats_icon_0
+  - first:
+      213: -1065754859744970735
+    second: Black Flats_icon_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grey Long Skirt_icon_0
+      name: Black Flats_icon_0
       rect:
         serializedVersion: 2
-        x: 137
-        y: 1
-        width: 264
-        height: 511
+        x: 14
+        y: 196
+        width: 370
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a402fe93e58357970800000000000000
-      internalID: 8751963428214480970
+      spriteID: 6a00fc241fdfe6c00800000000000000
+      internalID: 895932588543115430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Flats_icon_1
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 144
+        width: 130
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11831470a9da531f0800000000000000
+      internalID: -1065754859744970735
       vertices: []
       indices: 
       edges: []
@@ -147,8 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Grey Long Skirt_icon_0: 8751963428214480970
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

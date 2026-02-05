@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      heather_startingtop_outline_0: -6583006627437735381
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

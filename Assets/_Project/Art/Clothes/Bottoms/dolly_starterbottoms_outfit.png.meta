@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dolly_starterbottoms_outfit_0: 5068285115786606919
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

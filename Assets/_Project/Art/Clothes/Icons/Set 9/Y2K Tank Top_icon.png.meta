@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Y2K Tank Top_icon_0: -8536738606491542756
+      Y2K Tank Top_icon_1: 4416856066622120799
+      Y2K Tank Top_icon_2: 3904349586978950979
+      Y2K Tank Top_icon_3: -2367114266299147066
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

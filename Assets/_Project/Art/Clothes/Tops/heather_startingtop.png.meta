@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      heather_startingtop_0: 154975707118971099
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
