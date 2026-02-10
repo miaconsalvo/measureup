@@ -56,7 +56,7 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Measureup.sln",
+    "dotnet.defaultSolution": "Measureup.slnx",
     "yarnspinner.graph.format": "mermaid",
     "yarnspinner.graph.clustering": false
 }
