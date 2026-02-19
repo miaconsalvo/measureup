@@ -1,0 +1,313 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Items Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Items
+  m_TableCollectionNameGuidString: 06fb516fd519a2944b963e89afed6231
+  m_Entries:
+  - m_Id: 2342392686182400
+    m_Key: Baggy Striped TShirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2342411682185216
+    m_Key: Basic White TShirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2342519517741056
+    m_Key: Black Crop Top
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2342847550062592
+    m_Key: Brown Paisley Blouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2342860007145472
+    m_Key: Cableknit Sweater
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2342974960435200
+    m_Key: Cropped Floral Shirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343011572514816
+    m_Key: Fitted Blazer and White Button Up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343047752581120
+    m_Key: Grey Blazer and White Button Up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343086784774144
+    m_Key: Loose Graphic TShirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343117390610432
+    m_Key: Plain White Button-Up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343234046787584
+    m_Key: Black Pencil Skirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343264019283968
+    m_Key: Black Skinny Jeans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343526385582080
+    m_Key: Blue Skinny Jeans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343560883732480
+    m_Key: Distressed Jeans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343593393782784
+    m_Key: Floral Maxi Skirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343638239281152
+    m_Key: Grey Dress Pants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343674461290496
+    m_Key: Leggings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343706975535104
+    m_Key: Navy Dress Pants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343728123215872
+    m_Key: Sweatpants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343765779677184
+    m_Key: Polka Dot Skirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343864698142720
+    m_Key: Striped Dress Pants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343910038568960
+    m_Key: Ballet Flats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343936039059456
+    m_Key: Brown Tall Boots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2343981320765440
+    m_Key: Chelsea Boots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2344012140511232
+    m_Key: Converse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2344043341938688
+    m_Key: Flats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2344085192704000
+    m_Key: Heeled Calf High Boots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2344138225483776
+    m_Key: Heels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2344166285377536
+    m_Key: Plain Loafers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2344196551475200
+    m_Key: White Sneakers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3397697788444672
+    m_Key: Spats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3397726926274560
+    m_Key: White Tanktop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3397776632971264
+    m_Key: White Socks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6341558819094528
+    m_Key: Cropped Quarter-zip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6341905486708736
+    m_Key: Sporty Sandals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6341980204040192
+    m_Key: Sporty Skort
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6342117970149376
+    m_Key: Flared Leggings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6342259024592896
+    m_Key: Green Sneakers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6342582824861696
+    m_Key: Blue Crewneck
+    m_Metadata:
+      m_Items: []
+<<<<<<< HEAD
+  - m_Id: 77207219395878912
+    m_Key: Boxy Blazer + Fitted TShirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207324026986496
+    m_Key: Black Turtleneck
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207348253286400
+    m_Key: Brown Loafers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207371674279936
+    m_Key: Oxfords
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207393149116416
+    m_Key: Black Dress Pants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207410630975488
+    m_Key: Sweater Vest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207446601326592
+    m_Key: Strappy Heels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207454390149120
+    m_Key: Frilly Sweater
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207477475598336
+    m_Key: Sequin Short Skirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207508177903616
+    m_Key: Sheer Blouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207558912204800
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207567871238144
+    m_Key: Patterned Pants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207590688251904
+    m_Key: Bunny Flats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207628374073344
+    m_Key: Flowy Shorts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207658908606464
+    m_Key: Tiered Maxi Skirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207701019418624
+    m_Key: Pink Flowy Blouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207723874181120
+    m_Key: Wedges
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207771013963776
+    m_Key: Rainbow Sandals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207778496602112
+    m_Key: Tie-up Sandals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207859232759808
+    m_Key: Denim Mini Skirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207867373903872
+    m_Key: Low Rise Jeans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207895677067264
+    m_Key: Baby T
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207955538173952
+    m_Key: Y2K Tank Top
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77207980670443520
+    m_Key: Platform Flip Flops
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77208013255991296
+    m_Key: White Jeans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77208022349242368
+    m_Key: Grey Long Skirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77208050132312064
+    m_Key: Quality T-Shirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77208072341151744
+    m_Key: Cashmere Sweater
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77208096173187072
+    m_Key: Fitted Cotton Button-Up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77208117912264704
+    m_Key: Black Luxe Loafers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77208142377639936
+    m_Key: Old Money Sandals
+=======
+  - m_Id: 94899914519367680
+    m_Key: Black Flats
+>>>>>>> Art-v2
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 819228970296803345
+  references:
+    version: 2
+    RefIds:
+    - rid: 819228970296803345
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1747689440734
