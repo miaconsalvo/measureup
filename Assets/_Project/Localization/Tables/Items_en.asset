@@ -292,6 +292,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 77208142377639936
     m_Localized: Old Money Sandals
+  - m_Id: 94899914519367680
+    m_Localized: Black Flats
     m_Metadata:
       m_Items: []
   references:
