@@ -16,13 +16,20 @@ namespace Mystie.Dialogue
         }
 
         [YarnCommand("Contestant")]
-        public static void SetActorEpisode(string actorName, string spriteName, string positionX = "", string positionY = "", float alpha = 1f, string colorHex = "")
+        public static void SetActorEpisodeCommand(string actorName, string spriteName, string positionX = "", string positionY = "", float alpha = 1f, string colorHex = "")
         {
             //string actorName = LevelManager.Instance.episode.name;
             SpriteLayered dialogueModel = Object.Instantiate<SpriteLayered>(DressupUIManager.Instance.dressupUI.modelUI.model);
 
-            DialogueManager.Instance.AddSprite(actorName, dialogueModel, Vector2.zero, 0f);
+            SetActorEpisode(ref dialogueModel, actorName, spriteName, positionX, positionY, alpha, colorHex);
+        }
+
+        public static SpriteLayered SetActorEpisode(ref SpriteLayered model, string actorName, string spriteName, string positionX = "", string positionY = "", float alpha = 1f, string colorHex = "")
+        {
+            DialogueManager.Instance.AddSprite(actorName, model, Vector2.zero, 0f);
             DialogueManager.Instance.SetActor(actorName, spriteName, positionX, positionY, alpha, colorHex);
+
+            return model;
         }
 
         /// <summary>

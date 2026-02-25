@@ -4,14 +4,16 @@ using System.Linq;
 using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace Mystie
 {
     public class AudioManager : MonoBehaviour
     {
         [SerializeField] private bool playOnStart;
+        [SerializeField] private EventInstance bgmEmitter;
         [SerializeField] private EventReference bgm;
-        [SerializeField] private StudioEventEmitter bgmEmitter;
+        [SerializeField] private float bgmVolume = 1f;
         [SerializeField] private AudioCollection loadAudio;
 
         private Dictionary<string, EventInstance> audioInstances;
@@ -48,18 +50,79 @@ namespace Mystie
 
         public void Start()
         {
-            if (playOnStart)
-            {
-                bgmEmitter.EventReference = bgm;
-                bgmEmitter.Play();
-            }
+            if (!bgm.IsNull)
+                SetMusic(bgm, bgmVolume, playOnStart);
         }
 
         private void OnDestroy()
         {
-            bgmEmitter.Stop();
+            if (bgmEmitter.isValid()) bgmEmitter.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             StopAudioAll();
         }
+
+        #region Music
+
+        public void PlayMusic()
+        {
+            if (bgmEmitter.isValid())
+            {
+                SetMusicVolume(bgmVolume);
+                bgmEmitter.start();
+            }
+        }
+
+        public void PlayMusic(float volume)
+        {
+            if (bgmEmitter.isValid())
+            {
+                SetMusicVolume(volume);
+                bgmEmitter.start();
+            }
+        }
+
+        public void PauseMusic(bool pause = true)
+        {
+            if (bgmEmitter.isValid())
+                bgmEmitter.setPaused(pause);
+        }
+
+        public void StopMusic()
+        {
+            if (bgmEmitter.isValid())
+                bgmEmitter.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
+
+        public void SetMusic(EventReference eventReference, float volume = 1, bool play = true, float delay = 0)
+        {
+            if (bgmEmitter.isValid() && bgm.Equals(eventReference)) return;
+
+            StopMusic();
+            if (!eventReference.IsNull)
+            {
+                bgm = eventReference;
+                bgmEmitter = RuntimeManager.CreateInstance(bgm);
+                if (play) StartCoroutine(SetMusicCoroutine(volume, delay));
+            }
+        }
+
+        public IEnumerator SetMusicCoroutine(float volume = 1, float delay = 0)
+        {
+            yield return new WaitForSeconds(delay);
+            PlayMusic(volume);
+        }
+
+        public void SetMusicVolume(float volume = 1f)
+        {
+            if (bgmEmitter.isValid())
+            {
+                bgmVolume = volume;
+                bgmEmitter.setVolume(bgmVolume);
+            }
+        }
+
+        #endregion
+
+        #region Sound Effects
 
         /// <summary>PlayAudio( soundName,volume,"loop" )...
         /// PlayAudio(soundName,1.0) plays soundName once at 100% volume...
@@ -80,7 +143,7 @@ namespace Mystie
                 Debug.LogWarningFormat(this, "VN Manager is playing sound {0} at very low volume ({1}), just so you know", soundName, volume);
             }
 
-            EventInstance newAudioSource = CreateInstance(audioClip);
+            EventInstance newAudioSource = RuntimeManager.CreateInstance(audioClip);
             float v;
             newAudioSource.getVolume(out v);
             newAudioSource.setVolume(v * volume);
@@ -124,23 +187,13 @@ namespace Mystie
             }
         }
 
-        public void PlayMusic(bool play = true)
-        {
-            if (play) bgmEmitter.Play();
-            else bgmEmitter.Stop();
-        }
+        #endregion
 
-        public void PauseMusic(bool pause = true)
-        {
-            bgmEmitter.EventInstance.setPaused(pause);
-        }
 
-        public void SetMusic(EventReference eventReference)
-        {
-            bgmEmitter.Stop();
-            bgmEmitter.EventReference = eventReference;
-            bgmEmitter.Play();
-        }
+
+
+
+
 
         public void PlayOneShot(string soundName)
         {
@@ -161,12 +214,6 @@ namespace Mystie
         public void PlayOneShot(EventReference sound, Vector3 worldPos)
         {
             RuntimeManager.PlayOneShot(sound, worldPos);
-        }
-
-        public EventInstance CreateInstance(EventReference eventRefrence)
-        {
-            EventInstance eventInstance = RuntimeManager.CreateInstance(eventRefrence);
-            return eventInstance;
         }
     }
 }

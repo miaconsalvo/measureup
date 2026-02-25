@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b8f2a0eaa5059645aaefdd3bca1c7c9, type: 3}
-  m_Name: Fashionista Viewer Group
+  m_Name: Fashionista Sophie Viewer Group
   m_EditorClassIdentifier: 
   groupName: Fashionista
   condition: {fileID: 11400000, guid: 56289b1560b1c7b4582cc76951383dcd, type: 2}

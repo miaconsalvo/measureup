@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Black Flats_icon_0: 895932588543115430
+      Black Flats_icon_1: -1065754859744970735
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using Mystie.UI;
 using NaughtyAttributes;
 using UnityEngine;
@@ -26,6 +27,9 @@ namespace Mystie.Core
 
         [SerializeField] protected Button completeStageButton;
         [SerializeField] protected LocalizedString stageCompletePopupText;
+
+        public EventReference bgm;
+        public float bgmVolume = 1f;
 
         protected virtual void Awake()
         {
@@ -67,6 +71,9 @@ namespace Mystie.Core
             if (completeStageButton != null)
                 completeStageButton.onClick.AddListener(CompleteStage);
             Debug.Log("On stage enter " + stage);
+
+            if (!bgm.IsNull) AudioManager.Instance.SetMusic(bgm, bgmVolume);
+            else AudioManager.Instance.SetMusicVolume(bgmVolume);
         }
 
         protected virtual void CompleteStage()

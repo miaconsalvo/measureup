@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Black Flats_heather_0: 2774982204601887911
+      Black Flats_heather_1: -3776095787790839844
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
