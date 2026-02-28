@@ -16,7 +16,7 @@ MonoBehaviour:
   styleRule: {fileID: 11400000, guid: 10d88f6780ed48d4ebf67ec1790aa511, type: 2}
   trendingRule: {fileID: 11400000, guid: f0bfb4ce66b48fe4f8f66ad2150f97dd, type: 2}
   socialMediaComments: {fileID: 11400000, guid: e9545bf04a6b5874e8ad7d9b2cdea76e, type: 2}
-  stages: 000000000100000002000000030000000500000006000000
+  stages: 00000000010000000200000003000000040000000500000006000000
   preChatNode: HeatherGroupchatStart
   interviewNode: HeatherInterviewStart
   postCatwalkNode: HeatherPCW

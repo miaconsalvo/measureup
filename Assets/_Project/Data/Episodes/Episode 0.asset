@@ -16,7 +16,7 @@ MonoBehaviour:
   styleRule: {fileID: 11400000, guid: e23545181d685a045a79b6e641e443a6, type: 2}
   trendingRule: {fileID: 11400000, guid: 77b8136b084e91a4594358d318a561b4, type: 2}
   socialMediaComments: {fileID: 0}
-  stages: 0700000002000000010000000300000005000000
+  stages: 070000000200000001000000030000000400000005000000
   preChatNode: 
   interviewNode: JoInterviewStart
   postCatwalkNode: JoPCW

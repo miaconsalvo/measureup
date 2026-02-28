@@ -137,3 +137,10 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163041
+  packageName: Modern Procedural UI Kit
+  packageVersion: 1.2.3
+  assetPath: Assets/MPUIKit/Editor/Images/rotate_left_0.png
+  uploadId: 764221
