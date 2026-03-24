@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      heather_nude_0: 6273048543739382535
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
-  m_Name: Dolly Default Shoes
+  m_Name: Starter Shoes Dolly
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Dolly Defauly Shoes
   id: fb92b74d-6028-403d-9edf-cae6a93e75f1

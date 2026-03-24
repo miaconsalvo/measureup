@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
-  m_Name: Heather Default Bottom
+  m_Name: Starter Shoes Sophie
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
-  name: Heather Default Bottom
-  id: 5826e3ec-483c-4229-bae1-7f1d688b1cdf
-  <type>k__BackingField: 1
+  name: Sophie Default Shoes
+  id: 3b83ee95-fe5e-47dd-8f7b-618bfc4dcb2f
+  <type>k__BackingField: 2
   displayName:
     m_TableReference:
       m_TableCollectionName: 
@@ -35,10 +35,8 @@ MonoBehaviour:
     m_LocalVariables: []
   brand: {fileID: 0}
   icon: {fileID: 0}
-  sprite: {fileID: 21300000, guid: 5c91c8477a2211d4097dffbdf0053c55, type: 3}
-  spriteOutline: {fileID: 21300000, guid: e2b444d59525c2247bfc9d9de5484eed, type: 3}
+  sprite: {fileID: 0}
   sprites: []
-  displayOrder: 5
   tags: []
   references:
     version: 2

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 319cbde8e915dd643a3ebb60550f0ef8, type: 3}
-  m_Name: Jo
+  m_Name: Jo Actor
   m_EditorClassIdentifier: 
   name: Jo
   code: jo
   poses:
   - name: base
-    sprite: {fileID: 21300000, guid: a8485d03271004a4398d30a182b0c5d0, type: 3}
+    sprite: {fileID: 21300000, guid: f795d0c6ae9c3274eb5bfeeae6b9a368, type: 3}
     offset: {x: 0, y: 0}
   expressions:
   - name: neutral
