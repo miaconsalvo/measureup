@@ -99,6 +99,11 @@ namespace Mystie.UI
                 if (state != null) SetState(state);
         }
 
+        public void OnDestroy()
+        {
+            ClearStates();
+        }
+
         public void OnStateChange()
         {
             lastStateChangeTime = Time.unscaledTime;
@@ -128,7 +133,8 @@ namespace Mystie.UI
 
             OnStateChange();
 
-            StartCoroutine(stateStack.Pop().HideState(immediate)); // we close the current state
+            if (immediate) stateStack.Pop().HideState();
+            else StartCoroutine(stateStack.Pop().HideStateRoutine()); // we close the current state
             if (CurrentState != null) CurrentState?.ResumeState();
         }
 

@@ -24,7 +24,7 @@ Host: First, we are visiting our childhood-star turned stay-at-home mom, Heather
     <<jump HeatherEndingNeutral>>
 <<elseif get_reaction("heather") == 1>>
     <<jump HeatherEndingPos>>
-<<elseif get_reaction("heather") == 2>>
+<<elseif get_reaction("heather") == -1>>
     <<jump HeatherEndingNeg>>
 <<endif>>
 ===
@@ -115,7 +115,7 @@ Host: Time to find out how those lessons played out in the classroom!
     <<jump SophieEndingNeutral>>
 <<elseif get_reaction("sophie") == 1>>
     <<jump SophieEndingPos>>
-<<elseif get_reaction("sophie") == 2>>
+<<elseif get_reaction("sophie") == -1>>
     <<jump SophieEndingNeg>>
 <<endif>>
 ===
@@ -205,7 +205,7 @@ Host: Let’s see if our lessons stood the test of time!
     <<jump DollyEndingNeutral>>
 <<elseif get_reaction("dolly") == 1>>
     <<jump DollyEndingPos>>
-<<elseif get_reaction("dolly") == 2>>
+<<elseif get_reaction("dolly") == -1>>
     <<jump DollyEndingNeg>>
 <<endif>>
 ===

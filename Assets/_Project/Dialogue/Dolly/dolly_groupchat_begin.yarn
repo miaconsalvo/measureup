@@ -2,12 +2,12 @@ title: DollyGroupchatStart
 position: -220,24
 ---
 //this is based off of how the last episode went for Heather's reaction
-// 0=neut 1=good 2=bad
+// 0=neut 1=good -1=bad
 <<if get_reaction("heather") == 0 and get_reaction("sophie") == 0>>
     <<jump DollyGroupchatDNeutral>>
 <<elseif get_reaction("heather") == 1 and get_reaction("sophie") == 1>>
     <<jump DollyGroupchatHGood>>
-<<elseif get_reaction("heather") == 2 and get_reaction("sophie") == 2>>
+<<elseif get_reaction("heather") == -1 and get_reaction("sophie") == -1>>
     <<jump DollyGroupchatHBad>>
 <<endif>>
 

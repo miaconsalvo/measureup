@@ -31,7 +31,7 @@ namespace Mystie.UI
             dialogueRunner.StartDialogue(startNode);
         }
 
-        public override IEnumerator HideState(bool immediate = false)
+        public void StopDialogue()
         {
             //Debug.Log("=== HideState START ===");
             //Debug.Log("Current location before reset: "
@@ -55,8 +55,18 @@ namespace Mystie.UI
                 skipButton.gameObject.SetActive(false);
                 skipButton.onClick.RemoveListener(SkipDialogue);
             }
+        }
 
-            yield return StartCoroutine(base.HideState(immediate));
+        public override void HideState()
+        {
+            StopDialogue();
+            base.HideState();
+        }
+
+        public override IEnumerator HideStateRoutine()
+        {
+            StopDialogue();
+            yield return StartCoroutine(base.HideStateRoutine());
 
             //Debug.Log("=== HideState END ===");
 

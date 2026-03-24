@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dolly
   m_EditorClassIdentifier: 
   name: Dolly
-  code: 
+  code: dolly
   poses:
   - name: base
     sprite: {fileID: 21300000, guid: ac172c01f159f4546b7277f1ca2138d3, type: 3}

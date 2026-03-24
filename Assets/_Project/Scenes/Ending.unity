@@ -468,7 +468,7 @@ MonoBehaviour:
       Data3: 933167021
       Data4: 1214085417
     Path: event:/Music/bgm_dress_up
-  bgmEmitter: {fileID: 258312159}
+  bgmVolume: 1
   loadAudio: {fileID: 0}
 --- !u!4 &112415976
 Transform:
@@ -1246,6 +1246,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 0
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -1767,6 +1772,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -2468,6 +2478,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 15, y: 15, z: 15, w: 15}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -3071,6 +3086,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -3270,6 +3290,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 0
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -3703,6 +3728,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 15, y: 15, z: 15, w: 15}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -3884,6 +3914,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -4254,6 +4289,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 0
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -4606,6 +4646,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -5039,6 +5084,14 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  bgm:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  bgmVolume: 1
   startIndex: 0
   tablet: {fileID: 1382180218}
   sidebar: {fileID: 1797987779}
@@ -5135,6 +5188,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 15, y: 15, z: 15, w: 15}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -5788,6 +5846,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -6287,6 +6350,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 15, y: 15, z: 15, w: 15}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -6738,6 +6806,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 15, y: 15, z: 15, w: 15}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -6936,6 +7009,14 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  bgm:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  bgmVolume: 1
   nodeStart: OnboardingBoss
   skippable: 0
   skipButton: {fileID: 951265803}
@@ -7250,6 +7331,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -7451,6 +7537,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -7728,6 +7819,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 15, y: 15, z: 15, w: 15}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -8179,6 +8275,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -8906,6 +9007,9 @@ MonoBehaviour:
   m_RectangleUniformCornerRadius: 1
   m_CircleRadius: 0
   m_CircleFitToRect: 1
+  m_ChamferSize: 0
+  m_ParallelogramSkew: 0
+  m_ParallelogramCornerRadius: 0
   m_NStarPolygonSideCount: 3
   m_NStarPolygonInset: 2
   m_NStarPolygonCornerRadius: 0
@@ -9408,6 +9512,14 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  bgm:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  bgmVolume: 1
   startIndex: 2
   tablet: {fileID: 1382180218}
   sidebar: {fileID: 1797987779}
@@ -9660,6 +9772,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -9862,6 +9979,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -10153,6 +10275,9 @@ MonoBehaviour:
   m_RectangleUniformCornerRadius: 1
   m_CircleRadius: 0
   m_CircleFitToRect: 1
+  m_ChamferSize: 0
+  m_ParallelogramSkew: 0
+  m_ParallelogramCornerRadius: 0
   m_NStarPolygonSideCount: 3
   m_NStarPolygonInset: 2
   m_NStarPolygonCornerRadius: 0
@@ -10253,6 +10378,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0

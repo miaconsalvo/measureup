@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2305606088186020704}
   - component: {fileID: 8038087611088433465}
   - component: {fileID: 4150084530103594306}
+  - component: {fileID: 7647755905432310905}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -75,6 +76,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7647755905432310905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068295472937896910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d84d7a6a42d9ae488877afeabb95ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mystie.TooltipTrigger
+  header: 
+  content: 
+  positioningType: 2
+  offset: {x: 0, y: 60}
+  delayTime: 0.2
 --- !u!1 &2320882629562468970
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,11 +156,15 @@ MonoBehaviour:
   <item>k__BackingField: {fileID: 0}
   button: {fileID: 0}
   image: {fileID: 4150084530103594306}
+  tooltip: {fileID: 7647755905432310905}
   buttonColor: {r: 0.9490196, g: 0.8392157, b: 0.8627451, a: 1}
   buttonColorSelected: {r: 0.854902, g: 0.8235295, b: 0.8196079, a: 1}
   iconColor: {r: 1, g: 1, b: 1, a: 1}
   iconColorSelected: {r: 0.36862746, g: 0.30980393, b: 0.3647059, a: 0.5882353}
-  isSelected: 0
+  isEquipped: 0
+  isSelectableEquip: 0
+  isSelectableUnequip: 0
+  isDraggable: 0
 --- !u!114 &4078209191644073987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +212,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0

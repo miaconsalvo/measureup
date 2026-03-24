@@ -87,7 +87,7 @@ namespace Mystie.UI
 
         public virtual IEnumerator DisplayState()
         {
-            StopCoroutine(HideState());
+            StopCoroutine(HideStateRoutine());
 
             if (canvas != null)
                 canvasTween = canvas.DOFade(1, fadeInTime).SetUpdate(true);
@@ -114,7 +114,7 @@ namespace Mystie.UI
 
         public virtual void ResumeState()
         {
-            StopCoroutine(HideState());
+            StopCoroutine(HideStateRoutine());
             canvasTween?.Kill();
             canvasBGTween?.Kill();
 
@@ -138,49 +138,51 @@ namespace Mystie.UI
             }
         }
 
-        public virtual IEnumerator HideState(bool immediate = false)
+        public virtual void HideState()
         {
             StopCoroutine(DisplayState());
             canvasTween?.Kill();
             canvasBGTween?.Kill();
 
-            if (immediate)
+            if (canvas != null)
             {
-                if (canvas != null)
-                {
-                    canvas.alpha = 0;
-                    canvas.blocksRaycasts = false;
-                }
-
-                if (canvasBackground != null)
-                {
-                    canvasBackground.alpha = 0;
-                    canvasBackground.blocksRaycasts = false;
-                }
+                canvas.alpha = 0;
+                canvas.blocksRaycasts = false;
             }
-            else
+
+            if (canvasBackground != null)
             {
-                if (canvas != null)
-                {
-                    canvasTween = canvas.DOFade(0, fadeOutTime).SetUpdate(true);
-                    canvas.blocksRaycasts = false;
-                }
-
-                if (canvasBackground != null)
-                {
-                    canvasBGTween = canvasBackground.DOFade(0, fadeOutTime).SetUpdate(true);
-                    canvasBackground.blocksRaycasts = false;
-                }
-
-                if (!closeSFX.IsNull)
-                    RuntimeManager.PlayOneShot(closeSFX);
-
-                yield return new WaitForSecondsRealtime(fadeOutTime);
+                canvasBackground.alpha = 0;
+                canvasBackground.blocksRaycasts = false;
             }
 
             onExit?.Invoke();
+        }
 
-            yield break;
+        public virtual IEnumerator HideStateRoutine()
+        {
+            StopCoroutine(DisplayState());
+            canvasTween?.Kill();
+            canvasBGTween?.Kill();
+
+            if (canvas != null)
+            {
+                canvasTween = canvas.DOFade(0, fadeOutTime).SetUpdate(true);
+                canvas.blocksRaycasts = false;
+            }
+
+            if (canvasBackground != null)
+            {
+                canvasBGTween = canvasBackground.DOFade(0, fadeOutTime).SetUpdate(true);
+                canvasBackground.blocksRaycasts = false;
+            }
+
+            if (!closeSFX.IsNull)
+                RuntimeManager.PlayOneShot(closeSFX);
+
+            yield return new WaitForSecondsRealtime(fadeOutTime);
+
+            onExit?.Invoke();
         }
 
         public virtual void SetState()

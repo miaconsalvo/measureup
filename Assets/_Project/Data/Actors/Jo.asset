@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Jo
   m_EditorClassIdentifier: 
   name: Jo
-  code: 
+  code: jo
   poses:
   - name: base
     sprite: {fileID: 21300000, guid: a8485d03271004a4398d30a182b0c5d0, type: 3}

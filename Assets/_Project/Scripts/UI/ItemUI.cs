@@ -19,6 +19,7 @@ namespace Mystie.Dressup
         [field: SerializeField] public ItemScriptable item { get; private set; }
         [SerializeField] private Button button;
         [SerializeField] private Image image;
+        [SerializeField] private TooltipTrigger tooltip;
         private RectTransform t;
 
         [Space]
@@ -67,6 +68,12 @@ namespace Mystie.Dressup
             if (image != null && item != null)
                 SetSprite(item.icon);
             else SetEmpty();
+
+            if (tooltip != null)
+            {
+                tooltip.content = item ? item.displayName.GetLocalizedString()
+                    : string.Empty;
+            }
 
             SetEquipped(isEquipped);
 

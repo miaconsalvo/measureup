@@ -10,7 +10,7 @@ using Yarn.Unity;
 
 namespace Mystie.Dressup
 {
-    public enum Reaction { Neutral = 0, Positive = 1, Negative = 2 }
+    public enum Reaction { Neutral = 0, Positive = 1, Negative = -1 }
 
     public class DressupManager : MonoBehaviour
     {
@@ -239,6 +239,7 @@ namespace Mystie.Dressup
         {
             LevelManager.Instance.dressup.reaction = (Reaction)reaction;
             SaveDataManager.SaveReaction(name, (Reaction)reaction);
+            Debug.Log($"Reaction set for {name} to {(Reaction)reaction}.");
         }
 
         [YarnFunction("get_reaction")]

@@ -8,7 +8,7 @@ Alex: ...
 Alex: ew no
 Alex: but speaking about feelings!
 Alex: {playername()} feeling good about today?
-<<if get_reaction("heather") == 2>>
+<<if get_reaction("heather") == -1>>
     <<jump SophieGroupchatBadStart>>
 <<elseif get_reaction("heather") == 1>>
     <<jump SophieGroupchatGoodStart>>

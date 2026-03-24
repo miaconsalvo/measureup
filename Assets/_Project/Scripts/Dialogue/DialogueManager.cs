@@ -383,14 +383,14 @@ namespace Mystie.Dialogue
 				}
 				else
 				{
-					nameplateBG.color = nameplateBGDefaultColor;
+					if (nameplateBG != null) nameplateBG.color = nameplateBGDefaultColor;
 				}
 
-				nameplateBG.gameObject.SetActive(true);
+				if (nameplateBG != null) nameplateBG.gameObject.SetActive(true);
 			}
 			else
 			{
-				nameplateBG.gameObject.SetActive(false);
+				if (nameplateBG != null) nameplateBG.gameObject.SetActive(false);
 			}
 
 			return YarnTask.CompletedTask;

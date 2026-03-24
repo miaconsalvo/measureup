@@ -3,7 +3,7 @@ tags:
 position: 357.24005126953125,143.65028381347656
 ---
 <<declare $patternedItem = "null">>
-//0 = NEUTRAL, 1 = POSITIVE, 2 = NEGATIVE
+//0 = NEUTRAL, 1 = POSITIVE, -1 = NEGATIVE
 <<declare $sameTags = 0>>
 
 //check for outfit tags
@@ -56,7 +56,7 @@ title: HeatherPCWSkirt
 tags: 
 position: -488.34183168411255,385.89215087890625
 ---
-<<set_reaction "heather" 2>>
+<<set_reaction "heather" -1>>
 Heather: I hope I don't sound ungrateful, this has been a neat experience, but to be honest...
 Heather: I don't know when I would wear this outfit... 
 Heather: There's a reason I don't own any skirts. 
@@ -67,7 +67,7 @@ title: HeatherPCWBright
 tags: 
 position: -274.1782684326172,380.0409240722656
 ---
-<<set_reaction "heather" 2>>
+<<set_reaction "heather" -1>>
 Heather: Oh wow...
 Heather: I don't think I've worn these colours since I played little Jenny on TV as a kid. 
 Heather: I'm not sure how I feel about it, but if the stylist thinks it suits me, I guess I could try it out... we will see...
@@ -77,7 +77,7 @@ title: HeatherPCWFlashyImpractical
 tags: 
 position: -53.888526916503906,380.81392669677734
 ---
-<<set_reaction "heather" 2>>
+<<set_reaction "heather" -1>>
 Heather: This is a cool look, not something I would come up with on my own. 
 Heather: I'm not sure about when I would actually wear something like this though. 
 Heather: It isn't the most practical for my life right now. 
@@ -88,7 +88,7 @@ title: HeatherPCWUncomfy
 tags: 
 position: 166.3232765197754,387.9626693725586
 ---
-<<set_reaction "heather" 2>>
+<<set_reaction "heather" -1>>
 Heather: Okay, well, I think this is a super cute outfit, it looks nice...
 Heather: I see why the stylist chose it for me... 
 Heather: But honestly, it is so so uncomfortable. 

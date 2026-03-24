@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      catwalk_lights_2_0: -9047572084762165801
+      catwalk_lights_2_1: 8969688262367434520
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

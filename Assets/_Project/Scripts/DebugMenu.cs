@@ -1,24 +1,33 @@
 using System;
 using System.Collections.Generic;
+using Mystie.Dressup;
 using Mystie.UI;
-using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using VInspector;
 
 namespace Mystie.MystEditor
 {
     public class DebugMenu : MonoBehaviour
     {
+        public static DebugMenu instance;
+
         [field: SerializeField] public CanvasGroup canvas { get; private set; }
         [field: SerializeField] public Button debugMenuButton { get; private set; }
         [field: SerializeField] public Button debugButtonPrefab { get; private set; }
         private bool open;
 
-        public static DebugMenu instance;
-
         public RectTransform levelAnchor;
         public List<DebugLevelButton> levels;
+
+        [Space]
+
+        public RectTransform contestantsAnchor;
+        public List<ContestantData> contestants;
+        [field: SerializeField] public ContestantDebugUI debugContestantPrefab { get; private set; }
+
+        private List<DebugContestant> contestantsDebug;
 
         public void Awake()
         {
@@ -42,6 +51,14 @@ namespace Mystie.MystEditor
                 level.Init(Instantiate(debugButtonPrefab, levelAnchor));
             }
 
+            contestantsDebug = new List<DebugContestant>();
+            foreach (ContestantData c in contestants)
+            {
+                ContestantDebugUI debug = Instantiate(debugContestantPrefab.gameObject, contestantsAnchor).GetComponent<ContestantDebugUI>();
+                DebugContestant contestant = new DebugContestant(c, debug);
+                contestantsDebug.Add(contestant);
+            }
+
             debugMenuButton.onClick.AddListener(ToggleDebugMenu);
         }
 
@@ -55,6 +72,7 @@ namespace Mystie.MystEditor
             }
         }
 
+        [Button]
         public void ToggleDebugMenu()
         {
             open = !open;
@@ -67,6 +85,19 @@ namespace Mystie.MystEditor
             {
                 canvas.alpha = 0f;
                 canvas.blocksRaycasts = false;
+            }
+        }
+
+        public class DebugContestant
+        {
+            public ContestantData data;
+            private ContestantDebugUI debug;
+
+            public DebugContestant(ContestantData data, ContestantDebugUI debug)
+            {
+                this.data = data;
+                this.debug = debug;
+                debug.Set(data);
             }
         }
 
