@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c71bdd2891fe1a479bbc64f1486f3ff, type: 3}
   m_Name: Episode 1 (Heather)
   m_EditorClassIdentifier: 
+  contestantID: heather
   contestant: {fileID: 11400000, guid: 7749c355ff86d8e459f6715becae6f25, type: 2}
   styleRule: {fileID: 11400000, guid: 10d88f6780ed48d4ebf67ec1790aa511, type: 2}
   trendingRule: {fileID: 11400000, guid: f0bfb4ce66b48fe4f8f66ad2150f97dd, type: 2}

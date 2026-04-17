@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c71bdd2891fe1a479bbc64f1486f3ff, type: 3}
   m_Name: Episode 0
   m_EditorClassIdentifier: 
+  contestantID: jo
   contestant: {fileID: 11400000, guid: e890be3842fee654e993b62dd2f2d218, type: 2}
   styleRule: {fileID: 11400000, guid: e23545181d685a045a79b6e641e443a6, type: 2}
   trendingRule: {fileID: 11400000, guid: 77b8136b084e91a4594358d318a561b4, type: 2}

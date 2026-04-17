@@ -137,6 +137,8 @@ namespace Mystie.Core
         public void OnLevelComplete()
         {
             Debug.Log("Level Complete!");
+            dressup.SaveTags(episode.contestantID);
+
             SaveDataManager.SaveEpisodeIndex(episodeManager.index + 1);
             episodeManager.CompleteEpisode();
             episodeManager.LoadCurrentEpisode();

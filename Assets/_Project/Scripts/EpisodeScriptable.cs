@@ -11,6 +11,7 @@ namespace Mystie.Core
     [CreateAssetMenu(fileName = "Episode", menuName = "Data/Episode", order = 0)]
     public class EpisodeScriptable : ScriptableObject
     {
+        public string contestantID;
         public ContestantData contestant;
         public StyleRuleScriptable styleRule;
         public StyleRuleScriptable trendingRule;

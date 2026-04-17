@@ -69,6 +69,11 @@ namespace Mystie
             gameData.inventoryData.ownedKitIds = ownedKits.Select(k => k.id).ToList();
         }
 
+        public static void SaveTags(string name, List<ClothingTag> tags)
+        {
+            gameData.tags[name] = tags.ToList();
+        }
+
         public static List<Email> GetEmails()
         {
             return gameData.emails;
@@ -92,8 +97,9 @@ namespace Mystie
         public int episodeIndex;
         public string versionNumber;
         public InventoryData inventoryData;
-        public Dictionary<string, Reaction> reactions;
-        public List<Email> emails;
+        public Dictionary<string, Reaction> reactions = new();
+        public Dictionary<string, List<ClothingTag>> tags = new();
+        public List<Email> emails = new();
 
         public GameData()
         {
@@ -108,8 +114,9 @@ namespace Mystie
             episodeIndex = 0;
             versionNumber = Application.version;
             inventoryData = new InventoryData();
-            reactions = new Dictionary<string, Reaction>();
-            emails = new List<Email>();
+            //reactions = new();
+            //tags = new();
+            //emails = new();
         }
     }
 

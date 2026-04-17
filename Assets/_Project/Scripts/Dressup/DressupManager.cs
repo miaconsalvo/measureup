@@ -199,14 +199,23 @@ namespace Mystie.Dressup
 
         // TODO Implement this better
         [YarnFunction("has_tag")]
-        public static bool HasTag(string s)
+        public static bool HasTag(string tag)
         {
-            //Debug.Log("Has tag " + s);
-            foreach (ClothingTag tag in LevelManager.Instance.dressup.currentTags)
-            {
-                if (tag.name == s) return true;
-            }
-            return false;
+            return HasTag(tag, LevelManager.Instance.dressup.currentTags);
+        }
+
+        [YarnFunction("has_tag")]
+        public static bool HasTag(string tag, string name)
+        {
+            if (!SaveDataManager.gameData.tags.ContainsKey(name)) return false;
+            return HasTag(tag, SaveDataManager.gameData.tags[name]);
+        }
+
+        public static bool HasTag(string tag, List<ClothingTag> tags)
+        {
+            if (tags.IsNullOrEmpty()) return false;
+
+            return tags.Any(t => t.name == tag);
         }
 
         [YarnFunction("neg_tags")]
@@ -247,6 +256,11 @@ namespace Mystie.Dressup
         {
             return (int)SaveDataManager.gameData.reactions[name];
             //return (int)LevelManager.Instance.dressup.reaction;
+        }
+
+        public void SaveTags(string name)
+        {
+            SaveDataManager.SaveTags(name, currentTags);
         }
     }
 }

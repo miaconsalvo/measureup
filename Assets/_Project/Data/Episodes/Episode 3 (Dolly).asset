@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c71bdd2891fe1a479bbc64f1486f3ff, type: 3}
   m_Name: Episode 3 (Dolly)
   m_EditorClassIdentifier: 
+  contestantID: dolly
   contestant: {fileID: 11400000, guid: 33aef9671a38d464fb8e2935105f33e5, type: 2}
   styleRule: {fileID: 11400000, guid: b475a46808084e046b0fdbe69c911c29, type: 2}
   trendingRule: {fileID: 11400000, guid: 95c9475a78df11f4896f8962ec5dcd3f, type: 2}
