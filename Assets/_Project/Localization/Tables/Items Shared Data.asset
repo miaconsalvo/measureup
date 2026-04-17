@@ -40,7 +40,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2343011572514816
-    m_Key: Fitted Blazer and White Button Up
+    m_Key: 'Fitted Blazer '
     m_Metadata:
       m_Items: []
   - m_Id: 2343047752581120
@@ -293,6 +293,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 77208142377639936
     m_Key: Old Money Sandals
+    m_Metadata:
+      m_Items: []
   - m_Id: 94899914519367680
     m_Key: Black Flats
     m_Metadata:

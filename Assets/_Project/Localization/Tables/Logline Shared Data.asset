@@ -27,6 +27,10 @@ MonoBehaviour:
     m_Key: Episode Sophie/Logline
     m_Metadata:
       m_Items: []
+  - m_Id: 113692948896407552
+    m_Key: Onboarding Episode/Logline
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

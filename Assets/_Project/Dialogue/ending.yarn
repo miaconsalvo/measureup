@@ -109,7 +109,7 @@ title: SophieEnding
 color: purple
 position: -339,517
 ---
-Host: We helped Sophie revamp her wardrobe before starting her new job as an economics professor. 
+Host: We helped Sophie revamp her wardrobe and embrace her femininity before starting her new job as an economics professor. 
 Host: Time to find out how those lessons played out in the classroom!
  <<if get_reaction("sophie") == 0 >>
     <<jump SophieEndingNeutral>>

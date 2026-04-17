@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
   m_Name: Fitted Blazer and White Button Up
   m_EditorClassIdentifier: 
-  name: Fitted Blazer and White Button Up
+  name: Fitted Blazer
   id: b73373e5-28fd-46f3-b335-597e64ff02ff
   <type>k__BackingField: 0
   displayName:
@@ -36,6 +36,7 @@ MonoBehaviour:
   brand: {fileID: 0}
   icon: {fileID: 21300000, guid: 749bbab8433624b41805be2f545aa372, type: 3}
   sprite: {fileID: 21300000, guid: d82b4a7c9394d3146a8b21546256848a, type: 3}
+  spriteOutline: {fileID: 0}
   sprites: []
   displayOrder: 10
   tags:
