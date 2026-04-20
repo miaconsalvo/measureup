@@ -1670,10 +1670,6 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8036856441628680867, guid: 614ff1b727a24d143a2d8beff77a4b79, type: 3}
-      propertyPath: m_BlocksRaycasts
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9039106371480272136, guid: 614ff1b727a24d143a2d8beff77a4b79, type: 3}
       propertyPath: m_Name
       value: Line View
