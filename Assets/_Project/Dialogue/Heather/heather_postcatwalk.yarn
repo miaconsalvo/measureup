@@ -16,23 +16,23 @@ position: 357.24005126953125,143.65028381347656
 <<FadeIn Heather 0.5>>
 <<wait 0.5>>
 
-<<if has_tag("skirt") == true>>
+<<if has_tag_current("skirt") == true>>
     << jump HeatherPCWSkirt>>
-<<elseif has_tag("bright") == true>>
+<<elseif has_tag_current("bright") == true>>
     << jump HeatherPCWBright>>
-<<elseif has_tag("flashy") == true >>
+<<elseif has_tag_current("flashy") == true >>
     << jump HeatherPCWFlashyImpractical>>
-<<elseif has_tag("impractical") == true >>
+<<elseif has_tag_current("impractical") == true >>
     << jump HeatherPCWFlashyImpractical >>
-<<elseif has_tag("uncomfy") == true>>
+<<elseif has_tag_current("uncomfy") == true>>
     << jump HeatherPCWUncomfy >>
 <<elseif neg_tags() >= 2 >>
     << jump HeatherPCWNegative >>
 <<elseif $sameTags >= 3 >>
     << jump HeatherPCWSame >>
-<<elseif has_tag("comfy") == true && neg_tags() == 0>>
+<<elseif has_tag_current("comfy") == true && neg_tags() == 0>>
     << jump HeatherPCWComfy >>
-<<elseif has_tag("pattern") == true && neg_tags() == 0>>
+<<elseif has_tag_current("pattern") == true && neg_tags() == 0>>
     <<set $patternedItem = get_item("pattern")>> 
     << jump HeatherPCWPattern >>
 <<elseif pos_tags() >=2 && neg_tags() == 0>>

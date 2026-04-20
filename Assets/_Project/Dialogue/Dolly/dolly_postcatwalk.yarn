@@ -19,36 +19,36 @@ position: 552,-98
 <<wait 0.5>>
 
 //negative reactions
-<<if has_tag("business") == true>>
+<<if has_tag_current("business") == true>>
     << jump DollyPCWBusiness>>
-<<elseif has_tag("simple") == true && has_tag("bright")== false && has_tag("simple") == false >>
+<<elseif has_tag_current("simple") == true && has_tag_current("bright")== false && has_tag_current("simple") == false >>
     << jump DollyPCWSimple>>
-<<elseif has_tag("modest") == true && has_tag("risque")== false>>
+<<elseif has_tag_current("modest") == true && has_tag_current("risque")== false>>
     << jump DollyPCWModest>>
-<<elseif has_tag("muted") == true && has_tag("bright")== false>>
+<<elseif has_tag_current("muted") == true && has_tag_current("bright")== false>>
     << jump DollyPCWMuted >>
 
-// //neutral reaction
-// <<elseif same_outfit() == true>>
-//     <<jump DollyPCWSameOutfit>>
+    // //neutral reaction
+    // <<elseif same_outfit() == true>>
+    //     <<jump DollyPCWSameOutfit>>
 
-//postitive reactions
-<<elseif has_tag("girly") == true && neg_tags() == 0>>
+    //postitive reactions
+<<elseif has_tag_current("girly") == true && neg_tags() == 0>>
     <<set $girlyItem = get_item("girly")>> 
     << jump DollyPCWGirly >>
-<<elseif has_tag("young") == true && neg_tags() == 0>>
+<<elseif has_tag_current("young") == true && neg_tags() == 0>>
     << jump DollyPCWYoung >>
-<<elseif has_tag("bright") == true && neg_tags() == 0>>
+<<elseif has_tag_current("bright") == true && neg_tags() == 0>>
     <<set $brightItem = get_item("bright")>> 
     << jump DollyPCWBright >>
-<<elseif has_tag("skirt") == true && has_tag("business") == false>>
+<<elseif has_tag_current("skirt") == true && has_tag_current("business") == false>>
     <<jump DollyPCWSkirt>>
-<<elseif has_tag("heels") == true>>
+<<elseif has_tag_current("heels") == true>>
     <<jump DollyPCWHeels>>
 
-//irrelevant ie. same outfit
+    //irrelevant ie. same outfit
 <<else>>
-   << jump DollyPCWNeutral >>
+    << jump DollyPCWNeutral >>
 
 <<endif>>
 ===

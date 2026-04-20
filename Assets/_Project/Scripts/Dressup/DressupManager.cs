@@ -198,7 +198,7 @@ namespace Mystie.Dressup
         }
 
         // TODO Implement this better
-        [YarnFunction("has_tag")]
+        [YarnFunction("has_tag_current")]
         public static bool HasTag(string tag)
         {
             return HasTag(tag, LevelManager.Instance.dressup.currentTags);

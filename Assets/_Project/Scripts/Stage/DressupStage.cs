@@ -44,6 +44,9 @@ namespace Mystie.Dressup
         public void Initialize(EpisodeScriptable episode)
         {
             dressupManager = LevelManager.Instance.dressup;
+            dressupManager.onItemAdded += OnItemAdded;
+            dressupManager.onItemRemoved += OnItemRemoved;
+
             modelUI.Initialize(episode);
             UpdateItems();
         }
@@ -65,10 +68,12 @@ namespace Mystie.Dressup
         protected override void OnDestroy()
         {
             base.OnDestroy();
-            foreach (ItemUI ui in itemsUI.ToList())
+            if (dressupManager != null)
             {
-                DestroyItemUI(ui);
+                dressupManager.onItemAdded -= OnItemAdded;
+                dressupManager.onItemRemoved -= OnItemRemoved;
             }
+            foreach (ItemUI ui in itemsUI.ToList()) DestroyItemUI(ui);
         }
 
         protected override void OnStageEnter()
@@ -106,6 +111,7 @@ namespace Mystie.Dressup
         {
             ItemUI itemUI = Instantiate(itemPrefab.gameObject, itemAnchor).GetComponent<ItemUI>();
             itemUI.Init(c, OnItemSelected, dressupManager.AddItem, (item) => { dressupManager.RemoveItem(item); });
+
             itemsUI.Add(itemUI);
             return itemUI;
         }
@@ -140,6 +146,18 @@ namespace Mystie.Dressup
             {
                 itemDetailsPanelUI.Set(null);
             }
+        }
+
+        private void OnItemAdded(ItemScriptable item)
+        {
+            ItemUI match = itemsUI.FirstOrDefault(ui => ui.item == item);
+            match?.SetEquipped(true);
+        }
+
+        private void OnItemRemoved(ItemScriptable item)
+        {
+            ItemUI match = itemsUI.FirstOrDefault(ui => ui.item == item);
+            match?.SetEquipped(false);
         }
 
         [Button]

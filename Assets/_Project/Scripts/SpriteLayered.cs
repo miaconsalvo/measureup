@@ -44,30 +44,50 @@ namespace Mystie
         {
             if (copy == null || copy.renderersUI == null) return;
 
-            // Get the sprites from the copy object
-            int count = Mathf.Min(renderersUI.Count, copy.renderersUI.Count);
+            List<Image> copyOrdered = copy.renderersUI
+                .Where(r => r != null)
+                .OrderBy(r => r.transform.GetSiblingIndex())
+                .ToList();
 
-            for (int i = 0; i < renderersUI.Count; i++)
+            List<Image> selfOrdered = renderersUI
+                .Where(r => r != null)
+                .OrderBy(r => r.transform.GetSiblingIndex())
+                .ToList();
+
+            // Apply sibling ordering to self before copying
+            for (int i = 0; i < selfOrdered.Count; i++)
             {
-                if (i < count && copy.renderersUI[i] != null)
+                selfOrdered[i].transform.SetSiblingIndex(
+                    i < copyOrdered.Count
+                        ? copyOrdered[i].transform.GetSiblingIndex()
+                        : selfOrdered[i].transform.GetSiblingIndex()
+                );
+            }
+
+            // Get the sprites from the copy object
+            int count = Mathf.Min(renderersUI.Count, copyOrdered.Count);
+
+            for (int i = 0; i < selfOrdered.Count; i++)
+            {
+                if (i < count && copyOrdered[i] != null)
                 {
                     // Copy the sprite from the corresponding renderer
-                    renderersUI[i].sprite = copy.renderersUI[i].sprite;
-                    renderersUI[i].enabled = copy.renderersUI[i].enabled;
+                    selfOrdered[i].sprite = copyOrdered[i].sprite;
+                    selfOrdered[i].enabled = copyOrdered[i].enabled;
 
-                    if (renderersUI[i].sprite != null)
+                    if (selfOrdered[i].sprite != null)
                     {
-                        renderersUI[i].SetNativeSize();
+                        selfOrdered[i].SetNativeSize();
+
+                        int selfIdx = renderersUI.IndexOf(selfOrdered[i]);
+                        int copyIdx = copy.renderersUI.IndexOf(copyOrdered[i]);
 
                         // Calculate offset from copy's base position
-                        Vector2 basePos = i < basePositions.Count ? basePositions[i] : Vector2.zero;
-                        Vector2 copyBasePos = i < copy.basePositions.Count ? copy.basePositions[i] : Vector2.zero;
-                        Vector2 offset = copy.renderersUI[i].rectTransform.anchoredPosition - copyBasePos;
+                        Vector2 basePos = selfIdx < basePositions.Count ? basePositions[i] : Vector2.zero;
+                        Vector2 copyBasePos = copyIdx < copy.basePositions.Count ? copy.basePositions[i] : Vector2.zero;
+                        Vector2 offset = copyOrdered[i].rectTransform.anchoredPosition - copyBasePos;
 
-                        if (i > 0)
-                            renderersUI[i].rectTransform.anchoredPosition = basePos + offset;
-                        else
-                            renderersUI[i].rectTransform.anchoredPosition = basePos;
+                        selfOrdered[i].rectTransform.anchoredPosition = selfIdx > 0 ? basePos + offset : basePos;
                     }
                 }
                 else
@@ -78,6 +98,7 @@ namespace Mystie
                 }
             }
 
+            SetNativeSize();
             UpdateColors();
         }
 
@@ -107,6 +128,8 @@ namespace Mystie
                     else renderersUI[i].rectTransform.anchoredPosition = basePos;
                 }
             }
+
+            SetNativeSize();
         }
 
         public void UpdateColors()
@@ -121,7 +144,7 @@ namespace Mystie
         {
             for (int i = 0; i < renderersUI.Count; i++)
             {
-                renderersUI[i].SetNativeSize();
+                if (renderersUI[i] != null) renderersUI[i].SetNativeSize();
                 /*
                 if (i > 0)
                 {

@@ -5,7 +5,6 @@ using Mystie.Core;
 using Mystie.Dialogue;
 using Mystie.Dressup;
 using UnityEngine;
-using UnityEngine.Localization.SmartFormat.Utilities;
 using UnityEngine.UI;
 using VInspector;
 
@@ -30,6 +29,7 @@ namespace Mystie
             dressupManager = LevelManager.Instance.dressup;
 
             modelImage.sprite = episode.contestant.model;
+            model.SetNativeSize();
 
             dressupManager.onItemAdded += OnItemAdded;
             dressupManager.onItemRemoved += OnItemRemoved;
@@ -96,6 +96,7 @@ namespace Mystie
             }
 
             ReorderItems();
+            model.SetNativeSize();
         }
 
         public void OnItemRemoved(ItemScriptable item)
@@ -120,6 +121,7 @@ namespace Mystie
             }
 
             ReorderItems();
+            model.SetNativeSize();
         }
 
         private void ReorderItems()

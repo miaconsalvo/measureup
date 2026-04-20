@@ -16,10 +16,10 @@ position: 552,-98
 <<wait 0.5>>
 
 //negative reactions
-<<if has_tag("fancy") == true>>
+<<if has_tag_current("fancy") == true>>
     << jump JoPCWFancy>>
 <<else>>
-   << jump JoPCWPositive >>
+    << jump JoPCWPositive >>
 <<endif>>
 ===
 

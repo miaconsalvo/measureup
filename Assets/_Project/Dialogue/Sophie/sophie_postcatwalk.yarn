@@ -17,33 +17,33 @@ position: 552,-98
 <<Scene catwalk>>
 
 //negative reactions
-<<if has_tag("pink") == true>>
+<<if has_tag_current("pink") == true>>
     << jump SophiePCWPink>>
-<<elseif has_tag("boyish") == true >>
+<<elseif has_tag_current("boyish") == true >>
     << jump SophiePCWBoyish>>
 
-//neutral reaction
+    //neutral reaction
 <<elseif same_outfit() == true>>
     <<jump SophiePCWSameOutfit>>
 
-//postitive reactions
-<<elseif has_tag("pattern") == true && neg_tags() == 0>>
+    //postitive reactions
+<<elseif has_tag_current("pattern") == true && neg_tags() == 0>>
     <<set $patternItemSophie = get_item("pattern")>> 
     << jump SophiePCWpattern >>
 
-<<elseif has_tag("business") == true && neg_tags() == 0>>
+<<elseif has_tag_current("business") == true && neg_tags() == 0>>
     <<set $businessItemSophie = get_item("business")>> 
     << jump SophiePCWbusiness >>
 
-<<elseif has_tag("skirt") == true && neg_tags() == 0>>
+<<elseif has_tag_current("skirt") == true && neg_tags() == 0>>
     << jump SophiePCWSkirt >>
 
-<<elseif has_tag("young") == true>>
+<<elseif has_tag_current("young") == true>>
     <<jump SophiePCWYoung>>
 
-//irrelevant ie. same outfit
+    //irrelevant ie. same outfit
 <<else>>
-   << jump SophiePCWNeutral >>
+    << jump SophiePCWNeutral >>
 
 <<endif>>
 ===

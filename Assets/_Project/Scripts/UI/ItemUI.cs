@@ -103,7 +103,7 @@ namespace Mystie.Dressup
             onSelect?.Invoke(item);
 
             if (!isEquipped && isSelectableEquip) Equip();
-            else if (isEquipped && isSelectableUnequip) Unequip();
+            //else if (isEquipped && isSelectableUnequip) Unequip();
         }
 
         public void Show(bool show)
@@ -137,7 +137,7 @@ namespace Mystie.Dressup
             onUnequipped?.Invoke(item);
         }
 
-        private void SetEquipped(bool isEquipped)
+        public void SetEquipped(bool isEquipped)
         {
             this.isEquipped = isEquipped;
 
