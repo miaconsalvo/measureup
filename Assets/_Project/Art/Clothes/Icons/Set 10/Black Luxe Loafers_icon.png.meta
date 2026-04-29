@@ -119,10 +119,10 @@ TextureImporter:
       name: Black Luxe Loafers_icon_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 209
-        width: 336
-        height: 148
+        x: 4
+        y: 185
+        width: 335
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: Black Luxe Loafers_icon_1
       rect:
         serializedVersion: 2
-        x: 342
-        y: 122
+        x: 340
+        y: 100
         width: 167
-        height: 307
+        height: 305
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,9 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Black Luxe Loafers_icon_0: -7886632334787528665
-      Black Luxe Loafers_icon_1: -5572729492595582050
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
