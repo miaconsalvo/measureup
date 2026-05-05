@@ -7,8 +7,11 @@ position: -145,-211
 <<FadeIn Jo 0.5>>
 <<wait 0.5>>
 
-Jo: You will have time to ask each contestant three questions. 
-Jo: Choose wisely!
+Jo: The interview is an important part of each episode.
+Jo: It is a chance for you to learn more about the contestant before you style them.
+Jo: It also gives our audience the opportunity to connect with the contestants by hearing their stories. 
+Jo: You can ask each contestant [bold]three questions[/bold]. Choose wisely!
+Jo: We'll do a practice run now. Pretend I'm a contestant!
 <<jump JoInterviewQuestions>>
 ===
 
