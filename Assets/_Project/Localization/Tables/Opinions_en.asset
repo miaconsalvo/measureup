@@ -399,6 +399,19 @@ MonoBehaviour:
     m_Localized: 'Huh, this is okay I guess. '
     m_Metadata:
       m_Items: []
+  - m_Id: 124952813207805952
+    m_Localized: This outfit is... ok... but I'm not usually one for skirts.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124953299675766784
+    m_Localized: Oh, uh, did I mention that I kind of hate skirts? Sorry...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124953451375353856
+    m_Localized: Sorry but I really don't like skirts. They remind me of when I was
+      a little kid on Famiy Tree.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

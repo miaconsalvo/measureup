@@ -351,6 +351,18 @@ MonoBehaviour:
     m_Key: Sophie/Neutral
     m_Metadata:
       m_Items: []
+  - m_Id: 124952813207805952
+    m_Key: Heather/Skirt 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124953299675766784
+    m_Key: Heather/Skirt 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124953451375353856
+    m_Key: Heather/Skirt 3
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
