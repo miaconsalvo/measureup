@@ -27,6 +27,7 @@ namespace Mystie.UI
         [SerializeField] private OptionView optionPrefab;
         [SerializeField] private float lettersPerSecond = 10f;
         [SerializeField] private float delayPerCharacter = .05f;
+        [SerializeField] private float fastForwardMultiplier = 5f;
 
         [Space]
 
@@ -35,6 +36,7 @@ namespace Mystie.UI
         private MessageBoxSettings messageBoxNext;
 
         private ChatBubbleUI messageBox;
+        private bool fastForward = false;
 
         void Awake()
         {
@@ -82,23 +84,23 @@ namespace Mystie.UI
                 StopCoroutine(currentTypewriterEffect);
             }
 
-
-
             InstantiateMessageBox();
             messageBox.SetText(dialogueLine.TextWithoutCharacterName.Text, dialogueLine.CharacterName);
 
-            float delay = delayPerCharacter * dialogueLine.TextWithoutCharacterName.Text.Length;
             currentTypewriterEffect = StartCoroutine(ShowTextAndNotify());
 
             IEnumerator ShowTextAndNotify()
             {
                 messageBox.SetLoading(true);
 
+                float delay = delayPerCharacter * dialogueLine.TextWithoutCharacterName.Text.Length;
+                if (fastForward) delay /= fastForwardMultiplier;
                 yield return new WaitForSeconds(delay);
 
                 messageBox.SetLoading(false);
 
-                yield return StartCoroutine(Effects.Typewriter(messageBox.text, lettersPerSecond, null));
+                float lps = fastForward ? lettersPerSecond * fastForwardMultiplier : lettersPerSecond;
+                yield return StartCoroutine(Effects.Typewriter(messageBox.text, lps, null));
 
                 currentTypewriterEffect = null;
                 onDialogueLineFinished();
@@ -130,6 +132,11 @@ namespace Mystie.UI
                     onOptionSelected(selectedOption.DialogueOptionID);
                 };
             }
+        }
+
+        public void SetFastForward(bool enabled)
+        {
+            fastForward = enabled;
         }
     }
 }

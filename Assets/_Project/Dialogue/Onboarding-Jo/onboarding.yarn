@@ -17,10 +17,10 @@ Boss: But we're doing something different here on the reboot.
 Boss: We aren't telling women how to dress, we are showing them how to be the best versions of themselves.
 Boss: And to do that, they need to be shown how to dress.
 Boss: Got it?
-    -> Nod your head yes.
-        Boss: Great.
-    -> Ask a question
-        Boss: I don't have time for questions, keep up. 
+-> Nod your head yes.
+    Boss: Great.
+-> Ask a question
+    Boss: I don't have time for questions, keep up. 
 Boss: Every week you'll get an [bold]episode dossier[/bold] from our Production Assistant. 
 Boss: That dossier is your holy text for how to run the show.
 Boss: If it's in the dossier, I better see it to the final episode. If it's not in the dossier, I don't care.
@@ -36,13 +36,13 @@ tags:
 position: 86,183
 ---
 <<Scene  dressing_room>>
-<<Act Jo base.neutral center lower 0>>
+<<Contestant Jo base.neutral center lower 0>>
 <<FadeIn  Jo 0.5>>
 <<wait  0.5>>
 
 <<once>>
-Jo: Hi there. You're the new stylist? 
-Jo: Nice to meet you, I'm Jo. 
+    Jo: Hi there. You're the new stylist? 
+    Jo: Nice to meet you, I'm Jo. 
 <<endonce>>
 
 Jo: Here's this week's [bold]dossier[/bold].
@@ -58,12 +58,12 @@ Jo: Then, you get to meet the contestant, and ask them some questions.
 Jo: If you learn anything useful about their lifestyle or preferences, you can note it down on the dossier as well.
 Jo: Last but not least, you style the contestant! Pick out a nice outfit you think will work for them, but keep the dossier in mind too.
 Jo: Ok, I think that's everything! Are you ready to get started?
-    -> I'm ready!
-        Jo: Great! Your first contestant is waiting!
-        <<return>>
-    -> Wait, could you go over that again?
-        Jo: Of course!
-        <<jump OnboardingJo>>
+-> I'm ready!
+    Jo: Great! Your first contestant is waiting!
+    <<return>>
+-> Wait, could you go over that again?
+    Jo: Of course!
+    <<jump OnboardingJo>>
 ===
 title: OnboardingEnd
 tags: 

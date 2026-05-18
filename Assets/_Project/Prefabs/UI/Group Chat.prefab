@@ -92,6 +92,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 0
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -360,6 +365,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -453,6 +463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   appNavbarUI: {fileID: 1194740033345330572}
   lockNavbar: 1
+  skipButton: {fileID: 8410419069289975234}
   messageContainer: {fileID: 288213451438873062}
   scrollRect: {fileID: 5586838917055461677}
   messageBoxPrefab: {fileID: 6377425479382065159, guid: 20131e42391350e409dc833902e5036c, type: 3}
@@ -745,6 +756,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 0
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -921,6 +937,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -1502,8 +1523,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   appNavbarUI: {fileID: 1194740033345330572}
   lockNavbar: 1
+  skipButton: {fileID: 8410419069289975234}
   dialogueRunner: {fileID: 2299698663773367794}
   anchor: {fileID: 9146613345609515484}
+  dialogueHelper: {fileID: 0}
   completeStageButton: {fileID: 3378142740397607200}
 --- !u!114 &2299698663773367794
 MonoBehaviour:
@@ -1560,6 +1583,7 @@ MonoBehaviour:
   optionPrefab: {fileID: 8345148761801322113, guid: 2a8953000619c8449a31ae5d13da0ff4, type: 3}
   lettersPerSecond: 30
   delayPerCharacter: 0.02
+  fastForwardMultiplier: 5
   messageBoxMe:
     <bgColor>k__BackingField: {r: 0.73333335, g: 0.44705883, b: 0.62352943, a: 1}
     <isAlignedRight>k__BackingField: 1
@@ -1631,6 +1655,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -1901,6 +1930,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 15, y: 15, z: 15, w: 15}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -2076,6 +2110,9 @@ MonoBehaviour:
   m_RectangleUniformCornerRadius: 1
   m_CircleRadius: 0
   m_CircleFitToRect: 1
+  m_ChamferSize: 0
+  m_ParallelogramSkew: 0
+  m_ParallelogramCornerRadius: 0
   m_NStarPolygonSideCount: 3
   m_NStarPolygonInset: 2
   m_NStarPolygonCornerRadius: 0
@@ -2422,6 +2459,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -2599,6 +2641,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 15, y: 15, z: 15, w: 15}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -3250,6 +3297,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -3447,6 +3499,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 15, y: 15, z: 15, w: 15}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -3713,6 +3770,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 0
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -3829,6 +3891,7 @@ RectTransform:
   - {fileID: 2670662116078215408}
   - {fileID: 6194425382602357979}
   - {fileID: 3382483157772270001}
+  - {fileID: 1851646183764516889}
   - {fileID: 2242615778797164976}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3955,6 +4018,27 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  submitPopupText:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  closePopupText:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &5946609232200317911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4176,6 +4260,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -4390,6 +4479,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -4968,6 +5062,14 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  bgm:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  bgmVolume: 1
   startIndex: 2
   tablet: {fileID: 1194740033345330572}
   sidebar: {fileID: 5940904178808545353}
@@ -6321,8 +6423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   appNavbarUI: {fileID: 1194740033345330572}
   lockNavbar: 0
-  emails:
-  - {fileID: 11400000, guid: df394daf795f91240a9e6a90ff7dc3de, type: 2}
+  skipButton: {fileID: 0}
   emailUI: {fileID: 6812464610947267908, guid: e30df14a4d7abab489555501f8943cab, type: 3}
   emailPreviewsAnchor: {fileID: 8928696793096306772}
   emailDisplay: {fileID: 1935966001993165510}
@@ -6376,6 +6477,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -6624,6 +6730,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 15, y: 15, z: 15, w: 15}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -7023,6 +7134,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -7251,6 +7367,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 15, y: 15, z: 15, w: 15}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -7370,6 +7491,14 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  bgm:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  bgmVolume: 1
   startIndex: 0
   tablet: {fileID: 1194740033345330572}
   sidebar: {fileID: 5940904178808545353}
@@ -7523,6 +7652,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -7712,6 +7846,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 0, y: 0, z: 0, w: 0}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -8069,6 +8208,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 15, y: 15, z: 15, w: 15}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -8234,6 +8378,123 @@ RectTransform:
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2948249119031719699, guid: ed20f077e9e7cc844a8dc560e5165de1, type: 3}
   m_PrefabInstance: {fileID: 435681588014530099}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &962241936494544166
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6387835694602963486}
+    m_Modifications:
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304354498181427053, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_Name
+      value: Skip Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304354498181427053, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+--- !u!224 &1851646183764516889 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1506682316968174911, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+  m_PrefabInstance: {fileID: 962241936494544166}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8410419069289975234 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8785782232222435556, guid: 1fc2f4cce0927c0498943cc8d4b3c138, type: 3}
+  m_PrefabInstance: {fileID: 962241936494544166}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1

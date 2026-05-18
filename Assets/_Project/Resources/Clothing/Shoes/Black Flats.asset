@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Black Flats
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Black Flats
-  id: 
+  id: 78c729e9-d503-4e5b-8a28-66a4e580e4ad
   <type>k__BackingField: 2
   displayName:
     m_TableReference:
@@ -36,7 +36,9 @@ MonoBehaviour:
   brand: {fileID: 0}
   icon: {fileID: 21300000, guid: 81fa9e88c4ed09e45a97af9c06387f48, type: 3}
   sprite: {fileID: 21300000, guid: 2fcd2360d1e14304c876ca5e9c91c298, type: 3}
+  spriteOutline: {fileID: 0}
   sprites: []
+  displayOrder: 0
   tags:
   - {fileID: 11400000, guid: 3e95c84e0193e2f4aae2f5e9108678e9, type: 2}
   - {fileID: 11400000, guid: fcc1ede9ec381364988cafc4b40485dc, type: 2}

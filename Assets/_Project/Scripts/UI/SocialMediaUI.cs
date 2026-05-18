@@ -20,6 +20,7 @@ namespace Mystie.UI
         private ChatBubbleUI messageBox;
         private Queue<Comment> commentsQueue;
         private bool displayingComments;
+        private Coroutine displayComments;
 
         public override void OnOpen()
         {
@@ -30,7 +31,9 @@ namespace Mystie.UI
                 appNavbarUI.SetNavbarEnabled(false);
 
             if (!commentsQueue.IsNullOrEmpty() && !displayingComments)
-                StartCoroutine(DisplayComments());
+                displayComments = StartCoroutine(DisplayComments());
+
+            SetSkipButtonActive(true);
         }
 
         public override void OnClose()
@@ -38,7 +41,7 @@ namespace Mystie.UI
             if (open == false) return;
             base.OnClose();
             //Debug.Log("Social Media close!");
-            StopCoroutine(DisplayComments());
+            if (displayComments != null) StopCoroutine(displayComments);
             displayingComments = false;
         }
 
@@ -74,7 +77,8 @@ namespace Mystie.UI
                 //scrollRect.verticalNormalizedPosition = 0f;
                 //LayoutRebuilder.ForceRebuildLayoutImmediate(messageContainer);
 
-                float delay = Random.Range(delayBetweenPostsMin, delayBetweenPostsMax);
+                float delay = fastForward ? 0f :
+                    Random.Range(delayBetweenPostsMin, delayBetweenPostsMax);
                 yield return new WaitForSeconds(delay);
             }
 
@@ -89,11 +93,6 @@ namespace Mystie.UI
             messageBox.Set(messageBoxSettings);
 
             messageBox.SetText(comment.text.GetLocalizedString(), "@" + comment.handle);
-        }
-
-        public void OnDisplayDone()
-        {
-            if (appNavbarUI != null && lockNavbar) appNavbarUI.SetNavbarEnabled(true);
         }
 
         public override void Clear()

@@ -9,8 +9,10 @@ namespace Mystie
     {
         public AppNavbarUI appNavbarUI;
         public bool lockNavbar = false;
+        [SerializeField] protected Button skipButton;
 
         public bool active { get; private set; }
+        protected bool fastForward = false;
 
         protected bool open;
 
@@ -20,6 +22,7 @@ namespace Mystie
             open = true;
             if (lockNavbar && appNavbarUI != null)
                 appNavbarUI.SetNavbarEnabled(false);
+            SetSkipButtonActive(true);
         }
 
         public virtual void OnClose()
@@ -28,11 +31,36 @@ namespace Mystie
             open = false;
             if (lockNavbar && appNavbarUI != null)
                 appNavbarUI.SetNavbarEnabled(true);
+
+            SetSkipButtonActive(false);
+            fastForward = false;
         }
 
         public virtual void Clear()
         {
 
+        }
+
+        public virtual void OnDisplayDone()
+        {
+            if (appNavbarUI != null && lockNavbar) appNavbarUI.SetNavbarEnabled(true);
+            SetSkipButtonActive(false);
+            fastForward = false;
+        }
+
+        protected void SetSkipButtonActive(bool active)
+        {
+            if (skipButton != null)
+            {
+                skipButton.gameObject.SetActive(active);
+                if (active) skipButton.onClick.AddListener(OnFastForward);
+                else skipButton.onClick.RemoveListener(OnFastForward);
+            }
+        }
+
+        protected virtual void OnFastForward()
+        {
+            fastForward = !fastForward;
         }
     }
 }

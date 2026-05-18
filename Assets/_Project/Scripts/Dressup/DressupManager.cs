@@ -63,6 +63,7 @@ namespace Mystie.Dressup
                     AddItem(underwearItems[itemType]);
             }
 
+            LogCurrentOutfit("SetModel: " + (contestant != null ? contestant.name : "null contestant"));
         }
 
         public string FitCheck()
@@ -102,6 +103,8 @@ namespace Mystie.Dressup
 
             return true;
         }
+
+        #region Item Management
 
         public void UpdateTags()
         {
@@ -164,6 +167,32 @@ namespace Mystie.Dressup
             Debug.Log("Removed " + item.name + "(" + item.type + ")");
         }
 
+        public void LogCurrentOutfit(string context = "")
+        {
+            string label = string.IsNullOrEmpty(context) ? "Current outfit" : $"Outfit [{context}]";
+
+            if (items == null || items.Count == 0)
+            {
+                Debug.Log($"{label}: items dict is empty or null.");
+                return;
+            }
+
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.AppendLine(label + ":");
+
+            foreach (var kvp in items)
+            {
+                string itemName = kvp.Value != null ? $"{kvp.Value.name} (tags: {string.Join(", ", kvp.Value.tags)})" : "null";
+                sb.AppendLine($"  [{kvp.Key}] → {itemName}");
+            }
+
+            Debug.Log(sb.ToString());
+        }
+
+        #endregion
+
+        #region Level Flow
+
         private bool MeetsConditions(OpinionCondition condition)
         {
             // Check required tags
@@ -196,6 +225,10 @@ namespace Mystie.Dressup
         {
             return LevelManager.Instance.episode.trendingRule.Check(currentTags);
         }
+
+        #endregion
+
+        #region Yarn Tags
 
         // TODO Implement this better
         [YarnFunction("has_tag_current")]
@@ -257,6 +290,8 @@ namespace Mystie.Dressup
             return (int)SaveDataManager.gameData.reactions[name];
             //return (int)LevelManager.Instance.dressup.reaction;
         }
+
+        #endregion
 
         public void SaveTags(string name)
         {

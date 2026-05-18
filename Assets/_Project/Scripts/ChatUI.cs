@@ -5,13 +5,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
 
-namespace Mystie
+namespace Mystie.UI
 {
     public class ChatUI : AppUI
     {
         public DialogueRunner dialogueRunner;
 
         public Transform anchor;
+
+        [SerializeField] private PhoneChatDialogueHelper dialogueHelper;
 
         private string convoNodeStart;
 
@@ -26,6 +28,12 @@ namespace Mystie
             if (completeStageButton != null)
                 completeStageButton.gameObject.SetActive(false);
             if (convoNodeStart != string.Empty) StartConvo(convoNodeStart);
+        }
+
+        public override void OnClose()
+        {
+            base.OnClose();
+            dialogueHelper?.SetFastForward(false);
         }
 
         public void QueueConvo(string nodeStart)
@@ -43,7 +51,7 @@ namespace Mystie
         {
             if (completeStageButton != null)
                 completeStageButton.gameObject.SetActive(true);
-            if (appNavbarUI != null && lockNavbar) appNavbarUI.SetNavbarEnabled(true);
+            OnDisplayDone();
         }
 
         public override void Clear()
@@ -53,6 +61,12 @@ namespace Mystie
             {
                 Destroy(anchor.GetChild(anchor.childCount - 1).gameObject);
             }*/
+        }
+
+        protected override void OnFastForward()
+        {
+            base.OnFastForward();
+            dialogueHelper?.SetFastForward(fastForward);
         }
     }
 }

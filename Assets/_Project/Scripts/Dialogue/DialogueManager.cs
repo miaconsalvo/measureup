@@ -516,6 +516,7 @@ namespace Mystie.Dialogue
 			if (!sprites.ContainsKey(actorName))
 			{
 				sprite.transform.parent = genericSprite.transform.parent;
+				sprite.transform.localScale = Vector3.one;
 				sprites.Add(actorName, sprite);
 				sprite.name = actorName;
 			}

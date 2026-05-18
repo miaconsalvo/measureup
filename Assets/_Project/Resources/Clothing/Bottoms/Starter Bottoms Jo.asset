@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Starter Bottoms Jo
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
   name: Jo Default Bottom Starter
-  id: 
+  id: f9d01e40-1b81-401f-8cba-644ebec1602e
   <type>k__BackingField: 1
   displayName:
     m_TableReference:

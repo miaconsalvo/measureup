@@ -31,7 +31,7 @@ namespace Mystie
         public LocalizeStringEvent occupationText;
         public LocalizeStringEvent trendingText;
 
-        //private List<int> questionsAsked;
+        private List<int> notesAdded = new();
         private int questionsAsked = 0;
 
         [Space]
@@ -116,7 +116,7 @@ namespace Mystie
         {
             DossierUI dossier = DressupUIManager.Instance.dossierUI;
             InterviewQuestion question = LevelManager.Instance.episode.interviewNotes[q];
-            //if (!dossier.questionsAsked.Contains(q))
+            if (dossier.notesAdded.Contains(q)) return;
 
             foreach (InterviewNote note in question.notes)
             {
@@ -125,7 +125,8 @@ namespace Mystie
                 switch (note.type)
                 {
                     case InterviewNote.InfoType.Like:
-                        if (!dossier.likesList.Contains(note.text))
+                        if (!dossier.likesList.Exists(s => s.TableReference == note.text.TableReference &&
+                                                        s.TableEntryReference.KeyId == note.text.TableEntryReference.KeyId))
                         {
                             dossier.likesList.Add(note.text);
                             dossier.likes.text = GetList(dossier.likesList);
@@ -146,11 +147,11 @@ namespace Mystie
                         noteString.StringReference = note.text;
                         break;
                 }
-
-                dossier.questionsAsked++;
-                //dossier.questionsAsked.Add(q);
-                dossier.UpdateUI();
             }
+
+            dossier.questionsAsked++;
+            dossier.notesAdded.Add(q);
+            dossier.UpdateUI();
         }
 
         /*[YarnFunction("question_asked")]
@@ -162,6 +163,8 @@ namespace Mystie
         [YarnFunction("max_questions")]
         public static bool MaxQuestions()
         {
+            Debug.Log($"Max questions? ({DressupUIManager.Instance.dossierUI.questionsAsked}/{DressupUIManager.Instance.dossierUI.episode.maxQuestions})" +
+                $"\n{DressupUIManager.Instance.dossierUI.questionsAsked >= DressupUIManager.Instance.dossierUI.episode.maxQuestions}");
             return DressupUIManager.Instance.dossierUI.questionsAsked
                 >= DressupUIManager.Instance.dossierUI.episode.maxQuestions;
         }

@@ -1,12 +1,12 @@
 using FMODUnity;
 using Mystie.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Mystie.Core
 {
     public class CatwalkStage : LevelStage
     {
-
         public Animator animator;
         public SpriteLayered dialogueModel;
         public string playAnimParam = "Play";
@@ -20,9 +20,15 @@ namespace Mystie.Core
             animator.SetTrigger(playAnimParam);
 
             animTimer = new Timer(animDuration);
-            animTimer.onTimerEnd += CompleteStage;
+            animTimer.onTimerEnd += OnCatwalkDone;
 
             base.OnStageEnter();
+
+            if (completeStageButton != null)
+            {
+                completeStageButton.gameObject.SetActive(false);
+                //doneButton.onClick.AddListener(OnStageComplete);
+            }
         }
 
         public void Update()
@@ -30,10 +36,20 @@ namespace Mystie.Core
             animTimer?.Tick(Time.deltaTime);
         }
 
+        protected void OnCatwalkDone()
+        {
+            if (completeStageButton != null) completeStageButton.gameObject.SetActive(true);
+            else OnStageComplete();
+        }
+
         protected override void OnStageComplete()
         {
             //Destroy(dialogueModel);
-
+            if (completeStageButton != null)
+            {
+                completeStageButton.gameObject.SetActive(false);
+            }
+            animTimer = null;
             base.OnStageComplete();
         }
     }

@@ -18,8 +18,11 @@ namespace Mystie.Dialogue
         [YarnCommand("Contestant")]
         public static void SetActorEpisodeCommand(string actorName, string spriteName, string positionX = "", string positionY = "", float alpha = 1f, string colorHex = "")
         {
+            LevelManager.Instance.dressup.LogCurrentOutfit("SetActorEpisodeCommand: before clone");
+
             //string actorName = LevelManager.Instance.episode.name;
-            SpriteLayered dialogueModel = Object.Instantiate<SpriteLayered>(DressupUIManager.Instance.dressupUI.modelUI.model);
+            SpriteLayered dialogueModel = Object.Instantiate(DressupUIManager.Instance.dressupUI.modelUI.gameObject).GetComponent<SpriteLayered>();
+            //dialogueModel.transform.localScale = Vector3.one;
 
             SetActorEpisode(ref dialogueModel, actorName, spriteName, positionX, positionY, alpha, colorHex);
         }

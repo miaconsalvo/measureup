@@ -33,6 +33,12 @@ namespace Mystie
 
             dressupManager.onItemAdded += OnItemAdded;
             dressupManager.onItemRemoved += OnItemRemoved;
+
+            foreach (var kvp in dressupManager.items)
+            {
+                if (kvp.Value != null) OnItemAdded(kvp.Value);
+                else OnItemRemoved(kvp.Key);
+            }
         }
 
         private void Start()
@@ -81,7 +87,7 @@ namespace Mystie
 
             if (itemsUI.ContainsKey(item.type))
             {
-                itemsUI[item.type].gameObject.SetActive(item.sprite != null);
+                itemsUI[item.type].enabled = item.sprite != null;
                 itemsUI[item.type].sprite = item.sprite;
                 itemsUI[item.type].SetNativeSize();
                 //dialogueModel.Set(model);
@@ -89,7 +95,7 @@ namespace Mystie
 
             if (itemsBgUI.ContainsKey(item.type))
             {
-                itemsBgUI[item.type].gameObject.SetActive(item.spriteOutline != null);
+                itemsBgUI[item.type].enabled = item.spriteOutline != null;
                 itemsBgUI[item.type].sprite = item.spriteOutline;
                 itemsBgUI[item.type].SetNativeSize();
                 //dialogueModel.Set(model);
@@ -108,14 +114,14 @@ namespace Mystie
         {
             if (itemsUI.ContainsKey(itemType))
             {
-                itemsUI[itemType].gameObject.SetActive(false);
+                itemsUI[itemType].enabled = false;
                 itemsUI[itemType].sprite = null;
                 //dialogueModel.Set(model);
             }
 
             if (itemsBgUI.ContainsKey(itemType))
             {
-                itemsBgUI[itemType].gameObject.SetActive(false);
+                itemsBgUI[itemType].enabled = false;
                 itemsBgUI[itemType].sprite = null;
                 //dialogueModel.Set(model);
             }

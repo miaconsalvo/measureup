@@ -28,18 +28,17 @@ namespace Mystie.Core
             Debug.Log("On stage enter");
         }
 
-        protected override void OnStageComplete()
-        {
-            uiState.onExit -= OnDialogueComplete;
-
-            base.OnStageComplete();
-        }
-
         protected void OnDialogueComplete()
         {
             if (completeStageButton != null)
                 completeStageButton.gameObject.SetActive(true);
             else OnStageComplete();
+        }
+
+        protected override void OnStageComplete()
+        {
+            uiState.onExit -= OnDialogueComplete;
+            base.OnStageComplete();
         }
     }
 }

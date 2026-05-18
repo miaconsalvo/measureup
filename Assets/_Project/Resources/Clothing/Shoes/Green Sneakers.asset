@@ -17,18 +17,18 @@ MonoBehaviour:
   <type>k__BackingField: 2
   displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:06fb516fd519a2944b963e89afed6231
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 6342259024592896
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:64cd74dbad4db0a498efa44e79477bf2
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 3411213799309312
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -36,7 +36,9 @@ MonoBehaviour:
   brand: {fileID: 0}
   icon: {fileID: 21300000, guid: e7b8f4164794f8a47baed8e06390fa37, type: 3}
   sprite: {fileID: 21300000, guid: 2bdfbf19b63d4534db61915347c08b49, type: 3}
+  spriteOutline: {fileID: 0}
   sprites: []
+  displayOrder: 0
   tags:
   - {fileID: 11400000, guid: 3dd5bee944a9892499537f489a2e5591, type: 2}
   - {fileID: 11400000, guid: 09e5e03397f903c4ea80ae79a464d69d, type: 2}
