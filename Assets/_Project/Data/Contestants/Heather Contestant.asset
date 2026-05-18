@@ -85,9 +85,9 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - name: Flashy
+  - name: Skirt
     requiredTags:
-    - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
+    - {fileID: 11400000, guid: 46da594aa093a314ca17348cd4a39004, type: 2}
     excludedTags: []
     minNegativeTags: 0
     minPositiveTags: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6085943311990784
+        m_KeyId: 124952813207805952
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6085979156512768
+        m_KeyId: 124953299675766784
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
     - m_TableReference:
         m_TableCollectionName: GUID:ea84933096633a74fbd877fc0fd771f3
       m_TableEntryReference:
-        m_KeyId: 6086012115353600
+        m_KeyId: 124953451375353856
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -249,7 +249,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - name: Opinion
+  - name: Opinion Positive
     requiredTags: []
     excludedTags:
     - {fileID: 11400000, guid: 206ed9e876b88ef4d965aed36ac5f52f, type: 2}
