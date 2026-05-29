@@ -15,7 +15,7 @@ tags:
 position: -135,-9
 ---
 << if max_questions() == true>>
-    <<jump SophieInterviewEnd>>
+<<jump SophieInterviewEnd>>
 <<endif>>
 
 -> A. How would you describe your day-to-day wardrobe? <<once>>
@@ -29,7 +29,7 @@ position: -135,-9
 -> E. What is an outfit you've worn that you'll never wear again? <<once>>
     <<jump SophieInterviewQuestionE>>
 
-    ===
+===
     
 title: SophieInterviewQuestionA
 position: -581,130
@@ -99,7 +99,7 @@ title: SophieInterviewEnd
 tags: 
 position: -129,442
 ---
-Interview ends.
+
 <<FadeOut Sophie 0.5>>
 <<wait 0.5>>
 <<HideAll>>
