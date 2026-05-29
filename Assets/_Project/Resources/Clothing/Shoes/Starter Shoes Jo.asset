@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
   m_Name: Starter Shoes Jo
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
-  name: Starter Shoes Jo
-  id: 337badd4-aec6-46d0-a27f-0f10a9093cd6
-  <type>k__BackingField: 2
+  name: Item
+  id: 
+  <type>k__BackingField: 0
   displayName:
     m_TableReference:
       m_TableCollectionName: 
