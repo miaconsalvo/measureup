@@ -3,8 +3,8 @@ guid: 00adadc763232d14a85ec593c4a12223
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3353014839452668272
-    second: dolly_startertop_0
+      213: -5300822239761174657
+    second: top_starter_dolly_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,11 +113,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dolly_startertop_0
+      name: top_starter_dolly_0
       rect:
         serializedVersion: 2
-        x: 418
-        y: 975
+        x: 446
+        y: 755
         width: 293
         height: 206
       alignment: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09e6fcfb4c2b771d0800000000000000
-      internalID: -3353014839452668272
+      spriteID: f7f6b850242bf66b0800000000000000
+      internalID: -5300822239761174657
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      dolly_startertop_0: -3353014839452668272
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

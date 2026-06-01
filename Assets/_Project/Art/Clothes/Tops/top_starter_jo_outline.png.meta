@@ -119,8 +119,8 @@ TextureImporter:
       name: top_starter_jo_outline_0
       rect:
         serializedVersion: 2
-        x: 458
-        y: 1229
+        x: 487
+        y: 1015
         width: 165
         height: 164
       alignment: 0
@@ -141,8 +141,8 @@ TextureImporter:
       name: top_starter_jo_outline_1
       rect:
         serializedVersion: 2
-        x: 387
-        y: 931
+        x: 416
+        y: 717
         width: 360
         height: 290
       alignment: 0

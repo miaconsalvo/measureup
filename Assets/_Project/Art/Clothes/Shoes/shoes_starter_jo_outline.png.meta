@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c9c9f539bffdd0d44bcc86a8b2ac3bd0
+guid: 7334caba2ec0ab3428ee5bd0aed51f0e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5068285115786606919
-    second: dolly_starterbottoms_outfit_0
+      213: 896866226135375182
+    second: shoes_starter_jo_outline_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dolly_starterbottoms_outfit_0
+      name: shoes_starter_jo_outline_0
       rect:
         serializedVersion: 2
-        x: 348
-        y: 574
-        width: 427
-        height: 391
+        x: 402
+        y: 7
+        width: 276
+        height: 179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7493cdab57a265640800000000000000
-      internalID: 5068285115786606919
+      spriteID: e4d18d3b41f427c00800000000000000
+      internalID: 896866226135375182
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      dolly_starterbottoms_outfit_0: 5068285115786606919
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

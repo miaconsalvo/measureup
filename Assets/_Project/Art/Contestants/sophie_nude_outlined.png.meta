@@ -116,8 +116,8 @@ TextureImporter:
       name: sophie_nude_outlined_0
       rect:
         serializedVersion: 2
-        x: 430
-        y: 59
+        x: 407
+        y: 7
         width: 386
         height: 1185
       alignment: 0
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      sophie_nude_outlined_0: 8295613128533875907
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
