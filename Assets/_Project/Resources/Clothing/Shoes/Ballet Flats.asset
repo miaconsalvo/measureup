@@ -36,7 +36,9 @@ MonoBehaviour:
   brand: {fileID: 0}
   icon: {fileID: 21300000, guid: 01428fa7f796be643bdfbfce3d54f012, type: 3}
   sprite: {fileID: 21300000, guid: e3cfc2f76ace7724e9b8b944597f788f, type: 3}
+  spriteOutline: {fileID: 21300000, guid: 23d036894cdbd6643ae3629ce03a7fcf, type: 3}
   sprites: []
+  displayOrder: 0
   tags:
   - {fileID: 11400000, guid: 879a62e18b8ddef49be4113368d9f11a, type: 2}
   - {fileID: 11400000, guid: f8a1eef32fae65f4290a8fc77836a745, type: 2}

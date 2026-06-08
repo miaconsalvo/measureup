@@ -116,10 +116,10 @@ TextureImporter:
       name: dolly_nude_outlined_0
       rect:
         serializedVersion: 2
-        x: 430
-        y: 59
-        width: 386
-        height: 1219
+        x: 414
+        y: 12
+        width: 373
+        height: 1176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      dolly_nude_outlined_0: 621219476913697010
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

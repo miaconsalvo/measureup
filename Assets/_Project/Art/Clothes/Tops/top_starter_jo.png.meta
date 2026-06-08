@@ -119,8 +119,8 @@ TextureImporter:
       name: top_starter_jo_0
       rect:
         serializedVersion: 2
-        x: 471
-        y: 1242
+        x: 500
+        y: 1028
         width: 139
         height: 138
       alignment: 0
@@ -141,8 +141,8 @@ TextureImporter:
       name: top_starter_jo_1
       rect:
         serializedVersion: 2
-        x: 400
-        y: 944
+        x: 429
+        y: 730
         width: 334
         height: 264
       alignment: 0
