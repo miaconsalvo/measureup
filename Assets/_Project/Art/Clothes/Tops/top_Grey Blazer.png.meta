@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      top_Grey Blazer_0: -7665470843008048219
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

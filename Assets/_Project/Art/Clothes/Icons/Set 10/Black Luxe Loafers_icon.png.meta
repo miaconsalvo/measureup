@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Black Luxe Loafers_icon_0: -7886632334787528665
+      Black Luxe Loafers_icon_1: -5572729492595582050
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

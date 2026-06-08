@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      top_fitted blazer_0: 4564986632114446287
+      top_fitted blazer_1: 1021751230822718941
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

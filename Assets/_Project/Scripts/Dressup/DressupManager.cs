@@ -287,8 +287,9 @@ namespace Mystie.Dressup
         [YarnFunction("get_reaction")]
         public static int GetReaction(string name)
         {
-            return (int)SaveDataManager.gameData.reactions[name];
-            //return (int)LevelManager.Instance.dressup.reaction;
+            return SaveDataManager.gameData.reactions.ContainsKey(name) ?
+                (int)SaveDataManager.gameData.reactions[name] :
+                0;
         }
 
         #endregion

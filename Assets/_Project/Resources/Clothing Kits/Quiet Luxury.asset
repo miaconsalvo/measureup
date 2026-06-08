@@ -24,7 +24,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   price: 0
-  priceRange: SSS
+  priceRange: $$$
   garments:
   - {fileID: 11400000, guid: 0cc2480aa3336904486b6dd16b97abb3, type: 2}
   - {fileID: 11400000, guid: d063ec79cec0e5144b35863b06baa797, type: 2}

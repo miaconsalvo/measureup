@@ -137,16 +137,19 @@ namespace Mystie.Core
         public void OnLevelComplete()
         {
             Debug.Log("Level Complete!");
-            dressup.SaveTags(episode.contestantID);
 
+            dressup.SaveTags(episode.contestantID);
             SaveDataManager.SaveEpisodeIndex(episodeManager.index + 1);
             episodeManager.CompleteEpisode();
-            episodeManager.LoadCurrentEpisode();
 
             inventory.GainMoney(GetRevenue());
             inventory.SaveInventory();
 
+            Debug.Log($"[OnLevelComplete] Kit IDs saved: {string.Join(", ", SaveDataManager.gameData.inventoryData.ownedKitIds)}");
+
             SaveDataManager.SaveGameData();
+
+            episodeManager.LoadCurrentEpisode();
             //GameManager.Instance.LoadMainMenu();
         }
 

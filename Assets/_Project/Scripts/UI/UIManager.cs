@@ -101,7 +101,7 @@ namespace Mystie.UI
 
         public void OnDestroy()
         {
-            ClearStates();
+            //ClearStates();
         }
 
         public void OnStateChange()

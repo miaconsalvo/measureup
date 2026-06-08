@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b872cb4bd218c4d8cd9bda22fbe574, type: 3}
   m_Name: Starter Top Jo
   m_EditorClassIdentifier: Assembly-CSharp::Mystie.Dressup.ItemScriptable
-  name: Item
-  id: 
+  name: Jo Default Top
+  id: 4736cb70-0e9d-47b0-9c1a-f0d02422eadc
   <type>k__BackingField: 0
   displayName:
     m_TableReference:

@@ -104,6 +104,7 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fr
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c6bdb5517b18a834c89f9bb785f279f4
     m_Address: Logline_fr

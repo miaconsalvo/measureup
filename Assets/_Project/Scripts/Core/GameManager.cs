@@ -14,7 +14,7 @@ using Yarn.Unity;
 
 namespace Mystie.Core
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager
     {
         public static event Action<GameState> onGameStateChanged;
         public static event Action onPause;
@@ -38,31 +38,22 @@ namespace Mystie.Core
 
         #region Singleton
 
+        protected static GameManager instance = new();
         public static GameManager Instance
         {
             get
             {
-                if (instance == null) Instantiate();
+                if (instance == null) instance = new();
                 return instance;
             }
         }
 
-        protected static GameManager instance;
-
         #endregion
 
-        private static GameManager Instantiate()
-        {
-            GameObject gmObj = new GameObject("Game Manager");
-            instance = gmObj.AddComponent<GameManager>();
-            instance.Initialize();
 
-            return instance;
-        }
-
-        private void Initialize()
+        private GameManager()
         {
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
 
             //gameState = GameState.StartScreen;
 
@@ -92,16 +83,7 @@ namespace Mystie.Core
 
             //SceneManager.sceneLoaded += OnSceneLoaded;
 
-
-        }
-
-        IEnumerator Start()
-        {
-            Debug.Log("Game Manager Start");
-            // Wait for the localization system to initialize, loading Locales, preloading etc.
-            yield return LocalizationSettings.InitializationOperation;
-            gameSettings.LoadLocale();
-            //stringFormatter = LocalizationSettings.StringDatabase.SmartFormatter;
+            Debug.Log("Game Manager: Instantiated");
         }
 
         public static void SetGameState(GameState state)

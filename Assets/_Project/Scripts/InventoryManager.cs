@@ -25,6 +25,7 @@ namespace Mystie.Dressup
 
             ClothingKitScriptable[] allKits = Resources.LoadAll<ClothingKitScriptable>("Clothing Kits");
             kitLookup = allKits.ToDictionary(k => k.id);
+            Debug.Log($"[LoadClothingData] kitLookup count: {(kitLookup == null ? "NULL" : kitLookup.Count.ToString())}");
         }
 
         public void Initialize(EpisodeScriptable episode)
@@ -58,6 +59,9 @@ namespace Mystie.Dressup
 
         public void LoadInventory(GameData data)
         {
+            Debug.Log($"[LoadInventory] Kit IDs in gameData: {string.Join(", ", data.inventoryData.ownedKitIds)}");
+            Debug.Log($"[LoadInventory] kitLookup count: {(kitLookup == null ? "NULL" : kitLookup.Count.ToString())}");
+
             if (data == null) return;
 
             moneyAmount = data.moneyAmount;
@@ -70,6 +74,8 @@ namespace Mystie.Dressup
                 .Where(id => kitLookup.ContainsKey(id))
                 .Select(id => kitLookup[id])
                 .ToList();
+
+            Debug.Log($"[LoadInventory] Kits resolved: {ownedKits.Count}");
         }
 
         public void SaveInventory()

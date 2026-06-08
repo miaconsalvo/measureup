@@ -3,6 +3,7 @@ using Mystie.UI.Transition;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -14,11 +15,16 @@ namespace Mystie.UI
         [SerializeField] private Button newGameBtn;
         [SerializeField] private Button continueBtn;
 
-        public void Start()
+        public IEnumerator Start()
         {
             SaveManager.LoadSaveFiles();
             bool hasSave = SaveManager.HasSave();
             if (continueBtn != null) continueBtn.gameObject.SetActive(hasSave);
+
+            // Wait for the localization system to initialize, loading Locales, preloading etc.
+            yield return LocalizationSettings.InitializationOperation;
+            GameManager.Instance.gameSettings.LoadLocale();
+            //stringFormatter = LocalizationSettings.StringDatabase.SmartFormatter;
         }
 
         private void OnEnable()

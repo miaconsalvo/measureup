@@ -15,6 +15,16 @@ namespace Mystie.UI
         [SerializeField] protected Button skipButton;
         [SerializeField] protected LocalizedString skipPopupText;
 
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            dialogueRunner.onDialogueComplete.RemoveListener(CloseState);
+            if (skipButton != null)
+            {
+                skipButton.onClick.RemoveListener(SkipDialogue);
+            }
+        }
+
         public override IEnumerator DisplayState()
         {
             yield return StartCoroutine(base.DisplayState());
