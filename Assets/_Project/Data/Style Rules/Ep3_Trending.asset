@@ -32,10 +32,10 @@ MonoBehaviour:
     m_LocalVariables: []
   rules:
   - op: 0
-    not: 1
+    not: 0
     tags:
-    - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
-    - {fileID: 11400000, guid: 46da594aa093a314ca17348cd4a39004, type: 2}
+    - {fileID: 11400000, guid: 34a441d9946ea8b4cae321b4ff44fd72, type: 2}
+    - {fileID: 11400000, guid: 917721af043e0d942832882f8ad383d4, type: 2}
   references:
     version: 2
     RefIds: []

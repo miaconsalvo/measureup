@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8314b44e8a2c18428c58d20fb258138, type: 3}
-  m_Name: Ep0_Trending_Pink
+  m_Name: Ep0_Trending_ChelseaBoot
   m_EditorClassIdentifier: 
   ruleName:
     m_TableReference:
@@ -32,10 +32,9 @@ MonoBehaviour:
     m_LocalVariables: []
   rules:
   - op: 0
-    not: 1
+    not: 0
     tags:
-    - {fileID: 11400000, guid: 388d42d9cc9686e4abda25a029a6ed3f, type: 2}
-    - {fileID: 11400000, guid: 46da594aa093a314ca17348cd4a39004, type: 2}
+    - {fileID: 11400000, guid: 65afe443e2732d3478e6d4952d4bd7b4, type: 2}
   references:
     version: 2
     RefIds: []
