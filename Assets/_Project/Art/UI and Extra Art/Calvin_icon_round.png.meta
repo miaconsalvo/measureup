@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Calvin_icon_round_0: 7867688213003024154
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

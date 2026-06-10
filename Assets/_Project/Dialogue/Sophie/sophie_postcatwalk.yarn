@@ -23,8 +23,8 @@ position: 552,-98
     << jump SophiePCWBoyish>>
 
     //neutral reaction
-<<elseif same_outfit() == true>>
-    <<jump SophiePCWSameOutfit>>
+    //<<elseif same_outfit() == true>>
+    //<<jump SophiePCWSameOutfit>>
 
     //postitive reactions
 <<elseif has_tag_current("pattern") == true && neg_tags() == 0>>

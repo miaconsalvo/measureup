@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      shoes_starter_dolly_outline_0: 2904912234940979285
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

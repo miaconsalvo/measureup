@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Elie_icon_round_0: -7803957418244254993
+      Elie_icon_round_1: -6183166538528306208
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

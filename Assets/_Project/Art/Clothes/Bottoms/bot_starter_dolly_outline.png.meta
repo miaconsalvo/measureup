@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bot_starter_dolly_outline_0: -6340219944581514031
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

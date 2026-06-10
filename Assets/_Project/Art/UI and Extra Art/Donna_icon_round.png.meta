@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Donna_icon_round_0: -7022797644414006089
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

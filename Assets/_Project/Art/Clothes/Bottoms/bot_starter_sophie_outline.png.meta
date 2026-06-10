@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bot_starter_sophie_outline_0: 7730209171278409589
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

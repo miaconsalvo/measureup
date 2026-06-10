@@ -27,7 +27,7 @@ MonoBehaviour:
   actor: {fileID: 11400000, guid: 4408677c070288e42ab131b03e380bb4, type: 2}
   startingClothes:
   - {fileID: 11400000, guid: 0a89a884fde00a84c82cb990124aae8e, type: 2}
-  - {fileID: 11400000, guid: 336d08d53bd517f4bb7491421cbcdd8d, type: 2}
+  - {fileID: 11400000, guid: 6f337c39652428a4e871c9c942ed5df6, type: 2}
   - {fileID: 11400000, guid: 607d503170c376b408117d7c72df382f, type: 2}
   underwear:
   - {fileID: 11400000, guid: 1fe112ceb73469c418312d74fe818f7f, type: 2}
