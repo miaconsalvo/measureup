@@ -35,10 +35,12 @@ MonoBehaviour:
     not: 1
     tags:
     - {fileID: 11400000, guid: b306f85d40a227544a48f7fd47ea8136, type: 2}
-  - op: 0
+    - {fileID: 11400000, guid: a950a12033397f24092296fe08365686, type: 2}
+  - op: 1
     not: 0
     tags:
     - {fileID: 11400000, guid: b9ea74aeb487b8444a46e29887668b1c, type: 2}
+    - {fileID: 11400000, guid: 5dfc8ea14049d26438b13de9c26e0e81, type: 2}
   references:
     version: 2
     RefIds: []

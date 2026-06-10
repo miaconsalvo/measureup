@@ -191,6 +191,10 @@ MonoBehaviour:
     m_Key: "Heels\t"
     m_Metadata:
       m_Items: []
+  - m_Id: 183240933044641792
+    m_Key: "Pants\t"
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
