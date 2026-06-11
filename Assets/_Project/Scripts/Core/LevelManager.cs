@@ -47,6 +47,8 @@ namespace Mystie.Core
         [field: SerializeField] public DossierManager dossier { get; private set; }
         [field: SerializeField] public EmailManager emailManager { get; private set; }
 
+        public Dictionary<ItemScriptable, List<ClothingTag>> episodeTags { get; private set; }
+
         public bool IsBossReactionPositive
         {
             get => dressup.CheckStyleRule() && dressup.CheckTrending();
@@ -89,7 +91,6 @@ namespace Mystie.Core
         public void InitializeComponents()
         {
             contestant = episode.contestant;
-
             uiManager = DressupUIManager.Instance;
             if (!stagesOverride) stages = episode.stages;
 
@@ -98,6 +99,10 @@ namespace Mystie.Core
             dressup.Initialize(contestant);
             inventory.Initialize(episode);
             emailManager.Initialize(episode);
+
+            BuildEpisodeTags();
+            dressup.RefreshEpisodeTags();
+
             uiManager.Initialize(this);
         }
 
@@ -197,5 +202,36 @@ namespace Mystie.Core
 
             return revenue;
         }
+
+        #region Episode Tags
+
+        public void BuildEpisodeTags()
+        {
+            episodeTags = new Dictionary<ItemScriptable, List<ClothingTag>>();
+            if (episode.episodeTagRules.IsNullOrEmpty()) return;
+
+            // Evaluate against ALL known items so store kits show tags too
+            foreach (ItemScriptable item in InventoryManager.clothingLookup.Values)
+            {
+                List<ClothingTag> extras = new();
+                foreach (EpisodeTagRule rule in episode.episodeTagRules)
+                {
+                    if (rule.rule != null && rule.rule.Check(item))
+                        extras.Add(rule.tag);
+                }
+                if (extras.Count > 0) episodeTags[item] = extras;
+            }
+        }
+
+        public List<ClothingTag> GetEffectiveTags(ItemScriptable item)
+        {
+            if (item == null) return new List<ClothingTag>();
+            List<ClothingTag> tags = new(item.tags);
+            if (episodeTags != null && episodeTags.TryGetValue(item, out List<ClothingTag> extra))
+                tags.AddRange(extra);
+            return tags;
+        }
+
+        #endregion
     }
 }

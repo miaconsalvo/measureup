@@ -19,18 +19,19 @@ namespace Mystie.Dressup
 
         public ContestantData contestant { get; private set; }
         public Reaction reaction { get; private set; }
+        [field: SerializeField] public ClothingTag trendingTag { get; private set; }
         [field: SerializeField] public Dictionary<ItemType, ItemScriptable> items { get; private set; }
 
-        public List<ClothingTag> currentTags;
+        [SerializeField] private Dictionary<ItemType, ItemScriptable> startingItems;
+        [SerializeField] private Dictionary<ItemType, ItemScriptable> underwearItems;
+
+        public List<ClothingTag> currentTags { get; private set; }
 
         private List<LocalizedString> opinionsAvailable;
         private List<LocalizedString> opinionsUsed;
 
         private int negativeCount = 0;
         private int positiveCount = 0;
-
-        [SerializeField] private Dictionary<ItemType, ItemScriptable> startingItems;
-        [SerializeField] private Dictionary<ItemType, ItemScriptable> underwearItems;
 
         public void Initialize(ContestantData contestantData)
         {
@@ -135,10 +136,9 @@ namespace Mystie.Dressup
             //else items.Add(item.type, item);
             items[item.type] = item;
 
-            foreach (ClothingTag tag in item.tags)
-            {
+            List<ClothingTag> effectiveTags = LevelManager.Instance?.GetEffectiveTags(item) ?? item.tags;
+            foreach (ClothingTag tag in effectiveTags)
                 currentTags.Add(tag);
-            }
 
             onItemAdded?.Invoke(item);
 
@@ -151,10 +151,10 @@ namespace Mystie.Dressup
         {
             if (item == null || !items.ContainsValue(item)) return;
 
-            foreach (ClothingTag tag in item.tags)
-            {
+            List<ClothingTag> effectiveTags = LevelManager.Instance?.GetEffectiveTags(item) ?? item.tags;
+            foreach (ClothingTag tag in effectiveTags)
                 if (currentTags.Contains(tag)) currentTags.Remove(tag);
-            }
+
             items[item.type] = null;
 
             onItemRemoved?.Invoke(item);
@@ -218,12 +218,17 @@ namespace Mystie.Dressup
 
         public bool CheckStyleRule()
         {
-            return LevelManager.Instance.episode.styleRule.Check(currentTags);
+            return LevelManager.Instance.episode.styleRule.Check(this);
         }
 
         public bool CheckTrending()
         {
-            return LevelManager.Instance.episode.trendingRule.Check(currentTags);
+            //return LevelManager.Instance.episode.trendingRule.Check(currentTags);
+            foreach (ItemScriptable item in items.Values)
+                if (item != null && LevelManager.Instance.GetEffectiveTags(item)
+                    .Contains(trendingTag))
+                    return true;
+            return false;
         }
 
         #endregion
@@ -297,6 +302,18 @@ namespace Mystie.Dressup
         public void SaveTags(string name)
         {
             SaveDataManager.SaveTags(name, currentTags);
+        }
+
+        public void RefreshEpisodeTags()
+        {
+            currentTags.Clear();
+            foreach (KeyValuePair<ItemType, ItemScriptable> kvp in items)
+            {
+                if (kvp.Value == null) continue;
+                List<ClothingTag> effectiveTags = LevelManager.Instance?.GetEffectiveTags(kvp.Value) ?? kvp.Value.tags;
+                foreach (ClothingTag tag in effectiveTags) currentTags.Add(tag);
+            }
+            UpdateTags();
         }
     }
 }

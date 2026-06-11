@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Mystie.Core;
 using Mystie.Dressup;
 using NaughtyAttributes;
 using TMPro;
@@ -91,7 +92,8 @@ namespace Mystie
                 }
             }
 
-            foreach (TagsDisplayUI ui in tagsUI) ui.SetTags(item.tags);
+            List<ClothingTag> effectiveTags = LevelManager.Instance?.GetEffectiveTags(item) ?? item.tags;
+            foreach (TagsDisplayUI ui in tagsUI) ui.SetTags(effectiveTags);
         }
 
         [Button()]

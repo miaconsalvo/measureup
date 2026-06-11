@@ -7,17 +7,27 @@ using UnityEngine.Localization;
 
 namespace Mystie.Dressup
 {
-    [CreateAssetMenu(fileName = "Style Rule", menuName = "Data/Style Rule", order = 2)]
-    public class StyleRuleScriptable : ScriptableObject
+    [CreateAssetMenu(fileName = "Tags Rule", menuName = "Data/Tags Rule", order = 2)]
+    public class TagsRuleData : StyleRuleData
     {
-        public LocalizedString ruleName;
-        public LocalizedString ruleDescription;
         [SerializeField] private List<TagRule> rules;
 
-        public bool Check(List<ClothingTag> tags)
+        public override bool Check(DressupManager dressup)
         {
+            List<ClothingTag> tags = dressup.currentTags;
             Debug.Log($"Checking style rule {name}. Tags present: {string.Join(", ", tags.Select(t => t.name))}");
 
+            return CheckRule(tags);
+        }
+
+        public override bool Check(ItemScriptable item)
+        {
+            if (item == null) return false;
+            return CheckRule(LevelManager.Instance.GetEffectiveTags(item));
+        }
+
+        public bool CheckRule(List<ClothingTag> tags)
+        {
             foreach (TagRule rule in rules)
             {
                 bool ruleResult = rule.Check(tags);
@@ -35,6 +45,7 @@ namespace Mystie.Dressup
         [SerializeField] private LogicOp op;
         [SerializeField] private bool not;
         [SerializeField] private List<ClothingTag> tags;
+        [SerializeField] private ItemScriptable item;
 
         public bool Check(List<ClothingTag> tagsList)
         {

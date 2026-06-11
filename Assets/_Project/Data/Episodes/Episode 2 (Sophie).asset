@@ -17,6 +17,9 @@ MonoBehaviour:
   styleRule: {fileID: 11400000, guid: 59932e43d51e955458d9d4a8252f3fa6, type: 2}
   trendingRule: {fileID: 11400000, guid: e36d992e108c98340adeda3046acb865, type: 2}
   socialMediaComments: {fileID: 11400000, guid: ced37c0dbc3672f41bf635ca006bd009, type: 2}
+  <episodeTagRules>k__BackingField:
+  - tag: {fileID: 11400000, guid: 32479cf5b35da1a4f88167ddc19b8934, type: 2}
+    rule: {fileID: 11400000, guid: e36d992e108c98340adeda3046acb865, type: 2}
   stages: 00000000010000000200000003000000040000000500000006000000
   preChatNode: SophieGroupchatStart
   interviewNode: SophieInterviewStart
@@ -182,7 +185,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 877a0cf81aaba424baec5c0f01166c23, type: 2}
   <startEmails>k__BackingField: []
   <endEmails>k__BackingField:
-  - {fileID: 11400000, guid: df394daf795f91240a9e6a90ff7dc3de, type: 2}
+  - {fileID: 11400000, guid: 40c4d864077b6c3419bf4e2ff17c66a6, type: 2}
   <revenueSocialMediaPositive>k__BackingField: 1000
   <revenueSocialMediaNeutral>k__BackingField: 750
   <revenueSocialMediaNegative>k__BackingField: 250

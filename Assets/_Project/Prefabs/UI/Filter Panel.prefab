@@ -150,6 +150,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -327,6 +332,7 @@ MonoBehaviour:
   tagsAnchor: {fileID: 1818498064725854587}
   tagUIPrefab: {fileID: 452965193868575947, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
   disableWhenEmpty: 0
+  showAll: 0
   tags: []
   order: 
   filter: 01000000
@@ -385,6 +391,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -561,12 +572,11 @@ MonoBehaviour:
   tagsAnchor: {fileID: 6090993742190696614}
   tagUIPrefab: {fileID: 8622909782896547985, guid: c88b98c590e8a8d468adabc018e47a08, type: 3}
   disableWhenEmpty: 0
+  showAll: 1
   tags:
-  - {fileID: 11400000, guid: 612a1be9d45604b45bd943046ad436cc, type: 2}
+  - {fileID: 11400000, guid: 32479cf5b35da1a4f88167ddc19b8934, type: 2}
   - {fileID: 11400000, guid: 47e0debf43b19e4419c955e2b3ec2ead, type: 2}
   - {fileID: 11400000, guid: 879a62e18b8ddef49be4113368d9f11a, type: 2}
-  - {fileID: 11400000, guid: 32479cf5b35da1a4f88167ddc19b8934, type: 2}
-  - {fileID: 11400000, guid: f7317988bd3189e4ca2bd2ff3978cb4a, type: 2}
   order: 
   filter: 00000000
 --- !u!222 &7663452424405719508
@@ -624,6 +634,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 40, y: 40, z: 40, w: 40}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -800,6 +815,7 @@ MonoBehaviour:
   tagsAnchor: {fileID: 1800994915813443232}
   tagUIPrefab: {fileID: 452965193868575947, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
   disableWhenEmpty: 0
+  showAll: 0
   tags: []
   order: 
   filter: 03000000
@@ -858,6 +874,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -1086,15 +1107,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1204,6 +1227,7 @@ MonoBehaviour:
   tagsAnchor: {fileID: 521791380693250582}
   tagUIPrefab: {fileID: 452965193868575947, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
   disableWhenEmpty: 0
+  showAll: 0
   tags: []
   order: 
   filter: 02000000
@@ -1262,6 +1286,11 @@ MonoBehaviour:
   m_Rectangle:
     m_CornerRadius: {x: 25, y: 25, z: 25, w: 25}
     m_UniformCornerRadius: 1
+  m_ChamferBox:
+    m_ChamferSize: 0
+  m_Parallelogram:
+    m_Skew: 0
+    m_CornerRadius: 0
   m_Circle:
     m_Radius: 0
     m_FitRadius: 0
@@ -1452,6 +1481,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5107989381043534966, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 5654160127857085104, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1573,6 +1606,10 @@ PrefabInstance:
     - target: {fileID: 4190788688478040193, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5107989381043534966, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 5654160127857085104, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1707,6 +1744,10 @@ PrefabInstance:
     - target: {fileID: 4190788688478040193, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5107989381043534966, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 5654160127857085104, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1942,6 +1983,10 @@ PrefabInstance:
     - target: {fileID: 4190788688478040193, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5107989381043534966, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 5654160127857085104, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2191,6 +2236,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5107989381043534966, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 5654160127857085104, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2426,6 +2475,10 @@ PrefabInstance:
     - target: {fileID: 4190788688478040193, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5107989381043534966, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 5654160127857085104, guid: c240ff698d8a4984bb24bb73c93f64b2, type: 3}
       propertyPath: m_AnchorMax.y

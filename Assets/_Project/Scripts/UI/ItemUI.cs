@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Mystie.Core;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -19,6 +20,7 @@ namespace Mystie.Dressup
         [field: SerializeField] public ItemScriptable item { get; private set; }
         [SerializeField] private Button button;
         [SerializeField] private Image image;
+        [SerializeField] private Image tagImage;
         [SerializeField] private TooltipTrigger tooltip;
         private RectTransform t;
 
@@ -36,7 +38,9 @@ namespace Mystie.Dressup
 
         public List<ClothingTag> Tags
         {
-            get => item != null ? item.tags : new List<ClothingTag>();
+            get => LevelManager.Instance != null
+                ? LevelManager.Instance.GetEffectiveTags(item)
+                : (item != null ? item.tags : new List<ClothingTag>());
         }
 
         private bool init = false;
@@ -73,6 +77,15 @@ namespace Mystie.Dressup
             {
                 tooltip.content = item ? item.displayName.GetLocalizedString()
                     : string.Empty;
+            }
+
+            if (tagImage != null)
+            {
+                LevelManager levelManager = LevelManager.Instance;
+                bool isTrending = levelManager.GetEffectiveTags(item).Contains(levelManager.dressup.trendingTag);
+                //Debug.Log(item.name + ": " + levelManager.GetEffectiveTags(item).Count);
+                tagImage.gameObject.SetActive(isTrending);
+                if (isTrending) tagImage.sprite = levelManager.dressup.trendingTag.sprite;
             }
 
             SetEquipped(isEquipped);

@@ -13,9 +13,10 @@ namespace Mystie.Core
     {
         public string contestantID;
         public ContestantData contestant;
-        public StyleRuleScriptable styleRule;
-        public StyleRuleScriptable trendingRule;
+        public TagsRuleData styleRule;
+        public TagsRuleData trendingRule;
         public CommentCollection socialMediaComments;
+        [field: SerializeField] public List<EpisodeTagRule> episodeTagRules { get; private set; }
 
         public List<LevelStageType> stages = new List<LevelStageType>();
 
@@ -69,5 +70,12 @@ namespace Mystie.Core
         public enum InfoType { Like, Dislike, Lifestyle }
         public InfoType type;
         public LocalizedString text;
+    }
+
+    [Serializable]
+    public class EpisodeTagRule
+    {
+        public ClothingTag tag;
+        public StyleRuleData rule; // evaluated against each item's own tags
     }
 }

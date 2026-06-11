@@ -77,7 +77,7 @@ namespace Mystie.Dressup
             tagsInInventory = new List<ClothingTag>();
             foreach (ItemScriptable item in items)
             {
-                foreach (ClothingTag tag in item.tags)
+                foreach (ClothingTag tag in LevelManager.Instance.GetEffectiveTags(item))
                 {
                     if (!tagsInInventory.Contains(tag))
                     {

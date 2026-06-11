@@ -14,6 +14,7 @@ namespace Mystie
         [SerializeField] private Transform tagsAnchor;
         [SerializeField] private TagLabelUI tagUIPrefab;
         [SerializeField] private bool disableWhenEmpty = false;
+        [SerializeField] private bool showAll = false;
         [SerializeField] private List<ClothingTag> tags = new List<ClothingTag>();
         [SerializeField] private List<ClothingTag.TagType> order = new List<ClothingTag.TagType>();
         [SerializeField] private List<ClothingTag.TagType> filter = new List<ClothingTag.TagType>();
@@ -38,18 +39,23 @@ namespace Mystie
         public List<TagLabelUI> SetTags(List<ClothingTag> newTags)
         {
             ClearTags();
-            tags.Clear();
 
-            if (tagUIPrefab == null || newTags.IsNullOrEmpty()) return currentTagsUI;
+            if (tagUIPrefab == null) return currentTagsUI;
 
-            if (filter.Count > 0)
+            if (!showAll)
             {
-                foreach (ClothingTag tag in newTags)
+                tags.Clear();
+                if (newTags.IsNullOrEmpty()) return currentTagsUI;
+
+                if (filter.Count > 0)
                 {
-                    if (filter.Contains(tag.type)) tags.Add(tag);
+                    foreach (ClothingTag tag in newTags)
+                    {
+                        if (filter.Contains(tag.type)) tags.Add(tag);
+                    }
                 }
+                else tags = newTags;
             }
-            else tags = newTags;
 
             if (tags.IsNullOrEmpty()) return currentTagsUI;
 

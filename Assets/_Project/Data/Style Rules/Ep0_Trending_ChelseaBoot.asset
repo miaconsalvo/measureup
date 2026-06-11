@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8314b44e8a2c18428c58d20fb258138, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d8951225a3652842a7adfb0e96f03ee, type: 3}
   m_Name: Ep0_Trending_ChelseaBoot
   m_EditorClassIdentifier: 
   ruleName:
@@ -33,8 +33,8 @@ MonoBehaviour:
   rules:
   - op: 0
     not: 0
-    tags:
-    - {fileID: 11400000, guid: 65afe443e2732d3478e6d4952d4bd7b4, type: 2}
+    items:
+    - {fileID: 11400000, guid: 53d9ae020c4607140a5de839d9bf6341, type: 2}
   references:
     version: 2
     RefIds: []
