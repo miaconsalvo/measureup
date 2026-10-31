@@ -41,6 +41,7 @@ namespace Mystie.UI
         void Awake()
         {
             runner = GetComponent<DialogueRunner>();
+            messageBoxNext = messageBoxThem; // default sender, so a node can start with a bare line
             runner.AddCommandHandler("Me", SetSenderMe); // registers Yarn Command <<Me>>, which sets the current message sender to "Me"
             runner.AddCommandHandler("Them", SetSenderThem); // registers Yarn Command <<They>>, which sets the current message sender to "Them" (whoever the player is talking to)
 

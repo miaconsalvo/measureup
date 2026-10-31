@@ -25,15 +25,23 @@ namespace Mystie
 
         public static GameData GetSave()
         {
-            if (File.Exists(savePath))
+            try
             {
-                string json = File.ReadAllText(savePath);
-                GameData gameData = JsonUtility.FromJson<GameData>(json);
-                return gameData;
-            }
-            else
-            {
+                if (File.Exists(savePath))
+                {
+                    string json = File.ReadAllText(savePath);
+                    GameData gameData = JsonUtility.FromJson<GameData>(json);
+                    if (gameData != null) gameData.EnsureInitialized();
+                    return gameData;
+                }
+
                 Debug.Log("SaveManager: Game data does not exist.");
+                return null;
+            }
+            catch (Exception e)
+            {
+                // Corrupt/unreadable file.
+                Debug.LogError("SaveManager: Failed to read save file: " + e);
                 return null;
             }
         }
@@ -48,9 +56,7 @@ namespace Mystie
 
         public static void LoadGame()
         {
-            if (!loadedSaveFiles.IsNullOrEmpty()
-                && loadedSaveFiles.Count > 0
-                && loadedSaveFiles[0] != null)
+            if (!loadedSaveFiles.IsNullOrEmpty() && loadedSaveFiles[0] != null)
             {
                 SaveDataManager.LoadGameData(loadedSaveFiles[0]);
                 EpisodeManager.Instance.LoadCurrentEpisode();
@@ -66,9 +72,16 @@ namespace Mystie
 
         public static void SaveGameToFile(GameData gameData)
         {
-            string json = JsonUtility.ToJson(gameData, true);
-            File.WriteAllText(savePath, json);
-            Debug.Log("SaveManager: Game saved to: " + savePath);
+            try
+            {
+                string json = JsonUtility.ToJson(gameData, true);
+                File.WriteAllText(savePath, json);
+                Debug.Log("SaveManager: Game saved to: " + savePath);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("SaveManager: Failed to write save file: " + e);
+            }
         }
     }
 }

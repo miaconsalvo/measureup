@@ -106,7 +106,7 @@ namespace Mystie
 
         public void Activate()
         {
-            gameObject.SetActive(false);
+            gameObject.SetActive(true);
         }
 
         public void Deactivate()

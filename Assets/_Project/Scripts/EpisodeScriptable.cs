@@ -54,6 +54,14 @@ namespace Mystie.Core
 
         [field: SerializeField] public int bossBonusPerGroup { get; private set; } = 150;
         [field: SerializeField] public int bossBonusMax { get; private set; } = 600;
+
+        [field: Space]
+
+        // Social score = (#positive viewer groups) - (#negative viewer groups).
+        // >= positive threshold pays the positive revenue, <= negative threshold the negative one,
+        // anything in between pays the neutral revenue.
+        [field: SerializeField] public int positiveReactionThreshold { get; private set; } = 3;
+        [field: SerializeField] public int negativeReactionThreshold { get; private set; } = -3;
     }
 
     [Serializable]

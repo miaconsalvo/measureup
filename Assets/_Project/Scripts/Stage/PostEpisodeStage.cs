@@ -14,7 +14,8 @@ namespace Mystie.Core
             base.InitializeTablet();
 
             CommentCollection comments = LevelManager.Instance.episode.socialMediaComments;
-            socialMediaUI.QueueComments(comments.GenerateComments(LevelManager.Instance.dressup));
+            if (comments != null)
+                socialMediaUI.QueueComments(comments.GenerateComments(LevelManager.Instance.dressup));
         }
     }
 }

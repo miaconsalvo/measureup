@@ -42,6 +42,8 @@ namespace Mystie.UI
 
         public static TooltipUI ShowTooltip(Vector2 pos, float delayTime, string tooltipText, string tooltipHeader = "")
         {
+            if (instance == null) return null; // no TooltipSystem in this scene (e.g. main menu)
+
             instance.tooltip = instance.tooltipPool.Get();
             instance.tooltipStack.Push(instance.tooltip);
 
@@ -50,22 +52,22 @@ namespace Mystie.UI
                 instance.tooltip?.SetText(tooltipText, tooltipHeader);
                 SetPosition(instance.tooltip, pos);
 
-                instance.showDelay = instance.StartCoroutine(instance.ShowRoutine(instance.tooltip));
+                instance.showDelay = instance.StartCoroutine(instance.ShowRoutine(instance.tooltip, delayTime));
             }
 
             return instance.tooltip;
         }
 
-        public IEnumerator ShowRoutine(TooltipUI tooltip)
+        public IEnumerator ShowRoutine(TooltipUI tooltip, float delay)
         {
-            yield return new WaitForSecondsRealtime(instance.delayTime);
+            yield return new WaitForSecondsRealtime(delay); // honour the trigger's own delay
 
             tooltip?.Show();
         }
 
         public static void HideTooltip() //TooltipUI tooltip
         {
-            if (instance.tooltipStack.IsNullOrEmpty())
+            if (instance == null || instance.tooltipStack.IsNullOrEmpty())
                 return;
 
             if (instance.showDelay != null)

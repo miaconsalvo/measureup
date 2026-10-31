@@ -25,7 +25,7 @@ namespace Mystie
 
         public void Clean()
         {
-            levelManager.onStageComplete -= OnStageComplete;
+            if (levelManager != null) levelManager.onStageComplete -= OnStageComplete;
         }
 
         private void OnStageComplete(LevelStageType type)

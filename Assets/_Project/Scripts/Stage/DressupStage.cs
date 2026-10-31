@@ -73,7 +73,8 @@ namespace Mystie.Dressup
                 dressupManager.onItemAdded -= OnItemAdded;
                 dressupManager.onItemRemoved -= OnItemRemoved;
             }
-            foreach (ItemUI ui in itemsUI.ToList()) DestroyItemUI(ui);
+            if (itemsUI != null)
+                foreach (ItemUI ui in itemsUI.ToList()) DestroyItemUI(ui);
         }
 
         protected override void OnStageEnter()
@@ -95,6 +96,10 @@ namespace Mystie.Dressup
             {
                 if (i < itemsUI.Count) itemsUI[i].Set(clothes[i]);
                 else CreateItemUI(clothes[i]);
+
+                // Keep the highlight in sync (starting outfit, re-bound slots).
+                itemsUI[i].SetEquipped(dressupManager != null && dressupManager.items != null
+                    && dressupManager.items.ContainsValue(clothes[i]));
             }
 
             for (int i = clothes.Count; i < itemsUI.Count; i++)
@@ -173,13 +178,13 @@ namespace Mystie.Dressup
                 fitChecksDone++;
                 comment = dressupManager.FitCheck();
             }
-            else
+            else if (wrapupComments != null && wrapupComments.Count > 0)
             {
                 int rand = UnityEngine.Random.Range(0, wrapupComments.Count);
                 comment = wrapupComments[rand].GetLocalizedString();
             }
 
-            if (opinionBox != null || string.IsNullOrEmpty(comment))
+            if (opinionBox != null && !string.IsNullOrEmpty(comment))
                 StartCoroutine(ShowOpinionCoroutine(comment));
         }
 

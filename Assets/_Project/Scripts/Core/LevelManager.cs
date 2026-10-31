@@ -116,7 +116,7 @@ namespace Mystie.Core
 
         private void OnDestroy()
         {
-            emailManager.Clean();
+            emailManager?.Clean();
         }
 
         public void CompleteStage(LevelStageType stage)
@@ -188,8 +188,10 @@ namespace Mystie.Core
                 }
             }
 
-            if (positiveReactions >= 3) revenue = episode.revenueSocialMediaPositive;
-            else if (positiveReactions <= 3) revenue = episode.revenueSocialMediaNegative;
+            if (positiveReactions >= episode.positiveReactionThreshold)
+                revenue = episode.revenueSocialMediaPositive;
+            else if (positiveReactions <= episode.negativeReactionThreshold)
+                revenue = episode.revenueSocialMediaNegative;
 
             bool bossPositiveReaction = IsBossReactionPositive;
             int bossBonus = bossPositiveReaction ?
@@ -200,7 +202,7 @@ namespace Mystie.Core
             + $"\nSocial media score: {positiveReactions}."
             + $"\nBoss reaction positive: {bossPositiveReaction} ({bossBonus}$).");
 
-            return revenue;
+            return revenue + bossBonus;
         }
 
         #region Episode Tags

@@ -88,7 +88,7 @@ namespace Mystie.Core
 
         public static void SetGameState(GameState state)
         {
-            if (gameState != state) return;
+            if (gameState == state) return;
 
             gameState = state;
             onGameStateChanged?.Invoke(gameState);

@@ -16,7 +16,7 @@ namespace Mystie.UI.Transition
 
             float time = 0;
             Color startColor = color;
-            Color endColor = new Color(0, 0, 0, 0);
+            Color endColor = new Color(color.r, color.g, color.b, 0f);
             while (time < 1)
             {
                 animObj.color = Color.Lerp(startColor, endColor, time);
@@ -32,7 +32,7 @@ namespace Mystie.UI.Transition
             InitImage(parent);
 
             float time = 0;
-            Color startColor = new Color(0, 0, 0, 0);
+            Color startColor = new Color(color.r, color.g, color.b, 0f);
             Color endColor = color;
             while (time < 1)
             {

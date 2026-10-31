@@ -97,6 +97,7 @@ namespace Mystie
             if (bgmEmitter.isValid() && bgm.Equals(eventReference)) return;
 
             StopMusic();
+            if (bgmEmitter.isValid()) bgmEmitter.release();
             if (!eventReference.IsNull)
             {
                 bgm = eventReference;
@@ -143,20 +144,28 @@ namespace Mystie
                 Debug.LogWarningFormat(this, "VN Manager is playing sound {0} at very low volume ({1}), just so you know", soundName, volume);
             }
 
+            // Replace (and release) any previous instance with the same name;
+            // Dictionary.Add used to throw on the second play of the same sound.
+            if (audioInstances.TryGetValue(soundName, out EventInstance previous))
+            {
+                if (previous.isValid())
+                {
+                    previous.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                    previous.release();
+                }
+                audioInstances.Remove(soundName);
+            }
+
             EventInstance newAudioSource = RuntimeManager.CreateInstance(audioClip);
             float v;
             newAudioSource.getVolume(out v);
             newAudioSource.setVolume(v * volume);
             newAudioSource.start();
-            audioInstances.Add(soundName, newAudioSource);
+            audioInstances[soundName] = newAudioSource;
 
-            // if it doesn't loop, let's set a max lifetime for this sound
-            if (!loop)
-            {
-                newAudioSource.getDescription(out EventDescription d);
-                d.getLength(out int length);
-                //StartCoroutine(SetDestroyTime(newAudioSource, length));
-            }
+            // One-shot events: release now, FMOD frees the instance once it finishes playing.
+            // Looping events stay alive until StopAudio releases them.
+            if (!loop) newAudioSource.release();
         }
 
         /// <summary>stops sound playback based on sound name, whether it's
@@ -165,8 +174,12 @@ namespace Mystie
         {
             if (audioInstances.ContainsKey(soundName))
             {
-                if (audioInstances[soundName].isValid())
-                    audioInstances[soundName].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                EventInstance instance = audioInstances[soundName];
+                if (instance.isValid())
+                {
+                    instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                    instance.release();
+                }
                 audioInstances.Remove(soundName);
             }
             else
@@ -188,12 +201,6 @@ namespace Mystie
         }
 
         #endregion
-
-
-
-
-
-
 
         public void PlayOneShot(string soundName)
         {

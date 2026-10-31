@@ -4,7 +4,9 @@ using Mystie.Utils;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.InputSystem.InputAction;
@@ -67,7 +69,7 @@ namespace Mystie.UI
 
         protected void OnEnable()
         {
-            controls.UI.Enable();
+            if (controls != null) controls.UI.Enable();
             if (controls != null)
             {
                 controls.UI.Submit.started += OnSubmit;
@@ -79,7 +81,7 @@ namespace Mystie.UI
 
         protected void OnDisable()
         {
-            controls.UI.Disable();
+            if (controls != null) controls.UI.Disable();
             if (controls != null)
             {
                 controls.UI.Submit.started -= OnSubmit;

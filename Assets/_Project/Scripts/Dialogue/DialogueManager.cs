@@ -118,9 +118,9 @@ namespace Mystie.Dialogue
 			{
 				// if any missing position params, assume the actor position should stay the same 
 				if (positionX == string.Empty)
-					positionX = (actors[actorName].rectTransform.anchoredPosition.x / screenSize.x).ToString();
+					positionX = (actors[actorName].rectTransform.anchoredPosition.x / screenSize.x).ToString(System.Globalization.CultureInfo.InvariantCulture);
 				if (positionY == string.Empty)
-					positionY = (actors[actorName].rectTransform.anchoredPosition.y / screenSize.y).ToString();
+					positionY = (actors[actorName].rectTransform.anchoredPosition.y / screenSize.y).ToString(System.Globalization.CultureInfo.InvariantCulture);
 
 				// if any missing color params, then assume actor color
 				// should stay the same
@@ -244,6 +244,8 @@ namespace Mystie.Dialogue
 		{
 			SpriteLayered image = FindActorOrSprite(actorOrSpriteName);
 
+			if (image == null) return;
+
 			// get new screen position
 			Vector2 newPos = new Vector2(0.5f, 0.5f);
 			if (screenPosX != string.Empty && screenPosY != string.Empty)
@@ -264,6 +266,8 @@ namespace Mystie.Dialogue
 		public void FlipSprite(string actorOrSpriteName, string xDirection = "")
 		{
 			SpriteLayered image = FindActorOrSprite(actorOrSpriteName);
+
+			if (image == null) return;
 
 			float direction;
 
@@ -340,6 +344,7 @@ namespace Mystie.Dialogue
 		public void FadeSprite(string actorOrSpriteName, float startAlpha = 0, float endAlpha = 1, float fadeTime = 1)
 		{
 			SpriteLayered image = FindActorOrSprite(actorOrSpriteName);
+			if (image == null) return;
 			SetFade(image, startAlpha, endAlpha, fadeTime);
 		}
 
@@ -351,7 +356,7 @@ namespace Mystie.Dialogue
 			Vector2 newOffset = Vector2.zero;
 			if (xPos != string.Empty && yPos != string.Empty)
 			{
-				newOffset = new Vector2(ConvertCoordinates(xPos) - 0.5f, ConvertCoordinates(xPos) - 0.5f);
+				newOffset = new Vector2(ConvertCoordinates(xPos) - 0.5f, ConvertCoordinates(yPos) - 0.5f);
 			}
 			else if (xPos != string.Empty)
 			{
@@ -544,7 +549,12 @@ namespace Mystie.Dialogue
 				sprite.name = actorName;
 			}
 			sprite.color.a = alpha;
-			ActorScriptable actor = actorsCollection.actors[actorName];
+			ActorScriptable actor;
+			if (actorsCollection == null || !actorsCollection.actors.TryGetValue(actorName, out actor) || actor == null)
+			{
+				Debug.LogError($"DialogueManager: no actor named '{actorName}' in the Actor Collection.", this);
+				return sprite;
+			}
 			actor.Set(sprite, spriteParams);
 			//sprite.Set(actorsCollection.actors[actorName].Get(spriteParams)); //FetchAsset<Sprite>( spriteParams[0] )
 			//sprite.SetNativeSize();

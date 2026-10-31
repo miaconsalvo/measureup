@@ -31,7 +31,7 @@ namespace Mystie.Core
         {
             tablet.Clear();
 
-            if (nodeStart != string.Empty) chatUI.QueueConvo(nodeStart);
+            if (!string.IsNullOrEmpty(nodeStart) && chatUI != null) chatUI.QueueConvo(nodeStart);
         }
     }
 }

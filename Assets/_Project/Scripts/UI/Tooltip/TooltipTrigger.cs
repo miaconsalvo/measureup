@@ -42,6 +42,12 @@ namespace Mystie
             }
         }
 
+        private void OnDisable()
+        {
+            // Otherwise the tooltip stays on screen if the hovered object is hidden/destroyed.
+            if (hovered) HideTooltip();
+        }
+
         public void HideTooltip()
         {
             TooltipSystem.HideTooltip(); //tooltipUI

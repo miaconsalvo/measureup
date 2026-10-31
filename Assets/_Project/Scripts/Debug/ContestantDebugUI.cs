@@ -30,7 +30,7 @@ namespace Mystie
 
         private void OnDisable()
         {
-            dropdown.onValueChanged.AddListener(OnDropdownValueChanged);
+            dropdown.onValueChanged.RemoveListener(OnDropdownValueChanged);
         }
 
         private void OnDropdownValueChanged(int value)

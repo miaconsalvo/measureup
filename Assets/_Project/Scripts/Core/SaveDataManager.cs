@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Mystie.Core;
@@ -30,22 +31,21 @@ namespace Mystie
             }
 
             gameData = newGameData;
+            gameData.EnsureInitialized();
 
-            GameManager.playerName = gameData.playerName;
-            EpisodeManager.Instance.SetEpisodeIndex(gameData.episodeIndex);
+            if (!string.IsNullOrEmpty(gameData.playerName))
+                GameManager.playerName = gameData.playerName;
+
+            EpisodeManager episodeManager = EpisodeManager.Instance;
+            if (episodeManager != null) episodeManager.SetEpisodeIndex(gameData.episodeIndex);
         }
-
-        #region Load Data
-
-
-
-        #endregion
 
         #region Save Data
 
         public static void SavePlayerName(string newPlayerName)
         {
             gameData.playerName = newPlayerName;
+            GameManager.playerName = newPlayerName;
         }
 
         public static void SaveEpisodeIndex(int newIndex)
@@ -60,7 +60,28 @@ namespace Mystie
 
         public static void SaveReaction(string name, Reaction reaction)
         {
-            gameData.reactions[name] = reaction;
+            if (string.IsNullOrEmpty(name)) return;
+
+            ReactionEntry entry = gameData.reactions.FirstOrDefault(
+                e => string.Equals(e.name, name, StringComparison.OrdinalIgnoreCase));
+
+            if (entry == null)
+            {
+                entry = new ReactionEntry { name = name };
+                gameData.reactions.Add(entry);
+            }
+
+            entry.reaction = (int)reaction;
+        }
+
+        public static Reaction GetReaction(string name)
+        {
+            if (gameData == null || string.IsNullOrEmpty(name)) return Reaction.Neutral;
+
+            ReactionEntry entry = gameData.reactions.FirstOrDefault(
+                e => string.Equals(e.name, name, StringComparison.OrdinalIgnoreCase));
+
+            return entry != null ? (Reaction)entry.reaction : Reaction.Neutral;
         }
 
         public static void SaveInventory(List<ItemScriptable> ownedClothing, List<ClothingKitScriptable> ownedKits)
@@ -71,7 +92,30 @@ namespace Mystie
 
         public static void SaveTags(string name, List<ClothingTag> tags)
         {
-            gameData.tags[name] = tags.ToList();
+            if (string.IsNullOrEmpty(name)) return;
+
+            TagEntry entry = gameData.tags.FirstOrDefault(
+                e => string.Equals(e.contestantId, name, StringComparison.OrdinalIgnoreCase));
+
+            if (entry == null)
+            {
+                entry = new TagEntry { contestantId = name };
+                gameData.tags.Add(entry);
+            }
+
+            entry.tagNames = tags == null
+                ? new List<string>()
+                : tags.Where(t => t != null).Select(t => t.name).ToList();
+        }
+
+        public static bool HasSavedTag(string contestantId, string tag)
+        {
+            if (gameData == null || string.IsNullOrEmpty(contestantId)) return false;
+
+            TagEntry entry = gameData.tags.FirstOrDefault(
+                e => string.Equals(e.contestantId, contestantId, StringComparison.OrdinalIgnoreCase));
+
+            return entry != null && entry.tagNames.Contains(tag);
         }
 
         public static List<Email> GetEmails()
@@ -88,6 +132,20 @@ namespace Mystie
     }
 
     [System.Serializable]
+    public class ReactionEntry
+    {
+        public string name;
+        public int reaction; // Reaction enum value (-1, 0, 1)
+    }
+
+    [System.Serializable]
+    public class TagEntry
+    {
+        public string contestantId;
+        public List<string> tagNames = new List<string>();
+    }
+
+    [System.Serializable]
     public class GameData
     {
         private const string baseSaveDataPath = "Save Data";
@@ -97,9 +155,9 @@ namespace Mystie
         public int episodeIndex;
         public string versionNumber;
         public InventoryData inventoryData;
-        public Dictionary<string, Reaction> reactions = new();
-        public Dictionary<string, List<ClothingTag>> tags = new();
-        public List<Email> emails = new();
+        public List<ReactionEntry> reactions = new List<ReactionEntry>();
+        public List<TagEntry> tags = new List<TagEntry>();
+        public List<Email> emails = new List<Email>();
 
         public GameData()
         {
@@ -109,14 +167,22 @@ namespace Mystie
                 Debug.LogError("SaveManager: Save Data not found.");
             }
 
-            playerName = "";
-            moneyAmount = s.startingMoney;
+            playerName = s != null ? s.playerName : "Cindy";
+            moneyAmount = s != null ? s.startingMoney : 0;
             episodeIndex = 0;
             versionNumber = Application.version;
             inventoryData = new InventoryData();
-            //reactions = new();
-            //tags = new();
-            //emails = new();
+        }
+
+        /// <summary>Makes sure nothing is null after JsonUtility loads an older/partial save.</summary>
+        public void EnsureInitialized()
+        {
+            if (inventoryData == null) inventoryData = new InventoryData();
+            if (inventoryData.ownedClothingIds == null) inventoryData.ownedClothingIds = new List<string>();
+            if (inventoryData.ownedKitIds == null) inventoryData.ownedKitIds = new List<string>();
+            if (reactions == null) reactions = new List<ReactionEntry>();
+            if (tags == null) tags = new List<TagEntry>();
+            if (emails == null) emails = new List<Email>();
         }
     }
 

@@ -20,7 +20,7 @@ namespace Mystie
 
         private void OnDestroy()
         {
-            toggle.onValueChanged.AddListener(OnValueChanged);
+            toggle.onValueChanged.RemoveListener(OnValueChanged);
         }
 
         private void OnValueChanged(bool value)

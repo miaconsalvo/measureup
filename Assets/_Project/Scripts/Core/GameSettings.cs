@@ -62,6 +62,7 @@ namespace Mystie.Core
             Locale locale = LocalizationSettings.AvailableLocales.Locales[index];
             string localeCode = locale.Identifier.Code;
             PlayerPrefs.SetString(LOCALE_KEY, localeCode);
+            PlayerPrefs.Save(); // browsers give Unity no reliable quit event, so flush explicitly (WebGL)
 
             LocalizationSettings.SelectedLocale = locale;
         }
@@ -106,10 +107,20 @@ namespace Mystie.Core
             audioBuses[busType].Volume = volume;
         }
 
+        /// <summary>
+        /// Call when a volume slider is released (not on every drag tick). RuntimeAudioBus.Volume
+        /// writes PlayerPrefs but cannot flush them on WebGL by itself.
+        /// </summary>
+        public void SavePreferences()
+        {
+            PlayerPrefs.Save();
+        }
+
         public void SaveBindings()
         {
             string rebinds = inputActions.SaveBindingOverridesAsJson();
             PlayerPrefs.SetString(REBIND_KEY, rebinds);
+            PlayerPrefs.Save();
         }
 
         public void ResetAllBindings()
@@ -120,6 +131,7 @@ namespace Mystie.Core
             }
 
             PlayerPrefs.DeleteKey(REBIND_KEY);
+            PlayerPrefs.Save();
         }
     }
 }

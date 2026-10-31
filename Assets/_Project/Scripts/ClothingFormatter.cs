@@ -12,11 +12,19 @@ namespace Mystie
     {
         public const string NOT = "!";
 
+        private static bool MatchesTag(ItemScriptable item, string rawTag)
+        {
+            string tag = rawTag.Trim();
+            // "!tag" means the item must NOT have that tag (the prefix has to be stripped first).
+            if (tag.StartsWith(NOT)) return !item.TagsStrings.Contains(tag.Substring(NOT.Length));
+            return item.TagsStrings.Contains(tag);
+        }
+
         public override string[] DefaultNames => new[] { "clothing", "c" };
 
         public override bool TryEvaluateFormat(IFormattingInfo formattingInfo)
         {
-            List<ItemScriptable> items = (List<ItemScriptable>)formattingInfo.CurrentValue;
+            List<ItemScriptable> items = formattingInfo.CurrentValue as List<ItemScriptable>;
 
             string targetTags = formattingInfo.FormatterOptions;
             List<string> targetTagsList = targetTags.Split(',').ToList();
@@ -32,8 +40,9 @@ namespace Mystie
             {
                 foreach (ItemScriptable item in items.Shuffle())
                 {
-                    if (targetTagsList.All(t => !t.StartsWith(NOT) ?
-                        item.TagsStrings.Contains(t) : !item.TagsStrings.Contains(t)))
+                    if (item == null) continue;
+
+                    if (targetTagsList.All(t => MatchesTag(item, t)))
                     {
                         formattingInfo.Write(item.displayName.GetLocalizedString().ToLower());
                         return true;

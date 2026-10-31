@@ -12,8 +12,15 @@ namespace Mystie.UI
 
         private void Start()
         {
-            if (button == null) 
+            if (button == null)
                 button = GetComponentInChildren<Button>();
+            if (Application.platform == RuntimePlatform.WebGLPlayer)
+            {
+                // Application.Quit does nothing in a browser tab.
+                gameObject.SetActive(false);
+                return;
+            }
+
             button.onClick.AddListener(GameManager.Quit);
         }
 

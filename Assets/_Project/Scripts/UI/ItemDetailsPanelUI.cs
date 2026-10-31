@@ -32,7 +32,12 @@ namespace Mystie
 
         void Awake()
         {
-            UpdateLocale = (Locale locale) => { UpdateDisplay(); };
+            UpdateLocale = (Locale locale) =>
+            {
+                // On WebGL the new locale's tables load asynchronously; reading
+                // GetLocalizedString() before that finishes fails.
+                if (isActiveAndEnabled) StartCoroutine(RefreshAfterLocaleChange());
+            };
         }
 
         private void OnEnable()
@@ -44,6 +49,12 @@ namespace Mystie
         private void OnDisable()
         {
             LocalizationSettings.SelectedLocaleChanged -= UpdateLocale;
+        }
+
+        private IEnumerator RefreshAfterLocaleChange()
+        {
+            yield return LocalizationSettings.InitializationOperation;
+            UpdateDisplay();
         }
 
         public void Set(ItemScriptable newItem)

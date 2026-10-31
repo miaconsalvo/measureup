@@ -168,7 +168,7 @@ namespace Mystie.Dialogue
         [YarnCommand("CamOffset")]
         public static void SetCameraOffset(string xPos = "", string yPos = "", float moveTime = 0.25f)
         {
-            DialogueManager.Instance.SetCameraOffset(xPos, yPos, moveTime = 0.25f);
+            DialogueManager.Instance.SetCameraOffset(xPos, yPos, moveTime);
         }
     }
 }

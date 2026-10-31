@@ -1,3 +1,4 @@
+using System.Globalization;
 using UnityEngine;
 using VInspector;
 
@@ -11,17 +12,27 @@ namespace Mystie
 
         public SerializedDictionary<string, float> labelCoordinates;
 
+        private static string Normalize(string s)
+        {
+            return (s ?? string.Empty).ToLowerInvariant().Replace(" ", "").Replace("_", "").Replace("-", "");
+        }
+
         public float GetCoordinates(string coordinate)
         {
             // next, let's see if they used a position keyword
-            string labelCoordinate = coordinate.ToLower().Replace(" ", "").Replace("_", "").Replace("-", "");
-            if (labelCoordinates.ContainsKey(labelCoordinate))
-                return labelCoordinates[labelCoordinate];
+            string labelCoordinate = Normalize(coordinate);
+
+            // Normalise the inspector keys too, so "Top Left" or "top_left" still match.
+            foreach (var kvp in labelCoordinates)
+            {
+                if (Normalize(kvp.Key) == labelCoordinate)
+                    return kvp.Value;
+            }
 
             // if none of those worked, then let's try parsing it as a
             // number
             float x;
-            if (float.TryParse(coordinate, out x))
+            if (float.TryParse(coordinate, NumberStyles.Float, CultureInfo.InvariantCulture, out x))
             {
                 return x;
             }

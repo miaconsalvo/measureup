@@ -99,7 +99,8 @@ namespace Mystie.Dressup
         {
             foreach (ItemType type in items.Keys)
             {
-                if (items[type] == underwearItems[type]) return false;
+                if (underwearItems.TryGetValue(type, out ItemScriptable underwear)
+                    && items[type] == underwear) return false;
             }
 
             return true;
@@ -245,8 +246,7 @@ namespace Mystie.Dressup
         [YarnFunction("has_tag")]
         public static bool HasTag(string tag, string name)
         {
-            if (!SaveDataManager.gameData.tags.ContainsKey(name)) return false;
-            return HasTag(tag, SaveDataManager.gameData.tags[name]);
+            return SaveDataManager.HasSavedTag(name, tag);
         }
 
         public static bool HasTag(string tag, List<ClothingTag> tags)
@@ -275,7 +275,10 @@ namespace Mystie.Dressup
 
             foreach (ItemScriptable item in LevelManager.Instance.dressup.items.Values)
             {
-                if (item.HasTag(s)) return item.displayName.GetLocalizedString().ToLower();
+                if (item == null) continue;
+                // Effective tags, so tags granted by episode rules count too.
+                if (LevelManager.Instance.GetEffectiveTags(item).Any(t => t != null && t.name == s))
+                    return item.displayName.GetLocalizedString().ToLower();
             }
 
             return null;
@@ -284,7 +287,7 @@ namespace Mystie.Dressup
         [YarnCommand("set_reaction")]
         public static void SetReaction(string name, int reaction)
         {
-            LevelManager.Instance.dressup.reaction = (Reaction)reaction;
+            if (LevelManager.Instance != null) LevelManager.Instance.dressup.reaction = (Reaction)reaction;
             SaveDataManager.SaveReaction(name, (Reaction)reaction);
             Debug.Log($"Reaction set for {name} to {(Reaction)reaction}.");
         }
@@ -292,9 +295,7 @@ namespace Mystie.Dressup
         [YarnFunction("get_reaction")]
         public static int GetReaction(string name)
         {
-            return SaveDataManager.gameData.reactions.ContainsKey(name) ?
-                (int)SaveDataManager.gameData.reactions[name] :
-                0;
+            return (int)SaveDataManager.GetReaction(name);
         }
 
         #endregion
